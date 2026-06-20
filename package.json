@@ -1,0 +1,35 @@
+{
+  "name": "@remotionhub/assets",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["remotion/*"],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.base.json --noEmit",
+    "extract": "tsx scripts/extract-case.ts",
+    "media:mirror": "tsx scripts/upload-media.ts",
+    "sanitize": "tsx scripts/sanitize-case.ts",
+    "validate": "tsx scripts/validate-case.ts",
+    "manifest:validate": "tsx scripts/validate-case.ts --manifest-only",
+    "readme:generate": "tsx scripts/generate-readme.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.731.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.366",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "remotion": "^4.0.366",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.0",
+    "vitest": "^4.1.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
