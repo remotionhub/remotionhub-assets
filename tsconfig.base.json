@@ -12,5 +12,10 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
-  "include": ["scripts/**/*.ts", "remotion/**/*.ts", "remotion/**/*.tsx", "vitest.config.ts"]
+  "include": [
+    "scripts/**/*.ts",
+    "remotion/**/*.ts",
+    "remotion/**/*.tsx",
+    "vitest.config.ts"
+  ]
 }

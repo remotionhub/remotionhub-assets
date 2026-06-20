@@ -45,8 +45,10 @@ describe('asset manifest schema', () => {
   it('accepts RemotionHub-controlled published media URLs', () => {
     const parsed = assetManifestSchema.parse({
       ...baseManifest,
-      previewUrl: 'https://assets.remotionhub.ai/showcase/card-avatar/preview.mp4',
-      thumbnailUrl: 'https://assets.remotionhub.ai/showcase/card-avatar/thumb.jpg',
+      previewUrl:
+        'https://assets.remotionhub.ai/showcase/card-avatar/preview.mp4',
+      thumbnailUrl:
+        'https://assets.remotionhub.ai/showcase/card-avatar/thumb.jpg',
     })
 
     expect(parsed.previewUrl).toBe(
@@ -67,7 +69,17 @@ describe('asset manifest schema', () => {
     expect(() =>
       assetManifestSchema.parse({
         ...baseManifest,
-        previewUrl: 'https://another-bucket.r2.dev/showcase/card-avatar/preview.mp4',
+        previewUrl:
+          'https://another-bucket.r2.dev/showcase/card-avatar/preview.mp4',
+      }),
+    ).toThrow(/RemotionHub-controlled/)
+  })
+
+  it('rejects third-party thumbnail media URLs', () => {
+    expect(() =>
+      assetManifestSchema.parse({
+        ...baseManifest,
+        thumbnailUrl: 'https://example.com/thumb.jpg',
       }),
     ).toThrow(/RemotionHub-controlled/)
   })

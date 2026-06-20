@@ -12,9 +12,7 @@ const migrationStatusSchema = z.union([
 ])
 
 const httpsUrlSchema = z.string().url().startsWith('https://')
-const slugSchema = z
-  .string()
-  .regex(/^[a-z0-9](?:[a-z0-9-]{0,78}[a-z0-9])?$/)
+const slugSchema = z.string().regex(/^[a-z0-9](?:[a-z0-9-]{0,78}[a-z0-9])?$/)
 const remotionHubMediaUrlSchema = httpsUrlSchema.refine(
   (value) => {
     const url = new URL(value)
