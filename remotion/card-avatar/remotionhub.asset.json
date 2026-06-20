@@ -18,7 +18,50 @@
   ],
   "license": "MIT",
   "prompt": "我有一个用 Remotion 写的头像字卡组件（文件：CardAvatar.tsx），请帮我做以下调整： 1. 把姓名从 \"Jane Smith\" 改成「___」（修改顶部 NAME 常数，缩写会自动更新） 2. 把头衔从 \"Creative Director\" 改成「___」（修改顶部 TITLE 常数） 3. 把头像圆圈边框颜色从紫 #a78bfa 改成「___」 4. 把头像圆圈背景从深紫 #312e81 改成「___」 5. 把头像缩写文字颜色从紫 #a78bfa 改成「___」 6. 把头衔文字颜色从淡紫 #c4b5fd 改成「___」 7. 调整头像弹入速度：想更快请把 avatarProgress 的 stiffness 从 160 改大；想更慢改小 请保留圆形头像与缩写自动计算逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
-  "propsSchema": [],
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary role or title."
+    },
+    {
+      "name": "avatarBorderColor",
+      "type": "string",
+      "defaultValue": "#a78bfa",
+      "description": "CSS color for the avatar border."
+    },
+    {
+      "name": "avatarBackgroundColor",
+      "type": "string",
+      "defaultValue": "#312e81",
+      "description": "CSS color for the avatar circle background."
+    },
+    {
+      "name": "avatarTextColor",
+      "type": "string",
+      "defaultValue": "#a78bfa",
+      "description": "CSS color for the avatar initials."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#c4b5fd",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "avatarStiffness",
+      "type": "number",
+      "defaultValue": 160,
+      "description": "Spring stiffness for the avatar pop-in animation."
+    }
+  ],
   "extraDependencies": [],
   "migration": {
     "status": "extracted",
