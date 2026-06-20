@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
-import { inventorySchema } from './lib/assetManifest'
+import { inventorySchema, type Inventory } from './lib/assetManifest'
 import { parseRemotionLabMarkdown } from './lib/remotionlabMarkdown'
 
 type DraftAssetManifest = {
@@ -31,6 +31,16 @@ type DraftAssetManifest = {
   }
 }
 
+type ExtractionOptions = {
+  cwd?: string
+  slug?: string
+  sourceFile?: string
+  now?: () => string
+}
+
+const SUPPORTED_SLUG = 'card-avatar'
+const INVENTORY_PATH = path.join('manifest', 'remotionlab-showcase.json')
+
 function readArg(name: string) {
   return process.argv
     .find((arg) => arg.startsWith(`--${name}=`))
@@ -41,17 +51,56 @@ function nowIso() {
   return new Date().toISOString()
 }
 
+function assertSupportedSlug(slug: string) {
+  if (slug !== SUPPORTED_SLUG) {
+    throw new Error(
+      'Only card-avatar extraction is supported in the first migration slice.',
+    )
+  }
+}
+
 async function writeJson(pathname: string, value: unknown) {
   await fs.writeFile(pathname, `${JSON.stringify(value, null, 2)}\n`, 'utf8')
 }
 
-async function main() {
-  const slug = readArg('slug') ?? 'card-avatar'
-  const sourceFile = readArg('source') ?? `/tmp/remotionlab/案例/${slug}.md`
+async function readInventory(pathname: string) {
+  try {
+    const raw = await fs.readFile(pathname, 'utf8')
+    return inventorySchema.parse(JSON.parse(raw))
+  } catch (error: unknown) {
+    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
+      return inventorySchema.parse({ cases: [] })
+    }
+
+    throw error
+  }
+}
+
+function upsertInventoryCase(
+  inventory: Inventory,
+  nextCase: Inventory['cases'][number],
+) {
+  const cases = inventory.cases.filter((entry) => entry.slug !== nextCase.slug)
+  cases.push(nextCase)
+  cases.sort((left, right) => left.slug.localeCompare(right.slug))
+  return inventorySchema.parse({ cases })
+}
+
+export async function runExtraction(options: ExtractionOptions = {}) {
+  const slug = options.slug ?? readArg('slug') ?? SUPPORTED_SLUG
+  assertSupportedSlug(slug)
+
+  const cwd = options.cwd ?? process.cwd()
+  const sourceFile =
+    options.sourceFile ??
+    readArg('source') ??
+    `/tmp/remotionlab/案例/${slug}.md`
   const markdown = await fs.readFile(sourceFile, 'utf8')
   const parsed = parseRemotionLabMarkdown(markdown, sourceFile)
+  assertSupportedSlug(parsed.slug)
+
   const assetPath = path.join('remotion', parsed.slug)
-  const updatedAt = nowIso()
+  const updatedAt = (options.now ?? nowIso)()
 
   const draftManifest: DraftAssetManifest = {
     slug: parsed.slug,
@@ -80,35 +129,47 @@ async function main() {
     },
   }
 
-  const inventory = inventorySchema.parse({
-    cases: [
-      {
-        slug: parsed.slug,
-        status: 'extracted',
-        sourceFile,
-        assetPath,
-        updatedAt,
-      },
-    ],
+  const assetDir = path.join(cwd, assetPath)
+  const inventoryPath = path.join(cwd, INVENTORY_PATH)
+  const inventory = upsertInventoryCase(await readInventory(inventoryPath), {
+    slug: parsed.slug,
+    status: 'extracted',
+    sourceFile,
+    assetPath,
+    updatedAt,
   })
 
-  await fs.mkdir(assetPath, { recursive: true })
-  await fs.mkdir('manifest', { recursive: true })
+  await fs.mkdir(assetDir, { recursive: true })
+  await fs.mkdir(path.dirname(inventoryPath), { recursive: true })
   await writeJson(
-    path.join(assetPath, 'remotionhub.asset.draft.json'),
+    path.join(assetDir, 'remotionhub.asset.draft.json'),
     draftManifest,
   )
   await fs.writeFile(
-    path.join(assetPath, 'source.raw.tsx'),
+    path.join(assetDir, 'source.raw.tsx'),
     `${parsed.code}\n`,
     'utf8',
   )
-  await writeJson('manifest/remotionlab-showcase.json', inventory)
+  await writeJson(inventoryPath, inventory)
 
-  console.log(`Extracted ${parsed.slug} to ${assetPath}.`)
+  return {
+    assetPath,
+    inventory,
+    slug: parsed.slug,
+  }
 }
 
-main().catch((error: unknown) => {
-  console.error(error)
-  process.exit(1)
-})
+async function main() {
+  const result = await runExtraction()
+  console.log(`Extracted ${result.slug} to ${result.assetPath}.`)
+}
+
+if (
+  process.argv[1] &&
+  import.meta.url === new URL(process.argv[1], 'file:').href
+) {
+  main().catch((error: unknown) => {
+    console.error(error)
+    process.exit(1)
+  })
+}
