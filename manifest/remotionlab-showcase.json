@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "slug": "card-avatar",
+      "status": "extracted",
+      "sourceFile": "/tmp/remotionlab/案例/card-avatar.md",
+      "assetPath": "remotion/card-avatar",
+      "updatedAt": "2026-06-20T06:42:03.845Z"
+    }
+  ]
+}
