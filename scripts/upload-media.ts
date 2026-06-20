@@ -52,11 +52,48 @@ async function writeInventory(pathname: string, value: unknown) {
   await fs.writeFile(pathname, `${JSON.stringify(value, null, 2)}\n`, 'utf8')
 }
 
+function resolvePublicBaseUrl(dryRun: boolean) {
+  const configured = process.env.ASSETS_PUBLIC_BASE_URL?.trim()
+
+  if (configured) {
+    return configured
+  }
+
+  if (dryRun) {
+    return 'https://assets.remotionhub.ai'
+  }
+
+  throw new Error(
+    'ASSETS_PUBLIC_BASE_URL is required for real uploads and media-mirrored status.',
+  )
+}
+
+function resolveUploadTarget(dryRun: boolean) {
+  if (dryRun) {
+    return null
+  }
+
+  const client = createS3ClientFromEnv()
+  const bucket = process.env.ASSETS_R2_BUCKET
+
+  if (!client || !bucket) {
+    throw new Error(
+      'R2 credentials and ASSETS_R2_BUCKET are required for real uploads.',
+    )
+  }
+
+  return { client, bucket }
+}
+
 async function mirrorOne(args: {
   slug: string
   url: string
   publicBaseUrl: string
   dryRun: boolean
+  uploadTarget: {
+    client: NonNullable<ReturnType<typeof createS3ClientFromEnv>>
+    bucket: string
+  } | null
 }) {
   if (!isSourceSiteMediaUrl(args.url)) {
     throw new Error(`Unsupported source media URL: ${args.url}`)
@@ -67,19 +104,11 @@ async function mirrorOne(args: {
   const filename = filenameFor(args.url)
   const key = buildObjectKey(args.slug, filename, hash)
   const targetUrl = `${args.publicBaseUrl.replace(/\/$/, '')}/${key}`
-  const client = createS3ClientFromEnv()
-  const bucket = process.env.ASSETS_R2_BUCKET
 
-  if (!args.dryRun) {
-    if (!client || !bucket) {
-      throw new Error(
-        'R2 credentials and ASSETS_R2_BUCKET are required for real uploads.',
-      )
-    }
-
+  if (args.uploadTarget) {
     await uploadMediaObject({
-      client,
-      bucket,
+      client: args.uploadTarget.client,
+      bucket: args.uploadTarget.bucket,
       key,
       body,
       contentType: contentTypeFor(filename),
@@ -98,8 +127,8 @@ export async function runMediaMirror(options?: {
   const cwd = options?.cwd ?? process.cwd()
   const slug = options?.slug ?? readArg('slug') ?? 'card-avatar'
   const dryRun = options?.dryRun ?? process.argv.includes('--dry-run')
-  const publicBaseUrl =
-    process.env.ASSETS_PUBLIC_BASE_URL ?? 'https://assets.remotionhub.ai'
+  const publicBaseUrl = resolvePublicBaseUrl(dryRun)
+  const uploadTarget = resolveUploadTarget(dryRun)
   const draftPath = path.join(
     cwd,
     'remotion',
@@ -116,12 +145,14 @@ export async function runMediaMirror(options?: {
     url: raw.originalPreviewUrl,
     publicBaseUrl,
     dryRun,
+    uploadTarget,
   })
   const thumbnail = await mirrorOne({
     slug,
     url: raw.originalThumbnailUrl,
     publicBaseUrl,
     dryRun,
+    uploadTarget,
   })
   const migrationStatus: AssetManifest['migration']['status'] = dryRun
     ? 'extracted'
