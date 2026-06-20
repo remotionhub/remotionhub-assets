@@ -13,6 +13,13 @@ const migrationStatusSchema = z.union([
 
 const httpsUrlSchema = z.string().url().startsWith('https://')
 const slugSchema = z.string().regex(/^[a-z0-9](?:[a-z0-9-]{0,78}[a-z0-9])?$/)
+const sourceSiteMediaUrlSchema = httpsUrlSchema.refine(
+  (value) => {
+    const url = new URL(value)
+    return url.hostname === 'pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev'
+  },
+  { message: 'Draft media URLs must point to the source-site bucket.' },
+)
 const remotionHubMediaUrlSchema = httpsUrlSchema.refine(
   (value) => {
     const url = new URL(value)
@@ -58,6 +65,35 @@ export const assetManifestSchema = z.object({
 
 export type AssetManifest = z.infer<typeof assetManifestSchema>
 
+export const draftAssetManifestSchema = z.object({
+  slug: slugSchema,
+  displayName: z.string().min(1),
+  runtime: z.literal('remotion'),
+  sourceUrl: httpsUrlSchema,
+  originalPreviewUrl: sourceSiteMediaUrlSchema,
+  originalThumbnailUrl: sourceSiteMediaUrlSchema,
+  previewUrl: sourceSiteMediaUrlSchema,
+  thumbnailUrl: sourceSiteMediaUrlSchema,
+  entryPoint: z.string().min(1),
+  compositionId: z.string().min(1),
+  durationFrames: z.number().int().positive(),
+  fps: z.number().int().positive(),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  aspectRatios: z.array(z.string().min(1)).min(1),
+  license: z.string().min(1),
+  prompt: z.string().min(1),
+  propsSchema: z.array(propSchema),
+  extraDependencies: z.array(z.string().min(1)),
+  migration: z.object({
+    status: z.literal('extracted'),
+    sourceFile: z.string().min(1),
+    updatedAt: z.string().datetime(),
+  }),
+})
+
+export type DraftAssetManifest = z.infer<typeof draftAssetManifestSchema>
+
 export const inventoryCaseSchema = z.object({
   slug: slugSchema,
   status: migrationStatusSchema,
@@ -76,6 +112,11 @@ export type Inventory = z.infer<typeof inventorySchema>
 export async function readAssetManifest(pathname: string) {
   const raw = await fs.readFile(pathname, 'utf8')
   return assetManifestSchema.parse(JSON.parse(raw))
+}
+
+export async function readDraftAssetManifest(pathname: string) {
+  const raw = await fs.readFile(pathname, 'utf8')
+  return draftAssetManifestSchema.parse(JSON.parse(raw))
 }
 
 export async function writeAssetManifest(

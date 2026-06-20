@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest'
-import { assetManifestSchema, inventorySchema } from './assetManifest'
+import {
+  assetManifestSchema,
+  draftAssetManifestSchema,
+  inventorySchema,
+} from './assetManifest'
 
 const baseManifest = {
   slug: 'card-avatar',
@@ -38,6 +42,23 @@ const baseManifest = {
 }
 
 describe('asset manifest schema', () => {
+  it('accepts the extracted draft manifest shape', () => {
+    const parsed = draftAssetManifestSchema.parse({
+      ...baseManifest,
+      migration: {
+        status: 'extracted',
+        sourceFile: '/tmp/remotionlab/案例/card-avatar.md',
+        updatedAt: '2026-06-20T00:00:00.000Z',
+      },
+      previewUrl:
+        'https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-avatar/preview.mp4',
+      thumbnailUrl:
+        'https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-avatar/thumb.jpg',
+    })
+
+    expect(parsed.migration.status).toBe('extracted')
+  })
+
   it('accepts the card-avatar manifest shape', () => {
     expect(assetManifestSchema.parse(baseManifest).slug).toBe('card-avatar')
   })
