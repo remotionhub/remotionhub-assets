@@ -64,8 +64,8 @@
   ],
   "extraDependencies": [],
   "migration": {
-    "status": "extracted",
+    "status": "validated",
     "sourceFile": "/tmp/remotionlab/案例/card-avatar.md",
-    "updatedAt": "2026-06-20T07:36:19.600Z"
+    "updatedAt": "2026-06-20T12:16:12.805Z"
   }
 }

@@ -2,10 +2,10 @@
   "cases": [
     {
       "slug": "card-avatar",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/card-avatar.md",
       "assetPath": "remotion/card-avatar",
-      "updatedAt": "2026-06-20T07:12:52.250Z"
+      "updatedAt": "2026-06-20T12:16:17.000Z"
     }
   ]
 }
