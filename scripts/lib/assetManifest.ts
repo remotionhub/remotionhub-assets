@@ -12,8 +12,14 @@ const migrationStatusSchema = z.union([
 ])
 
 const httpsUrlSchema = z.string().url().startsWith('https://')
+const slugSchema = z
+  .string()
+  .regex(/^[a-z0-9](?:[a-z0-9-]{0,78}[a-z0-9])?$/)
 const remotionHubMediaUrlSchema = httpsUrlSchema.refine(
-  (value) => !value.includes('pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev'),
+  (value) => {
+    const url = new URL(value)
+    return url.hostname === 'assets.remotionhub.ai' && url.pathname.length > 1
+  },
   { message: 'Published media URLs must be RemotionHub-controlled.' },
 )
 
@@ -25,7 +31,7 @@ export const propSchema = z.object({
 })
 
 export const assetManifestSchema = z.object({
-  slug: z.string().regex(/^[a-z0-9](?:[a-z0-9-]{0,78}[a-z0-9])?$/),
+  slug: slugSchema,
   displayName: z.string().min(1),
   runtime: z.literal('remotion'),
   sourceUrl: httpsUrlSchema,
@@ -55,7 +61,7 @@ export const assetManifestSchema = z.object({
 export type AssetManifest = z.infer<typeof assetManifestSchema>
 
 export const inventoryCaseSchema = z.object({
-  slug: z.string().min(1),
+  slug: slugSchema,
   status: migrationStatusSchema,
   sourceFile: z.string().min(1),
   assetPath: z.string().min(1).optional(),

@@ -42,11 +42,32 @@ describe('asset manifest schema', () => {
     expect(assetManifestSchema.parse(baseManifest).slug).toBe('card-avatar')
   })
 
-  it('rejects source-site media as published preview media', () => {
+  it('accepts RemotionHub-controlled published media URLs', () => {
+    const parsed = assetManifestSchema.parse({
+      ...baseManifest,
+      previewUrl: 'https://assets.remotionhub.ai/showcase/card-avatar/preview.mp4',
+      thumbnailUrl: 'https://assets.remotionhub.ai/showcase/card-avatar/thumb.jpg',
+    })
+
+    expect(parsed.previewUrl).toBe(
+      'https://assets.remotionhub.ai/showcase/card-avatar/preview.mp4',
+    )
+  })
+
+  it('rejects third-party preview media URLs', () => {
     expect(() =>
       assetManifestSchema.parse({
         ...baseManifest,
-        previewUrl: baseManifest.originalPreviewUrl,
+        previewUrl: 'https://example.com/preview.mp4',
+      }),
+    ).toThrow(/RemotionHub-controlled/)
+  })
+
+  it('rejects non-canonical r2 preview media URLs', () => {
+    expect(() =>
+      assetManifestSchema.parse({
+        ...baseManifest,
+        previewUrl: 'https://another-bucket.r2.dev/showcase/card-avatar/preview.mp4',
       }),
     ).toThrow(/RemotionHub-controlled/)
   })
@@ -66,5 +87,21 @@ describe('asset manifest schema', () => {
     })
 
     expect(parsed.cases).toHaveLength(1)
+  })
+
+  it('reuses the manifest slug rules for inventory cases', () => {
+    expect(() =>
+      inventorySchema.parse({
+        cases: [
+          {
+            slug: 'Card Avatar',
+            status: 'published',
+            sourceFile: '/tmp/remotionlab/案例/card-avatar.md',
+            assetPath: 'remotion/card-avatar',
+            updatedAt: '2026-06-20T00:00:00.000Z',
+          },
+        ],
+      }),
+    ).toThrow()
   })
 })
