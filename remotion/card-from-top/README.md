@@ -31,12 +31,12 @@ export function RemotionRoot() {
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| | `name` | `string` | `Maria Chen` | Primary display name. |
+| `name` | `string` | `Maria Chen` | Primary display name. |
 | `title` | `string` | `Motion Designer` | Secondary title or role. |
-| `lineColor` | `string` | `#f59e0b` | CSS color for the bottom highlight line. |
+| `accentColor` | `string` | `#f59e0b` | CSS color for the bottom highlight line. |
 | `titleColor` | `string` | `#fde68a` | CSS color for the title text. |
-| `backgroundColor` | `string` | `rgba(15, 23, 42, 0.92)` | CSS color for the card background block. |
-| `stiffness` | `number` | `140` | Spring stiffness for the slide-in animation. | |
+| `cardBackgroundColor` | `string` | `rgba(15, 23, 42, 0.92)` | CSS color for the card background block. |
+| `animationStiffness` | `number` | `140` | Spring stiffness for the slide-in animation. |
 
 ## Extra Dependencies
 

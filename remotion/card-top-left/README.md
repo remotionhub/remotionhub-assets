@@ -31,13 +31,13 @@ export function RemotionRoot() {
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| | `name` | `string` | `Jane Smith` | Primary display name. |
+| `name` | `string` | `Jane Smith` | Primary display name. |
 | `title` | `string` | `Creative Director` | Secondary title or role. |
-| `lineColor` | `string` | `#38bdf8` | CSS color for the bottom highlight line. |
+| `accentColor` | `string` | `#38bdf8` | CSS color for the bottom highlight line. |
 | `titleColor` | `string` | `#bae6fd` | CSS color for the title text. |
-| `backgroundColor` | `string` | `#0f172a` | CSS color for the card background block. |
-| `stiffness` | `number` | `140` | Spring stiffness for the slide-in animation. |
-| `textDelay` | `number` | `10` | Frame delay before the text fades in. | |
+| `cardBackgroundColor` | `string` | `#0f172a` | CSS color for the card background block. |
+| `animationStiffness` | `number` | `140` | Spring stiffness for the slide-in animation. |
+| `textDelay` | `number` | `10` | Frame delay before the text fades in. |
 
 ## Extra Dependencies
 

@@ -31,13 +31,13 @@ export function RemotionRoot() {
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| | `name` | `string` | `Alex Johnson` | Primary display name. |
+| `name` | `string` | `Alex Johnson` | Primary display name. |
 | `title` | `string` | `Lead Engineer` | Secondary title or role. |
-| `lineColor` | `string` | `#4ade80` | CSS color for the left highlight line. |
+| `accentColor` | `string` | `#4ade80` | CSS color for the left highlight line. |
 | `titleColor` | `string` | `#bbf7d0` | CSS color for the title text. |
-| `backgroundColor` | `string` | `#052e16` | CSS color for the card background block. |
-| `stiffness` | `number` | `140` | Spring stiffness for the slide-in animation. |
-| `textDelay` | `number` | `10` | Frame delay before the text fades in. | |
+| `cardBackgroundColor` | `string` | `#052e16` | CSS color for the card background block. |
+| `animationStiffness` | `number` | `140` | Spring stiffness for the slide-in animation. |
+| `textDelay` | `number` | `10` | Frame delay before the text fades in. |
 
 ## Extra Dependencies
 

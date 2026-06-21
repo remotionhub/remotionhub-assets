@@ -12,35 +12,35 @@
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/card-from-left.md",
       "assetPath": "remotion/card-from-left",
-      "updatedAt": "2026-06-21T06:55:09.445Z"
+      "updatedAt": "2026-06-21T07:35:47.515Z"
     },
     {
       "slug": "card-from-right",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/card-from-right.md",
       "assetPath": "remotion/card-from-right",
-      "updatedAt": "2026-06-21T07:04:10.558Z"
+      "updatedAt": "2026-06-21T07:35:52.450Z"
     },
     {
       "slug": "card-from-top",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/card-from-top.md",
       "assetPath": "remotion/card-from-top",
-      "updatedAt": "2026-06-21T07:04:51.006Z"
+      "updatedAt": "2026-06-21T07:35:57.383Z"
     },
     {
       "slug": "card-top-left",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/card-top-left.md",
       "assetPath": "remotion/card-top-left",
-      "updatedAt": "2026-06-21T07:05:24.422Z"
+      "updatedAt": "2026-06-21T07:36:02.307Z"
     },
     {
       "slug": "card-top-right",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/card-top-right.md",
       "assetPath": "remotion/card-top-right",
-      "updatedAt": "2026-06-21T07:05:57.462Z"
+      "updatedAt": "2026-06-21T07:36:07.228Z"
     }
   ]
 }

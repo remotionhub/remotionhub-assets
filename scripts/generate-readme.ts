@@ -57,7 +57,7 @@ export function RemotionRoot() {
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| ${propsTable} |
+${propsTable}
 
 ## Extra Dependencies
 

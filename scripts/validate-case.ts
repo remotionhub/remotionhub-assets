@@ -115,6 +115,23 @@ export async function runValidation(options: ValidationOptions = {}) {
     throw new Error(`README for ${slug} is missing required sections.`)
   }
 
+  const lines = readme.split('\n')
+  const propsIndex = lines.findIndex((l) => l.startsWith('## Props'))
+  if (propsIndex !== -1) {
+    for (let i = propsIndex + 1; i < lines.length; i++) {
+      const line = lines[i].trim()
+      if (line.startsWith('#')) {
+        break
+      }
+      if (
+        line.startsWith('|') &&
+        (line.includes('||') || line.startsWith('| |') || line.endsWith('| |'))
+      ) {
+        throw new Error(`README for ${slug} has a malformed Props table.`)
+      }
+    }
+  }
+
   if (manifestOnly) {
     return { slug, status: manifest.migration.status, manifestOnly: true }
   }

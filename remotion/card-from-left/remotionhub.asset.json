@@ -32,7 +32,7 @@
       "description": "Secondary title or role."
     },
     {
-      "name": "lineColor",
+      "name": "accentColor",
       "type": "string",
       "defaultValue": "#ef4444",
       "description": "CSS color for the left highlight line."
@@ -44,13 +44,13 @@
       "description": "CSS color for the title text."
     },
     {
-      "name": "backgroundColor",
+      "name": "cardBackgroundColor",
       "type": "string",
       "defaultValue": "rgba(15, 23, 42, 0.92)",
       "description": "CSS color for the card background block."
     },
     {
-      "name": "stiffness",
+      "name": "animationStiffness",
       "type": "number",
       "defaultValue": 140,
       "description": "Spring stiffness for the slide-in animation."
@@ -60,6 +60,6 @@
   "migration": {
     "status": "validated",
     "sourceFile": "/tmp/remotionlab/案例/card-from-left.md",
-    "updatedAt": "2026-06-21T06:55:09.445Z"
+    "updatedAt": "2026-06-21T07:35:47.515Z"
   }
 }

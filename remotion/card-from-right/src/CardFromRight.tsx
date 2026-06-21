@@ -4,33 +4,33 @@ import React from "react";
 export type CardFromRightProps = {
   name: string;
   title: string;
-  lineColor: string;
+  accentColor: string;
   titleColor: string;
-  backgroundColor: string;
-  stiffness: number;
+  cardBackgroundColor: string;
+  animationStiffness: number;
 };
 
 export const cardFromRightDefaultProps: CardFromRightProps = {
   name: "Alex Johnson",
   title: "Lead Engineer",
-  lineColor: "#f97316",
+  accentColor: "#f97316",
   titleColor: "#fdba74",
-  backgroundColor: "rgba(15, 23, 42, 0.92)",
-  stiffness: 140,
+  cardBackgroundColor: "rgba(15, 23, 42, 0.92)",
+  animationStiffness: 140,
 };
 
 export const CardFromRight: React.FC<CardFromRightProps> = ({
   name,
   title,
-  lineColor,
+  accentColor,
   titleColor,
-  backgroundColor,
-  stiffness,
+  cardBackgroundColor,
+  animationStiffness,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const slideProgress = spring({ frame, fps, config: { damping: 22, stiffness } });
+  const slideProgress = spring({ frame, fps, config: { damping: 22, stiffness: animationStiffness } });
   const textProgress = spring({ frame: frame - 10, fps, config: { damping: 25, stiffness: 110 } });
 
   const x = interpolate(slideProgress, [0, 1], [700, 0]);
@@ -56,7 +56,7 @@ export const CardFromRight: React.FC<CardFromRightProps> = ({
       >
         <div
           style={{
-            background: backgroundColor,
+            background: cardBackgroundColor,
             paddingRight: 24,
             paddingLeft: 52,
             display: "flex",
@@ -88,7 +88,7 @@ export const CardFromRight: React.FC<CardFromRightProps> = ({
             {title}
           </div>
         </div>
-        <div style={{ width: 4, background: lineColor, flexShrink: 0 }} />
+        <div style={{ width: 4, background: accentColor, flexShrink: 0 }} />
       </div>
     </AbsoluteFill>
   );

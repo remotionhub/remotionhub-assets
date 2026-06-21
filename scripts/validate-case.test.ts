@@ -170,4 +170,29 @@ describe('runValidation', () => {
     )
     expect(inventory.cases[0].status).toBe('blocked')
   })
+
+  it('rejects a malformed README Props table', async () => {
+    const tempDir = await makeTempDir()
+    await writeWorkspace(tempDir)
+    const readmePath = path.join(
+      tempDir,
+      'remotion',
+      'card-avatar',
+      'README.md',
+    )
+    await fs.writeFile(
+      readmePath,
+      '# Card Avatar\n\n## Props\n\n| | name | type | default | desc | |\n\n## Agent Prompt\n',
+      'utf8',
+    )
+
+    await expect(
+      runValidation({
+        cwd: tempDir,
+        slug: 'card-avatar',
+        manifestOnly: false,
+        runCommand: vi.fn(),
+      }),
+    ).rejects.toThrow(/malformed Props table/i)
+  })
 })
