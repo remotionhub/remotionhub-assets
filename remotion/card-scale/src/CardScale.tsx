@@ -64,6 +64,7 @@ export const CardScale: React.FC<CardScaleProps> = ({
           height: 90,
         }}
       >
+        <div style={{ width: 4, background: accentColor, flexShrink: 0 }} />
         <div
           style={{
             background: cardBackgroundColor,

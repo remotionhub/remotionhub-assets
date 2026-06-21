@@ -1,4 +1,4 @@
-import { AbsoluteFill, interpolate, useCurrentFrame } from 'remotion'
+import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion'
 import React from 'react'
 
 const TICKER =
@@ -35,10 +35,15 @@ export const LowerThirdNews: React.FC<LowerThirdNewsProps> = ({
   animationStiffness,
 }) => {
   const frame = useCurrentFrame()
+  const { fps } = useVideoConfig()
 
-  const bannerOpacity = interpolate(frame, [0, 12], [0, 1], {
-    extrapolateRight: 'clamp',
+  const bannerProgress = spring({
+    frame,
+    fps,
+    config: { damping: 15, stiffness: animationStiffness },
   })
+
+  const bannerY = interpolate(bannerProgress, [0, 1], [50, 0])
   const tickerX = -frame * TICKER_SPEED
 
   return (
@@ -48,7 +53,13 @@ export const LowerThirdNews: React.FC<LowerThirdNewsProps> = ({
         justifyContent: 'flex-end',
       }}
     >
-      <div style={{ opacity: bannerOpacity, width: '100%' }}>
+      <div
+        style={{
+          opacity: bannerProgress,
+          transform: `translateY(${bannerY}px)`,
+          width: '100%',
+        }}
+      >
         <div
           style={{
             background: cardBackgroundColor,

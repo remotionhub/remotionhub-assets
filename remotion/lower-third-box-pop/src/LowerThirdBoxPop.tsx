@@ -73,6 +73,7 @@ export const LowerThirdBoxPop: React.FC<LowerThirdBoxPopProps> = ({
         <div
           style={{
             background: cardBackgroundColor,
+            borderLeft: `4px solid ${accentColor}`,
             paddingLeft: 24,
             paddingRight: 36,
             paddingTop: 14,
