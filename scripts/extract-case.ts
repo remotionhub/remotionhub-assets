@@ -38,8 +38,46 @@ type ExtractionOptions = {
   now?: () => string
 }
 
-const SUPPORTED_SLUG = 'card-avatar'
+const SUPPORTED_SLUGS = new Set([
+  'card-avatar',
+  'card-elastic',
+  'card-from-left',
+  'card-from-right',
+  'card-from-top',
+  'card-glass',
+  'card-outline',
+  'card-scale',
+  'card-split',
+  'card-stagger',
+  'card-top-left',
+  'card-top-right',
+  'card-two-tone',
+  'card-typewriter',
+  'card-wipe',
+  'lower-third-box-pop',
+  'lower-third-callout',
+  'lower-third-gradient-bar',
+  'lower-third-line-expand',
+  'lower-third-minimal',
+  'lower-third-news',
+  'lower-third-slide',
+  'lower-third-social',
+])
 const INVENTORY_PATH = path.join('manifest', 'remotionlab-showcase.json')
+
+function toPascalCase(slug: string) {
+  return slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')
+}
+
+function toDisplayName(slug: string) {
+  return slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
 
 function readArg(name: string) {
   return process.argv
@@ -52,10 +90,8 @@ function nowIso() {
 }
 
 function assertSupportedSlug(slug: string) {
-  if (slug !== SUPPORTED_SLUG) {
-    throw new Error(
-      'Only card-avatar extraction is supported in the first migration slice.',
-    )
+  if (!SUPPORTED_SLUGS.has(slug)) {
+    throw new Error(`Slug ${slug} is not supported.`)
   }
 }
 
@@ -87,7 +123,7 @@ function upsertInventoryCase(
 }
 
 export async function runExtraction(options: ExtractionOptions = {}) {
-  const slug = options.slug ?? readArg('slug') ?? SUPPORTED_SLUG
+  const slug = options.slug ?? readArg('slug') ?? 'card-avatar'
   assertSupportedSlug(slug)
 
   const cwd = options.cwd ?? process.cwd()
@@ -101,18 +137,20 @@ export async function runExtraction(options: ExtractionOptions = {}) {
 
   const assetPath = path.join('remotion', parsed.slug)
   const updatedAt = (options.now ?? nowIso)()
+  const componentName = toPascalCase(parsed.slug)
+  const displayName = toDisplayName(parsed.slug)
 
   const draftManifest: DraftAssetManifest = {
     slug: parsed.slug,
-    displayName: 'Card Avatar',
+    displayName,
     runtime: 'remotion',
     sourceUrl: parsed.sourceUrl,
     originalPreviewUrl: parsed.previewUrl,
     originalThumbnailUrl: parsed.thumbnailUrl,
     previewUrl: parsed.previewUrl,
     thumbnailUrl: parsed.thumbnailUrl,
-    entryPoint: 'src/CardAvatar.tsx',
-    compositionId: 'CardAvatar',
+    entryPoint: `src/${componentName}.tsx`,
+    compositionId: componentName,
     durationFrames: 120,
     fps: 30,
     width: 1920,

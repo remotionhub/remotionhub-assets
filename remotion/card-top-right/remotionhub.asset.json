@@ -1,0 +1,71 @@
+{
+  "slug": "card-top-right",
+  "displayName": "Card Top Right",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-top-right",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-right/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-right/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-top-right/8817b071b193-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-top-right/c2d614220e0a-thumb.jpg",
+  "entryPoint": "src/CardTopRight.tsx",
+  "compositionId": "CardTopRight",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardTopRight Remotion component by setting the name, title, left highlight line color, title text color, background color, animation stiffness, and text delay while preserving the horizontal slide-in animation from the right at the top right of the viewport.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Alex Johnson",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Lead Engineer",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "lineColor",
+      "type": "string",
+      "defaultValue": "#4ade80",
+      "description": "CSS color for the left highlight line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#bbf7d0",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#052e16",
+      "description": "CSS color for the card background block."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Spring stiffness for the slide-in animation."
+    },
+    {
+      "name": "textDelay",
+      "type": "number",
+      "defaultValue": 10,
+      "description": "Frame delay before the text fades in."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-top-right.md",
+    "updatedAt": "2026-06-21T07:05:57.462Z"
+  }
+}

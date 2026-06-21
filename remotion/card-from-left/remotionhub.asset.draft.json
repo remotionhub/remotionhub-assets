@@ -1,0 +1,28 @@
+{
+  "slug": "card-from-left",
+  "displayName": "Card From Left",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-from-left",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-left/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-left/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-left/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-left/thumb.jpg",
+  "entryPoint": "src/CardFromLeft.tsx",
+  "compositionId": "CardFromLeft",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的左滑入字卡组件（文件：CardFromLeft.tsx），请帮我做以下调整： 1. 把姓名从 \"Jane Smith\" 改成「___」 2. 把头衔从 \"Creative Director\" 改成「___」 3. 把左侧强调线的颜色从红色 #ef4444 改成「___」 4. 把头衔文字颜色从淡红 #fca5a5 改成「___」 5. 把背景色块从深蓝黑 rgba(15,23,42,0.92) 改成「___」 6. 把滑入速度调整：想更快请把 stiffness 从 140 改大（例如 200）；想更慢改小（例如 80） 请保留原本的从左滑入效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-from-left.md",
+    "updatedAt": "2026-06-21T06:53:38.534Z"
+  }
+}

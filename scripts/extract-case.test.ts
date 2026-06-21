@@ -112,8 +112,6 @@ describe('runExtraction', () => {
         slug: 'other-case',
         sourceFile,
       }),
-    ).rejects.toThrow(
-      'Only card-avatar extraction is supported in the first migration slice.',
-    )
+    ).rejects.toThrow('Slug other-case is not supported.')
   })
 })

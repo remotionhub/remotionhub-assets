@@ -1,0 +1,65 @@
+{
+  "slug": "card-from-top",
+  "displayName": "Card From Top",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-from-top",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-top/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-top/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-from-top/c74771d86448-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-from-top/ada992b63a26-thumb.jpg",
+  "entryPoint": "src/CardFromTop.tsx",
+  "compositionId": "CardFromTop",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardFromTop Remotion component by setting the name, title, bottom highlight line color, title text color, background color, and animation stiffness while preserving the slide-in animation from the top.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Maria Chen",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Motion Designer",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "lineColor",
+      "type": "string",
+      "defaultValue": "#f59e0b",
+      "description": "CSS color for the bottom highlight line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#fde68a",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "rgba(15, 23, 42, 0.92)",
+      "description": "CSS color for the card background block."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Spring stiffness for the slide-in animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-from-top.md",
+    "updatedAt": "2026-06-21T07:04:51.006Z"
+  }
+}

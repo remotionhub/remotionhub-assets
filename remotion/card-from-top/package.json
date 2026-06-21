@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/card-from-top",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx CardFromTop out/card-from-top.mp4"
+  },
+  "dependencies": {}
+}

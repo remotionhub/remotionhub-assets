@@ -1,0 +1,65 @@
+{
+  "slug": "card-from-left",
+  "displayName": "Card From Left",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-from-left",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-left/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-left/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-from-left/2ef3edc9847c-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-from-left/d7b8d862073c-thumb.jpg",
+  "entryPoint": "src/CardFromLeft.tsx",
+  "compositionId": "CardFromLeft",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardFromLeft Remotion component by setting the name, title, left highlight line color, title text color, background color, and animation stiffness while preserving the slide-in animation from the left.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "lineColor",
+      "type": "string",
+      "defaultValue": "#ef4444",
+      "description": "CSS color for the left highlight line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#fca5a5",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "rgba(15, 23, 42, 0.92)",
+      "description": "CSS color for the card background block."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Spring stiffness for the slide-in animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-from-left.md",
+    "updatedAt": "2026-06-21T06:55:09.445Z"
+  }
+}

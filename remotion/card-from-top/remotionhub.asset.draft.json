@@ -1,0 +1,28 @@
+{
+  "slug": "card-from-top",
+  "displayName": "Card From Top",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-from-top",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-top/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-top/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-top/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-top/thumb.jpg",
+  "entryPoint": "src/CardFromTop.tsx",
+  "compositionId": "CardFromTop",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的上滑入字卡组件（文件：CardFromTop.tsx），请帮我做以下调整： 1. 把姓名从 \"Maria Chen\" 改成「___」 2. 把头衔从 \"Motion Designer\" 改成「___」 3. 把底部强调线的颜色从橘黄 #f59e0b 改成「___」 4. 把头衔文字颜色从淡黄 #fde68a 改成「___」 5. 把背景色块从深蓝黑 rgba(15,23,42,0.92) 改成「___」 6. 把滑落速度调整：想更快请把 stiffness 从 140 改大；想更慢改小 请保留原本的从顶端滑落效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-from-top.md",
+    "updatedAt": "2026-06-21T07:04:26.707Z"
+  }
+}

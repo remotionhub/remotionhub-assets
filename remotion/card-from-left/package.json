@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/card-from-left",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx CardFromLeft out/card-from-left.mp4"
+  },
+  "dependencies": {}
+}

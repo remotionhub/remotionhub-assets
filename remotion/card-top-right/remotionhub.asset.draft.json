@@ -1,0 +1,28 @@
+{
+  "slug": "card-top-right",
+  "displayName": "Card Top Right",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-top-right",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-right/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-right/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-right/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-right/thumb.jpg",
+  "entryPoint": "src/CardTopRight.tsx",
+  "compositionId": "CardTopRight",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的右上角滑入字卡组件（文件：CardTopRight.tsx），请帮我做以下调整： 1. 把姓名从 \"Alex Johnson\" 改成「___」 2. 把头衔从 \"Lead Engineer\" 改成「___」 3. 把左侧强调线的颜色从绿色 #4ade80 改成「___」 4. 把头衔文字颜色从淡绿 #bbf7d0 改成「___」 5. 把背景色块从深绿黑 #052e16 改成「___」 6. 把滑入速度调整：想更快请把 stiffness 从 140 改大（例如 200）；想更慢改小（例如 80） 7. 若要调整文字淡入延迟，请修改 frame - 10 的数值（越大延迟越长） 请保留原本从右侧水平滑入的效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-top-right.md",
+    "updatedAt": "2026-06-21T07:05:29.422Z"
+  }
+}

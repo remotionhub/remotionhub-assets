@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/card-top-right",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx CardTopRight out/card-top-right.mp4"
+  },
+  "dependencies": {}
+}

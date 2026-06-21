@@ -9,31 +9,67 @@ import {
   writeAssetManifest,
 } from './lib/assetManifest'
 
-const SUPPORTED_SLUG = 'card-avatar'
+const SUPPORTED_SLUGS = new Set([
+  'card-avatar',
+  'card-elastic',
+  'card-from-left',
+  'card-from-right',
+  'card-from-top',
+  'card-glass',
+  'card-outline',
+  'card-scale',
+  'card-split',
+  'card-stagger',
+  'card-top-left',
+  'card-top-right',
+  'card-two-tone',
+  'card-typewriter',
+  'card-wipe',
+  'lower-third-box-pop',
+  'lower-third-callout',
+  'lower-third-gradient-bar',
+  'lower-third-line-expand',
+  'lower-third-minimal',
+  'lower-third-news',
+  'lower-third-slide',
+  'lower-third-social',
+])
 const INVENTORY_PATH = path.join('manifest', 'remotionlab-showcase.json')
-const REQUIRED_FILES = [
-  'package.json',
-  'remotion.config.ts',
-  'remotionhub.asset.json',
-  'remotionhub.asset.draft.json',
-  'README.md',
-  'LICENSE',
-  'source.raw.tsx',
-  'src/CardAvatar.tsx',
-  'src/Root.tsx',
-  'src/index.ts',
-]
+
+function toPascalCase(slug: string) {
+  return slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')
+}
+
+function getRequiredFiles(componentName: string) {
+  return [
+    'package.json',
+    'remotion.config.ts',
+    'remotionhub.asset.json',
+    'remotionhub.asset.draft.json',
+    'README.md',
+    'LICENSE',
+    'source.raw.tsx',
+    `src/${componentName}.tsx`,
+    'src/Root.tsx',
+    'src/index.ts',
+  ]
+}
+
 const PLACEHOLDER_PATTERN =
   /___|\b(?:TODO|FIXME|PLACEHOLDER|TBD)\b|replace\s+me/i
-const PLACEHOLDER_CHECK_FILES = [
-  'remotionhub.asset.json',
-  'remotionhub.asset.draft.json',
-  'README.md',
-  'source.raw.tsx',
-  'src/CardAvatar.tsx',
-  'src/Root.tsx',
-  'src/index.ts',
-]
+
+function getPlaceholderCheckFiles(componentName: string) {
+  return [
+    'remotionhub.asset.json',
+    'README.md',
+    `src/${componentName}.tsx`,
+    'src/Root.tsx',
+    'src/index.ts',
+  ]
+}
 
 type SanitizeOptions = {
   cwd?: string
@@ -48,10 +84,8 @@ function readArg(name: string) {
 }
 
 function assertSupportedSlug(slug: string) {
-  if (slug !== SUPPORTED_SLUG) {
-    throw new Error(
-      'Only card-avatar sanitization is supported in the first migration slice.',
-    )
+  if (!SUPPORTED_SLUGS.has(slug)) {
+    throw new Error(`Slug ${slug} is not supported.`)
   }
 }
 
@@ -77,8 +111,8 @@ async function assertFileExists(pathname: string) {
   }
 }
 
-async function assertNoPlaceholders(assetDir: string) {
-  for (const relativePath of PLACEHOLDER_CHECK_FILES) {
+async function assertNoPlaceholders(assetDir: string, componentName: string) {
+  for (const relativePath of getPlaceholderCheckFiles(componentName)) {
     const pathname = path.join(assetDir, relativePath)
     const content = await fs.readFile(pathname, 'utf8')
     if (PLACEHOLDER_PATTERN.test(content)) {
@@ -127,7 +161,7 @@ function withSanitizedInventory(
 
 export async function runSanitization(options: SanitizeOptions = {}) {
   const cwd = options.cwd ?? process.cwd()
-  const slug = options.slug ?? readArg('slug') ?? SUPPORTED_SLUG
+  const slug = options.slug ?? readArg('slug') ?? 'card-avatar'
   assertSupportedSlug(slug)
 
   const assetDir = path.join(cwd, 'remotion', slug)
@@ -140,13 +174,15 @@ export async function runSanitization(options: SanitizeOptions = {}) {
     throw new Error(`Manifest slug ${manifest.slug} does not match ${slug}.`)
   }
 
+  const componentName = toPascalCase(slug)
+
   await assertFileExists(manifest.migration.sourceFile)
   await Promise.all(
-    REQUIRED_FILES.map((relativePath) =>
+    getRequiredFiles(componentName).map((relativePath) =>
       assertFileExists(path.join(assetDir, relativePath)),
     ),
   )
-  await assertNoPlaceholders(assetDir)
+  await assertNoPlaceholders(assetDir, componentName)
 
   const nextManifest = withSanitizedStatus(manifest, updatedAt)
   if (nextManifest !== manifest) {

@@ -1,0 +1,28 @@
+{
+  "slug": "card-top-left",
+  "displayName": "Card Top Left",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-top-left",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-left/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-left/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-left/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-left/thumb.jpg",
+  "entryPoint": "src/CardTopLeft.tsx",
+  "compositionId": "CardTopLeft",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的左上角滑入字卡组件（文件：CardTopLeft.tsx），请帮我做以下调整： 1. 把姓名从 \"Jane Smith\" 改成「___」 2. 把头衔从 \"Creative Director\" 改成「___」 3. 把底部强调线的颜色从水蓝色 #38bdf8 改成「___」 4. 把头衔文字颜色从淡蓝 #bae6fd 改成「___」 5. 把背景色块从深蓝黑 #0f172a 改成「___」 6. 把滑入速度调整：想更快请把 stiffness 从 140 改大（例如 200）；想更慢改小（例如 80） 7. 若要调整文字淡入延迟，请修改 frame - 10 的数值（越大延迟越长） 请保留原本从左上角斜向滑入的效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-top-left.md",
+    "updatedAt": "2026-06-21T07:04:55.823Z"
+  }
+}

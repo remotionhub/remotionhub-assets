@@ -1,0 +1,71 @@
+{
+  "slug": "card-top-left",
+  "displayName": "Card Top Left",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-top-left",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-left/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-top-left/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-top-left/df3cee163da6-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-top-left/6aca63ae46ee-thumb.jpg",
+  "entryPoint": "src/CardTopLeft.tsx",
+  "compositionId": "CardTopLeft",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardTopLeft Remotion component by setting the name, title, bottom highlight line color, title text color, background color, animation stiffness, and text delay while preserving the diagonal slide-in animation from the top-left.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "lineColor",
+      "type": "string",
+      "defaultValue": "#38bdf8",
+      "description": "CSS color for the bottom highlight line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#bae6fd",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#0f172a",
+      "description": "CSS color for the card background block."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Spring stiffness for the slide-in animation."
+    },
+    {
+      "name": "textDelay",
+      "type": "number",
+      "defaultValue": 10,
+      "description": "Frame delay before the text fades in."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-top-left.md",
+    "updatedAt": "2026-06-21T07:05:24.422Z"
+  }
+}

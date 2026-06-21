@@ -13,6 +13,11 @@ async function main() {
   const manifest = await readAssetManifest(
     `remotion/${slug}/remotionhub.asset.json`,
   )
+  const componentName = manifest.compositionId
+  const defaultPropsName =
+    componentName.charAt(0).toLowerCase() +
+    componentName.slice(1) +
+    'DefaultProps'
   const propsTable = manifest.propsSchema
     .map(
       (prop) =>
@@ -27,22 +32,22 @@ Reusable Remotion component migrated from ${manifest.sourceUrl}.
 
 ## Usage
 
-Copy \`src/CardAvatar.tsx\` into your Remotion project and register it in your composition root.
+Copy \`src/${componentName}.tsx\` into your Remotion project and register it in your composition root.
 
 \`\`\`tsx
 import { Composition } from 'remotion'
-import { CardAvatar, cardAvatarDefaultProps } from './CardAvatar'
+import { ${componentName}, ${defaultPropsName} } from './${componentName}'
 
 export function RemotionRoot() {
   return (
     <Composition
-      id="CardAvatar"
-      component={CardAvatar}
+      id="${componentName}"
+      component={${componentName}}
       durationInFrames={120}
       fps={30}
       width={1920}
       height={1080}
-      defaultProps={cardAvatarDefaultProps}
+      defaultProps={${defaultPropsName}}
     />
   )
 }
@@ -52,7 +57,7 @@ export function RemotionRoot() {
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-${propsTable}
+| ${propsTable} |
 
 ## Extra Dependencies
 

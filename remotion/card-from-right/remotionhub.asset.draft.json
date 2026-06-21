@@ -1,0 +1,28 @@
+{
+  "slug": "card-from-right",
+  "displayName": "Card From Right",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-from-right",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-right/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-right/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-right/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-right/thumb.jpg",
+  "entryPoint": "src/CardFromRight.tsx",
+  "compositionId": "CardFromRight",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的右滑入字卡组件（文件：CardFromRight.tsx），请帮我做以下调整： 1. 把姓名从 \"Alex Johnson\" 改成「___」 2. 把头衔从 \"Lead Engineer\" 改成「___」 3. 把右侧强调线的颜色从橘色 #f97316 改成「___」 4. 把头衔文字颜色从淡橘 #fdba74 改成「___」 5. 把背景色块从深蓝黑 rgba(15,23,42,0.92) 改成「___」 6. 把滑入速度调整：想更快请把 stiffness 从 140 改大（例如 200）；想更慢改小（例如 80） 请保留原本的从右滑入效果与文字靠右对齐，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-from-right.md",
+    "updatedAt": "2026-06-21T07:03:31.902Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "card-from-right",
+  "displayName": "Card From Right",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-from-right",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-right/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-from-right/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-from-right/5b2b01c8263e-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-from-right/bd1fb1c2e023-thumb.jpg",
+  "entryPoint": "src/CardFromRight.tsx",
+  "compositionId": "CardFromRight",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardFromRight Remotion component by setting the name, title, right highlight line color, title text color, background color, and animation stiffness while preserving the slide-in animation from the right and right text alignment.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Alex Johnson",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Lead Engineer",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "lineColor",
+      "type": "string",
+      "defaultValue": "#f97316",
+      "description": "CSS color for the right highlight line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#fdba74",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "rgba(15, 23, 42, 0.92)",
+      "description": "CSS color for the card background block."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Spring stiffness for the slide-in animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-from-right.md",
+    "updatedAt": "2026-06-21T07:04:10.558Z"
+  }
+}
