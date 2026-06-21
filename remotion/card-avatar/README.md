@@ -1,6 +1,6 @@
 # Card Avatar
 
-![Preview](https://assets.remotionhub.ai/showcase/card-avatar/15c7ad983dc4-thumb.jpg)
+![Preview](https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-avatar/15c7ad983dc4-thumb.jpg)
 
 Reusable Remotion component migrated from https://remotionlab.com/showcase/card-avatar.
 

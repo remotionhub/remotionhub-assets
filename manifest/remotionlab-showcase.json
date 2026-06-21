@@ -2,11 +2,10 @@
   "cases": [
     {
       "slug": "card-avatar",
-      "status": "blocked",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/card-avatar.md",
       "assetPath": "remotion/card-avatar",
-      "updatedAt": "2026-06-20T12:16:17.000Z",
-      "blockedReason": "External media availability is pending because real upload credentials are not configured for assets.remotionhub.ai."
+      "updatedAt": "2026-06-21T04:20:14.669Z"
     }
   ]
 }
