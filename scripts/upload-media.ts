@@ -5,14 +5,16 @@ import {
   type AssetManifest,
   type Inventory,
   inventorySchema,
+  readAssetManifest,
   readDraftAssetManifest,
   writeAssetManifest,
 } from './lib/assetManifest'
 import {
   buildObjectKey,
-  createS3ClientFromEnv,
+  createUploadTargetFromEnv,
   downloadMedia,
   isSourceSiteMediaUrl,
+  type MediaUploadTarget,
   sha256,
   uploadMediaObject,
 } from './lib/media'
@@ -52,8 +54,52 @@ async function writeInventory(pathname: string, value: unknown) {
   await fs.writeFile(pathname, `${JSON.stringify(value, null, 2)}\n`, 'utf8')
 }
 
+async function readExistingAssetManifest(pathname: string) {
+  try {
+    return await readAssetManifest(pathname)
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      return null
+    }
+
+    throw error
+  }
+}
+
+async function loadLocalEnv(cwd: string) {
+  const envPath = path.join(cwd, '.env.local')
+
+  try {
+    const raw = await fs.readFile(envPath, 'utf8')
+    for (const line of raw.split('\n')) {
+      const trimmed = line.trim()
+      if (!trimmed || trimmed.startsWith('#')) {
+        continue
+      }
+
+      const separator = trimmed.indexOf('=')
+      if (separator === -1) {
+        continue
+      }
+
+      const key = trimmed.slice(0, separator).trim()
+      const value = trimmed
+        .slice(separator + 1)
+        .trim()
+        .replace(/^["']|["']$/g, '')
+      process.env[key] ??= value
+    }
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw error
+    }
+  }
+}
+
 function resolvePublicBaseUrl(dryRun: boolean) {
-  const configured = process.env.ASSETS_PUBLIC_BASE_URL?.trim()
+  const configured =
+    process.env.OSS_PUBLIC_BASE_URL?.trim() ??
+    process.env.ASSETS_PUBLIC_BASE_URL?.trim()
 
   if (configured) {
     return configured
@@ -64,7 +110,7 @@ function resolvePublicBaseUrl(dryRun: boolean) {
   }
 
   throw new Error(
-    'ASSETS_PUBLIC_BASE_URL is required for real uploads and media-mirrored status.',
+    'OSS_PUBLIC_BASE_URL or ASSETS_PUBLIC_BASE_URL is required for real uploads and media-mirrored status.',
   )
 }
 
@@ -73,16 +119,14 @@ function resolveUploadTarget(dryRun: boolean) {
     return null
   }
 
-  const client = createS3ClientFromEnv()
-  const bucket = process.env.ASSETS_R2_BUCKET
-
-  if (!client || !bucket) {
+  const target = createUploadTargetFromEnv()
+  if (!target) {
     throw new Error(
-      'R2 credentials and ASSETS_R2_BUCKET are required for real uploads.',
+      'OSS credentials (OSS_ACCESS_KEY_ID, OSS_ACCESS_KEY_SECRET, OSS_BUCKET, OSS_REGION) or R2 credentials are required for real uploads.',
     )
   }
 
-  return { client, bucket }
+  return target
 }
 
 async function mirrorOne(args: {
@@ -90,10 +134,7 @@ async function mirrorOne(args: {
   url: string
   publicBaseUrl: string
   dryRun: boolean
-  uploadTarget: {
-    client: NonNullable<ReturnType<typeof createS3ClientFromEnv>>
-    bucket: string
-  } | null
+  uploadTarget: MediaUploadTarget | null
 }) {
   if (!isSourceSiteMediaUrl(args.url)) {
     throw new Error(`Unsupported source media URL: ${args.url}`)
@@ -107,8 +148,7 @@ async function mirrorOne(args: {
 
   if (args.uploadTarget) {
     await uploadMediaObject({
-      client: args.uploadTarget.client,
-      bucket: args.uploadTarget.bucket,
+      target: args.uploadTarget,
       key,
       body,
       contentType: contentTypeFor(filename),
@@ -125,6 +165,8 @@ export async function runMediaMirror(options?: {
   now?: () => string
 }) {
   const cwd = options?.cwd ?? process.cwd()
+  await loadLocalEnv(cwd)
+
   const slug = options?.slug ?? readArg('slug') ?? 'card-avatar'
   const dryRun = options?.dryRun ?? process.argv.includes('--dry-run')
   const publicBaseUrl = resolvePublicBaseUrl(dryRun)
@@ -138,6 +180,8 @@ export async function runMediaMirror(options?: {
   const finalPath = path.join(cwd, 'remotion', slug, 'remotionhub.asset.json')
   const inventoryPath = path.join(cwd, INVENTORY_PATH)
   const raw = await readDraftAssetManifest(draftPath)
+  const existing = await readExistingAssetManifest(finalPath)
+  const baseManifest = existing ?? raw
   const updatedAt = options?.now?.() ?? new Date().toISOString()
 
   const preview = await mirrorOne({
@@ -159,17 +203,19 @@ export async function runMediaMirror(options?: {
     : 'media-mirrored'
 
   const nextManifest: AssetManifest = {
-    ...raw,
+    ...baseManifest,
     previewUrl: preview.targetUrl,
     thumbnailUrl: thumbnail.targetUrl,
     migration: {
-      ...raw.migration,
+      sourceFile: baseManifest.migration.sourceFile,
       status: migrationStatus,
       updatedAt,
     },
   }
 
-  await writeAssetManifest(finalPath, nextManifest)
+  if (!dryRun) {
+    await writeAssetManifest(finalPath, nextManifest)
+  }
 
   if (!dryRun) {
     const inventory = await readInventory(inventoryPath)

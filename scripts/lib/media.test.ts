@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   buildObjectKey,
+  createUploadTargetFromEnv,
   downloadMedia,
   isSourceSiteMediaUrl,
   sha256,
@@ -19,6 +20,22 @@ describe('media helpers', () => {
     expect(buildObjectKey('card-avatar', 'preview.mp4', 'abc123')).toBe(
       'showcase/card-avatar/abc123-preview.mp4',
     )
+  })
+
+  it('creates an OSS upload target from OSS environment variables', () => {
+    const originalEnv = { ...process.env }
+
+    try {
+      process.env.OSS_ACCESS_KEY_ID = 'test-access-key-id'
+      process.env.OSS_ACCESS_KEY_SECRET = 'test-access-key-secret'
+      process.env.OSS_BUCKET = 'remotionhub'
+      process.env.OSS_REGION = 'oss-cn-shenzhen'
+      process.env.OSS_ENDPOINT = 'https://oss-cn-shenzhen.aliyuncs.com'
+
+      expect(createUploadTargetFromEnv()?.provider).toBe('oss')
+    } finally {
+      process.env = originalEnv
+    }
   })
 
   it('retries transient download failures before succeeding', async () => {

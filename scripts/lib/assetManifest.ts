@@ -23,7 +23,12 @@ const sourceSiteMediaUrlSchema = httpsUrlSchema.refine(
 const remotionHubMediaUrlSchema = httpsUrlSchema.refine(
   (value) => {
     const url = new URL(value)
-    return url.hostname === 'assets.remotionhub.ai' && url.pathname.length > 1
+    return (
+      [
+        'assets.remotionhub.ai',
+        'remotionhub.oss-cn-shenzhen.aliyuncs.com',
+      ].includes(url.hostname) && url.pathname.length > 1
+    )
   },
   { message: 'Published media URLs must be RemotionHub-controlled.' },
 )

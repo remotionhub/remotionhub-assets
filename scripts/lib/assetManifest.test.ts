@@ -77,6 +77,20 @@ describe('asset manifest schema', () => {
     )
   })
 
+  it('accepts RemotionHub-controlled OSS media URLs', () => {
+    const parsed = assetManifestSchema.parse({
+      ...baseManifest,
+      previewUrl:
+        'https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-avatar/preview.mp4',
+      thumbnailUrl:
+        'https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-avatar/thumb.jpg',
+    })
+
+    expect(parsed.previewUrl).toBe(
+      'https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-avatar/preview.mp4',
+    )
+  })
+
   it('rejects third-party preview media URLs', () => {
     expect(() =>
       assetManifestSchema.parse({
@@ -92,6 +106,16 @@ describe('asset manifest schema', () => {
         ...baseManifest,
         previewUrl:
           'https://another-bucket.r2.dev/showcase/card-avatar/preview.mp4',
+      }),
+    ).toThrow(/RemotionHub-controlled/)
+  })
+
+  it('rejects non-canonical OSS preview media URLs', () => {
+    expect(() =>
+      assetManifestSchema.parse({
+        ...baseManifest,
+        previewUrl:
+          'https://other-bucket.oss-cn-shenzhen.aliyuncs.com/showcase/card-avatar/preview.mp4',
       }),
     ).toThrow(/RemotionHub-controlled/)
   })
