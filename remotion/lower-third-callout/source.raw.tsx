@@ -8,14 +8,14 @@ import {
 import React from "react";
 
 // Subject point (upper area — what's being annotated)
-const DOT-X = 700;
-const DOT-Y = 310;
+const DOT_X = 700;
+const DOT_Y = 310;
 // Text box anchor (lower third — where the label sits)
-const BOX-X = 860;
-const BOX-Y = 820;
+const BOX_X = 860;
+const BOX_Y = 820;
 
-const LINE-LEN = Math.sqrt((BOX-X - DOT-X) ** 2 + (BOX-Y - DOT-Y) ** 2);
-const ANGLE = (Math.atan2(BOX-Y - DOT-Y, BOX-X - DOT-X) * 180) / Math.PI;
+const LINE_LEN = Math.sqrt((BOX_X - DOT_X) ** 2 + (BOX_Y - DOT_Y) ** 2);
+const ANGLE = (Math.atan2(BOX_Y - DOT_Y, BOX_X - DOT_X) * 180) / Math.PI;
 
 export const LowerThirdCallout: React.FC = () => {
   const frame = useCurrentFrame();
@@ -24,7 +24,7 @@ export const LowerThirdCallout: React.FC = () => {
   const lineProgress = spring({ frame, fps, config: { damping: 25, stiffness: 150 } });
   const boxProgress = spring({ frame: frame - 15, fps, config: { damping: 14, stiffness: 200 } });
 
-  const lineWidth = interpolate(lineProgress, [0, 1], [0, LINE-LEN]);
+  const lineWidth = interpolate(lineProgress, [0, 1], [0, LINE_LEN]);
   const dotOpacity = interpolate(lineProgress, [0, 0.2], [0, 1], { extrapolateRight: "clamp" });
   const boxScale = interpolate(boxProgress, [0, 1], [0, 1]);
 
@@ -34,8 +34,8 @@ export const LowerThirdCallout: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          left: DOT-X - 8,
-          top: DOT-Y - 8,
+          left: DOT_X - 8,
+          top: DOT_Y - 8,
           width: 16,
           height: 16,
           borderRadius: "50%",
@@ -47,8 +47,8 @@ export const LowerThirdCallout: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          left: DOT-X,
-          top: DOT-Y,
+          left: DOT_X,
+          top: DOT_Y,
           width: lineWidth,
           height: 2,
           background: "#f59e0b",
@@ -60,8 +60,8 @@ export const LowerThirdCallout: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          left: BOX-X + 8,
-          top: BOX-Y - 28,
+          left: BOX_X + 8,
+          top: BOX_Y - 28,
           transform: `scale(${boxScale})`,
           transformOrigin: "left center",
           background: "#f59e0b",
