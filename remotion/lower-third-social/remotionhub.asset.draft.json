@@ -1,0 +1,28 @@
+{
+  "slug": "lower-third-social",
+  "displayName": "Lower Third Social",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-social",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-social/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-social/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-social/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-social/thumb.jpg",
+  "entryPoint": "src/LowerThirdSocial.tsx",
+  "compositionId": "LowerThirdSocial",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的社群帐号下三分之一组件（文件：LowerThirdSocial.tsx），请帮我做以下调整： 1. 把姓名从 \"John Doe\" 改成「___」 2. 把三个社群平台的标签文字（label）从 𝕏/in/▶ 改成「___」/「___」/「___」（可用 emoji 或英文缩写） 3. 把三个平台的帐号名称从 @johndoe / john-doe / JohnDoeTV 改成「___」/「___」/「___」 4. 把三个平台的背景色从黑/蓝/红（#000000 / #0a66c2 / #cc0000）改成「___」/「___」/「___」 5. 把每个平台标签的出场间隔从 8 帧改成 ___ 帧 6. 如果只需要两个或四个平台，可以直接修改 PLATFORMS 阵列的长度，同时新增或删除对应的 spring 变数（p0、p1...） 请保留原本的依序弹出效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-social.md",
+    "updatedAt": "2026-06-21T12:37:49.281Z"
+  }
+}

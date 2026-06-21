@@ -1,0 +1,65 @@
+{
+  "slug": "lower-third-line-expand",
+  "displayName": "Lower Third Line Expand",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-line-expand",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-line-expand/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-line-expand/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-line-expand/a52a64ac067b-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-line-expand/b9ca089bcbf2-thumb.jpg",
+  "entryPoint": "src/LowerThirdLineExpand.tsx",
+  "compositionId": "LowerThirdLineExpand",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the LowerThirdLineExpand Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the line expanding and text unfolding animation.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Chief Executive Officer",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#f59e0b",
+      "description": "CSS color for the expanding horizontal line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#fcd34d",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "transparent",
+      "description": "CSS color for the card background."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 180,
+      "description": "Spring stiffness for the horizontal line expanding animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-line-expand.md",
+    "updatedAt": "2026-06-21T12:41:49.955Z"
+  }
+}

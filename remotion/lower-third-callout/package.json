@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/lower-third-callout",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx LowerThirdCallout out/lower-third-callout.mp4"
+  },
+  "dependencies": {}
+}

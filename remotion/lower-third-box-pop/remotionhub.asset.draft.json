@@ -1,0 +1,28 @@
+{
+  "slug": "lower-third-box-pop",
+  "displayName": "Lower Third Box Pop",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-box-pop",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-box-pop/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-box-pop/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-box-pop/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-box-pop/thumb.jpg",
+  "entryPoint": "src/LowerThirdBoxPop.tsx",
+  "compositionId": "LowerThirdBoxPop",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的方框弹出下三分之一组件（文件：LowerThirdBoxPop.tsx），请帮我做以下调整： 1. 把姓名从 \"Alex Chen\" 改成「___」 2. 把头衔从 \"Lead Engineer\" 改成「___」 3. 把色块背景色从紫色 #7c3aed 改成「___」 4. 把头衔文字颜色从淡紫 #ddd6fe 改成「___」 5. 把弹跳感调整：想更弹改小 damping（目前 12，试试 8-10）；想更稳定改大（试试 18-25） 6. 把色块的 padding 从上下 14px / 左右 24px~36px 改成 ___px 请保留原本的从左下角弹出展开效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-box-pop.md",
+    "updatedAt": "2026-06-21T12:37:47.222Z"
+  }
+}

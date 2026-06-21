@@ -1,0 +1,77 @@
+{
+  "slug": "lower-third-social",
+  "displayName": "Lower Third Social",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-social",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-social/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-social/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-social/69ee00cecfe2-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-social/794eea2604b0-thumb.jpg",
+  "entryPoint": "src/LowerThirdSocial.tsx",
+  "compositionId": "LowerThirdSocial",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the LowerThirdSocial Remotion component by setting the name, title, handle, platform, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the social tag pop animation.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "John Doe",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Developer",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "handle",
+      "type": "string",
+      "defaultValue": "@johndoe",
+      "description": "Social platform handle."
+    },
+    {
+      "name": "platform",
+      "type": "string",
+      "defaultValue": "𝕏",
+      "description": "Social platform identifier."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#000000",
+      "description": "CSS color for the social platform background."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color for the social handle text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "#1f2937",
+      "description": "CSS color for the container background."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 120,
+      "description": "Spring stiffness for the slide-in name animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-social.md",
+    "updatedAt": "2026-06-21T12:42:09.972Z"
+  }
+}

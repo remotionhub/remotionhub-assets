@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/lower-third-line-expand",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx LowerThirdLineExpand out/lower-third-line-expand.mp4"
+  },
+  "dependencies": {}
+}

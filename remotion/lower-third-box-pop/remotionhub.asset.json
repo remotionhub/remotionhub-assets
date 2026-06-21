@@ -1,0 +1,65 @@
+{
+  "slug": "lower-third-box-pop",
+  "displayName": "Lower Third Box Pop",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-box-pop",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-box-pop/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-box-pop/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-box-pop/b79809a13e2d-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-box-pop/4df2b1855220-thumb.jpg",
+  "entryPoint": "src/LowerThirdBoxPop.tsx",
+  "compositionId": "LowerThirdBoxPop",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the LowerThirdBoxPop Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the left-bottom scaling pop-up effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Alex Chen",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Lead Engineer",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "Accent CSS color."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#ddd6fe",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "#7c3aed",
+      "description": "CSS color for the pop-up background block."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 200,
+      "description": "Spring stiffness for the pop-up scale animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-box-pop.md",
+    "updatedAt": "2026-06-21T12:41:33.814Z"
+  }
+}

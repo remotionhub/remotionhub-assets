@@ -17,5 +17,6 @@
     "remotion/**/*.ts",
     "remotion/**/*.tsx",
     "vitest.config.ts"
-  ]
+  ],
+  "exclude": ["remotion/**/source.raw.tsx"]
 }

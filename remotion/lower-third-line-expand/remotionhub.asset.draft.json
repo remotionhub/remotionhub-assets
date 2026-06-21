@@ -1,0 +1,28 @@
+{
+  "slug": "lower-third-line-expand",
+  "displayName": "Lower Third Line Expand",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-line-expand",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-line-expand/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-line-expand/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-line-expand/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-line-expand/thumb.jpg",
+  "entryPoint": "src/LowerThirdLineExpand.tsx",
+  "compositionId": "LowerThirdLineExpand",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的线条展开下三分之一组件（文件：LowerThirdLineExpand.tsx），请帮我做以下调整： 1. 把姓名从 \"Jane Smith\" 改成「___」 2. 把头衔从 \"Chief Executive Officer\" 改成「___」 3. 把横线颜色从琥珀色 #f59e0b 改成「___」 4. 把头衔文字颜色从淡黄 #fcd34d 改成「___」 5. 把头衔的字母间距从 0.1em 改成 ___em（越大越稀疏，适合全大写头衔） 6. 把横线最终长度从 480px 改成 ___px 请保留原本的线条展开 → 姓名/头衔上下出现的效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-line-expand.md",
+    "updatedAt": "2026-06-21T12:37:48.092Z"
+  }
+}
