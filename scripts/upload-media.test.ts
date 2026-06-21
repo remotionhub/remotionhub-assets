@@ -272,6 +272,27 @@ describe('runMediaMirror', () => {
     const tempDir = await makeTempDir()
     await writeWorkspace(tempDir)
     await writeExistingFinalManifest(tempDir)
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'remotionlab-showcase.json'),
+      `${JSON.stringify(
+        {
+          cases: [
+            {
+              slug: 'card-avatar',
+              status: 'blocked',
+              sourceFile: '/tmp/remotionlab/案例/card-avatar.md',
+              assetPath: 'remotion/card-avatar',
+              blockedReason:
+                'External media availability is pending because real upload credentials are not configured.',
+              updatedAt: '2026-06-20T07:12:52.250Z',
+            },
+          ],
+        },
+        null,
+        2,
+      )}\n`,
+      'utf8',
+    )
     process.env.ASSETS_PUBLIC_BASE_URL = 'https://assets.remotionhub.ai'
     createUploadTargetFromEnvMock.mockReturnValue({
       provider: 'r2',
@@ -306,6 +327,7 @@ describe('runMediaMirror', () => {
       path.join(tempDir, 'manifest', 'remotionlab-showcase.json'),
     )
     expect(inventory.cases[0].status).toBe('media-mirrored')
+    expect(inventory.cases[0].blockedReason).toBeUndefined()
     expect(inventory.cases[0].updatedAt).toBe('2026-06-20T12:34:56.000Z')
   })
 

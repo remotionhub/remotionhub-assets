@@ -114,9 +114,13 @@ export async function uploadMediaObject(args: {
   contentType: string
 }) {
   if (args.target.provider === 'oss') {
+    const objectAcl = process.env.OSS_OBJECT_ACL?.trim()
     await args.target.client.put(args.key, args.body, {
       mime: args.contentType,
-      headers: { 'Content-Type': args.contentType },
+      headers: {
+        'Content-Type': args.contentType,
+        ...(objectAcl ? { 'x-oss-object-acl': objectAcl } : {}),
+      },
     })
     return
   }

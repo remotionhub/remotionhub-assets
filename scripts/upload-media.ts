@@ -223,8 +223,10 @@ export async function runMediaMirror(options?: {
       cases: inventory.cases.map((entry) =>
         entry.slug === slug
           ? {
-              ...entry,
+              slug: entry.slug,
               status: migrationStatus,
+              sourceFile: entry.sourceFile,
+              assetPath: entry.assetPath,
               updatedAt,
             }
           : entry,

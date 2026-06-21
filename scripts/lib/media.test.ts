@@ -1,10 +1,11 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import {
   buildObjectKey,
   createUploadTargetFromEnv,
   downloadMedia,
   isSourceSiteMediaUrl,
   sha256,
+  uploadMediaObject,
 } from './media'
 
 describe('media helpers', () => {
@@ -33,6 +34,64 @@ describe('media helpers', () => {
       process.env.OSS_ENDPOINT = 'https://oss-cn-shenzhen.aliyuncs.com'
 
       expect(createUploadTargetFromEnv()?.provider).toBe('oss')
+    } finally {
+      process.env = originalEnv
+    }
+  })
+
+  it('uploads to OSS without object ACL by default', async () => {
+    const put = vi.fn(async () => undefined)
+
+    await uploadMediaObject({
+      target: {
+        provider: 'oss',
+        client: { put },
+      },
+      key: 'showcase/card-avatar/preview.mp4',
+      body: Buffer.from('preview-media'),
+      contentType: 'video/mp4',
+    })
+
+    expect(put).toHaveBeenCalledWith(
+      'showcase/card-avatar/preview.mp4',
+      Buffer.from('preview-media'),
+      {
+        mime: 'video/mp4',
+        headers: {
+          'Content-Type': 'video/mp4',
+        },
+      },
+    )
+  })
+
+  it('sets OSS object ACL when explicitly configured', async () => {
+    const originalEnv = { ...process.env }
+    const put = vi.fn(async () => undefined)
+
+    try {
+      process.env.OSS_OBJECT_ACL = 'public-read'
+
+      await uploadMediaObject({
+        target: {
+          provider: 'oss',
+          client: { put },
+        },
+        key: 'showcase/card-avatar/preview.mp4',
+        body: Buffer.from('preview-media'),
+        contentType: 'video/mp4',
+      })
+
+      expect(put).toHaveBeenCalledWith(
+        'showcase/card-avatar/preview.mp4',
+        Buffer.from('preview-media'),
+        {
+          mime: 'video/mp4',
+          headers: {
+            'Content-Type': 'video/mp4',
+            'x-oss-object-acl': 'public-read',
+          },
+        },
+      )
     } finally {
       process.env = originalEnv
     }
