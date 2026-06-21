@@ -1,0 +1,28 @@
+{
+  "slug": "card-split",
+  "displayName": "Card Split",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-split",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-split/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-split/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-split/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-split/thumb.jpg",
+  "entryPoint": "src/CardSplit.tsx",
+  "compositionId": "CardSplit",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的分裂展开字卡组件（文件：CardSplit.tsx），请帮我做以下调整： 1. 把姓名从 \"David Kim\" 改成「___」 2. 把头衔从 \"Brand Strategist\" 改成「___」 3. 把姓名色块背景从深紫 rgba(46,16,101,0.95) 改成「___」 4. 把头衔色块背景从紫 rgba(88,28,135,0.90) 改成「___」 5. 把头衔文字颜色从淡紫 #d8b4fe 改成「___」 6. 调整分裂幅度：想分得更开请把 splitY 的插值终点从 45 改大；想缩小改小 请保留原本的滑入后分裂效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-split.md",
+    "updatedAt": "2026-06-21T12:37:46.367Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "card-glass",
+  "displayName": "Card Glass",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-glass",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-glass/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-glass/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-glass/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-glass/thumb.jpg",
+  "entryPoint": "src/CardGlass.tsx",
+  "compositionId": "CardGlass",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的毛玻璃字卡组件（文件：CardGlass.tsx），请帮我做以下调整： 1. 把姓名从 \"Jane Smith\" 改成「___」 2. 把头衔从 \"Creative Director\" 改成「___」 3. 把背景渐层从紫蓝（#7c3aed 到 #2563eb）改成「___」 4. 调整毛玻璃模糊程度：想更模糊请把 blur(20px) 改大；想更透明清晰改小 5. 调整毛玻璃透明度：把 rgba(255,255,255,0.12) 的 0.12 改大可变得不透明，改小更透明 6. 调整上升速度：想更快请把 stiffness 从 120 改大；想更慢改小 请保留毛玻璃质感与升起效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-glass.md",
+    "updatedAt": "2026-06-21T12:37:46.061Z"
+  }
+}

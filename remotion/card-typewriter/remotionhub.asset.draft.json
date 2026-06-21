@@ -1,0 +1,28 @@
+{
+  "slug": "card-typewriter",
+  "displayName": "Card Typewriter",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-typewriter",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-typewriter/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-typewriter/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-typewriter/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-typewriter/thumb.jpg",
+  "entryPoint": "src/CardTypewriter.tsx",
+  "compositionId": "CardTypewriter",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的打字机字卡组件（文件：CardTypewriter.tsx），请帮我做以下调整： 1. 把姓名从 \"Jane Smith\" 改成「___」（修改顶部 NAME 常数） 2. 把头衔从 \"Creative Director\" 改成「___」（修改顶部 TITLE 常数） 3. 把背景色块从青蓝 #0e7490 改成「___」 4. 把头衔文字颜色从淡青 #a5f3fc 改成「___」 5. 调整打字速度：目前每 2 帧打一个字，把 `/ 2` 改成 `/ 1` 可加速，改成 `/ 3` 可减速 6. 调整姓名与头衔之间的停顿：目前停顿 20 帧（typeStart + NAME.length * 2 + 20），可改大或改小 请保留打字机效果与闪烁游标，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-typewriter.md",
+    "updatedAt": "2026-06-21T12:37:46.938Z"
+  }
+}
