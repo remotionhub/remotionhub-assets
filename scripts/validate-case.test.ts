@@ -195,4 +195,39 @@ describe('runValidation', () => {
       }),
     ).rejects.toThrow(/malformed Props table/i)
   })
+
+  it('rejects README Props tables with extra columns', async () => {
+    const tempDir = await makeTempDir()
+    await writeWorkspace(tempDir)
+    const readmePath = path.join(
+      tempDir,
+      'remotion',
+      'card-avatar',
+      'README.md',
+    )
+    await fs.writeFile(
+      readmePath,
+      [
+        '# Card Avatar',
+        '',
+        '## Props',
+        '',
+        '| Name | Type | Default | Description | Extra |',
+        '| --- | --- | --- | --- | --- |',
+        '| `name` | `string` | `Jane Smith` | Primary display name. | ignored |',
+        '',
+        '## Agent Prompt',
+      ].join('\n'),
+      'utf8',
+    )
+
+    await expect(
+      runValidation({
+        cwd: tempDir,
+        slug: 'card-avatar',
+        manifestOnly: false,
+        runCommand: vi.fn(),
+      }),
+    ).rejects.toThrow(/Props table must use columns/i)
+  })
 })

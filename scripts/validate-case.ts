@@ -81,6 +81,76 @@ function withValidatedInventory(
   })
 }
 
+function parseMarkdownTableCells(line: string) {
+  return line
+    .trim()
+    .replace(/^\|/, '')
+    .replace(/\|$/, '')
+    .split('|')
+    .map((cell) => cell.trim())
+}
+
+function isMarkdownTableRow(line: string) {
+  return line.trim().startsWith('|')
+}
+
+function isMarkdownSeparatorRow(cells: string[]) {
+  return cells.every((cell) => /^:?-{3,}:?$/.test(cell))
+}
+
+function assertValidPropsTable(readme: string, slug: string) {
+  const lines = readme.split('\n')
+  const propsIndex = lines.findIndex((line) => line.startsWith('## Props'))
+  if (propsIndex === -1) {
+    return
+  }
+
+  const tableRows: string[] = []
+  for (let index = propsIndex + 1; index < lines.length; index++) {
+    const line = lines[index].trim()
+    if (line.startsWith('#')) {
+      break
+    }
+
+    if (isMarkdownTableRow(line)) {
+      tableRows.push(line)
+    }
+  }
+
+  if (tableRows.length === 0) {
+    return
+  }
+
+  const header = parseMarkdownTableCells(tableRows[0])
+  const expectedHeader = ['Name', 'Type', 'Default', 'Description']
+  if (header.some((cell) => cell.length === 0)) {
+    throw new Error(`README for ${slug} has a malformed Props table.`)
+  }
+
+  if (JSON.stringify(header) !== JSON.stringify(expectedHeader)) {
+    throw new Error(
+      `README for ${slug} Props table must use columns: ${expectedHeader.join(', ')}.`,
+    )
+  }
+
+  for (const row of tableRows.slice(1)) {
+    const cells = parseMarkdownTableCells(row)
+    if (cells.length !== expectedHeader.length) {
+      throw new Error(
+        `README for ${slug} Props table must use columns: ${expectedHeader.join(', ')}.`,
+      )
+    }
+
+    if (isMarkdownSeparatorRow(cells)) {
+      continue
+    }
+
+    if (cells.some((cell) => cell.length === 0)) {
+      throw new Error(`README for ${slug} has a malformed Props table.`)
+    }
+  }
+}
+
 export async function runValidation(options: ValidationOptions = {}) {
   const cwd = options.cwd ?? process.cwd()
   const slug = options.slug ?? readArg('slug') ?? 'card-avatar'
@@ -114,23 +184,7 @@ export async function runValidation(options: ValidationOptions = {}) {
   if (!readme.includes('## Props') || !readme.includes('## Agent Prompt')) {
     throw new Error(`README for ${slug} is missing required sections.`)
   }
-
-  const lines = readme.split('\n')
-  const propsIndex = lines.findIndex((l) => l.startsWith('## Props'))
-  if (propsIndex !== -1) {
-    for (let i = propsIndex + 1; i < lines.length; i++) {
-      const line = lines[i].trim()
-      if (line.startsWith('#')) {
-        break
-      }
-      if (
-        line.startsWith('|') &&
-        (line.includes('||') || line.startsWith('| |') || line.endsWith('| |'))
-      ) {
-        throw new Error(`README for ${slug} has a malformed Props table.`)
-      }
-    }
-  }
+  assertValidPropsTable(readme, slug)
 
   if (manifestOnly) {
     return { slug, status: manifest.migration.status, manifestOnly: true }
