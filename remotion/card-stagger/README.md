@@ -33,6 +33,7 @@ export function RemotionRoot() {
 | --- | --- | --- | --- |
 | `name` | `string` | `Jane Smith` | Primary display name. |
 | `title` | `string` | `Creative Director` | Secondary title or role. |
+| `tagline` | `string` | `Remotion Studio · Product Team` | Third-line tagline text. |
 | `accentColor` | `string` | `#f97316` | CSS color for the left highlight line. |
 | `titleColor` | `string` | `#93c5fd` | CSS color for the title text. |
 | `cardBackgroundColor` | `string` | `#1e3a5f` | CSS color for the card background. |
@@ -45,7 +46,7 @@ None.
 ## Agent Prompt
 
 ```text
-Customize the CardStagger Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the staggered fade-in line effect.
+Customize the CardStagger Remotion component by setting the name, title, tagline, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the staggered fade-in line effect.
 ```
 
 ## Links

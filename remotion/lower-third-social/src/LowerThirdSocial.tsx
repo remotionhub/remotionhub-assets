@@ -72,14 +72,34 @@ export const LowerThirdSocial: React.FC<LowerThirdSocialProps> = ({
           style={{
             opacity: nameOpacity,
             transform: `translateX(${nameX}px)`,
-            fontSize: 38,
-            fontWeight: 700,
-            color: '#ffffff',
-            fontFamily: 'sans-serif',
-            background: cardBackgroundColor === '#1f2937' ? 'transparent' : cardBackgroundColor,
+            display: 'flex',
+            alignItems: 'baseline',
+            gap: 12,
           }}
         >
-          {name}
+          <span
+            style={{
+              fontSize: 38,
+              fontWeight: 700,
+              color: '#ffffff',
+              fontFamily: 'sans-serif',
+              background: cardBackgroundColor === '#1f2937' ? 'transparent' : cardBackgroundColor,
+            }}
+          >
+            {name}
+          </span>
+          {title && (
+            <span
+              style={{
+                fontSize: 18,
+                color: titleColor,
+                fontFamily: 'sans-serif',
+                fontWeight: 500,
+              }}
+            >
+              {title}
+            </span>
+          )}
         </div>
         <div style={{ display: 'flex', gap: 10 }}>
           <div

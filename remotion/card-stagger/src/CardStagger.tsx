@@ -50,6 +50,7 @@ const StaggerLine: React.FC<StaggerLineProps> = ({
 export type CardStaggerProps = {
   name: string
   title: string
+  tagline: string
   accentColor: string
   titleColor: string
   cardBackgroundColor: string
@@ -59,6 +60,7 @@ export type CardStaggerProps = {
 export const cardStaggerDefaultProps: CardStaggerProps = {
   name: 'Jane Smith',
   title: 'Creative Director',
+  tagline: 'Remotion Studio · Product Team',
   accentColor: '#f97316',
   titleColor: '#93c5fd',
   cardBackgroundColor: '#1e3a5f',
@@ -68,6 +70,7 @@ export const cardStaggerDefaultProps: CardStaggerProps = {
 export const CardStagger: React.FC<CardStaggerProps> = ({
   name,
   title,
+  tagline,
   accentColor,
   titleColor,
   cardBackgroundColor,
@@ -138,7 +141,7 @@ export const CardStagger: React.FC<CardStaggerProps> = ({
             fontSize={16}
             color="#64748b"
           >
-            Remotion Studio · Product Team
+            {tagline}
           </StaggerLine>
         </div>
       </div>

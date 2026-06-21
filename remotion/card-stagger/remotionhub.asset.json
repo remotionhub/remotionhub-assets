@@ -17,7 +17,7 @@
     "16:9"
   ],
   "license": "MIT",
-  "prompt": "Customize the CardStagger Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the staggered fade-in line effect.",
+  "prompt": "Customize the CardStagger Remotion component by setting the name, title, tagline, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the staggered fade-in line effect.",
   "propsSchema": [
     {
       "name": "name",
@@ -30,6 +30,12 @@
       "type": "string",
       "defaultValue": "Creative Director",
       "description": "Secondary title or role."
+    },
+    {
+      "name": "tagline",
+      "type": "string",
+      "defaultValue": "Remotion Studio · Product Team",
+      "description": "Third-line tagline text."
     },
     {
       "name": "accentColor",
