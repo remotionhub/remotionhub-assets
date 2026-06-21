@@ -31,9 +31,14 @@ export const CardWipe: React.FC<CardWipeProps> = ({
   const { fps } = useVideoConfig()
 
   // Linearly interpolate wipeProgress based on wipeDurationFrames
-  const wipeProgress = interpolate(frame, [0, wipeDurationFrames], [0, 1], {
-    extrapolateRight: 'clamp',
-  })
+  const wipeProgress = interpolate(
+    frame,
+    [0, Math.max(1, wipeDurationFrames)],
+    [0, 1],
+    {
+      extrapolateRight: 'clamp',
+    }
+  )
   
   const textProgress = spring({
     frame: frame - 15,
