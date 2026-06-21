@@ -1,0 +1,65 @@
+{
+  "slug": "card-scale",
+  "displayName": "Card Scale",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-scale",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-scale/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-scale/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-scale/f1c29b7eac90-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-scale/95a290715a5c-thumb.jpg",
+  "entryPoint": "src/CardScale.tsx",
+  "compositionId": "CardScale",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardScale Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the pop-up scaling effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Liam Park",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Full-Stack Developer",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#86efac",
+      "description": "Accent CSS color."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#86efac",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "rgba(5, 46, 22, 0.95)",
+      "description": "CSS color for the card background."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 200,
+      "description": "Spring stiffness for the pop-up scale animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-scale.md",
+    "updatedAt": "2026-06-21T12:40:53.128Z"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "card-outline",
+  "displayName": "Card Outline",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-outline",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-outline/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-outline/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-outline/218d3bc9424c-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-outline/12f867dc2fb7-thumb.jpg",
+  "entryPoint": "src/CardOutline.tsx",
+  "compositionId": "CardOutline",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardOutline Remotion component by setting the name, title, outlineColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the transparent outline border slide-in effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "outlineColor",
+      "type": "string",
+      "defaultValue": "#f59e0b",
+      "description": "CSS color for the border outline and left highlight line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#fcd34d",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "transparent",
+      "description": "CSS color for the card background."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Spring stiffness for the slide-in animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-outline.md",
+    "updatedAt": "2026-06-21T12:41:08.275Z"
+  }
+}
