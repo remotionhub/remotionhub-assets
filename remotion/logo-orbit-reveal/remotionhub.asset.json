@@ -1,0 +1,28 @@
+{
+  "slug": "logo-orbit-reveal",
+  "displayName": "Logo Orbit Reveal",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/logo-orbit-reveal",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-orbit-reveal/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-orbit-reveal/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/logo-orbit-reveal/e4f69902c4aa-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/logo-orbit-reveal/b21662ec1541-thumb.jpg",
+  "entryPoint": "src/LogoOrbitReveal.tsx",
+  "compositionId": "LogoOrbitReveal",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的轨道聚合 Logo 揭示动画组件（文件：LogoOrbitReveal.tsx），请帮我做以下调整： 1. 把中央图标渐层从靛蓝紫（#6366f1→#8b5cf6）改成你的品牌色组合 2. 把图标内的字母「V」改成你的品牌缩写（1 个大写字母，字型大小默认 60px） 3. 把三个轨道圆点的颜色从 ['#3b82f6','#8b5cf6','#ec4899'] 改成你的品牌色系 4. 把品牌名「Vertex」改成你的品牌名称（建议 1–2 个英文单字） 5. 把副标语「Motion by design.」改成你的品牌口号 6. 调整中央图标大小：默认直径 120px，可依品牌识别调整 7. 调整轨道半径：默认 100px，半径越大圆点旋转圈越宽 8. 调整旋转速度：默认 frame * 0.06 弧度，增大数值加快旋转 请保留序列动画结构（图标弹入→圆点旋转→聚合消失→品牌名登场→副标语淡现），只修改我指定的部分，然后把完整修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/logo-orbit-reveal.md",
+    "updatedAt": "2026-06-22T14:59:06.915Z"
+  }
+}

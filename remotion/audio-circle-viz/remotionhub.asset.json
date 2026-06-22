@@ -1,0 +1,28 @@
+{
+  "slug": "audio-circle-viz",
+  "displayName": "Audio Circle Viz",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/audio-circle-viz",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-circle-viz/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-circle-viz/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/audio-circle-viz/ac883b501ae3-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/audio-circle-viz/6c5b33e40fc4-thumb.jpg",
+  "entryPoint": "src/AudioCircleViz.tsx",
+  "compositionId": "AudioCircleViz",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的圆形频谱视觉化组件（文件：AudioCircleViz.tsx），请帮我做以下调整： 1. 把射线数量从 120 根改成「___」根 2. 把基础圆半径从 180 改成「___」 3. 把最大额外延伸长度从 160 改成「___」 4. 把中央图标从音符「♪」改成「___」（可以是任意文字或 emoji） 请保留原本的彩虹渐层与呼吸动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/audio-circle-viz.md",
+    "updatedAt": "2026-06-22T14:57:15.877Z"
+  }
+}

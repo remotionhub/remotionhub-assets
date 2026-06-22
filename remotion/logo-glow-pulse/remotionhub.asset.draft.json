@@ -1,0 +1,28 @@
+{
+  "slug": "logo-glow-pulse",
+  "displayName": "Logo Glow Pulse",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/logo-glow-pulse",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-glow-pulse/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-glow-pulse/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-glow-pulse/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-glow-pulse/thumb.jpg",
+  "entryPoint": "src/LogoGlowPulse.tsx",
+  "compositionId": "LogoGlowPulse",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的光晕脉冲 Logo 动画组件（文件：LogoGlowPulse.tsx），请帮我做以下调整： 1. 把主色渐层从 #7c3aed（电紫）→ #2563eb（电蓝）改成「___」→「___」 2. 把品牌缩写从 \"GX\" 改成「___」（建议 1-2 个字母） 3. 把品牌名从 \"GlowX\" 改成「___」 4. 把状态文字从 \"ONLINE\" 改成「___」（若不需要状态列可删除此区块） 5. 调整脉冲速度：默认 Math.sin(frame * 0.12)，数值越大脉冲越快 6. 调整菱形大小：主菱形默认 120×120px，光晕菱形 160×160px，可等比例修改 7. 背景改成非纯黑：可修改 background: \"#050505\" 为其他深色 请保留菱形 + 光晕脉冲的核心视觉结构，只修改我指定的部分，然后把完整修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/logo-glow-pulse.md",
+    "updatedAt": "2026-06-22T14:56:47.720Z"
+  }
+}

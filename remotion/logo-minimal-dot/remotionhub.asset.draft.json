@@ -1,0 +1,28 @@
+{
+  "slug": "logo-minimal-dot",
+  "displayName": "Logo Minimal Dot",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/logo-minimal-dot",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-minimal-dot/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-minimal-dot/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-minimal-dot/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-minimal-dot/thumb.jpg",
+  "entryPoint": "src/LogoMinimalDot.tsx",
+  "compositionId": "LogoMinimalDot",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的极简圆点 Logo 动画组件（文件：LogoMinimalDot.tsx），请帮我做以下调整： 1. 把品牌名从 \"Dot Studio\" 改成「___」 2. 把 tagline 从 \"Less. Better.\" 改成「___」（建议简短有力） 3. 把 icon 颜色从白色 #ffffff 改成「___」（同时修改内部斜线颜色为对比色） 4. 调整圆点最终直径：默认 120px，可修改 interpolate 目标值 5. 调整品牌名字重：默认 fontWeight 300（极细），可改 400（正常）或 500（中等） 6. 替换 icon 内部图形：可把三条斜线换成其他简单几何（如十字、对勾、圆弧等） 7. 调整整体水平位置：icon 中心默认在 960-160，可修改 iconCenterX 值 请保留圆点展开的核心视觉与分层动画序列，只修改我指定的部分，然后把完整修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/logo-minimal-dot.md",
+    "updatedAt": "2026-06-22T14:56:49.095Z"
+  }
+}

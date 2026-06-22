@@ -1,0 +1,28 @@
+{
+  "slug": "audio-pulse-ring",
+  "displayName": "Audio Pulse Ring",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/audio-pulse-ring",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-pulse-ring/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-pulse-ring/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/audio-pulse-ring/ff853ec415e5-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/audio-pulse-ring/cbe8bfbbde9f-thumb.jpg",
+  "entryPoint": "src/AudioPulseRing.tsx",
+  "compositionId": "AudioPulseRing",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的脉冲光环视觉化组件（文件：AudioPulseRing.tsx），请帮我做以下调整： 1. 把圆环数量从 6 个改成「___」个 2. 把脉冲间隔从 18 帧改成「___」帧（数值越小脉冲越密集） 3. 把最大扩散半径从 420 改成「___」 4. 把中央图标从「♫」改成「___」 5. 把主色调从科技蓝（#00d4ff）改成「___」 请保留原本的循环扩散动画与中央呼吸效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/audio-pulse-ring.md",
+    "updatedAt": "2026-06-22T14:57:23.618Z"
+  }
+}

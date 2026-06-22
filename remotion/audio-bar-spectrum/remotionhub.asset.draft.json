@@ -1,0 +1,28 @@
+{
+  "slug": "audio-bar-spectrum",
+  "displayName": "Audio Bar Spectrum",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/audio-bar-spectrum",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-bar-spectrum/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-bar-spectrum/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-bar-spectrum/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-bar-spectrum/thumb.jpg",
+  "entryPoint": "src/AudioBarSpectrum.tsx",
+  "compositionId": "AudioBarSpectrum",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的频谱长条视觉化组件（文件：AudioBarSpectrum.tsx），请帮我做以下调整： 1. 把长条数量从 20 根改成「___」根 2. 把最大长条高度从 420 改成「___」 3. 把标题从「频谱视觉化」改成「___」 4. 把长条颜色改成单一色系（例如全部蓝色系），色码请用「___」 请保留原本的 Math.sin 动画与倒影效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/audio-bar-spectrum.md",
+    "updatedAt": "2026-06-22T14:56:44.610Z"
+  }
+}

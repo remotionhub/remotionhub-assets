@@ -1,0 +1,28 @@
+{
+  "slug": "audio-waveform",
+  "displayName": "Audio Waveform",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/audio-waveform",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-waveform/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-waveform/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-waveform/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-waveform/thumb.jpg",
+  "entryPoint": "src/AudioWaveform.tsx",
+  "compositionId": "AudioWaveform",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的流动声波视觉化组件（文件：AudioWaveform.tsx），请帮我做以下调整： 1. 把第一层（最主要的）声波颜色从「#00d4ff」改成「___」 2. 把波形振幅从 80 改成「___」（数值越大波形越高） 3. 把背景颜色从「#030814」改成「___」 4. 把标题从「声波视觉化」改成「___」 请保留所有层次的叠加与发光效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/audio-waveform.md",
+    "updatedAt": "2026-06-22T14:56:46.006Z"
+  }
+}

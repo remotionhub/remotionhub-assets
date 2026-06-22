@@ -1,0 +1,28 @@
+{
+  "slug": "logo-icon-reveal",
+  "displayName": "Logo Icon Reveal",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/logo-icon-reveal",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-icon-reveal/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-icon-reveal/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-icon-reveal/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-icon-reveal/thumb.jpg",
+  "entryPoint": "src/LogoIconReveal.tsx",
+  "compositionId": "LogoIconReveal",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的图标揭示 Logo 动画组件（文件：LogoIconReveal.tsx），请帮我做以下调整： 1. 把图标渐层从蓝紫（#3b82f6→#8b5cf6）改成「___」（例如：橘红 #f97316→#ef4444） 2. 把图标内的 SVG 闪电路径改成你的品牌图标（保留 pathLength=\"100\" 与 strokeDashoffset 动画） 3. 把品牌名称从 \"Acme Studio\" 改成「___」 4. 把副标语从 \"Design · Build · Launch\" 改成「___」 5. 调整图标大小：默认 80×80px，圆角 16px，可依比例调整 6. 调整品牌名称字型大小（默认 52px）与字重（默认 700） 7. 调整弹入速度：stiffness 默认 200，想更弹跳改大（250），想更缓慢改小（120） 请保留序列动画结构（图标弹入→路径描绘→文字滑入→副标语淡现），只修改我指定的部分，然后把完整修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/logo-icon-reveal.md",
+    "updatedAt": "2026-06-22T14:56:48.411Z"
+  }
+}
