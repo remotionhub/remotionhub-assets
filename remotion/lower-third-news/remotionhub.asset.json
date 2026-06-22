@@ -1,0 +1,71 @@
+{
+  "slug": "lower-third-news",
+  "displayName": "Lower Third News",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-news",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-news/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-news/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-news/3cd491db34db-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-news/819a0e448ec6-thumb.jpg",
+  "entryPoint": "src/LowerThirdNews.tsx",
+  "compositionId": "LowerThirdNews",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the LowerThirdNews Remotion component by setting the name, title, segmentLabel, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the news live banner and rolling ticker animation.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "张伟明",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "现场记者",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "segmentLabel",
+      "type": "string",
+      "defaultValue": "LIVE",
+      "description": "Text displayed inside the live indicator tag."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#ef4444",
+      "description": "CSS color for the live indicator tag background."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#bfdbfe",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "#1d4ed8",
+      "description": "CSS color for the banner background block."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 100,
+      "description": "Stiffness configuration."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-news.md",
+    "updatedAt": "2026-06-21T12:41:59.975Z"
+  }
+}

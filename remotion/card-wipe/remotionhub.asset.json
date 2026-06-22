@@ -1,0 +1,65 @@
+{
+  "slug": "card-wipe",
+  "displayName": "Card Wipe",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-wipe",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-wipe/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-wipe/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-wipe/c6441635b928-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-wipe/832ed4f08e7b-thumb.jpg",
+  "entryPoint": "src/CardWipe.tsx",
+  "compositionId": "CardWipe",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardWipe Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and wipeDurationFrames while preserving the wipe-in clipping effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Sofia Rossi",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "UX Researcher",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#a5b4fc",
+      "description": "Accent CSS color."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#a5b4fc",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "rgba(49, 46, 129, 0.95)",
+      "description": "CSS color for the card background."
+    },
+    {
+      "name": "wipeDurationFrames",
+      "type": "number",
+      "defaultValue": 30,
+      "description": "Duration of the wipe effect in frames."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-wipe.md",
+    "updatedAt": "2026-06-21T12:41:03.309Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "lower-third-gradient-bar",
+  "displayName": "Lower Third Gradient Bar",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-gradient-bar",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-gradient-bar/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-gradient-bar/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-gradient-bar/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-gradient-bar/thumb.jpg",
+  "entryPoint": "src/LowerThirdGradientBar.tsx",
+  "compositionId": "LowerThirdGradientBar",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的渐层色带下三分之一组件（文件：LowerThirdGradientBar.tsx），请帮我做以下调整： 1. 把姓名从 \"Maria Torres\" 改成「___」 2. 把头衔从 \"Head of Innovation\" 改成「___」 3. 把左侧强调线的渐层色从青色→紫色（#06b6d4 → #8b5cf6）改成「___」→「___」 4. 把头衔文字颜色从淡青 #a5f3fc 改成「___」 5. 把色带背景渐层从青蓝→紫（rgba(6,182,212,0.18) → rgba(139,92,246,0.18)）改成对应你的强调线颜色 6. 把色带上边框颜色从半透明白 rgba(255,255,255,0.18) 改成「___」 请保留原本的从下方淡入上移效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-gradient-bar.md",
+    "updatedAt": "2026-06-21T12:37:47.804Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "card-outline",
+  "displayName": "Card Outline",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-outline",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-outline/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-outline/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-outline/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-outline/thumb.jpg",
+  "entryPoint": "src/CardOutline.tsx",
+  "compositionId": "CardOutline",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的外框描线字卡组件（文件：CardOutline.tsx），请帮我做以下调整： 1. 把姓名从 \"Jane Smith\" 改成「___」 2. 把头衔从 \"Creative Director\" 改成「___」 3. 把描边与左侧强调线的颜色从琥珀 #f59e0b 改成「___」 4. 把头衔文字颜色从淡金 #fcd34d 改成「___」 5. 调整描边粗细：把 border: \"3px solid ...\" 的 3px 改大可加粗；改小变细 6. 调整滑入速度：想更快请把 stiffness 从 140 改大；想更慢改小 请保留透明背景描框效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-outline.md",
+    "updatedAt": "2026-06-21T12:37:45.759Z"
+  }
+}

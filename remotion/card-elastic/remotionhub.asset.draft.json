@@ -1,0 +1,28 @@
+{
+  "slug": "card-elastic",
+  "displayName": "Card Elastic",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-elastic",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-elastic/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-elastic/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-elastic/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-elastic/thumb.jpg",
+  "entryPoint": "src/CardElastic.tsx",
+  "compositionId": "CardElastic",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的弹性滑入字卡组件（文件：CardElastic.tsx），请帮我做以下调整： 1. 把姓名从 \"Emma Torres\" 改成「___」 2. 把头衔从 \"Art Director\" 改成「___」 3. 把左侧细线颜色从淡粉 #fda4af 改成「___」 4. 把主色块背景从玫红 #e11d48 改成「___」 5. 把头衔文字颜色从淡粉 #fecdd3 改成「___」 6. 调整弹跳幅度：想弹更多请把 damping 从 8 改小（例如 4）；想更稳定改大（例如 15） 请保留原本的弹性滑入与文字缩放效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-elastic.md",
+    "updatedAt": "2026-06-21T12:37:44.642Z"
+  }
+}

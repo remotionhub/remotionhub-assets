@@ -1,0 +1,65 @@
+{
+  "slug": "card-elastic",
+  "displayName": "Card Elastic",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-elastic",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-elastic/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-elastic/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-elastic/b75d8d3a51f7-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-elastic/faf3b34d543a-thumb.jpg",
+  "entryPoint": "src/CardElastic.tsx",
+  "compositionId": "CardElastic",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardElastic Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the elastic slide-in effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Emma Torres",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Art Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#fda4af",
+      "description": "CSS color for the left highlight line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#fecdd3",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "#e11d48",
+      "description": "CSS color for the card background."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 180,
+      "description": "Spring stiffness for the slide-in animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-elastic.md",
+    "updatedAt": "2026-06-21T12:40:47.804Z"
+  }
+}

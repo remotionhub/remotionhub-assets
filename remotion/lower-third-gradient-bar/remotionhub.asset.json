@@ -1,0 +1,65 @@
+{
+  "slug": "lower-third-gradient-bar",
+  "displayName": "Lower Third Gradient Bar",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-gradient-bar",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-gradient-bar/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-gradient-bar/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-gradient-bar/bb338d09f242-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-gradient-bar/93985f8abb97-thumb.jpg",
+  "entryPoint": "src/LowerThirdGradientBar.tsx",
+  "compositionId": "LowerThirdGradientBar",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the LowerThirdGradientBar Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the full width bottom bar rising effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Maria Torres",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Head of Innovation",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#06b6d4",
+      "description": "Indicator highlight gradient start color."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#a5f3fc",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "rgba(6, 182, 212, 0.18)",
+      "description": "CSS color for the bar background gradient start."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 80,
+      "description": "Spring stiffness for the rising slide animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-gradient-bar.md",
+    "updatedAt": "2026-06-21T12:41:44.687Z"
+  }
+}

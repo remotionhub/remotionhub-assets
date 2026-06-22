@@ -1,0 +1,71 @@
+{
+  "slug": "card-stagger",
+  "displayName": "Card Stagger",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-stagger",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-stagger/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-stagger/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-stagger/34612e65ce92-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-stagger/0eb42d1af7ec-thumb.jpg",
+  "entryPoint": "src/CardStagger.tsx",
+  "compositionId": "CardStagger",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardStagger Remotion component by setting the name, title, tagline, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the staggered fade-in line effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "tagline",
+      "type": "string",
+      "defaultValue": "Remotion Studio · Product Team",
+      "description": "Third-line tagline text."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#f97316",
+      "description": "CSS color for the left highlight line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#93c5fd",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "#1e3a5f",
+      "description": "CSS color for the card background."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Spring stiffness for the main slide-in animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-stagger.md",
+    "updatedAt": "2026-06-21T12:40:58.173Z"
+  }
+}

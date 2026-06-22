@@ -1,0 +1,28 @@
+{
+  "slug": "card-two-tone",
+  "displayName": "Card Two Tone",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-two-tone",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-two-tone/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-two-tone/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-two-tone/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-two-tone/thumb.jpg",
+  "entryPoint": "src/CardTwoTone.tsx",
+  "compositionId": "CardTwoTone",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的双色调字卡组件（文件：CardTwoTone.tsx），请帮我做以下调整： 1. 把姓名从 \"Jane Smith\" 改成「___」 2. 把头衔从 \"Creative Director\" 改成「___」 3. 把左侧强调色块从橘色 #f97316 改成「___」 4. 把右侧主区块背景从深靛蓝 #1e1b4b 改成「___」 5. 把头衔文字颜色从淡橘 #fb923c 改成「___」 6. 调整左侧色块宽度：把 width: 80 改大可加宽；改小可缩窄 请保留双色调设计与左侧装饰线条，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-two-tone.md",
+    "updatedAt": "2026-06-21T12:37:46.654Z"
+  }
+}

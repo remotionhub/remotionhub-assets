@@ -1,0 +1,71 @@
+{
+  "slug": "card-glass",
+  "displayName": "Card Glass",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-glass",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-glass/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-glass/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-glass/b9cb4811709e-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-glass/66a1d6f2971f-thumb.jpg",
+  "entryPoint": "src/CardGlass.tsx",
+  "compositionId": "CardGlass",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardGlass Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, blurAmount, and animationStiffness while preserving the frosted glass rising effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#7c3aed",
+      "description": "Outer background gradient start color."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "rgba(255, 255, 255, 0.75)",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "rgba(255, 255, 255, 0.12)",
+      "description": "CSS color for the frosted glass background block."
+    },
+    {
+      "name": "blurAmount",
+      "type": "number",
+      "defaultValue": 20,
+      "description": "Backdrop blur amount in pixels."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 120,
+      "description": "Spring stiffness for the rising animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-glass.md",
+    "updatedAt": "2026-06-21T12:41:13.423Z"
+  }
+}

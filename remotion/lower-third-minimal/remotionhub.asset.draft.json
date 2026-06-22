@@ -1,0 +1,28 @@
+{
+  "slug": "lower-third-minimal",
+  "displayName": "Lower Third Minimal",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-minimal",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-minimal/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-minimal/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-minimal/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-minimal/thumb.jpg",
+  "entryPoint": "src/LowerThirdMinimal.tsx",
+  "compositionId": "LowerThirdMinimal",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的极简下三分之一组件（文件：LowerThirdMinimal.tsx），请帮我做以下调整： 1. 把姓名从 \"Sarah Park\" 改成「___」 2. 把头衔从 \"Creative Director\" 改成「___」 3. 把底线颜色从浅灰 #e4e4e7 改成「___」 4. 把头衔文字颜色从灰色 #a1a1aa 改成「___」 5. 把姓名字体大小从 44px 改成 ___px 6. 把底线最终长度从 320px 改成 ___px（建议和姓名文字宽度相近） 请保留原本的整体淡入上移效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-minimal.md",
+    "updatedAt": "2026-06-21T12:37:48.380Z"
+  }
+}

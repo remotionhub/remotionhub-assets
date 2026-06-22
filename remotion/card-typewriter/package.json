@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/card-typewriter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx CardTypewriter out/card-typewriter.mp4"
+  },
+  "dependencies": {}
+}

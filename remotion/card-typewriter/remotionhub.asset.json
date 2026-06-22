@@ -1,0 +1,65 @@
+{
+  "slug": "card-typewriter",
+  "displayName": "Card Typewriter",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-typewriter",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-typewriter/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-typewriter/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-typewriter/ff92cfc8e989-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-typewriter/2bc8c47aaf70-thumb.jpg",
+  "entryPoint": "src/CardTypewriter.tsx",
+  "compositionId": "CardTypewriter",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardTypewriter Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and charactersPerSecond while preserving the typewriter typing cursor effect.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color for the left indicator line and typing cursor."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#a5f3fc",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "#0e7490",
+      "description": "CSS color for the card background."
+    },
+    {
+      "name": "charactersPerSecond",
+      "type": "number",
+      "defaultValue": 15,
+      "description": "Typewriter typing speed in characters per second."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-typewriter.md",
+    "updatedAt": "2026-06-21T12:41:28.660Z"
+  }
+}

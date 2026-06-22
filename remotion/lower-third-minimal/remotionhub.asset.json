@@ -1,0 +1,65 @@
+{
+  "slug": "lower-third-minimal",
+  "displayName": "Lower Third Minimal",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-minimal",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-minimal/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-minimal/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-minimal/f4d8ec46c694-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-minimal/9a9a7d83da91-thumb.jpg",
+  "entryPoint": "src/LowerThirdMinimal.tsx",
+  "compositionId": "LowerThirdMinimal",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the LowerThirdMinimal Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the clean fading rise animation.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Sarah Park",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#e4e4e7",
+      "description": "CSS color for the horizontal separator line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#a1a1aa",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "transparent",
+      "description": "CSS color for the card background."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 80,
+      "description": "Spring stiffness for the rising animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-minimal.md",
+    "updatedAt": "2026-06-21T12:41:54.892Z"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/card-split",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx CardSplit out/card-split.mp4"
+  },
+  "dependencies": {}
+}

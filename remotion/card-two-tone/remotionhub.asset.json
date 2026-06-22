@@ -1,0 +1,71 @@
+{
+  "slug": "card-two-tone",
+  "displayName": "Card Two Tone",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-two-tone",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-two-tone/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-two-tone/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-two-tone/645199d0ec28-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-two-tone/373967feb129-thumb.jpg",
+  "entryPoint": "src/CardTwoTone.tsx",
+  "compositionId": "CardTwoTone",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the CardTwoTone Remotion component by setting the name, title, primaryColor, secondaryColor, textColor, titleColor, and animationStiffness while preserving the two-tone highlight structure.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Jane Smith",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Creative Director",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "primaryColor",
+      "type": "string",
+      "defaultValue": "#f97316",
+      "description": "CSS color for the left decorative block."
+    },
+    {
+      "name": "secondaryColor",
+      "type": "string",
+      "defaultValue": "#1e1b4b",
+      "description": "CSS color for the main right card background."
+    },
+    {
+      "name": "textColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color for the primary name text."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#fb923c",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Spring stiffness for the slide-in animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/card-two-tone.md",
+    "updatedAt": "2026-06-21T12:41:23.562Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "card-wipe",
+  "displayName": "Card Wipe",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/card-wipe",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-wipe/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-wipe/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-wipe/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/card-wipe/thumb.jpg",
+  "entryPoint": "src/CardWipe.tsx",
+  "compositionId": "CardWipe",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的擦除显现字卡组件（文件：CardWipe.tsx），请帮我做以下调整： 1. 把姓名从 \"Sofia Rossi\" 改成「___」 2. 把头衔从 \"UX Researcher\" 改成「___」 3. 把头衔文字颜色从淡紫 #a5b4fc 改成「___」 4. 把色块背景从深紫 rgba(49,46,129,0.95) 改成「___」 5. 调整擦除速度：想更快请把 stiffness 从 130 改大；想更慢改小 6. 调整文字出现的延迟：目前在擦除开始后 15 帧才淡入，可将 frame - 15 中的 15 改大或改小 请保留原本的 clip-path 擦除效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/card-wipe.md",
+    "updatedAt": "2026-06-21T12:37:45.480Z"
+  }
+}

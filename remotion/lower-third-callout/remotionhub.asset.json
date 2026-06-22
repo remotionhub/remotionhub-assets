@@ -1,0 +1,65 @@
+{
+  "slug": "lower-third-callout",
+  "displayName": "Lower Third Callout",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/lower-third-callout",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-callout/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/lower-third-callout/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-callout/5b2a00472627-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/lower-third-callout/e8ef813104d7-thumb.jpg",
+  "entryPoint": "src/LowerThirdCallout.tsx",
+  "compositionId": "LowerThirdCallout",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "Customize the LowerThirdCallout Remotion component by setting the name, title, accentColor, titleColor, cardBackgroundColor, and animationStiffness while preserving the dot callout line connection and text box animation.",
+  "propsSchema": [
+    {
+      "name": "name",
+      "type": "string",
+      "defaultValue": "Product Feature",
+      "description": "Primary display name."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "Tap to learn more",
+      "description": "Secondary title or role."
+    },
+    {
+      "name": "accentColor",
+      "type": "string",
+      "defaultValue": "#f59e0b",
+      "description": "CSS color for the subject dot and line."
+    },
+    {
+      "name": "titleColor",
+      "type": "string",
+      "defaultValue": "#451a03",
+      "description": "CSS color for the title text."
+    },
+    {
+      "name": "cardBackgroundColor",
+      "type": "string",
+      "defaultValue": "#f59e0b",
+      "description": "CSS color for the label box background."
+    },
+    {
+      "name": "animationStiffness",
+      "type": "number",
+      "defaultValue": 150,
+      "description": "Spring stiffness for the line drawing animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/lower-third-callout.md",
+    "updatedAt": "2026-06-21T12:41:38.906Z"
+  }
+}

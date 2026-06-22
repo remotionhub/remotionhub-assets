@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/lower-third-box-pop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx LowerThirdBoxPop out/lower-third-box-pop.mp4"
+  },
+  "dependencies": {}
+}

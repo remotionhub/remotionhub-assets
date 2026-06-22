@@ -1,0 +1,11 @@
+{
+  "name": "@remotionhub/card-stagger",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx CardStagger out/card-stagger.mp4"
+  },
+  "dependencies": {}
+}
