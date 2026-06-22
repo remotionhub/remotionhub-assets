@@ -102,7 +102,11 @@ function stripBackticks(str: string) {
   return str.replace(/^`|`$/g, '')
 }
 
-function assertValidPropsTable(readme: string, slug: string, manifest: AssetManifest) {
+function assertValidPropsTable(
+  readme: string,
+  slug: string,
+  manifest: AssetManifest,
+) {
   const lines = readme.split('\n')
   const propsIndex = lines.findIndex((line) => line.startsWith('## Props'))
   if (propsIndex === -1) {
@@ -125,7 +129,9 @@ function assertValidPropsTable(readme: string, slug: string, manifest: AssetMani
 
   if (tableRows.length === 0) {
     if (schemaProps.length > 0) {
-      throw new Error(`README for ${slug} is missing a Props table, but manifest contains props.`)
+      throw new Error(
+        `README for ${slug} is missing a Props table, but manifest contains props.`,
+      )
     }
     return
   }

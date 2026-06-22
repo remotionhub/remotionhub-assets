@@ -39,7 +39,7 @@ export const CardWipe: React.FC<CardWipeProps> = ({
       extrapolateRight: 'clamp',
     }
   )
-  
+
   const textProgress = spring({
     frame: frame - 15,
     fps,
