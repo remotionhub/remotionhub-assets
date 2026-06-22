@@ -7,24 +7,19 @@ import {
 } from "remotion";
 import React from "react";
 
-const PHASE_FRAMES = 40;
-const PARTICLE_COUNT = 40;
-const PARTICLE_COLORS = [
-  "#ff4d4d", "#ff9500", "#ffdd00", "#44ff88",
-  "#00cfff", "#a855f7", "#ff69b4", "#ffffff",
-];
-
 interface ParticleProps {
   index: number;
   frame: number;
   origin: { x: number; y: number };
+  particleColors: string[];
+  particleCount: number;
 }
 
-const Particle: React.FC<ParticleProps> = ({ index, frame, origin }) => {
+const Particle: React.FC<ParticleProps> = ({ index, frame, origin, particleColors, particleCount }) => {
   const seed = (index * 137.508) % 1;
-  const angle = (index / PARTICLE_COUNT) * 2 * Math.PI + seed * 0.5;
+  const angle = (index / particleCount) * 2 * Math.PI + seed * 0.5;
   const speed = 180 + seed * 220;
-  const color = PARTICLE_COLORS[index % PARTICLE_COLORS.length];
+  const color = particleColors[index % particleColors.length];
   const size = 8 + seed * 14;
 
   const vx = Math.cos(angle) * speed;
@@ -57,20 +52,48 @@ const Particle: React.FC<ParticleProps> = ({ index, frame, origin }) => {
   );
 };
 
-export const CountdownFirework: React.FC = () => {
+export interface CountdownFireworkProps {
+  phaseFrames?: number;
+  particleCount?: number;
+  particleColors?: string[];
+  numbers?: string[];
+  bgColors?: string[];
+  digitColors?: string[];
+}
+
+export const countdownFireworkDefaultProps: CountdownFireworkProps = {
+  phaseFrames: 40,
+  particleCount: 40,
+  particleColors: [
+    "#ff4d4d", "#ff9500", "#ffdd00", "#44ff88",
+    "#00cfff", "#a855f7", "#ff69b4", "#ffffff",
+  ],
+  numbers: ["3", "2", "1", "GO!"],
+  bgColors: ["#0a0a1a", "#0a0a1a", "#0a0a1a", "#ff4d00"],
+  digitColors: ["#ffdd00", "#ff9500", "#ff4d4d", "#ffffff"],
+};
+
+export const CountdownFirework: React.FC<CountdownFireworkProps> = ({
+  phaseFrames = 40,
+  particleCount = 40,
+  particleColors = [
+    "#ff4d4d", "#ff9500", "#ffdd00", "#44ff88",
+    "#00cfff", "#a855f7", "#ff69b4", "#ffffff",
+  ],
+  numbers = ["3", "2", "1", "GO!"],
+  bgColors = ["#0a0a1a", "#0a0a1a", "#0a0a1a", "#ff4d00"],
+  digitColors = ["#ffdd00", "#ff9500", "#ff4d4d", "#ffffff"],
+}) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
 
-  const phase = Math.min(3, Math.floor(frame / PHASE_FRAMES));
-  const phaseFrame = frame - phase * PHASE_FRAMES;
-
-  const numbers = ["3", "2", "1", "GO!"];
-  const bgColors = ["#0a0a1a", "#0a0a1a", "#0a0a1a", "#ff4d00"];
-  const digitColors = ["#ffdd00", "#ff9500", "#ff4d4d", "#ffffff"];
+  const totalPhases = numbers.length;
+  const phase = Math.min(totalPhases - 1, Math.floor(frame / phaseFrames));
+  const phaseFrame = frame - phase * phaseFrames;
 
   const currentNum = numbers[phase];
-  const currentColor = digitColors[phase];
-  const bgColor = bgColors[phase];
+  const currentColor = digitColors[phase % digitColors.length];
+  const bgColor = bgColors[phase % bgColors.length];
 
   const scaleSpring = spring({
     frame: phaseFrame,
@@ -81,8 +104,8 @@ export const CountdownFirework: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  const exitScale = phaseFrame > PHASE_FRAMES - 10
-    ? interpolate(phaseFrame, [PHASE_FRAMES - 10, PHASE_FRAMES], [1, 0], {
+  const exitScale = phaseFrame > phaseFrames - 10
+    ? interpolate(phaseFrame, [phaseFrames - 10, phaseFrames], [1, 0], {
         extrapolateRight: "clamp",
       })
     : 1;
@@ -91,12 +114,12 @@ export const CountdownFirework: React.FC = () => {
 
   const opacity = interpolate(
     phaseFrame,
-    [0, 3, PHASE_FRAMES - 8, PHASE_FRAMES],
+    [0, 3, phaseFrames - 8, phaseFrames],
     [0, 1, 1, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
   );
 
-  const isGoPhase = phase === 3;
+  const isGoPhase = phase === totalPhases - 1;
   const fireworkFrame = isGoPhase ? phaseFrame : 0;
 
   const flashOpacity = isGoPhase
@@ -160,14 +183,35 @@ export const CountdownFirework: React.FC = () => {
           width={width}
           height={height}
         >
-          {Array.from({ length: PARTICLE_COUNT }).map((_, i) => (
-            <Particle key={i} index={i} frame={fireworkFrame} origin={{ x: width / 2, y: height / 2 }} />
+          {Array.from({ length: particleCount }).map((_, i) => (
+            <Particle
+              key={i}
+              index={i}
+              frame={fireworkFrame}
+              origin={{ x: width / 2, y: height / 2 }}
+              particleColors={particleColors}
+              particleCount={particleCount}
+            />
           ))}
-          {Array.from({ length: PARTICLE_COUNT }).map((_, i) => (
-            <Particle key={`b${i}`} index={i + PARTICLE_COUNT} frame={Math.max(0, fireworkFrame - 8)} origin={{ x: width / 2 - 100, y: height / 2 - 80 }} />
+          {Array.from({ length: particleCount }).map((_, i) => (
+            <Particle
+              key={`b${i}`}
+              index={i + particleCount}
+              frame={Math.max(0, fireworkFrame - 8)}
+              origin={{ x: width / 2 - 100, y: height / 2 - 80 }}
+              particleColors={particleColors}
+              particleCount={particleCount}
+            />
           ))}
-          {Array.from({ length: PARTICLE_COUNT }).map((_, i) => (
-            <Particle key={`c${i}`} index={i + PARTICLE_COUNT * 2} frame={Math.max(0, fireworkFrame - 16)} origin={{ x: width / 2 + 100, y: height / 2 - 80 }} />
+          {Array.from({ length: particleCount }).map((_, i) => (
+            <Particle
+              key={`c${i}`}
+              index={i + particleCount * 2}
+              frame={Math.max(0, fireworkFrame - 16)}
+              origin={{ x: width / 2 + 100, y: height / 2 - 80 }}
+              particleColors={particleColors}
+              particleCount={particleCount}
+            />
           ))}
         </svg>
       )}
@@ -176,7 +220,7 @@ export const CountdownFirework: React.FC = () => {
         style={{
           position: "relative",
           zIndex: 10,
-          fontSize: phase === 3 ? 200 : 280,
+          fontSize: isGoPhase ? 200 : 280,
           fontWeight: 900,
           color: currentColor,
           fontFamily: "sans-serif",
@@ -199,15 +243,15 @@ export const CountdownFirework: React.FC = () => {
           zIndex: 10,
         }}
       >
-        {[0, 1, 2].map((i) => (
+        {numbers.slice(0, -1).map((_, i) => (
           <div
             key={i}
             style={{
               width: 16,
               height: 16,
               borderRadius: "50%",
-              background: i < phase ? digitColors[i] : "rgba(255,255,255,0.2)",
-              boxShadow: i < phase ? `0 0 10px ${digitColors[i]}` : "none",
+              background: i < phase ? digitColors[i % digitColors.length] : "rgba(255,255,255,0.2)",
+              boxShadow: i < phase ? `0 0 10px ${digitColors[i % digitColors.length]}` : "none",
             }}
           />
         ))}
@@ -215,5 +259,3 @@ export const CountdownFirework: React.FC = () => {
     </AbsoluteFill>
   );
 };
-
-export const countdownFireworkDefaultProps = {}

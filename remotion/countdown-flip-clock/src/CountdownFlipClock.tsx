@@ -6,9 +6,6 @@ import {
 } from "remotion";
 import React from "react";
 
-// 从 01:00 倒数至 00:00，共 60 秒
-const TOTAL_SECONDS = 60;
-
 function pad(n: number) {
   return String(n).padStart(2, "0");
 }
@@ -18,6 +15,9 @@ interface FlipDigitProps {
   prev: string;
   isFlipping: boolean;
   flipProgress: number;
+  cardBgColor: string;
+  cardTextColor: string;
+  cardBottomBgColor: string;
 }
 
 const FlipDigit: React.FC<FlipDigitProps> = ({
@@ -25,6 +25,9 @@ const FlipDigit: React.FC<FlipDigitProps> = ({
   prev,
   isFlipping,
   flipProgress,
+  cardBgColor,
+  cardTextColor,
+  cardBottomBgColor,
 }) => {
   const topFlipAngle = interpolate(flipProgress, [0, 0.5], [0, -90], {
     extrapolateLeft: "clamp",
@@ -47,7 +50,7 @@ const FlipDigit: React.FC<FlipDigitProps> = ({
     overflow: "hidden",
     position: "relative",
     boxShadow: "0 8px 32px rgba(0,0,0,0.6)",
-    background: "#1a1a2e",
+    background: cardBgColor,
   };
 
   const digitStyle: React.CSSProperties = {
@@ -55,7 +58,7 @@ const FlipDigit: React.FC<FlipDigitProps> = ({
     width: "100%",
     fontSize: 120,
     fontWeight: 900,
-    color: "#f5f5f0",
+    color: cardTextColor,
     fontFamily: "monospace",
     textAlign: "center",
     lineHeight: `${cardH}px`,
@@ -74,7 +77,7 @@ const FlipDigit: React.FC<FlipDigitProps> = ({
           height: halfH,
           overflow: "hidden",
           borderTop: "1px solid rgba(0,0,0,0.4)",
-          background: "#16213e",
+          background: cardBottomBgColor,
           borderRadius: "0 0 12px 12px",
         }}
       >
@@ -90,7 +93,7 @@ const FlipDigit: React.FC<FlipDigitProps> = ({
           width: cardW,
           height: halfH,
           overflow: "hidden",
-          background: "#1a1a2e",
+          background: cardBgColor,
           borderRadius: "12px 12px 0 0",
         }}
       >
@@ -109,7 +112,7 @@ const FlipDigit: React.FC<FlipDigitProps> = ({
             width: cardW,
             height: halfH,
             overflow: "hidden",
-            background: "#1a1a2e",
+            background: cardBgColor,
             borderRadius: "12px 12px 0 0",
             transformOrigin: "bottom center",
             transform: `perspective(600px) rotateX(${topFlipAngle}deg)`,
@@ -131,7 +134,7 @@ const FlipDigit: React.FC<FlipDigitProps> = ({
             width: cardW,
             height: halfH,
             overflow: "hidden",
-            background: "#16213e",
+            background: cardBottomBgColor,
             borderRadius: "0 0 12px 12px",
             transformOrigin: "top center",
             transform: `perspective(600px) rotateX(${bottomFlipAngle}deg)`,
@@ -164,6 +167,9 @@ interface FlipGroupProps {
   prevVal: string;
   isFlipping: boolean;
   flipProgress: number;
+  cardBgColor: string;
+  cardTextColor: string;
+  cardBottomBgColor: string;
 }
 
 const FlipGroup: React.FC<FlipGroupProps> = ({
@@ -171,6 +177,9 @@ const FlipGroup: React.FC<FlipGroupProps> = ({
   prevVal,
   isFlipping,
   flipProgress,
+  cardBgColor,
+  cardTextColor,
+  cardBottomBgColor,
 }) => {
   return (
     <div style={{ display: "flex", gap: 6 }}>
@@ -179,27 +188,55 @@ const FlipGroup: React.FC<FlipGroupProps> = ({
         prev={prevVal[0]}
         isFlipping={isFlipping && currentVal[0] !== prevVal[0]}
         flipProgress={flipProgress}
+        cardBgColor={cardBgColor}
+        cardTextColor={cardTextColor}
+        cardBottomBgColor={cardBottomBgColor}
       />
       <FlipDigit
         current={currentVal[1]}
         prev={prevVal[1]}
         isFlipping={isFlipping && currentVal[1] !== prevVal[1]}
         flipProgress={flipProgress}
+        cardBgColor={cardBgColor}
+        cardTextColor={cardTextColor}
+        cardBottomBgColor={cardBottomBgColor}
       />
     </div>
   );
 };
 
-export const CountdownFlipClock: React.FC = () => {
+export interface CountdownFlipClockProps {
+  totalSeconds?: number;
+  title?: string;
+  cardBgColor?: string;
+  cardTextColor?: string;
+  cardBottomBgColor?: string;
+}
+
+export const countdownFlipClockDefaultProps: CountdownFlipClockProps = {
+  totalSeconds: 60,
+  title: "倒数计时",
+  cardBgColor: "#1a1a2e",
+  cardTextColor: "#f5f5f0",
+  cardBottomBgColor: "#16213e",
+};
+
+export const CountdownFlipClock: React.FC<CountdownFlipClockProps> = ({
+  totalSeconds = 60,
+  title = "倒数计时",
+  cardBgColor = "#1a1a2e",
+  cardTextColor = "#f5f5f0",
+  cardBottomBgColor = "#16213e",
+}) => {
   const frame = useCurrentFrame();
-  const { fps, durationInFrames } = useVideoConfig();
+  const { durationInFrames } = useVideoConfig();
 
   const totalFrames = durationInFrames;
-  const framesPerSecond = totalFrames / TOTAL_SECONDS;
+  const framesPerSecond = totalFrames / totalSeconds;
 
-  const elapsed = (frame / totalFrames) * TOTAL_SECONDS;
-  const currentSecTotal = Math.max(0, TOTAL_SECONDS - Math.floor(elapsed));
-  const prevSecTotal = Math.min(TOTAL_SECONDS, currentSecTotal + 1);
+  const elapsed = (frame / totalFrames) * totalSeconds;
+  const currentSecTotal = Math.max(0, totalSeconds - Math.floor(elapsed));
+  const prevSecTotal = Math.min(totalSeconds, currentSecTotal + 1);
 
   const currentMin = Math.floor(currentSecTotal / 60);
   const currentSec = currentSecTotal % 60;
@@ -258,7 +295,7 @@ export const CountdownFlipClock: React.FC = () => {
           textTransform: "uppercase",
         }}
       >
-        倒数计时
+        {title}
       </div>
 
       {/* 翻页时钟主体 */}
@@ -276,6 +313,9 @@ export const CountdownFlipClock: React.FC = () => {
             prevVal={prevMinStr}
             isFlipping={minIsFlipping}
             flipProgress={flipProgress}
+            cardBgColor={cardBgColor}
+            cardTextColor={cardTextColor}
+            cardBottomBgColor={cardBottomBgColor}
           />
           <div
             style={{
@@ -325,6 +365,9 @@ export const CountdownFlipClock: React.FC = () => {
             prevVal={prevSecStr}
             isFlipping={secIsFlipping}
             flipProgress={flipProgress}
+            cardBgColor={cardBgColor}
+            cardTextColor={cardTextColor}
+            cardBottomBgColor={cardBottomBgColor}
           />
           <div
             style={{
@@ -364,5 +407,3 @@ export const CountdownFlipClock: React.FC = () => {
     </AbsoluteFill>
   );
 };
-
-export const countdownFlipClockDefaultProps = {}

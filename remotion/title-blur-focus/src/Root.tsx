@@ -1,8 +1,7 @@
-import { Composition } from 'remotion'
-import React from 'react'
+import { Composition, registerRoot } from 'remotion'
 import { TitleBlurFocus, titleBlurFocusDefaultProps } from './TitleBlurFocus'
 
-export const Root: React.FC = () => {
+export function RemotionRoot() {
   return (
     <Composition
       id="TitleBlurFocus"
@@ -15,3 +14,5 @@ export const Root: React.FC = () => {
     />
   )
 }
+
+registerRoot(RemotionRoot)

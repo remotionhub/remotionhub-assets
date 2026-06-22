@@ -1,8 +1,7 @@
-import { Composition } from 'remotion'
-import React from 'react'
+import { Composition, registerRoot } from 'remotion'
 import { SubtitleSlide, subtitleSlideDefaultProps } from './SubtitleSlide'
 
-export const Root: React.FC = () => {
+export function RemotionRoot() {
   return (
     <Composition
       id="SubtitleSlide"
@@ -15,3 +14,5 @@ export const Root: React.FC = () => {
     />
   )
 }
+
+registerRoot(RemotionRoot)

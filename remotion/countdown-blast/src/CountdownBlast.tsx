@@ -7,16 +7,14 @@ import {
 } from "remotion";
 import React from "react";
 
-const PHASE_FRAMES = 28;
-const PHASES = ["5", "4", "3", "2", "1", "GO!"];
-const RAY_COUNT = 12;
-
 interface EnergyRayProps {
   index: number;
   frame: number;
   width: number;
   height: number;
   color: string;
+  rayCount: number;
+  phaseFrames: number;
 }
 
 const EnergyRay: React.FC<EnergyRayProps> = ({
@@ -25,6 +23,8 @@ const EnergyRay: React.FC<EnergyRayProps> = ({
   width,
   height,
   color,
+  rayCount,
+  phaseFrames,
 }) => {
   const cx = width / 2;
   const cy = height / 2;
@@ -38,7 +38,7 @@ const EnergyRay: React.FC<EnergyRayProps> = ({
   const cornerIdx = index % 4;
   const corner = corners[cornerIdx];
 
-  const spread = ((index % (RAY_COUNT / 4)) - (RAY_COUNT / 8 - 0.5)) * 40;
+  const spread = ((index % Math.max(1, Math.floor(rayCount / 4))) - (rayCount / 8 - 0.5)) * 40;
   const dx = cx - corner.x;
   const dy = cy - corner.y;
   const len = Math.sqrt(dx * dx + dy * dy);
@@ -50,7 +50,7 @@ const EnergyRay: React.FC<EnergyRayProps> = ({
   const x2 = cx + perpX * spread * 0.1;
   const y2 = cy + perpY * spread * 0.1;
 
-  const fadeOut = interpolate(frame, [12, PHASE_FRAMES], [1, 0], {
+  const fadeOut = interpolate(frame, [12, phaseFrames], [1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -110,28 +110,42 @@ const ShockwaveRing: React.FC<ShockwaveRingProps> = ({ frame, delay, color, cx, 
   );
 };
 
-const PHASE_COLORS = [
-  "#00e5ff", "#00cfb4", "#7fff00", "#ffcc00", "#ff6600", "#ff2020",
-];
+export interface CountdownBlastProps {
+  phaseFrames?: number;
+  phases?: string[];
+  rayCount?: number;
+  phaseColors?: string[];
+  bgColors?: string[];
+}
 
-const BG_COLORS = [
-  "#00060f", "#001208", "#040f00", "#0f0a00", "#0f0400", "#0f0000",
-];
+export const countdownBlastDefaultProps: CountdownBlastProps = {
+  phaseFrames: 28,
+  phases: ["5", "4", "3", "2", "1", "GO!"],
+  rayCount: 12,
+  phaseColors: ["#00e5ff", "#00cfb4", "#7fff00", "#ffcc00", "#ff6600", "#ff2020"],
+  bgColors: ["#00060f", "#001208", "#040f00", "#0f0a00", "#0f0400", "#0f0000"],
+};
 
-export const CountdownBlast: React.FC = () => {
+export const CountdownBlast: React.FC<CountdownBlastProps> = ({
+  phaseFrames = 28,
+  phases = ["5", "4", "3", "2", "1", "GO!"],
+  rayCount = 12,
+  phaseColors = ["#00e5ff", "#00cfb4", "#7fff00", "#ffcc00", "#ff6600", "#ff2020"],
+  bgColors = ["#00060f", "#001208", "#040f00", "#0f0a00", "#0f0400", "#0f0000"],
+}) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
 
   const cx = width / 2;
   const cy = height / 2;
 
-  const totalPhases = PHASES.length;
-  const phase = Math.min(totalPhases - 1, Math.floor(frame / PHASE_FRAMES));
-  const phaseFrame = frame - phase * PHASE_FRAMES;
+  const totalPhases = phases.length;
+  const phase = Math.min(totalPhases - 1, Math.floor(frame / phaseFrames));
+  const phaseFrame = frame - phase * phaseFrames;
 
-  const currentLabel = PHASES[phase];
-  const color = PHASE_COLORS[phase];
-  const bgColor = BG_COLORS[phase];
+  const currentLabel = phases[phase];
+  const color = phaseColors[phase % phaseColors.length];
+  const bgColor = bgColors[phase % bgColors.length];
   const isGo = phase === totalPhases - 1;
 
   const impactSpring = spring({
@@ -143,15 +157,15 @@ export const CountdownBlast: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  const exitScale = phaseFrame > PHASE_FRAMES - 8
-    ? interpolate(phaseFrame, [PHASE_FRAMES - 8, PHASE_FRAMES], [1, 0.3], {
+  const exitScale = phaseFrame > phaseFrames - 8
+    ? interpolate(phaseFrame, [phaseFrames - 8, phaseFrames], [1, 0.3], {
         extrapolateRight: "clamp",
       })
     : 1;
 
   const opacity = interpolate(
     phaseFrame,
-    [0, 2, PHASE_FRAMES - 6, PHASE_FRAMES],
+    [0, 2, phaseFrames - 6, phaseFrames],
     [0, 1, 1, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
   );
@@ -165,7 +179,7 @@ export const CountdownBlast: React.FC = () => {
     : 300;
 
   const bgPulse = interpolate(
-    Math.sin((phaseFrame / PHASE_FRAMES) * Math.PI),
+    Math.sin((phaseFrame / phaseFrames) * Math.PI),
     [-1, 1],
     [0, 0.15]
   );
@@ -193,8 +207,17 @@ export const CountdownBlast: React.FC = () => {
         width={width}
         height={height}
       >
-        {Array.from({ length: RAY_COUNT }).map((_, i) => (
-          <EnergyRay key={i} index={i} frame={phaseFrame} width={width} height={height} color={color} />
+        {Array.from({ length: rayCount }).map((_, i) => (
+          <EnergyRay
+            key={i}
+            index={i}
+            frame={phaseFrame}
+            width={width}
+            height={height}
+            color={color}
+            rayCount={rayCount}
+            phaseFrames={phaseFrames}
+          />
         ))}
 
         <ShockwaveRing frame={phaseFrame} delay={0} color={color} cx={cx} cy={cy} />
@@ -275,15 +298,15 @@ export const CountdownBlast: React.FC = () => {
           zIndex: 10,
         }}
       >
-        {PHASES.slice(0, -1).map((_, i) => (
+        {phases.slice(0, -1).map((_, i) => (
           <div
             key={i}
             style={{
               width: 12,
               height: 12,
               borderRadius: "50%",
-              background: i <= phase ? PHASE_COLORS[i] : "rgba(255,255,255,0.15)",
-              boxShadow: i <= phase ? `0 0 8px ${PHASE_COLORS[i]}` : "none",
+              background: i <= phase ? phaseColors[i % phaseColors.length] : "rgba(255,255,255,0.15)",
+              boxShadow: i <= phase ? `0 0 8px ${phaseColors[i % phaseColors.length]}` : "none",
             }}
           />
         ))}
@@ -291,5 +314,3 @@ export const CountdownBlast: React.FC = () => {
     </AbsoluteFill>
   );
 };
-
-export const countdownBlastDefaultProps = {}

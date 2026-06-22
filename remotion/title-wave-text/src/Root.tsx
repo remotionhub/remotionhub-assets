@@ -1,8 +1,7 @@
-import { Composition } from 'remotion'
-import React from 'react'
+import { Composition, registerRoot } from 'remotion'
 import { TitleWaveText, titleWaveTextDefaultProps } from './TitleWaveText'
 
-export const Root: React.FC = () => {
+export function RemotionRoot() {
   return (
     <Composition
       id="TitleWaveText"
@@ -15,3 +14,5 @@ export const Root: React.FC = () => {
     />
   )
 }
+
+registerRoot(RemotionRoot)

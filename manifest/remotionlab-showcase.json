@@ -107,38 +107,38 @@
     },
     {
       "slug": "countdown-blast",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/countdown-blast.md",
       "assetPath": "remotion/countdown-blast",
-      "updatedAt": "2026-06-22T06:16:54.869Z"
+      "updatedAt": "2026-06-22T08:18:06.053Z"
     },
     {
       "slug": "countdown-circle",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/countdown-circle.md",
       "assetPath": "remotion/countdown-circle",
-      "updatedAt": "2026-06-22T06:16:55.229Z"
+      "updatedAt": "2026-06-22T08:18:18.622Z"
     },
     {
       "slug": "countdown-digital",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/countdown-digital.md",
       "assetPath": "remotion/countdown-digital",
-      "updatedAt": "2026-06-22T06:16:55.585Z"
+      "updatedAt": "2026-06-22T08:18:24.178Z"
     },
     {
       "slug": "countdown-firework",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/countdown-firework.md",
       "assetPath": "remotion/countdown-firework",
-      "updatedAt": "2026-06-22T06:16:55.926Z"
+      "updatedAt": "2026-06-22T08:18:29.412Z"
     },
     {
       "slug": "countdown-flip-clock",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/countdown-flip-clock.md",
       "assetPath": "remotion/countdown-flip-clock",
-      "updatedAt": "2026-06-22T06:16:56.269Z"
+      "updatedAt": "2026-06-22T08:18:34.725Z"
     },
     {
       "slug": "lower-third-box-pop",

@@ -1,8 +1,7 @@
-import { Composition } from 'remotion'
-import React from 'react'
+import { Composition, registerRoot } from 'remotion'
 import { TitleHandwriting, titleHandwritingDefaultProps } from './TitleHandwriting'
 
-export const Root: React.FC = () => {
+export function RemotionRoot() {
   return (
     <Composition
       id="TitleHandwriting"
@@ -15,3 +14,5 @@ export const Root: React.FC = () => {
     />
   )
 }
+
+registerRoot(RemotionRoot)

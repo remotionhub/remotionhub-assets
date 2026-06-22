@@ -1,0 +1,71 @@
+{
+  "slug": "countdown-circle",
+  "displayName": "Countdown Circle",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/countdown-circle",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/countdown-circle/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/countdown-circle/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/countdown-circle/8c52ee759308-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/countdown-circle/427d6e1a934d-thumb.jpg",
+  "entryPoint": "src/CountdownCircle.tsx",
+  "compositionId": "CountdownCircle",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的圆形进度倒数计时器组件（文件：CountdownCircle.tsx），请帮我做以下调整： 1. 把倒数秒数从 10 改成「___」秒（修改顶部 TOTAL-SECONDS 常数） 2. 把主色从青色 #22d3ee 改成「___」 3. 把最后 N 秒警示触发时间从 3 改成「___」秒（修改 isLast3 判断） 4. 把警示颜色从红色 #ef4444 改成「___」 5. 把完成文字从「完成！」改成「___」 请保留圆弧 stroke-dashoffset 动画逻辑与抖动效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "totalSeconds",
+      "type": "number",
+      "defaultValue": 10,
+      "description": "Total countdown seconds."
+    },
+    {
+      "name": "radius",
+      "type": "number",
+      "defaultValue": 200,
+      "description": "Radius of the circle."
+    },
+    {
+      "name": "strokeWidth",
+      "type": "number",
+      "defaultValue": 20,
+      "description": "Stroke width of the circle."
+    },
+    {
+      "name": "mainColor",
+      "type": "string",
+      "defaultValue": "#22d3ee",
+      "description": "Main color of the circle and number."
+    },
+    {
+      "name": "warningSeconds",
+      "type": "number",
+      "defaultValue": 3,
+      "description": "Warning seconds threshold."
+    },
+    {
+      "name": "warningColor",
+      "type": "string",
+      "defaultValue": "#ef4444",
+      "description": "Color during warning seconds."
+    },
+    {
+      "name": "completeText",
+      "type": "string",
+      "defaultValue": "完成！",
+      "description": "Text displayed when countdown completes."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/countdown-circle.md",
+    "updatedAt": "2026-06-22T08:18:18.622Z"
+  }
+}

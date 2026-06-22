@@ -8,6 +8,7 @@ import {
   inventorySchema,
   readAssetManifest,
   writeAssetManifest,
+  formatDefaultValue,
 } from './lib/assetManifest'
 
 const INVENTORY_PATH = path.join('manifest', 'remotionlab-showcase.json')
@@ -190,7 +191,7 @@ function assertValidPropsTable(
       )
     }
 
-    const expectedDefault = String(expectedProp.defaultValue)
+    const expectedDefault = formatDefaultValue(expectedProp.defaultValue)
     if (defaultValue !== expectedDefault) {
       throw new Error(
         `README for ${slug} Props table row ${i + 1}: expected default value '${expectedDefault}', found '${defaultValue}'.`,

@@ -1,8 +1,7 @@
-import { Composition } from 'remotion'
-import React from 'react'
+import { Composition, registerRoot } from 'remotion'
 import { MapAreaReveal, mapAreaRevealDefaultProps } from './MapAreaReveal'
 
-export const Root: React.FC = () => {
+export function RemotionRoot() {
   return (
     <Composition
       id="MapAreaReveal"
@@ -15,3 +14,5 @@ export const Root: React.FC = () => {
     />
   )
 }
+
+registerRoot(RemotionRoot)

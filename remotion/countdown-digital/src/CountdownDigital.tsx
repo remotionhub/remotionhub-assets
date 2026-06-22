@@ -6,8 +6,6 @@ import {
 } from "remotion";
 import React from "react";
 
-const TOTAL_SECONDS = 10;
-
 const SEGMENTS: Record<string, boolean[]> = {
   "0": [true,  true,  true,  true,  true,  true,  false],
   "1": [false, true,  true,  false, false, false, false],
@@ -24,9 +22,12 @@ const SEGMENTS: Record<string, boolean[]> = {
 interface SegmentDisplayProps {
   digit: string;
   glowIntensity: number;
+  r: number;
+  g: number;
+  b: number;
 }
 
-const SegmentDisplay: React.FC<SegmentDisplayProps> = ({ digit, glowIntensity }) => {
+const SegmentDisplay: React.FC<SegmentDisplayProps> = ({ digit, glowIntensity, r, g, b }) => {
   const segs = SEGMENTS[digit] ?? SEGMENTS["8"];
   const W = 80;
   const H = 140;
@@ -34,9 +35,9 @@ const SegmentDisplay: React.FC<SegmentDisplayProps> = ({ digit, glowIntensity })
   const GAP = 4;
   const HALF = H / 2;
 
-  const onColor = `rgba(255, 40, 40, ${glowIntensity})`;
-  const offColor = "rgba(255,40,40,0.06)";
-  const shadow = `0 0 ${16 * glowIntensity}px rgba(255,40,40,${glowIntensity * 0.9}), 0 0 ${32 * glowIntensity}px rgba(255,40,40,${glowIntensity * 0.4})`;
+  const onColor = `rgba(${r}, ${g}, ${b}, ${glowIntensity})`;
+  const offColor = `rgba(${r}, ${g}, ${b}, 0.06)`;
+  const shadow = `0 0 ${16 * glowIntensity}px rgba(${r},${g},${b},${glowIntensity * 0.9}), 0 0 ${32 * glowIntensity}px rgba(${r},${g},${b},${glowIntensity * 0.4})`;
 
   const seg = (on: boolean) => ({
     background: on ? onColor : offColor,
@@ -57,13 +58,43 @@ const SegmentDisplay: React.FC<SegmentDisplayProps> = ({ digit, glowIntensity })
   );
 };
 
-export const CountdownDigital: React.FC = () => {
+export interface CountdownDigitalProps {
+  totalSeconds?: number;
+  color?: string;
+  label?: string;
+  timeUpLabel?: string;
+}
+
+export const countdownDigitalDefaultProps: CountdownDigitalProps = {
+  totalSeconds: 10,
+  color: "#ff2828",
+  label: "COUNTDOWN TIMER",
+  timeUpLabel: "-- TIME UP --",
+};
+
+const hexToRgb = (hex: string) => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : { r: 255, g: 40, b: 40 };
+};
+
+export const CountdownDigital: React.FC<CountdownDigitalProps> = ({
+  totalSeconds = 10,
+  color = "#ff2828",
+  label = "COUNTDOWN TIMER",
+  timeUpLabel = "-- TIME UP --",
+}) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
   const totalFrames = durationInFrames;
-  const elapsed = (frame / totalFrames) * TOTAL_SECONDS;
-  const remaining = Math.max(0, TOTAL_SECONDS - Math.floor(elapsed));
+  const elapsed = (frame / totalFrames) * totalSeconds;
+  const remaining = Math.max(0, totalSeconds - Math.floor(elapsed));
 
   const minutes = Math.floor(remaining / 60);
   const seconds = remaining % 60;
@@ -79,6 +110,7 @@ export const CountdownDigital: React.FC = () => {
   );
 
   const scanY = (frame * 3) % 1080;
+  const { r, g, b } = hexToRgb(color);
 
   return (
     <AbsoluteFill
@@ -95,7 +127,7 @@ export const CountdownDigital: React.FC = () => {
           left: 0,
           width: "100%",
           height: 2,
-          background: "rgba(255,40,40,0.04)",
+          background: `rgba(${r},${g},${b},0.04)`,
           zIndex: 1,
         }}
       />
@@ -106,7 +138,7 @@ export const CountdownDigital: React.FC = () => {
           border: "3px solid #1a1a1a",
           borderRadius: 20,
           padding: "48px 64px",
-          boxShadow: "inset 0 0 60px rgba(0,0,0,0.8), 0 0 40px rgba(255,40,40,0.08)",
+          boxShadow: `inset 0 0 60px rgba(0,0,0,0.8), 0 0 40px rgba(${r},${g},${b},0.08)`,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -116,19 +148,19 @@ export const CountdownDigital: React.FC = () => {
         <div
           style={{
             fontSize: 22,
-            color: "rgba(255,40,40,0.5)",
+            color: `rgba(${r},${g},${b},0.5)`,
             fontFamily: "monospace",
             letterSpacing: 10,
             textTransform: "uppercase",
           }}
         >
-          COUNTDOWN TIMER
+          {label}
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <div style={{ display: "flex", gap: 12 }}>
-            <SegmentDisplay digit={minStr[0]} glowIntensity={glowPulse} />
-            <SegmentDisplay digit={minStr[1]} glowIntensity={glowPulse} />
+            <SegmentDisplay digit={minStr[0]} glowIntensity={glowPulse} r={r} g={g} b={b} />
+            <SegmentDisplay digit={minStr[1]} glowIntensity={glowPulse} r={r} g={g} b={b} />
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 20, paddingBottom: 8 }}>
@@ -139,16 +171,16 @@ export const CountdownDigital: React.FC = () => {
                   width: 14,
                   height: 14,
                   borderRadius: "50%",
-                  background: `rgba(255,40,40,${glowPulse})`,
-                  boxShadow: `0 0 ${12 * glowPulse}px rgba(255,40,40,0.8)`,
+                  background: `rgba(${r},${g},${b},${glowPulse})`,
+                  boxShadow: `0 0 ${12 * glowPulse}px rgba(${r},${g},${b},0.8)`,
                 }}
               />
             ))}
           </div>
 
           <div style={{ display: "flex", gap: 12 }}>
-            <SegmentDisplay digit={secStr[0]} glowIntensity={glowPulse} />
-            <SegmentDisplay digit={secStr[1]} glowIntensity={glowPulse} />
+            <SegmentDisplay digit={secStr[0]} glowIntensity={glowPulse} r={r} g={g} b={b} />
+            <SegmentDisplay digit={secStr[1]} glowIntensity={glowPulse} r={r} g={g} b={b} />
           </div>
         </div>
 
@@ -164,9 +196,9 @@ export const CountdownDigital: React.FC = () => {
           <div
             style={{
               height: "100%",
-              width: `${((frame % Math.ceil(durationInFrames / TOTAL_SECONDS)) / Math.ceil(durationInFrames / TOTAL_SECONDS)) * 100}%`,
-              background: `rgba(255,40,40,${glowPulse})`,
-              boxShadow: `0 0 8px rgba(255,40,40,0.6)`,
+              width: `${((frame % Math.ceil(durationInFrames / totalSeconds)) / Math.ceil(durationInFrames / totalSeconds)) * 100}%`,
+              background: `rgba(${r},${g},${b},${glowPulse})`,
+              boxShadow: `0 0 8px rgba(${r},${g},${b},0.6)`,
               borderRadius: 3,
             }}
           />
@@ -175,12 +207,12 @@ export const CountdownDigital: React.FC = () => {
         <div
           style={{
             fontSize: 18,
-            color: "rgba(255,40,40,0.3)",
+            color: `rgba(${r},${g},${b},0.3)`,
             fontFamily: "monospace",
             letterSpacing: 6,
           }}
         >
-          {remaining === 0 ? "-- TIME UP --" : `${remaining} SEC REMAINING`}
+          {remaining === 0 ? timeUpLabel : `${remaining} SEC REMAINING`}
         </div>
       </div>
 
@@ -188,7 +220,7 @@ export const CountdownDigital: React.FC = () => {
         style={{
           position: "absolute",
           inset: 0,
-          background: `radial-gradient(ellipse at center, rgba(255,40,40,${0.03 * glowPulse}) 0%, transparent 60%)`,
+          background: `radial-gradient(ellipse at center, rgba(${r},${g},${b},${0.03 * glowPulse}) 0%, transparent 60%)`,
           zIndex: 0,
           pointerEvents: "none",
         }}
@@ -196,5 +228,3 @@ export const CountdownDigital: React.FC = () => {
     </AbsoluteFill>
   );
 };
-
-export const countdownDigitalDefaultProps = {}

@@ -7,27 +7,51 @@ import {
 } from "remotion";
 import React from "react";
 
-const TOTAL_SECONDS = 10;
-const RADIUS = 200;
-const STROKE_WIDTH = 20;
-const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+export interface CountdownCircleProps {
+  totalSeconds?: number;
+  radius?: number;
+  strokeWidth?: number;
+  mainColor?: string;
+  warningSeconds?: number;
+  warningColor?: string;
+  completeText?: string;
+}
 
-export const CountdownCircle: React.FC = () => {
+export const countdownCircleDefaultProps: CountdownCircleProps = {
+  totalSeconds: 10,
+  radius: 200,
+  strokeWidth: 20,
+  mainColor: "#22d3ee",
+  warningSeconds: 3,
+  warningColor: "#ef4444",
+  completeText: "完成！",
+};
+
+export const CountdownCircle: React.FC<CountdownCircleProps> = ({
+  totalSeconds = 10,
+  radius = 200,
+  strokeWidth = 20,
+  mainColor = "#22d3ee",
+  warningSeconds = 3,
+  warningColor = "#ef4444",
+  completeText = "完成！",
+}) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
 
   const totalFrames = durationInFrames;
-  const elapsedSeconds = Math.floor((frame / totalFrames) * TOTAL_SECONDS);
-  const currentDisplay = Math.max(0, TOTAL_SECONDS - elapsedSeconds);
+  const elapsedSeconds = Math.floor((frame / totalFrames) * totalSeconds);
+  const currentDisplay = Math.max(0, totalSeconds - elapsedSeconds);
 
   const progress = frame / totalFrames;
-  const dashOffset = CIRCUMFERENCE * progress;
+  const circumference = 2 * Math.PI * radius;
+  const dashOffset = circumference * progress;
 
-  const isLast3 = currentDisplay <= 3 && currentDisplay > 0;
+  const isLastWarning = currentDisplay <= warningSeconds && currentDisplay > 0;
   const isZero = currentDisplay === 0;
 
-  // 最后3秒抖动
-  const shake = isLast3
+  // 最后警告秒数抖动
+  const shake = isLastWarning
     ? interpolate(
         Math.sin((frame * Math.PI * 8) / fps),
         [-1, 1],
@@ -37,7 +61,7 @@ export const CountdownCircle: React.FC = () => {
 
   // 数字弹出 spring
   const digitSpring = spring({
-    frame: frame % Math.ceil(totalFrames / TOTAL_SECONDS),
+    frame: frame % Math.ceil(totalFrames / totalSeconds),
     fps,
     config: { damping: 12, stiffness: 200, mass: 0.8 },
   });
@@ -47,11 +71,11 @@ export const CountdownCircle: React.FC = () => {
 
   const circleColor = isZero
     ? "#ffffff"
-    : isLast3
-    ? "#ef4444"
-    : "#22d3ee";
+    : isLastWarning
+    ? warningColor
+    : mainColor;
 
-  const bgColor = isLast3 ? "#1a0000" : "#0a0a1a";
+  const bgColor = isLastWarning ? "#1a0000" : "#0a0a1a";
 
   // 整体缩放入场
   const entrySpring = spring({ frame, fps, config: { damping: 18, stiffness: 120 } });
@@ -75,7 +99,7 @@ export const CountdownCircle: React.FC = () => {
           width: 600,
           height: 600,
           borderRadius: "50%",
-          background: isLast3
+          background: isLastWarning
             ? "radial-gradient(circle, rgba(239,68,68,0.15) 0%, transparent 70%)"
             : "radial-gradient(circle, rgba(34,211,238,0.1) 0%, transparent 70%)",
         }}
@@ -100,20 +124,20 @@ export const CountdownCircle: React.FC = () => {
           <circle
             cx={0}
             cy={0}
-            r={RADIUS}
+            r={radius}
             fill="none"
             stroke="rgba(255,255,255,0.08)"
-            strokeWidth={STROKE_WIDTH}
+            strokeWidth={strokeWidth}
           />
           {/* 进度弧（从顶部开始，逆时针消耗） */}
           <circle
             cx={0}
             cy={0}
-            r={RADIUS}
+            r={radius}
             fill="none"
             stroke={circleColor}
-            strokeWidth={STROKE_WIDTH}
-            strokeDasharray={CIRCUMFERENCE}
+            strokeWidth={strokeWidth}
+            strokeDasharray={circumference}
             strokeDashoffset={dashOffset}
             strokeLinecap="round"
             transform="rotate(-90)"
@@ -129,10 +153,10 @@ export const CountdownCircle: React.FC = () => {
             return (
               <line
                 key={i}
-                x1={Math.cos(angle) * (RADIUS - 32)}
-                y1={Math.sin(angle) * (RADIUS - 32)}
-                x2={Math.cos(angle) * (RADIUS - 16)}
-                y2={Math.sin(angle) * (RADIUS - 16)}
+                x1={Math.cos(angle) * (radius - 32)}
+                y1={Math.sin(angle) * (radius - 32)}
+                x2={Math.cos(angle) * (radius - 16)}
+                y2={Math.sin(angle) * (radius - 16)}
                 stroke="rgba(255,255,255,0.15)"
                 strokeWidth={isMajor ? 2 : 1}
               />
@@ -163,7 +187,7 @@ export const CountdownCircle: React.FC = () => {
                 transform: `scale(${digitScale})`,
               }}
             >
-              完成！
+              {completeText}
             </div>
           ) : (
             <>
@@ -214,5 +238,3 @@ export const CountdownCircle: React.FC = () => {
     </AbsoluteFill>
   );
 };
-
-export const countdownCircleDefaultProps = {}

@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import process from 'node:process'
-import { readAssetManifest } from './lib/assetManifest'
+import { readAssetManifest, formatDefaultValue } from './lib/assetManifest'
 
 function readArg(name: string) {
   return process.argv
@@ -21,7 +21,7 @@ async function main() {
   const propsTable = manifest.propsSchema
     .map(
       (prop) =>
-        `| \`${prop.name}\` | \`${prop.type}\` | \`${String(prop.defaultValue)}\` | ${prop.description} |`,
+        `| \`${prop.name}\` | \`${prop.type}\` | \`${formatDefaultValue(prop.defaultValue)}\` | ${prop.description} |`,
     )
     .join('\n')
   const readme = `# ${manifest.displayName}

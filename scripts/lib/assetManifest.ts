@@ -36,7 +36,7 @@ const remotionHubMediaUrlSchema = httpsUrlSchema.refine(
 export const propSchema = z.object({
   name: z.string().min(1),
   type: z.string().min(1),
-  defaultValue: z.union([z.string(), z.number(), z.boolean()]),
+  defaultValue: z.any(),
   description: z.string().min(1),
 })
 
@@ -130,4 +130,14 @@ export async function writeAssetManifest(
 ) {
   const parsed = assetManifestSchema.parse(manifest)
   await fs.writeFile(pathname, `${JSON.stringify(parsed, null, 2)}\n`, 'utf8')
+}
+
+export function formatDefaultValue(value: unknown): string {
+  if (value === null || value === undefined) {
+    return ''
+  }
+  if (typeof value === 'object') {
+    return JSON.stringify(value)
+  }
+  return String(value)
 }
