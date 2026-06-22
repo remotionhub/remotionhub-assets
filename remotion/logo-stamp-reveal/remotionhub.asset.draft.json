@@ -1,0 +1,28 @@
+{
+  "slug": "logo-stamp-reveal",
+  "displayName": "Logo Stamp Reveal",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/logo-stamp-reveal",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-stamp-reveal/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-stamp-reveal/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-stamp-reveal/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-stamp-reveal/thumb.jpg",
+  "entryPoint": "src/LogoStampReveal.tsx",
+  "compositionId": "LogoStampReveal",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的品牌印章盖下动画组件（文件：LogoStampReveal.tsx），请帮我做以下调整： 1. 把印章底色从红色（#dc2626）改成你的品牌色（例如：深蓝 #1e40af） 2. 把品牌缩写从「BR」改成你的缩写（1–3 个字母），并调整字型大小（默认 100px） 3. 把弧形文字「BRAND STUDIO」改成你的品牌口号或全名（建议 2–4 个英文单字） 4. 把「SINCE 2024」改成你的成立年份或自订文字 5. 把品牌全名「Brand Studio Inc.」改成你的正式名称 6. 把副标语「Identity · Strategy · Craft」改成你的服务描述 7. 调整印章尺寸：默认 260×260px，圆角 12px，可依品牌风格调整 8. 若想改为方形印章风格，可把圆角改成 0px；若想要圆形印章，改成 50% 请保留序列动画结构（落下冲击→光晕→缩写→弧形文字→年份→全名副标语），只修改我指定的部分，然后把完整修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/logo-stamp-reveal.md",
+    "updatedAt": "2026-06-22T14:56:51.158Z"
+  }
+}

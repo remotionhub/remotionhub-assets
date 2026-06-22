@@ -1,0 +1,53 @@
+# Logo Negative Reveal
+
+![Preview](https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/logo-negative-reveal/ced836e94710-thumb.jpg)
+
+Reusable Remotion component migrated from https://remotionlab.com/showcase/logo-negative-reveal.
+
+## Usage
+
+Copy `src/LogoNegativeReveal.tsx` into your Remotion project and register it in your composition root.
+
+```tsx
+import { Composition } from 'remotion'
+import { LogoNegativeReveal, logoNegativeRevealDefaultProps } from './LogoNegativeReveal'
+
+export function RemotionRoot() {
+  return (
+    <Composition
+      id="LogoNegativeReveal"
+      component={LogoNegativeReveal}
+      durationInFrames={120}
+      fps={30}
+      width={1920}
+      height={1080}
+      defaultProps={logoNegativeRevealDefaultProps}
+    />
+  )
+}
+```
+
+## Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+
+
+## Extra Dependencies
+
+None.
+
+## Agent Prompt
+
+```text
+我有一个用 Remotion 写的负空间圆形 Logo 揭幕动画组件（文件：LogoNegativeReveal.tsx），请帮我做以下调整： 1. 修改圆形内的字母：把「N」改成你的品牌首字母（1 个大写字母），fontSize 默认 100px 2. 修改品牌名：把「Negative Space」改成你的品牌名（建议 1–3 个单字） 3. 修改副标语：把「Less is more.」改成你的品牌标语 4. 调整圆形大小：默认直径 160px（width/height 160），调整时同步修改 SVG circle r 值（默认 88，比圆形半径略大 8px 作为外框） 5. 调整遮罩收缩速度：默认 frame 0-40（约 1.3 秒），想要更戏剧性可缩短到 0-25 6. 调整外框描边动画速度：默认 frame 35-65，描边颜色默认白色可改为品牌色 7. 调整扫描线：默认高 200px，可改为圆形直径的 1.5 倍；duration 默认 frame 0-5 可拉长到 0-8 让扫描更明显 请保留遮罩收缩→外框描绘→品牌名→副标语的序列结构，只修改我指定的部分，并返回完整修改后代码。
+```
+
+## Links
+
+- RemotionHub: https://remotionhub.ai/terence/logo-negative-reveal
+- Source: https://github.com/remotionhub/remotionhub-assets/tree/main/remotion/logo-negative-reveal
+
+## License
+
+MIT

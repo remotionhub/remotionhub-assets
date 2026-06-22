@@ -1,6 +1,41 @@
 {
   "cases": [
     {
+      "slug": "audio-bar-spectrum",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/audio-bar-spectrum.md",
+      "assetPath": "remotion/audio-bar-spectrum",
+      "updatedAt": "2026-06-22T14:57:06.435Z"
+    },
+    {
+      "slug": "audio-circle-viz",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/audio-circle-viz.md",
+      "assetPath": "remotion/audio-circle-viz",
+      "updatedAt": "2026-06-22T14:57:15.877Z"
+    },
+    {
+      "slug": "audio-pulse-ring",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/audio-pulse-ring.md",
+      "assetPath": "remotion/audio-pulse-ring",
+      "updatedAt": "2026-06-22T14:57:23.618Z"
+    },
+    {
+      "slug": "audio-vinyl-record",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/audio-vinyl-record.md",
+      "assetPath": "remotion/audio-vinyl-record",
+      "updatedAt": "2026-06-22T14:57:31.584Z"
+    },
+    {
+      "slug": "audio-waveform",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/audio-waveform.md",
+      "assetPath": "remotion/audio-waveform",
+      "updatedAt": "2026-06-22T14:57:39.934Z"
+    },
+    {
       "slug": "card-avatar",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/card-avatar.md",
@@ -139,6 +174,118 @@
       "sourceFile": "/tmp/remotionlab/案例/countdown-flip-clock.md",
       "assetPath": "remotion/countdown-flip-clock",
       "updatedAt": "2026-06-22T08:18:34.725Z"
+    },
+    {
+      "slug": "logo-badge-unfold",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-badge-unfold.md",
+      "assetPath": "remotion/logo-badge-unfold",
+      "updatedAt": "2026-06-22T14:57:48.259Z"
+    },
+    {
+      "slug": "logo-block-build",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-block-build.md",
+      "assetPath": "remotion/logo-block-build",
+      "updatedAt": "2026-06-22T14:57:55.588Z"
+    },
+    {
+      "slug": "logo-brand-kit",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-brand-kit.md",
+      "assetPath": "remotion/logo-brand-kit",
+      "updatedAt": "2026-06-22T14:58:03.795Z"
+    },
+    {
+      "slug": "logo-emblem",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-emblem.md",
+      "assetPath": "remotion/logo-emblem",
+      "updatedAt": "2026-06-22T14:58:11.779Z"
+    },
+    {
+      "slug": "logo-glow-pulse",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-glow-pulse.md",
+      "assetPath": "remotion/logo-glow-pulse",
+      "updatedAt": "2026-06-22T14:58:19.632Z"
+    },
+    {
+      "slug": "logo-hologram",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-hologram.md",
+      "assetPath": "remotion/logo-hologram",
+      "updatedAt": "2026-06-22T14:58:27.409Z"
+    },
+    {
+      "slug": "logo-icon-reveal",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-icon-reveal.md",
+      "assetPath": "remotion/logo-icon-reveal",
+      "updatedAt": "2026-06-22T14:58:35.703Z"
+    },
+    {
+      "slug": "logo-line-draw",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-line-draw.md",
+      "assetPath": "remotion/logo-line-draw",
+      "updatedAt": "2026-06-22T14:58:43.132Z"
+    },
+    {
+      "slug": "logo-minimal-dot",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-minimal-dot.md",
+      "assetPath": "remotion/logo-minimal-dot",
+      "updatedAt": "2026-06-22T14:58:50.767Z"
+    },
+    {
+      "slug": "logo-negative-reveal",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-negative-reveal.md",
+      "assetPath": "remotion/logo-negative-reveal",
+      "updatedAt": "2026-06-22T14:58:59.601Z"
+    },
+    {
+      "slug": "logo-orbit-reveal",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-orbit-reveal.md",
+      "assetPath": "remotion/logo-orbit-reveal",
+      "updatedAt": "2026-06-22T14:59:06.915Z"
+    },
+    {
+      "slug": "logo-pin-drop",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-pin-drop.md",
+      "assetPath": "remotion/logo-pin-drop",
+      "updatedAt": "2026-06-22T14:59:14.214Z"
+    },
+    {
+      "slug": "logo-ring-focus",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-ring-focus.md",
+      "assetPath": "remotion/logo-ring-focus",
+      "updatedAt": "2026-06-22T14:59:21.516Z"
+    },
+    {
+      "slug": "logo-shield-crest",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-shield-crest.md",
+      "assetPath": "remotion/logo-shield-crest",
+      "updatedAt": "2026-06-22T14:59:29.786Z"
+    },
+    {
+      "slug": "logo-stamp-reveal",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-stamp-reveal.md",
+      "assetPath": "remotion/logo-stamp-reveal",
+      "updatedAt": "2026-06-22T14:59:40.208Z"
+    },
+    {
+      "slug": "logo-triangle-form",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/logo-triangle-form.md",
+      "assetPath": "remotion/logo-triangle-form",
+      "updatedAt": "2026-06-22T14:59:51.397Z"
     },
     {
       "slug": "lower-third-box-pop",

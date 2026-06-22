@@ -355,7 +355,7 @@ async function scaffold(slug: string) {
   await fs.writeFile(path.join(dir, 'remotion.config.ts'), config, 'utf8')
 
   // 10. Write src/Root.tsx
-  const root = `import { Composition } from 'remotion'\nimport React from 'react'\nimport { ${compName}, ${propName} } from './${compName}'\n\nexport const Root: React.FC = () => {\n  return (\n    <Composition\n      id="${compName}"\n      component={${compName}}\n      durationInFrames={120}\n      fps={30}\n      width={1920}\n      height={1080}\n      defaultProps={${propName}}\n    />\n  )\n}\n`
+  const root = `import { Composition, registerRoot } from 'remotion'\nimport { ${compName}, ${propName} } from './${compName}'\n\nexport function RemotionRoot() {\n  return (\n    <Composition\n      id="${compName}"\n      component={${compName}}\n      durationInFrames={120}\n      fps={30}\n      width={1920}\n      height={1080}\n      defaultProps={${propName}}\n    />\n  )\n}\n\nregisterRoot(RemotionRoot)\n`
   await fs.writeFile(path.join(dir, 'src/Root.tsx'), root, 'utf8')
 
   // 11. Write src/index.ts
@@ -366,7 +366,9 @@ async function scaffold(slug: string) {
 }
 
 async function main() {
-  for (const slug of slugs) {
+  const targets = process.argv.slice(2)
+  const list = targets.length > 0 ? targets : slugs
+  for (const slug of list) {
     await scaffold(slug)
   }
 }

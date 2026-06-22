@@ -1,0 +1,28 @@
+{
+  "slug": "audio-vinyl-record",
+  "displayName": "Audio Vinyl Record",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/audio-vinyl-record",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-vinyl-record/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-vinyl-record/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-vinyl-record/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/audio-vinyl-record/thumb.jpg",
+  "entryPoint": "src/AudioVinylRecord.tsx",
+  "compositionId": "AudioVinylRecord",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的黑胶唱片视觉化组件（文件：AudioVinylRecord.tsx），请帮我做以下调整： 1. 把唱片旋转速度从每帧 1.2 度改成「___」度 2. 把标签颜色从红色（#cc3300）改成「___」 3. 把右侧频谱棒数量从 24 根改成「___」根 4. 把标题文字从「黑胶唱片」改成「___」 请保留原本的旋转动画与唱针臂，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/audio-vinyl-record.md",
+    "updatedAt": "2026-06-22T14:56:45.660Z"
+  }
+}

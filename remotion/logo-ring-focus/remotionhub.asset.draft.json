@@ -1,0 +1,28 @@
+{
+  "slug": "logo-ring-focus",
+  "displayName": "Logo Ring Focus",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/logo-ring-focus",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-ring-focus/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-ring-focus/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-ring-focus/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-ring-focus/thumb.jpg",
+  "entryPoint": "src/LogoRingFocus.tsx",
+  "compositionId": "LogoRingFocus",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的光圈聚焦 Logo 动画组件（文件：LogoRingFocus.tsx），请帮我做以下调整： 1. 把圆圈底色从深蓝 #0f172a 改成「___」 2. 把圆圈边框颜色从白色改成「___」（例如金色 #f59e0b） 3. 把光晕颜色从蓝色 rgba(59,130,246) 改成「___」（可配合品牌色） 4. 把圆圈内的汉堡图标（三条横线）换成你的品牌符号：可改成三角形、字母、或其他 div 组合图形 5. 把品牌名称从 \"FOCUS LABS\" 改成「___」（全大写字距效果最佳） 6. 把品牌名称字距从 8px 改成「___」 7. 把标语从 \"See clearly.\" 改成「___」，或删除 8. 调整聚焦速度：frame [0, 50] 可改成 [0, 35]（更快）或 [0, 70]（更慢） 请保留从大圆缩小聚焦的核心动画逻辑，只修改我指定的部分，然后把完整修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/logo-ring-focus.md",
+    "updatedAt": "2026-06-22T14:56:50.476Z"
+  }
+}

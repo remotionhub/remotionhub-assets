@@ -1,0 +1,28 @@
+{
+  "slug": "logo-triangle-form",
+  "displayName": "Logo Triangle Form",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/logo-triangle-form",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-triangle-form/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-triangle-form/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-triangle-form/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/logo-triangle-form/thumb.jpg",
+  "entryPoint": "src/LogoTriangleForm.tsx",
+  "compositionId": "LogoTriangleForm",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的三角碎片拼合 Logo 动画组件（文件：LogoTriangleForm.tsx），请帮我做以下调整： 1. 修改品牌名：把「Triform」改成你的品牌名（建议 1–2 个英文单字） 2. 修改副标语：把「Built to last.」改成你的品牌标语 3. 调整配色（三个小三角形）： - 左下三角默认蓝色 #3b82f6，可改为品牌主色 - 右下三角默认紫色 #8b5cf6，可改为品牌副色 - 顶部三角默认青色 #06b6d4，可改为品牌第三色 - 中央倒三角（负空间）背景色 #0f0f0f 需与画面背景相同 4. 调整三角形大小： - 目前大三角高 220px，中心约 (960, 430) - 顶点：顶部 (960,320)、左下 (833,540)、右下 (1087,540) - 各小三角的顶点坐标需同步修改，请依比例缩放 5. 调整 spring 物理参数： - damping 默认 18（越低越弹跳），stiffness 默认 120（越高越快） - stagger 间隔默认 12 帧，可缩到 8 帧（更紧凑）或拉到 16 帧（更连贯） 6. 调整各三角形飞入起始位置： - 左下：默认 (-300, 200)，可改成更远如 (-500, 300) - 右下：默认 (300, 200) - 顶部：默认 (0, -300)，可改为 (0, -500) 7. 调整品牌名与副标语出现时机： - 品牌名 frame 80-105，副标语 frame 100-120 请保留三角飞入→中央负空间→品牌名→副标语的序列结构，只修改我指定的部分，并返回完整修改后代码。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/logo-triangle-form.md",
+    "updatedAt": "2026-06-22T14:56:51.501Z"
+  }
+}
