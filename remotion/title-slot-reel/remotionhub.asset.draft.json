@@ -1,0 +1,28 @@
+{
+  "slug": "title-slot-reel",
+  "displayName": "Title Slot Reel",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-slot-reel",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-slot-reel/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-slot-reel/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-slot-reel/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-slot-reel/thumb.jpg",
+  "entryPoint": "src/TitleSlotReel.tsx",
+  "compositionId": "TitleSlotReel",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的老虎机字卡组件（文件：SlotReelTitle.tsx），请帮我做以下调整： 1. 把最终显示文字从 \"REWIND\" 改成「___」（需同步更新 FINAL-TEXT 和 REEL-PREFIXES，每个位置提供 4 个过渡字元） 2. 把最终字元的颜色从金黄 #fbbf24 改成「___」 3. 把过渡字元的颜色从深灰 #374151 改成「___」 4. 把背景色从深蓝黑 #1a1a2e 改成「___」 5. 把字体大小从 96px 改成 ___px（需同步调整 ITEM-HEIGHT 为字体大小的 1.15 倍） 6. 把每个字元的出场延迟从 8 帧改成 ___ 帧（数字越大，字元依序出现的间隔越长） 请保留原本的老虎机滚轮效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/title-slot-reel.md",
+    "updatedAt": "2026-06-22T06:17:03.250Z"
+  }
+}

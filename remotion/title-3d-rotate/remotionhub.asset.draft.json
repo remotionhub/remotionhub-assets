@@ -1,0 +1,28 @@
+{
+  "slug": "title-3d-rotate",
+  "displayName": "Title 3d Rotate",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-3d-rotate",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-3d-rotate/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-3d-rotate/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-3d-rotate/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-3d-rotate/thumb.jpg",
+  "entryPoint": "src/Title3dRotate.tsx",
+  "compositionId": "Title3dRotate",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 3D 旋转字卡组件（文件：Rotate3DTitle.tsx），请帮我做以下调整： 1. 把显示文字从 \"3D ROTATE\" 改成「___」 2. 把文字颜色从近白 #fafafa 改成「___」 3. 把背景色从深灰 #18181b 改成「___」 4. 把字体大小从 110px 改成 ___px 5. 把透视距离从 1200px 改成 ___px（数字越小，3D 效果越夸张） 6. 把旋转方向从 Y 轴（rotateY）改成「___」轴（可选：rotateX、rotateY、rotateZ） 请保留原本的 3D 旋转入场效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/title-3d-rotate.md",
+    "updatedAt": "2026-06-22T06:17:00.111Z"
+  }
+}

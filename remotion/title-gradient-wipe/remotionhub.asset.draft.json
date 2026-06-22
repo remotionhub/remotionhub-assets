@@ -1,0 +1,28 @@
+{
+  "slug": "title-gradient-wipe",
+  "displayName": "Title Gradient Wipe",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-gradient-wipe",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-gradient-wipe/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-gradient-wipe/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-gradient-wipe/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-gradient-wipe/thumb.jpg",
+  "entryPoint": "src/TitleGradientWipe.tsx",
+  "compositionId": "TitleGradientWipe",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的渐层擦拭字卡组件（文件：GradientWipeTitle.tsx），请帮我做以下调整： 1. 把显示文字从 \"Your Story Starts Here\" 改成「___」 2. 把渐层色从青蓝→紫→琥珀（#06b6d4 → #8b5cf6 → #f59e0b）改成「___」→「___」→「___」 3. 把底层暗色文字从 #1f2937 改成「___」（越深越不明显） 4. 把背景色从近黑 #030712 改成「___」 5. 把字体大小从 96px 改成 ___px 6. 把擦拭速度调整：想更快请把 stiffness 从 50 改大（例如 100）；想更慢请改小（例如 20） 请保留原本的由左至右渐层擦拭效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/title-gradient-wipe.md",
+    "updatedAt": "2026-06-22T06:17:01.141Z"
+  }
+}

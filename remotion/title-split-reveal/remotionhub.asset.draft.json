@@ -1,0 +1,28 @@
+{
+  "slug": "title-split-reveal",
+  "displayName": "Title Split Reveal",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-split-reveal",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-split-reveal/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-split-reveal/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-split-reveal/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-split-reveal/thumb.jpg",
+  "entryPoint": "src/TitleSplitReveal.tsx",
+  "compositionId": "TitleSplitReveal",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的分割揭示字卡组件（文件：SplitRevealTitle.tsx），请帮我做以下调整： 1. 把上方文字从 \"SPLIT\" 改成「___」 2. 把下方文字从 \"REVEAL\" 改成「___」 3. 把中间分割线的颜色从琥珀色 #f59e0b 改成「___」 4. 把下方文字的颜色从琥珀色 #f59e0b 改成「___」 5. 把背景色从深灰 #111827 改成「___」 6. 把字体大小从 140px 改成 ___px 请保留原本的分割线展开 → 文字上下分离的入场效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/title-split-reveal.md",
+    "updatedAt": "2026-06-22T06:17:03.609Z"
+  }
+}

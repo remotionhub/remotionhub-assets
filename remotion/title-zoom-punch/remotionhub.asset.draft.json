@@ -1,0 +1,28 @@
+{
+  "slug": "title-zoom-punch",
+  "displayName": "Title Zoom Punch",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-zoom-punch",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-zoom-punch/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-zoom-punch/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-zoom-punch/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-zoom-punch/thumb.jpg",
+  "entryPoint": "src/TitleZoomPunch.tsx",
+  "compositionId": "TitleZoomPunch",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的冲击缩放字卡组件（文件：ZoomPunchTitle.tsx），请帮我做以下调整： 1. 把显示文字从 \"IMPACT\" 改成「___」 2. 把背景色从红色 #dc2626 改成「___」 3. 把文字颜色从白色 #ffffff 改成「___」 4. 把字体大小从 130px 改成 ___px 5. 把起始缩放倍数从 6 倍改成 ___ 倍（数字越大，冲击感越强） 6. 把弹跳感调整：想更弹改小 damping（目前 10，试试 6-8）；想更稳定改大（试试 15-20） 请保留原本的缩放冲击效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/title-zoom-punch.md",
+    "updatedAt": "2026-06-22T06:17:05.405Z"
+  }
+}

@@ -41,7 +41,7 @@ export function parseRemotionLabMarkdown(
     /\[Video\]\((https:\/\/[^)]+preview\.mp4)\)/,
   )
   const thumbnailMatch = markdown.match(
-    /\[Poster\]\((https:\/\/[^)]+thumb\.jpg)\)/,
+    /\[Poster\]\((https:\/\/[^)]+thumb\.(?:jpg|png))\)/,
   )
   const blocks = readCodeBlocks(markdown)
   const prompt = blocks.find((block) => block.language === 'text')?.body.trim()

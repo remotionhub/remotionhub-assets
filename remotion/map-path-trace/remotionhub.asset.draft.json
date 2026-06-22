@@ -1,0 +1,28 @@
+{
+  "slug": "map-path-trace",
+  "displayName": "Map Path Trace",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/map-path-trace",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-path-trace/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-path-trace/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-path-trace/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-path-trace/thumb.jpg",
+  "entryPoint": "src/MapPathTrace.tsx",
+  "compositionId": "MapPathTrace",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的路径描绘动画组件（文件：MapPathTrace.tsx），请帮我做以下调整： 1. 把起点城市从「台北」改成「___」（修改 ROUTE-CITIES 阵列第一个元素的 name/lat/lng） 2. 把终点城市从「高雄」改成「___」（修改 ROUTE-CITIES 阵列最后一个元素的 name/lat/lng） 3. 把路径描绘颜色从蓝色 #38bdf8 改成「___」 4. 把移动小圆点颜色从黄色 #facc15 改成「___」 5. 调整描绘速度：想更快请把 interpolate 的第二个参数从 [0, 110] 改小；想更慢改大 6. 把左侧资讯面板「预计距离」的数值改成「___」 请保留台湾轮廓、polyline 路径与站点标记逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/map-path-trace.md",
+    "updatedAt": "2026-06-22T06:16:56.950Z"
+  }
+}

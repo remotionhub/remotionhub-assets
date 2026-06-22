@@ -1,0 +1,28 @@
+{
+  "slug": "countdown-blast",
+  "displayName": "Countdown Blast",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/countdown-blast",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/countdown-blast/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/countdown-blast/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/countdown-blast/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/countdown-blast/thumb.jpg",
+  "entryPoint": "src/CountdownBlast.tsx",
+  "compositionId": "CountdownBlast",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的爆炸式倒数计时器组件（文件：CountdownBlast.tsx），请帮我做以下调整： 1. 把倒数序列从「5-4-3-2-1-GO!」改成「___」（修改 PHASES 阵列） 2. 把每个阶段的主色阵列从现有颜色改成「___」（修改 PHASE-COLORS 阵列，需与 PHASES 长度相同） 3. 把能量射线数量从 12 改成「___」（修改 RAY-COUNT 常数） 4. 把每个数字停留帧数从 28 改成「___」（修改 PHASE-FRAMES 常数） 5. 数字冲击弹出力度调整：stiffness 从 400 改大更冲，改小更柔 请保留能量射线、冲击波环与 GO! 放射线展开逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/countdown-blast.md",
+    "updatedAt": "2026-06-22T06:16:54.869Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "title-neon-glow",
+  "displayName": "Title Neon Glow",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-neon-glow",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-neon-glow/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-neon-glow/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-neon-glow/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-neon-glow/thumb.jpg",
+  "entryPoint": "src/TitleNeonGlow.tsx",
+  "compositionId": "TitleNeonGlow",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的霓虹发光字卡组件（文件：NeonGlowTitle.tsx），请帮我做以下调整： 1. 把显示文字从 \"NEON GLOW\" 改成「___」 2. 把发光颜色从紫色系（#f0abfc、#d946ef）改成「___」色系（请自行选配两个深浅色） 3. 把文字颜色从淡紫 #f5d0fe 改成「___」 4. 把字体从等宽字型 Courier New 改成「___」（例如：sans-serif、serif、Impact） 5. 把背景色从极深紫 #050008 改成「___」 6. 把闪烁结束时间从第 45 帧改成第 ___ 帧（数字越大，闪烁越久） 请保留原本的闪烁 → 稳定亮起的效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/title-neon-glow.md",
+    "updatedAt": "2026-06-22T06:17:02.196Z"
+  }
+}

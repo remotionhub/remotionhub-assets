@@ -1,0 +1,28 @@
+{
+  "slug": "title-stagger-lines",
+  "displayName": "Title Stagger Lines",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-stagger-lines",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-stagger-lines/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-stagger-lines/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-stagger-lines/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-stagger-lines/thumb.jpg",
+  "entryPoint": "src/TitleStaggerLines.tsx",
+  "compositionId": "TitleStaggerLines",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的逐行交错字卡组件（文件：StaggerLinesTitle.tsx），请帮我做以下调整： 1. 把三行文字从 \"Design\" / \"with Purpose.\" / \"Move the World.\" 改成「___」/「___」/「___」 2. 把三行文字的颜色从白/灰/蓝（#ffffff / #94a3b8 / #38bdf8）改成「___」/「___」/「___」 3. 把三行文字的字体大小从 120px / 72px / 58px 改成 ___px / ___px / ___px 4. 把每行的出场方向从 left / right / bottom 改成「___」/「___」/「___」（可选：left、right、bottom） 5. 把背景色从深蓝 #0f172a 改成「___」 6. 把每行的出场延迟从 0 / 20 / 40 帧改成 ___ / ___ / ___ 帧 请保留原本的三行依序滑入效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/title-stagger-lines.md",
+    "updatedAt": "2026-06-22T06:17:03.969Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "map-area-reveal",
+  "displayName": "Map Area Reveal",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/map-area-reveal",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-area-reveal/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-area-reveal/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-area-reveal/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-area-reveal/thumb.jpg",
+  "entryPoint": "src/MapAreaReveal.tsx",
+  "compositionId": "MapAreaReveal",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的地图区域揭示组件（文件：MapAreaReveal.tsx），请帮我做以下调整： 1. 把某个区域的颜色改成「___」（修改 REGIONS 阵列中对应项目的 color/glowColor） 2. 把某个区域的城市清单改成「___」（修改 cities 阵列，提供 name/lat/lng） 3. 把标题「台湾五大区域」改成「___」 4. 调整揭示动画速度：修改各区域 spring 的 stiffness 改大可加速揭示 5. 把外岛图标位置调整（修改 OFFSHORE-ICONS 阵列中的 x/y 值） 请保留台湾轮廓、渐层椭圆色块与城市标记弹出逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/map-area-reveal.md",
+    "updatedAt": "2026-06-22T06:16:56.607Z"
+  }
+}
