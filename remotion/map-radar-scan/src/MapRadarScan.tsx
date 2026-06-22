@@ -1,143 +1,187 @@
-import {
-  AbsoluteFill,
-  interpolate,
-  useCurrentFrame,
-} from "remotion";
-import React from "react";
+import { AbsoluteFill, interpolate, useCurrentFrame } from 'remotion'
+import React from 'react'
 
-// 投影函数
-const GEO = { lngMin: 119.5, lngMax: 122.5, latMin: 21.7, latMax: 25.5 };
-
-// 台湾中心作为雷达中心
-const TAIWAN_CENTER = { lat: 23.7, lng: 120.9 };
-
-// SVG 画面中心
-const SVG_CENTER_X = 760;
-const SVG_CENTER_Y = 540;
-const RADAR_RADIUS = 390;
-
-// 从地理座标转成相对于台湾中心的 SVG 偏移
-// 约 1° 纬 = RADAR_RADIUS / ((GEO.latMax - GEO.latMin) / 2) 的比例
-const LAT_SCALE = RADAR_RADIUS / ((GEO.latMax - GEO.latMin) / 2);
-const LNG_SCALE = RADAR_RADIUS / ((GEO.lngMax - GEO.lngMin) / 2);
-
-const projectToRadar = (lat: number, lng: number) => ({
-  x: SVG_CENTER_X + (lng - TAIWAN_CENTER.lng) * LNG_SCALE,
-  y: SVG_CENTER_Y - (lat - TAIWAN_CENTER.lat) * LAT_SCALE,
-});
-
-// 台湾轮廓（原始地理座标 → 雷达投影）
-const TAIWAN_OUTLINE: [number, number][] = [
-  [25.3, 121.54], [25.13, 121.74], [25.0, 122.0], [24.87, 121.83],
-  [24.72, 121.77], [24.6, 121.87], [23.98, 121.61], [23.55, 121.55],
-  [23.09, 121.37], [22.75, 121.1], [22.3, 120.9], [21.9, 120.85],
-  [22.17, 120.7], [22.38, 120.49], [22.62, 120.26], [23.05, 120.1],
-  [23.42, 120.12], [23.71, 120.29], [23.96, 120.43], [24.2, 120.57],
-  [24.56, 120.78], [24.85, 120.88], [25.0, 121.35], [25.17, 121.43],
-  [25.3, 121.54],
-];
-
-const taiwanRadarPath = TAIWAN_OUTLINE.map(([lat, lng], i) => {
-  const p = projectToRadar(lat, lng);
-  return `${i === 0 ? "M" : "L"} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`;
-}).join(" ") + " Z";
-
-// 6 个主要城市（雷达上的目标点）
-const RADAR_CITIES = [
-  { name: "台北", lat: 25.033, lng: 121.565 },
-  { name: "新竹", lat: 24.807, lng: 120.969 },
-  { name: "台中", lat: 24.148, lng: 120.674 },
-  { name: "台南", lat: 23.0, lng: 120.227 },
-  { name: "高雄", lat: 22.627, lng: 120.301 },
-  { name: "花莲", lat: 23.991, lng: 121.611 },
-].map((c) => {
-  const p = projectToRadar(c.lat, c.lng);
-  // 角度（从正北顺时针，转成 SVG 角度）
-  const dx = p.x - SVG_CENTER_X;
-  const dy = p.y - SVG_CENTER_Y;
-  const angle = (Math.atan2(dy, dx) * 180) / Math.PI + 90; // 转为从上方起
-  return { ...c, x: p.x, y: p.y, angle: (angle + 360) % 360 };
-});
-
-function toRad(deg: number) {
-  return (deg * Math.PI) / 180;
+export interface RadarCity {
+  name: string
+  lat: number
+  lng: number
 }
 
-export const MapRadarScan: React.FC = () => {
-  const frame = useCurrentFrame();
+export interface MapRadarScanProps {
+  title?: string
+  subtitle?: string
+  themeColor?: string
+  bgColor?: string
+  scanSpeed?: number
+  tailDegrees?: number
+  radarRadius?: number
+  cities?: RadarCity[]
+}
 
-  // 扫描线角度（每帧旋转 2°，180帧 = 1圈）
-  const scanAngle = (frame * 2) % 360;
-  const scanRad = toRad(scanAngle - 90);
+// 投影函数 Constants
+const GEO = { lngMin: 119.5, lngMax: 122.5, latMin: 21.7, latMax: 25.5 }
+const TAIWAN_CENTER = { lat: 23.7, lng: 120.9 }
+const SVG_CENTER_X = 760
+const SVG_CENTER_Y = 540
 
-  const TAIL_DEGREES = 70;
+// 台湾轮廓原始地理座标
+const TAIWAN_OUTLINE: [number, number][] = [
+  [25.3, 121.54],
+  [25.13, 121.74],
+  [25.0, 122.0],
+  [24.87, 121.83],
+  [24.72, 121.77],
+  [24.6, 121.87],
+  [23.98, 121.61],
+  [23.55, 121.55],
+  [23.09, 121.37],
+  [22.75, 121.1],
+  [22.3, 120.9],
+  [21.9, 120.85],
+  [22.17, 120.7],
+  [22.38, 120.49],
+  [22.62, 120.26],
+  [23.05, 120.1],
+  [23.42, 120.12],
+  [23.71, 120.29],
+  [23.96, 120.43],
+  [24.2, 120.57],
+  [24.56, 120.78],
+  [24.85, 120.88],
+  [25.0, 121.35],
+  [25.17, 121.43],
+  [25.3, 121.54],
+]
+
+function toRad(deg: number) {
+  return (deg * Math.PI) / 180
+}
+
+export function MapRadarScan({
+  title = '▌ 台湾雷达扫描系统 v2.4',
+  subtitle = 'TAIWAN RADAR SURVEILLANCE ACTIVE',
+  themeColor = '#4ade80',
+  bgColor = '#020b02',
+  scanSpeed = 2,
+  tailDegrees = 70,
+  radarRadius = 390,
+  cities = [],
+}: MapRadarScanProps) {
+  const frame = useCurrentFrame()
+
+  const latScale = radarRadius / ((GEO.latMax - GEO.latMin) / 2)
+  const lngScale = radarRadius / ((GEO.lngMax - GEO.lngMin) / 2)
+
+  const projectToRadar = (lat: number, lng: number) => ({
+    x: SVG_CENTER_X + (lng - TAIWAN_CENTER.lng) * lngScale,
+    y: SVG_CENTER_Y - (lat - TAIWAN_CENTER.lat) * latScale,
+  })
+
+  const taiwanRadarPath =
+    TAIWAN_OUTLINE.map(([lat, lng], i) => {
+      const p = projectToRadar(lat, lng)
+      return `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`
+    }).join(' ') + ' Z'
+
+  const radarCities = cities.map((c) => {
+    const p = projectToRadar(c.lat, c.lng)
+    const dx = p.x - SVG_CENTER_X
+    const dy = p.y - SVG_CENTER_Y
+    const angle = (Math.atan2(dy, dx) * 180) / Math.PI + 90
+    return { ...c, x: p.x, y: p.y, angle: (angle + 360) % 360 }
+  })
+
+  // 扫描线角度（每帧旋转 scanSpeed°）
+  const scanAngle = (frame * scanSpeed) % 360
+  const scanRad = toRad(scanAngle - 90)
+
+  // 辅助雷达边线暗色
+  const darkGreen = '#15803d'
+  const darkerGreen = '#14532d'
+  const gridGreen = '#061506'
 
   return (
     <AbsoluteFill
       style={{
-        background: "#020b02",
-        fontFamily: "monospace",
+        background: bgColor,
+        fontFamily: 'monospace',
       }}
     >
       {/* 标题 */}
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 48,
           left: 60,
-          color: "#4ade80",
+          color: themeColor,
           fontSize: 15,
           letterSpacing: 4,
           opacity: 0.8,
         }}
       >
-        ▌ 台湾雷达扫描系统 v2.4
+        {title}
       </div>
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 78,
           left: 60,
-          color: "#166534",
+          color: darkerGreen,
           fontSize: 12,
           letterSpacing: 3,
         }}
       >
-        TAIWAN RADAR SURVEILLANCE ACTIVE
+        {subtitle}
       </div>
 
       <svg
         width="1920"
         height="1080"
         viewBox="0 0 1920 1080"
-        style={{ position: "absolute", top: 0, left: 0 }}
+        style={{ position: 'absolute', top: 0, left: 0 }}
       >
         <defs>
           <clipPath id="radarClip">
-            <circle cx={SVG_CENTER_X} cy={SVG_CENTER_Y} r={RADAR_RADIUS} />
+            <circle cx={SVG_CENTER_X} cy={SVG_CENTER_Y} r={radarRadius} />
           </clipPath>
           <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#4ade80" stopOpacity="0.25" />
-            <stop offset="100%" stopColor="#4ade80" stopOpacity="0" />
+            <stop offset="0%" stopColor={themeColor} stopOpacity="0.25" />
+            <stop offset="100%" stopColor={themeColor} stopOpacity="0" />
           </radialGradient>
         </defs>
 
         {/* 背景格线 */}
-        <rect width="1920" height="1080" fill="#020b02" />
+        <rect width="1920" height="1080" fill={bgColor} />
         {Array.from({ length: 31 }).map((_, i) => (
-          <line key={`v${i}`} x1={i * 64} y1={0} x2={i * 64} y2={1080} stroke="#061506" strokeWidth="1" />
+          <line
+            key={`v${i}`}
+            x1={i * 64}
+            y1={0}
+            x2={i * 64}
+            y2={1080}
+            stroke={gridGreen}
+            strokeWidth="1"
+          />
         ))}
         {Array.from({ length: 18 }).map((_, i) => (
-          <line key={`h${i}`} x1={0} y1={i * 64} x2={1920} y2={i * 64} stroke="#061506" strokeWidth="1" />
+          <line
+            key={`h${i}`}
+            x1={0}
+            y1={i * 64}
+            x2={1920}
+            y2={i * 64}
+            stroke={gridGreen}
+            strokeWidth="1"
+          />
         ))}
 
         {/* 雷达圆形背景 */}
         <circle
           cx={SVG_CENTER_X}
           cy={SVG_CENTER_Y}
-          r={RADAR_RADIUS}
+          r={radarRadius}
           fill="#040f04"
-          stroke="#15803d"
+          stroke={darkGreen}
           strokeWidth="2"
         />
 
@@ -147,9 +191,9 @@ export const MapRadarScan: React.FC = () => {
             key={i}
             cx={SVG_CENTER_X}
             cy={SVG_CENTER_Y}
-            r={RADAR_RADIUS * r}
+            r={radarRadius * r}
             fill="none"
-            stroke="#14532d"
+            stroke={darkerGreen}
             strokeWidth="1"
             strokeDasharray="4 4"
           />
@@ -157,37 +201,37 @@ export const MapRadarScan: React.FC = () => {
 
         {/* 十字线 */}
         <line
-          x1={SVG_CENTER_X - RADAR_RADIUS}
+          x1={SVG_CENTER_X - radarRadius}
           y1={SVG_CENTER_Y}
-          x2={SVG_CENTER_X + RADAR_RADIUS}
+          x2={SVG_CENTER_X + radarRadius}
           y2={SVG_CENTER_Y}
-          stroke="#14532d"
+          stroke={darkerGreen}
           strokeWidth="1"
         />
         <line
           x1={SVG_CENTER_X}
-          y1={SVG_CENTER_Y - RADAR_RADIUS}
+          y1={SVG_CENTER_Y - radarRadius}
           x2={SVG_CENTER_X}
-          y2={SVG_CENTER_Y + RADAR_RADIUS}
-          stroke="#14532d"
+          y2={SVG_CENTER_Y + radarRadius}
+          stroke={darkerGreen}
           strokeWidth="1"
         />
 
         {/* 斜线 */}
         {[45, 135].map((deg) => {
-          const r = toRad(deg);
+          const r = toRad(deg)
           return (
             <line
               key={deg}
-              x1={SVG_CENTER_X - Math.cos(r) * RADAR_RADIUS}
-              y1={SVG_CENTER_Y - Math.sin(r) * RADAR_RADIUS}
-              x2={SVG_CENTER_X + Math.cos(r) * RADAR_RADIUS}
-              y2={SVG_CENTER_Y + Math.sin(r) * RADAR_RADIUS}
-              stroke="#14532d"
+              x1={SVG_CENTER_X - Math.cos(r) * radarRadius}
+              y1={SVG_CENTER_Y - Math.sin(r) * radarRadius}
+              x2={SVG_CENTER_X + Math.cos(r) * radarRadius}
+              y2={SVG_CENTER_Y + Math.sin(r) * radarRadius}
+              stroke={darkerGreen}
               strokeWidth="1"
               strokeDasharray="2 6"
             />
-          );
+          )
         })}
 
         {/* 台湾轮廓（裁剪在雷达圆内） */}
@@ -204,21 +248,21 @@ export const MapRadarScan: React.FC = () => {
 
         {/* 扫描尾迹（扇形） */}
         <g clipPath="url(#radarClip)">
-          {Array.from({ length: TAIL_DEGREES }).map((_, i) => {
-            const alpha = i / TAIL_DEGREES;
-            const angle = toRad(scanAngle - 90 - i);
+          {Array.from({ length: tailDegrees }).map((_, i) => {
+            const alpha = i / tailDegrees
+            const angle = toRad(scanAngle - 90 - i)
             return (
               <line
                 key={i}
                 x1={SVG_CENTER_X}
                 y1={SVG_CENTER_Y}
-                x2={SVG_CENTER_X + Math.cos(angle) * RADAR_RADIUS}
-                y2={SVG_CENTER_Y + Math.sin(angle) * RADAR_RADIUS}
-                stroke="#4ade80"
+                x2={SVG_CENTER_X + Math.cos(angle) * radarRadius}
+                y2={SVG_CENTER_Y + Math.sin(angle) * radarRadius}
+                stroke={themeColor}
                 strokeWidth="2"
                 opacity={(1 - alpha) * 0.2}
               />
-            );
+            )
           })}
         </g>
 
@@ -226,49 +270,71 @@ export const MapRadarScan: React.FC = () => {
         <line
           x1={SVG_CENTER_X}
           y1={SVG_CENTER_Y}
-          x2={SVG_CENTER_X + Math.cos(scanRad) * RADAR_RADIUS}
-          y2={SVG_CENTER_Y + Math.sin(scanRad) * RADAR_RADIUS}
-          stroke="#4ade80"
+          x2={SVG_CENTER_X + Math.cos(scanRad) * radarRadius}
+          y2={SVG_CENTER_Y + Math.sin(scanRad) * radarRadius}
+          stroke={themeColor}
           strokeWidth="3"
-          style={{ filter: "drop-shadow(0 0 5px #4ade80)" }}
+          style={{ filter: `drop-shadow(0 0 5px ${themeColor})` }}
           clipPath="url(#radarClip)"
         />
 
         {/* 城市目标点 */}
-        {RADAR_CITIES.map((city) => {
-          // SVG 角度（从右方 0° 逆时针，转为从上方 0° 顺时针）
-          const dx = city.x - SVG_CENTER_X;
-          const dy = city.y - SVG_CENTER_Y;
-          const targetAngle = ((Math.atan2(dy, dx) * 180) / Math.PI + 360 + 90) % 360;
+        {radarCities.map((city) => {
+          const dx = city.x - SVG_CENTER_X
+          const dy = city.y - SVG_CENTER_Y
+          const targetAngle =
+            ((Math.atan2(dy, dx) * 180) / Math.PI + 360 + 90) % 360
 
-          // 扫描线已扫过后闪烁
-          const angleDiff = ((scanAngle - targetAngle) % 360 + 360) % 360;
-          const isFresh = angleDiff < 45;
+          const angleDiff = ((scanAngle - targetAngle) % 360 + 360) % 360
+          const isFresh = angleDiff < 45
           const blinkIntensity = isFresh
-            ? interpolate(angleDiff, [0, 45], [1, 0], { extrapolateRight: "clamp" })
-            : 0;
+            ? interpolate(angleDiff, [0, 45], [1, 0], {
+                extrapolateRight: 'clamp',
+              })
+            : 0
 
           return (
             <g key={city.name} transform={`translate(${city.x}, ${city.y})`}>
               <circle
                 r={18}
                 fill="none"
-                stroke="#4ade80"
+                stroke={themeColor}
                 strokeWidth="2"
                 opacity={blinkIntensity * 0.7}
               />
               <circle
                 r={5}
-                fill="#4ade80"
+                fill={themeColor}
                 opacity={blinkIntensity}
-                style={{ filter: blinkIntensity > 0.4 ? "drop-shadow(0 0 5px #4ade80)" : "none" }}
+                style={{
+                  filter:
+                    blinkIntensity > 0.4
+                      ? `drop-shadow(0 0 5px ${themeColor})`
+                      : 'none',
+                }}
               />
-              <line x1="-12" y1="0" x2="12" y2="0" stroke="#4ade80" strokeWidth="1.5" opacity={blinkIntensity * 0.6} />
-              <line x1="0" y1="-12" x2="0" y2="12" stroke="#4ade80" strokeWidth="1.5" opacity={blinkIntensity * 0.6} />
+              <line
+                x1="-12"
+                y1="0"
+                x2="12"
+                y2="0"
+                stroke={themeColor}
+                strokeWidth="1.5"
+                opacity={blinkIntensity * 0.6}
+              />
+              <line
+                x1="0"
+                y1="-12"
+                x2="0"
+                y2="12"
+                stroke={themeColor}
+                strokeWidth="1.5"
+                opacity={blinkIntensity * 0.6}
+              />
               <text
                 x="22"
                 y="5"
-                fill="#4ade80"
+                fill={themeColor}
                 fontSize="15"
                 opacity={blinkIntensity * 0.9}
                 fontFamily="monospace"
@@ -276,7 +342,7 @@ export const MapRadarScan: React.FC = () => {
                 {city.name}
               </text>
             </g>
-          );
+          )
         })}
 
         {/* 中心点 */}
@@ -284,77 +350,103 @@ export const MapRadarScan: React.FC = () => {
           cx={SVG_CENTER_X}
           cy={SVG_CENTER_Y}
           r={8}
-          fill="#4ade80"
-          style={{ filter: "drop-shadow(0 0 10px #4ade80)" }}
+          fill={themeColor}
+          style={{ filter: `drop-shadow(0 0 10px ${themeColor})` }}
         />
-        <circle cx={SVG_CENTER_X} cy={SVG_CENTER_Y} r={44} fill="url(#centerGlow)" />
+        <circle
+          cx={SVG_CENTER_X}
+          cy={SVG_CENTER_Y}
+          r={44}
+          fill="url(#centerGlow)"
+        />
 
         {/* 外圈刻度 */}
         {Array.from({ length: 36 }).map((_, i) => {
-          const a = toRad(i * 10 - 90);
-          const inner = i % 3 === 0 ? RADAR_RADIUS - 18 : RADAR_RADIUS - 10;
+          const a = toRad(i * 10 - 90)
+          const inner = i % 3 === 0 ? radarRadius - 18 : radarRadius - 10
           return (
             <line
               key={i}
               x1={SVG_CENTER_X + Math.cos(a) * inner}
               y1={SVG_CENTER_Y + Math.sin(a) * inner}
-              x2={SVG_CENTER_X + Math.cos(a) * RADAR_RADIUS}
-              y2={SVG_CENTER_Y + Math.sin(a) * RADAR_RADIUS}
-              stroke="#15803d"
+              x2={SVG_CENTER_X + Math.cos(a) * radarRadius}
+              y2={SVG_CENTER_Y + Math.sin(a) * radarRadius}
+              stroke={darkGreen}
               strokeWidth={i % 9 === 0 ? 2 : 1}
             />
-          );
+          )
         })}
       </svg>
 
       {/* 右侧状态面板 */}
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           right: 60,
           top: 160,
           width: 260,
-          color: "#4ade80",
+          color: themeColor,
           fontSize: 13,
-          fontFamily: "monospace",
+          fontFamily: 'monospace',
           lineHeight: 2,
         }}
       >
-        <div style={{ color: "#166534", marginBottom: 8 }}>// 系统状态</div>
+        <div style={{ color: darkerGreen, marginBottom: 8 }}>// 系统状态</div>
         <div>扫描角度：{Math.round(scanAngle)}°</div>
-        <div>目标数量：{RADAR_CITIES.length}</div>
-        <div>扫描半径：{RADAR_RADIUS} px</div>
-        <div style={{ marginTop: 20, color: "#166534" }}>// 侦测城市</div>
-        {RADAR_CITIES.map((city) => {
-          const dx = city.x - SVG_CENTER_X;
-          const dy = city.y - SVG_CENTER_Y;
-          const targetAngle = ((Math.atan2(dy, dx) * 180) / Math.PI + 360 + 90) % 360;
-          const angleDiff = ((scanAngle - targetAngle) % 360 + 360) % 360;
-          const active = angleDiff < 45;
+        <div>目标数量：{radarCities.length}</div>
+        <div>扫描半径：{radarRadius} px</div>
+        <div style={{ marginTop: 20, color: darkerGreen }}>// 侦测城市</div>
+        {radarCities.map((city) => {
+          const dx = city.x - SVG_CENTER_X
+          const dy = city.y - SVG_CENTER_Y
+          const targetAngle =
+            ((Math.atan2(dy, dx) * 180) / Math.PI + 360 + 90) % 360
+          const angleDiff = ((scanAngle - targetAngle) % 360 + 360) % 360
+          const active = angleDiff < 45
           return (
-            <div key={city.name} style={{ color: active ? "#4ade80" : "#166534" }}>
-              {active ? "▶" : "○"} {city.name}
+            <div
+              key={city.name}
+              style={{ color: active ? themeColor : darkerGreen }}
+            >
+              {active ? '▶' : '○'} {city.name}
             </div>
-          );
+          )
         })}
       </div>
 
       {/* 左下角角度显示 */}
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           bottom: 80,
           left: 60,
-          color: "#166534",
+          color: darkerGreen,
           fontSize: 12,
-          fontFamily: "monospace",
+          fontFamily: 'monospace',
           letterSpacing: 2,
         }}
       >
-        SCAN: {String(Math.round(scanAngle)).padStart(3, "0")}°　RANGE: {RADAR_RADIUS}m　MODE: ACTIVE
+        SCAN: {String(Math.round(scanAngle)).padStart(3, '0')}° RANGE:{' '}
+        {radarRadius}m MODE: ACTIVE
       </div>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const mapRadarScanDefaultProps = {}
+export const mapRadarScanDefaultProps: MapRadarScanProps = {
+  title: '▌ 台湾雷达扫描系统 v2.4',
+  subtitle: 'TAIWAN RADAR SURVEILLANCE ACTIVE',
+  themeColor: '#4ade80',
+  bgColor: '#020b02',
+  scanSpeed: 2,
+  tailDegrees: 70,
+  radarRadius: 390,
+  cities: [
+    { name: '台北', lat: 25.033, lng: 121.565 },
+    { name: '新竹', lat: 24.807, lng: 120.969 },
+    { name: '台中', lat: 24.148, lng: 120.674 },
+    { name: '台南', lat: 23.0, lng: 120.227 },
+    { name: '高雄', lat: 22.627, lng: 120.301 },
+    { name: '花莲', lat: 23.991, lng: 121.611 },
+  ],
+}

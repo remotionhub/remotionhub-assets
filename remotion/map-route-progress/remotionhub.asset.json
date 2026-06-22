@@ -1,0 +1,153 @@
+{
+  "slug": "map-route-progress",
+  "displayName": "Map Route Progress",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/map-route-progress",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-route-progress/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/map-route-progress/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/map-route-progress/8a54671b68d9-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/map-route-progress/a7f11309dccc-thumb.jpg",
+  "entryPoint": "src/MapRouteProgress.tsx",
+  "compositionId": "MapRouteProgress",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的路线进度条组件（文件：MapRouteProgress.tsx），请帮我做以下调整： 1. 把主要站名改成「___、___、___、___」（修改 HSR-STATIONS 阵列中 major: true 的站点） 2. 把进度条颜色从橘色 #f97316 改成「___」（同时更新 hsrGrad 渐层） 3. 把闪烁脉冲圆点颜色从黄色 #fbbf24 改成「___」 4. 调整填充速度：修改 interpolate(frame, [20, 155], ...) 的第二个参数来加快或放慢 5. 把左上角副标题从「高速铁路」改成「___」 请保留台湾轮廓、高铁路线与列车光点逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "路线进度",
+      "description": "Main title text."
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "defaultValue": "高速铁路",
+      "description": "Subtitle text."
+    },
+    {
+      "name": "themeColor",
+      "type": "string",
+      "defaultValue": "#f97316",
+      "description": "Primary theme color."
+    },
+    {
+      "name": "themeGradientColors",
+      "type": "array",
+      "defaultValue": [
+        "#f97316",
+        "#ea580c"
+      ],
+      "description": "Linear gradient colors for the progress bar."
+    },
+    {
+      "name": "dotColor",
+      "type": "string",
+      "defaultValue": "#fbbf24",
+      "description": "Blinking train light dot color."
+    },
+    {
+      "name": "speedFrameStart",
+      "type": "number",
+      "defaultValue": 20,
+      "description": "Start frame of the route progress animation."
+    },
+    {
+      "name": "speedFrameEnd",
+      "type": "number",
+      "defaultValue": 155,
+      "description": "End frame of the route progress animation."
+    },
+    {
+      "name": "totalDistanceKm",
+      "type": "number",
+      "defaultValue": 345,
+      "description": "Total distance parameter in kilometers."
+    },
+    {
+      "name": "stations",
+      "type": "array",
+      "defaultValue": [
+        {
+          "name": "台北",
+          "lat": 25.033,
+          "lng": 121.565,
+          "major": true
+        },
+        {
+          "name": "板桥",
+          "lat": 25.014,
+          "lng": 121.464,
+          "major": false
+        },
+        {
+          "name": "桃园",
+          "lat": 24.994,
+          "lng": 121.301,
+          "major": false
+        },
+        {
+          "name": "新竹",
+          "lat": 24.807,
+          "lng": 120.969,
+          "major": false
+        },
+        {
+          "name": "苗栗",
+          "lat": 24.56,
+          "lng": 120.82,
+          "major": false
+        },
+        {
+          "name": "台中",
+          "lat": 24.148,
+          "lng": 120.674,
+          "major": true
+        },
+        {
+          "name": "彰化",
+          "lat": 24.052,
+          "lng": 120.516,
+          "major": false
+        },
+        {
+          "name": "云林",
+          "lat": 23.709,
+          "lng": 120.431,
+          "major": false
+        },
+        {
+          "name": "嘉义",
+          "lat": 23.48,
+          "lng": 120.449,
+          "major": false
+        },
+        {
+          "name": "台南",
+          "lat": 23,
+          "lng": 120.227,
+          "major": true
+        },
+        {
+          "name": "高雄",
+          "lat": 22.627,
+          "lng": 120.301,
+          "major": true
+        }
+      ],
+      "description": "List of train route stations."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/map-route-progress.md",
+    "updatedAt": "2026-06-22T09:47:04.151Z"
+  }
+}

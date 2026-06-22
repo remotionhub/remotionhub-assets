@@ -4,17 +4,38 @@ import {
   spring,
   useCurrentFrame,
   useVideoConfig,
-} from "remotion";
-import React from "react";
+} from 'remotion'
+import React from 'react'
+
+export interface PinConfig {
+  name: string
+  lat: number
+  lng: number
+  delay: number
+}
+
+export interface MapPinDropProps {
+  title?: string
+  sidebarTitle?: string
+  sidebarSubtitle?: string
+  pins?: PinConfig[]
+  pinColor?: string
+  pinStrokeColor?: string
+  pinDotColor?: string
+  springDamping?: number
+  springStiffness?: number
+  springMass?: number
+  rippleStartFrame?: number
+}
 
 // 投影函数
-const GEO = { lngMin: 119.5, lngMax: 122.5, latMin: 21.7, latMax: 25.5 };
-const MAP = { x: 80, y: 60, w: 560, h: 855 };
+const GEO = { lngMin: 119.5, lngMax: 122.5, latMin: 21.7, latMax: 25.5 }
+const MAP = { x: 80, y: 60, w: 560, h: 855 }
 
 const project = (lat: number, lng: number) => ({
   x: MAP.x + ((lng - GEO.lngMin) / (GEO.lngMax - GEO.lngMin)) * MAP.w,
   y: MAP.y + ((GEO.latMax - lat) / (GEO.latMax - GEO.latMin)) * MAP.h,
-});
+})
 
 // 台湾轮廓座标 [lat, lng]
 const TAIWAN_OUTLINE: [number, number][] = [
@@ -43,57 +64,77 @@ const TAIWAN_OUTLINE: [number, number][] = [
   [25.0, 121.35],
   [25.17, 121.43],
   [25.3, 121.54],
-];
+]
 
-const taiwanPath = TAIWAN_OUTLINE.map(([lat, lng], i) => {
-  const p = project(lat, lng);
-  return `${i === 0 ? "M" : "L"} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`;
-}).join(" ") + " Z";
-
-// 5 个城市图钉（台北、台中、台南、高雄、花莲）
-const PINS = [
-  { name: "台北", lat: 25.033, lng: 121.565, delay: 0 },
-  { name: "台中", lat: 24.148, lng: 120.674, delay: 18 },
-  { name: "台南", lat: 23.0, lng: 120.227, delay: 36 },
-  { name: "高雄", lat: 22.627, lng: 120.301, delay: 54 },
-  { name: "花莲", lat: 23.991, lng: 121.611, delay: 72 },
-].map((p) => ({ ...p, ...project(p.lat, p.lng) }));
+const taiwanPath =
+  TAIWAN_OUTLINE.map(([lat, lng], i) => {
+    const p = project(lat, lng)
+    return `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`
+  }).join(' ') + ' Z'
 
 // SVG 泪滴形状
 const PIN_PATH =
-  "M 0 -28 C -14 -28, -22 -18, -22 -7 C -22 7, 0 28, 0 28 C 0 28, 22 7, 22 -7 C 22 -18, 14 -28, 0 -28 Z";
+  'M 0 -28 C -14 -28, -22 -18, -22 -7 C -22 7, 0 28, 0 28 C 0 28, 22 7, 22 -7 C 22 -18, 14 -28, 0 -28 Z'
 
-export const MapPinDrop: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+export function MapPinDrop({
+  title = '城市图钉落点',
+  sidebarTitle = '标记地点',
+  sidebarSubtitle = '台湾城市',
+  pins = [],
+  pinColor = '#ef4444',
+  pinStrokeColor = '#991b1b',
+  pinDotColor = '#fca5a5',
+  springDamping = 14,
+  springStiffness = 200,
+  springMass = 0.8,
+  rippleStartFrame = 110,
+}: MapPinDropProps) {
+  const frame = useCurrentFrame()
+  const { fps } = useVideoConfig()
 
-  // 全部落地后脉冲（frame > 110）
-  const allLanded = frame > 110;
+  const routePins = pins.map((p) => ({
+    ...p,
+    ...project(p.lat, p.lng),
+  }))
+
+  // 全部落地后脉冲
+  const allLanded = frame > rippleStartFrame
   const pulseRipple = allLanded
-    ? interpolate(frame - 110, [0, 40], [0, 1], {
-        extrapolateLeft: "clamp",
-        extrapolateRight: "clamp",
+    ? interpolate(frame - rippleStartFrame, [0, 40], [0, 1], {
+        extrapolateLeft: 'clamp',
+        extrapolateRight: 'clamp',
       })
-    : 0;
-  const rippleScale = interpolate(pulseRipple, [0, 1], [1, 3.5]);
-  const rippleOpacity = interpolate(pulseRipple, [0, 0.6, 1], [0.7, 0.3, 0]);
+    : 0
+  const rippleScale = interpolate(pulseRipple, [0, 1], [1, 3.5])
+  const rippleOpacity = interpolate(pulseRipple, [0, 0.6, 1], [0.7, 0.3, 0])
 
   return (
     <AbsoluteFill
       style={{
-        background: "#050d1a",
-        fontFamily: "sans-serif",
+        background: '#050d1a',
+        fontFamily: 'sans-serif',
       }}
     >
       <svg
         width="1920"
         height="1080"
         viewBox="0 0 1920 1080"
-        style={{ position: "absolute", top: 0, left: 0 }}
+        style={{ position: 'absolute', top: 0, left: 0 }}
       >
         <defs>
-          <pattern id="mapGrid" width="80" height="80" patternUnits="userSpaceOnUse">
-            <rect width="80" height="80" fill="none" stroke="#0e1e30" strokeWidth="1" />
+          <pattern
+            id="mapGrid"
+            width="80"
+            height="80"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              width="80"
+              height="80"
+              fill="none"
+              stroke="#0e1e30"
+              strokeWidth="1"
+            />
           </pattern>
           <filter id="pinGlow">
             <feGaussianBlur stdDeviation="3" result="blur" />
@@ -117,33 +158,42 @@ export const MapPinDrop: React.FC = () => {
         />
 
         {/* 图钉 */}
-        {PINS.map((pin, i) => {
+        {routePins.map((pin) => {
           const sp = spring({
             frame: frame - pin.delay,
             fps,
-            config: { damping: 14, stiffness: 200, mass: 0.8 },
-          });
+            config: {
+              damping: springDamping,
+              stiffness: springStiffness,
+              mass: springMass,
+            },
+          })
 
           const dropY = interpolate(sp, [0, 1], [-140, 0], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          });
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+          })
 
           const scaleY = interpolate(sp, [0, 0.7, 1, 1.2], [0.3, 1.2, 1.0, 0.9], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          });
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+          })
           const scaleX = interpolate(sp, [0, 0.7, 1, 1.2], [0.3, 0.85, 1.0, 1.1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          });
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+          })
 
-          const textOpacity = interpolate(frame - pin.delay - 10, [0, 20], [0, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          });
+          const textOpacity = interpolate(
+            frame - pin.delay - 10,
+            [0, 20],
+            [0, 1],
+            {
+              extrapolateLeft: 'clamp',
+              extrapolateRight: 'clamp',
+            },
+          )
 
-          const landed = frame > pin.delay + 15;
+          const landed = frame > pin.delay + 15
 
           return (
             <g key={pin.name} transform={`translate(${pin.x}, ${pin.y})`}>
@@ -154,7 +204,7 @@ export const MapPinDrop: React.FC = () => {
                   cy="4"
                   r={22 * rippleScale}
                   fill="none"
-                  stroke="#ef4444"
+                  stroke={pinColor}
                   strokeWidth="2"
                   opacity={rippleOpacity}
                 />
@@ -173,15 +223,17 @@ export const MapPinDrop: React.FC = () => {
               )}
 
               {/* 图钉本体 */}
-              <g transform={`translate(0, ${dropY}) scale(${scaleX}, ${scaleY})`}>
+              <g
+                transform={`translate(0, ${dropY}) scale(${scaleX}, ${scaleY})`}
+              >
                 <path
                   d={PIN_PATH}
-                  fill="#ef4444"
-                  stroke="#991b1b"
+                  fill={pinColor}
+                  stroke={pinStrokeColor}
                   strokeWidth="2"
                   filter="url(#pinGlow)"
                 />
-                <circle cx="0" cy="-7" r="7" fill="#fca5a5" opacity="0.8" />
+                <circle cx="0" cy="-7" r="7" fill={pinDotColor} opacity="0.8" />
               </g>
 
               {/* 地名标签 */}
@@ -196,60 +248,62 @@ export const MapPinDrop: React.FC = () => {
                 {pin.name}
               </text>
             </g>
-          );
+          )
         })}
       </svg>
 
       {/* 右侧资讯面板 */}
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           right: 80,
-          top: "50%",
-          transform: "translateY(-50%)",
+          top: '50%',
+          transform: 'translateY(-50%)',
           width: 300,
-          background: "rgba(5, 13, 26, 0.92)",
-          border: "1px solid #1e3a5f",
+          background: 'rgba(5, 13, 26, 0.92)',
+          border: '1px solid #1e3a5f',
           borderRadius: 14,
-          padding: "28px 32px",
-          opacity: interpolate(frame, [20, 50], [0, 1], { extrapolateRight: "clamp" }),
+          padding: '28px 32px',
+          opacity: interpolate(frame, [20, 50], [0, 1], {
+            extrapolateRight: 'clamp',
+          }),
         }}
       >
         <div
           style={{
-            color: "#3b82f6",
+            color: '#3b82f6',
             fontSize: 13,
             letterSpacing: 3,
             marginBottom: 6,
-            textTransform: "uppercase",
+            textTransform: 'uppercase',
           }}
         >
-          台湾城市
+          {sidebarSubtitle}
         </div>
         <div
           style={{
-            color: "#f1f5f9",
+            color: '#f1f5f9',
             fontSize: 26,
             fontWeight: 700,
             letterSpacing: 2,
             marginBottom: 24,
-            borderBottom: "1px solid #1e3a5f",
+            borderBottom: '1px solid #1e3a5f',
             paddingBottom: 16,
           }}
         >
-          标记地点
+          {sidebarTitle}
         </div>
-        {PINS.map((pin) => (
+        {routePins.map((pin) => (
           <div
             key={pin.name}
             style={{
-              display: "flex",
-              alignItems: "center",
+              display: 'flex',
+              alignItems: 'center',
               gap: 14,
               marginBottom: 16,
               opacity: interpolate(frame - pin.delay - 10, [0, 20], [0, 1], {
-                extrapolateLeft: "clamp",
-                extrapolateRight: "clamp",
+                extrapolateLeft: 'clamp',
+                extrapolateRight: 'clamp',
               }),
             }}
           >
@@ -257,13 +311,13 @@ export const MapPinDrop: React.FC = () => {
               style={{
                 width: 10,
                 height: 10,
-                borderRadius: "50%",
-                background: "#ef4444",
-                boxShadow: "0 0 6px #ef4444",
+                borderRadius: '50%',
+                background: pinColor,
+                boxShadow: `0 0 6px ${pinColor}`,
                 flexShrink: 0,
               }}
             />
-            <span style={{ color: "#e2e8f0", fontSize: 20 }}>{pin.name}</span>
+            <span style={{ color: '#e2e8f0', fontSize: 20 }}>{pin.name}</span>
           </div>
         ))}
       </div>
@@ -271,22 +325,42 @@ export const MapPinDrop: React.FC = () => {
       {/* 标题 */}
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 48,
           left: 0,
           right: 0,
-          textAlign: "center",
-          color: "#f1f5f9",
+          textAlign: 'center',
+          color: '#f1f5f9',
           fontSize: 40,
           fontWeight: 700,
           letterSpacing: 6,
-          opacity: interpolate(frame, [0, 20], [0, 1], { extrapolateRight: "clamp" }),
+          opacity: interpolate(frame, [0, 20], [0, 1], {
+            extrapolateRight: 'clamp',
+          }),
         }}
       >
-        城市图钉落点
+        {title}
       </div>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const mapPinDropDefaultProps = {}
+export const mapPinDropDefaultProps: MapPinDropProps = {
+  title: '城市图钉落点',
+  sidebarTitle: '标记地点',
+  sidebarSubtitle: '台湾城市',
+  pinColor: '#ef4444',
+  pinStrokeColor: '#991b1b',
+  pinDotColor: '#fca5a5',
+  springDamping: 14,
+  springStiffness: 200,
+  springMass: 0.8,
+  rippleStartFrame: 110,
+  pins: [
+    { name: '台北', lat: 25.033, lng: 121.565, delay: 0 },
+    { name: '台中', lat: 24.148, lng: 120.674, delay: 18 },
+    { name: '台南', lat: 23.0, lng: 120.227, delay: 36 },
+    { name: '高雄', lat: 22.627, lng: 120.301, delay: 54 },
+    { name: '花莲', lat: 23.991, lng: 121.611, delay: 72 },
+  ],
+}

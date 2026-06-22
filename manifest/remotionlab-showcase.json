@@ -198,38 +198,38 @@
     },
     {
       "slug": "map-area-reveal",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/map-area-reveal.md",
       "assetPath": "remotion/map-area-reveal",
-      "updatedAt": "2026-06-22T06:16:56.607Z"
+      "updatedAt": "2026-06-22T09:39:47.797Z"
     },
     {
       "slug": "map-path-trace",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/map-path-trace.md",
       "assetPath": "remotion/map-path-trace",
-      "updatedAt": "2026-06-22T06:16:56.950Z"
+      "updatedAt": "2026-06-22T09:41:28.655Z"
     },
     {
       "slug": "map-pin-drop",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/map-pin-drop.md",
       "assetPath": "remotion/map-pin-drop",
-      "updatedAt": "2026-06-22T06:16:57.318Z"
+      "updatedAt": "2026-06-22T09:42:31.703Z"
     },
     {
       "slug": "map-radar-scan",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/map-radar-scan.md",
       "assetPath": "remotion/map-radar-scan",
-      "updatedAt": "2026-06-22T06:16:57.666Z"
+      "updatedAt": "2026-06-22T09:46:16.784Z"
     },
     {
       "slug": "map-route-progress",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/map-route-progress.md",
       "assetPath": "remotion/map-route-progress",
-      "updatedAt": "2026-06-22T06:16:58.008Z"
+      "updatedAt": "2026-06-22T09:47:04.151Z"
     },
     {
       "slug": "subtitle-cinematic",
