@@ -4,39 +4,57 @@ import {
   spring,
   useCurrentFrame,
   useVideoConfig,
-} from "remotion";
-import React from "react";
+} from 'remotion'
+import React from 'react'
 
-const WORDS = [
-  { text: "Think", color: "#0f172a" },
-  { text: "Different.", color: "#3b82f6" },
-];
-const WORD_DELAY = 20;
+export interface WordItem {
+  text: string
+  color: string
+}
 
-export const TitleWordFade: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+export interface TitleWordFadeProps {
+  words?: WordItem[]
+  wordDelay?: number
+  backgroundColor?: string
+  fontSize?: number
+  stiffness?: number
+  damping?: number
+}
+
+export function TitleWordFade({
+  words = [
+    { text: 'Think', color: '#0f172a' },
+    { text: 'Different.', color: '#3b82f6' },
+  ],
+  wordDelay = 20,
+  backgroundColor = '#f8fafc',
+  fontSize = 110,
+  stiffness = 60,
+  damping = 28,
+}: TitleWordFadeProps) {
+  const frame = useCurrentFrame()
+  const { fps } = useVideoConfig()
 
   return (
     <AbsoluteFill
       style={{
-        background: "#f8fafc",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
+        background: backgroundColor,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
         gap: 12,
       }}
     >
-      {WORDS.map((word, i) => {
+      {words.map((word, i) => {
         const progress = spring({
-          frame: frame - i * WORD_DELAY,
+          frame: frame - i * wordDelay,
           fps,
-          config: { damping: 28, stiffness: 60 },
-        });
+          config: { damping, stiffness },
+        })
         const opacity = interpolate(progress, [0, 0.3], [0, 1], {
-          extrapolateRight: "clamp",
-        });
-        const y = interpolate(progress, [0, 1], [40, 0]);
+          extrapolateRight: 'clamp',
+        })
+        const y = interpolate(progress, [0, 1], [40, 0])
 
         return (
           <div
@@ -44,20 +62,30 @@ export const TitleWordFade: React.FC = () => {
             style={{
               opacity,
               transform: `translateY(${y}px)`,
-              fontSize: 110,
+              fontSize,
               fontWeight: 800,
               color: word.color,
-              fontFamily: "sans-serif",
-              letterSpacing: "-0.03em",
+              fontFamily: 'sans-serif',
+              letterSpacing: '-0.03em',
               lineHeight: 1,
             }}
           >
             {word.text}
           </div>
-        );
+        )
       })}
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const titleWordFadeDefaultProps = {}
+export const titleWordFadeDefaultProps: TitleWordFadeProps = {
+  words: [
+    { text: 'Think', color: '#0f172a' },
+    { text: 'Different.', color: '#3b82f6' },
+  ],
+  wordDelay: 20,
+  backgroundColor: '#f8fafc',
+  fontSize: 110,
+  stiffness: 60,
+  damping: 28,
+}

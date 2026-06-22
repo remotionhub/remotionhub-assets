@@ -4,45 +4,75 @@ import {
   spring,
   useCurrentFrame,
   useVideoConfig,
-} from "remotion";
-import React from "react";
+} from 'remotion'
+import React from 'react'
 
-export const TitleBlurFocus: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+export interface TitleBlurFocusProps {
+  text?: string
+  textColor?: string
+  backgroundColor?: string
+  fontSize?: number
+  initialBlur?: number
+  stiffness?: number
+  damping?: number
+}
 
-  const progress = spring({ frame, fps, config: { damping: 40, stiffness: 35 } });
-  const blur = interpolate(progress, [0, 1], [40, 0]);
+export function TitleBlurFocus({
+  text = 'IN FOCUS',
+  textColor = '#ffffff',
+  backgroundColor = '#000000',
+  fontSize = 108,
+  initialBlur = 40,
+  stiffness = 35,
+  damping = 40,
+}: TitleBlurFocusProps) {
+  const frame = useCurrentFrame()
+  const { fps } = useVideoConfig()
+
+  const progress = spring({
+    frame,
+    fps,
+    config: { damping, stiffness },
+  })
+  const blur = interpolate(progress, [0, 1], [initialBlur, 0])
   const opacity = interpolate(progress, [0, 0.15], [0, 1], {
-    extrapolateRight: "clamp",
-  });
-  const scale = interpolate(progress, [0, 1], [1.25, 1]);
+    extrapolateRight: 'clamp',
+  })
+  const scale = interpolate(progress, [0, 1], [1.25, 1])
 
   return (
     <AbsoluteFill
       style={{
-        background: "#000000",
-        justifyContent: "center",
-        alignItems: "center",
+        background: backgroundColor,
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <div
         style={{
-          fontSize: 108,
+          fontSize,
           fontWeight: 900,
-          color: "#ffffff",
-          fontFamily: "sans-serif",
-          letterSpacing: "0.08em",
+          color: textColor,
+          fontFamily: 'sans-serif',
+          letterSpacing: '0.08em',
           filter: `blur(${blur}px)`,
           opacity,
           transform: `scale(${scale})`,
-          textAlign: "center",
+          textAlign: 'center',
         }}
       >
-        IN FOCUS
+        {text}
       </div>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const titleBlurFocusDefaultProps = {}
+export const titleBlurFocusDefaultProps: TitleBlurFocusProps = {
+  text: 'IN FOCUS',
+  textColor: '#ffffff',
+  backgroundColor: '#000000',
+  fontSize: 108,
+  initialBlur: 40,
+  stiffness: 35,
+  damping: 40,
+}

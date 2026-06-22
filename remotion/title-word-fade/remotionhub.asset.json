@@ -1,0 +1,74 @@
+{
+  "slug": "title-word-fade",
+  "displayName": "Title Word Fade",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-word-fade",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-word-fade/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-word-fade/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-word-fade/682acf63fb71-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-word-fade/76aa111a8835-thumb.jpg",
+  "entryPoint": "src/TitleWordFade.tsx",
+  "compositionId": "TitleWordFade",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的逐字淡入字卡组件（文件：WordFadeTitle.tsx），请帮我做以下调整： 1. 把两行文字从 \"Think\" / \"Different.\" 改成「___」/「___」 2. 把第一行颜色从深黑 #0f172a 改成「___」 3. 把第二行颜色从蓝色 #3b82f6 改成「___」 4. 把背景色从浅白 #f8fafc 改成「___」 5. 把字体大小从 110px 改成 ___px 6. 把两行的出场间隔从 20 帧改成 ___ 帧（数字越大，第二行出现越晚） 如果需要三行以上，可以在 WORDS 阵列中继续新增 `{ text: \"___\", color: \"___\" }` 对象。 请保留原本的逐词淡入上移效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "words",
+      "type": "array",
+      "defaultValue": [
+        {
+          "text": "Think",
+          "color": "#0f172a"
+        },
+        {
+          "text": "Different.",
+          "color": "#3b82f6"
+        }
+      ],
+      "description": "List of words with custom text and color."
+    },
+    {
+      "name": "wordDelay",
+      "type": "number",
+      "defaultValue": 20,
+      "description": "Frames delay between fading in each word."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#f8fafc",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 110,
+      "description": "Font size of the text."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 60,
+      "description": "Stiffness configuration for the spring physics animation."
+    },
+    {
+      "name": "damping",
+      "type": "number",
+      "defaultValue": 28,
+      "description": "Damping configuration for the spring physics animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-word-fade.md",
+    "updatedAt": "2026-06-22T11:28:23.627Z"
+  }
+}

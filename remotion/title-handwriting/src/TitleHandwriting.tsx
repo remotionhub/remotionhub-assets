@@ -1,40 +1,58 @@
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
-import React from "react";
+import { AbsoluteFill, interpolate, useCurrentFrame } from 'remotion'
+import React from 'react'
 
-const DASH_LENGTH = 2000;
+export interface TitleHandwritingProps {
+  text?: string
+  textColor?: string
+  backgroundColor?: string
+  underlineColor?: string
+  fontSize?: number
+  dashLength?: number
+  startFrame?: number
+  endFrame?: number
+}
 
-export const TitleHandwriting: React.FC = () => {
-  const frame = useCurrentFrame();
+export function TitleHandwriting({
+  text = 'Create',
+  textColor = '#1c1917',
+  backgroundColor = '#fafaf9',
+  underlineColor = '#ef4444',
+  fontSize = 145,
+  dashLength = 2000,
+  startFrame = 10,
+  endFrame = 140,
+}: TitleHandwritingProps) {
+  const frame = useCurrentFrame()
 
-  const drawProgress = interpolate(frame, [10, 140], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const dashOffset = interpolate(drawProgress, [0, 1], [DASH_LENGTH, 0]);
+  const drawProgress = interpolate(frame, [startFrame, endFrame], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  })
+  const dashOffset = interpolate(drawProgress, [0, 1], [dashLength, 0])
 
-  const fillOpacity = interpolate(frame, [130, 165], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const fillOpacity = interpolate(frame, [endFrame - 10, endFrame + 25], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  })
 
-  const underlineWidth = interpolate(frame, [10, 140], [0, 500], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const underlineWidth = interpolate(frame, [startFrame, endFrame], [0, 500], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  })
 
   return (
     <AbsoluteFill
       style={{
-        background: "#fafaf9",
-        justifyContent: "center",
-        alignItems: "center",
+        background: backgroundColor,
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <svg
         viewBox="0 0 900 220"
         width="1350"
         height="330"
-        style={{ overflow: "visible" }}
+        style={{ overflow: 'visible' }}
       >
         {/* Filled text - fades in after drawing */}
         <text
@@ -42,12 +60,12 @@ export const TitleHandwriting: React.FC = () => {
           y="155"
           textAnchor="middle"
           fontFamily="Georgia, 'Times New Roman', serif"
-          fontSize="145"
+          fontSize={fontSize}
           fontWeight="bold"
-          fill="#1c1917"
+          fill={textColor}
           fillOpacity={fillOpacity}
         >
-          Create
+          {text}
         </text>
 
         {/* Stroke-animated text - simulates drawing */}
@@ -56,17 +74,17 @@ export const TitleHandwriting: React.FC = () => {
           y="155"
           textAnchor="middle"
           fontFamily="Georgia, 'Times New Roman', serif"
-          fontSize="145"
+          fontSize={fontSize}
           fontWeight="bold"
           fill="none"
-          stroke="#1c1917"
+          stroke={textColor}
           strokeWidth="2.5"
-          strokeDasharray={DASH_LENGTH}
+          strokeDasharray={dashLength}
           strokeDashoffset={dashOffset}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          Create
+          {text}
         </text>
 
         {/* Decorative red underline */}
@@ -75,13 +93,22 @@ export const TitleHandwriting: React.FC = () => {
           y1="175"
           x2={200 + underlineWidth}
           y2="175"
-          stroke="#ef4444"
+          stroke={underlineColor}
           strokeWidth="5"
           strokeLinecap="round"
         />
       </svg>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const titleHandwritingDefaultProps = {}
+export const titleHandwritingDefaultProps: TitleHandwritingProps = {
+  text: 'Create',
+  textColor: '#1c1917',
+  backgroundColor: '#fafaf9',
+  underlineColor: '#ef4444',
+  fontSize: 145,
+  dashLength: 2000,
+  startFrame: 10,
+  endFrame: 140,
+}

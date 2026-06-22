@@ -1,0 +1,71 @@
+{
+  "slug": "title-shimmer",
+  "displayName": "Title Shimmer",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-shimmer",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-shimmer/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-shimmer/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-shimmer/20580a562cfd-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-shimmer/b3a96a120a43-thumb.jpg",
+  "entryPoint": "src/TitleShimmer.tsx",
+  "compositionId": "TitleShimmer",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的扫光闪耀字卡组件（文件：ShimmerTitle.tsx），请帮我做以下调整： 1. 把显示文字从 \"GOLDEN HOUR\" 改成「___」 2. 把底层文字颜色从暗金 #8b6914 改成「___」，扫光文字颜色从亮奶油 #fff8dc 改成「___」 3. 把背景色从近黑 #0c0c0c 改成「___」 4. 把字体大小从 100px 改成 ___px 5. 把字母间距从 0.12em 改成 ___em（间距越大，扫光效果越明显） 6. 把扫光速度调整：目前从第 0 帧到第 80 帧扫过，想更快改成 0 到 50；想更慢改成 0 到 120 请保留原本的由左至右扫光效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "text",
+      "type": "string",
+      "defaultValue": "GOLDEN HOUR",
+      "description": "The text content to display."
+    },
+    {
+      "name": "baseTextColor",
+      "type": "string",
+      "defaultValue": "#8b6914",
+      "description": "CSS color of the background text."
+    },
+    {
+      "name": "shimmerColor",
+      "type": "string",
+      "defaultValue": "#fff8dc",
+      "description": "CSS color of the shining light effect."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#0c0c0c",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 100,
+      "description": "Font size of the text."
+    },
+    {
+      "name": "startFrame",
+      "type": "number",
+      "defaultValue": 5,
+      "description": "Frame when shimmer sweep starts."
+    },
+    {
+      "name": "endFrame",
+      "type": "number",
+      "defaultValue": 85,
+      "description": "Frame when shimmer sweep ends."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-shimmer.md",
+    "updatedAt": "2026-06-22T11:28:13.208Z"
+  }
+}

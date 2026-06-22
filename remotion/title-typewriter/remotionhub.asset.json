@@ -1,0 +1,71 @@
+{
+  "slug": "title-typewriter",
+  "displayName": "Title Typewriter",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-typewriter",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-typewriter/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-typewriter/thumb.png",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-typewriter/b446aca7d634-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-typewriter/d587fd4164b8-thumb.png",
+  "entryPoint": "src/TitleTypewriter.tsx",
+  "compositionId": "TitleTypewriter",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的打字机字卡组件（文件：TypewriterTitle.tsx），请帮我做以下调整： 1. 把显示的文字从「Hello, Remotion.」改成「___」 2. 把打字速度从每帧 2 个字改成每帧 ___ 个字（数字越大越快） 3. 把文字颜色从白色改成「___」 4. 把背景色从深蓝 #0f172a 改成「___」 5. 把游标颜色从青色 #38bdf8 改成「___」 6. 把字体大小从 72px 改成 ___px 请保留原本的逐字打出效果和游标闪烁，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "text",
+      "type": "string",
+      "defaultValue": "Hello, Remotion.",
+      "description": "The text content to type out."
+    },
+    {
+      "name": "charsPerFrame",
+      "type": "number",
+      "defaultValue": 2,
+      "description": "Number of characters typed per frame."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 72,
+      "description": "Font size of the text."
+    },
+    {
+      "name": "textColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color of the text."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#0f172a",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "cursorColor",
+      "type": "string",
+      "defaultValue": "#38bdf8",
+      "description": "CSS color of the blinking cursor."
+    },
+    {
+      "name": "cursorBlinkInterval",
+      "type": "number",
+      "defaultValue": 15,
+      "description": "Blink interval in frames for the cursor."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-typewriter.md",
+    "updatedAt": "2026-06-22T11:28:18.419Z"
+  }
+}

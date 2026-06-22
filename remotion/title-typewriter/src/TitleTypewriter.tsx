@@ -1,56 +1,66 @@
-import { AbsoluteFill, useCurrentFrame } from "remotion";
-import React from "react";
+import { AbsoluteFill, useCurrentFrame } from 'remotion'
+import React from 'react'
 
-const TEXT = "Hello, Remotion.";
-const CHARS_PER_FRAME = 2;
-const FONT_SIZE = 72;
-const TEXT_COLOR = "#ffffff";
-const BG_COLOR = "#0f172a";
-const CURSOR_COLOR = "#38bdf8";
-const CURSOR_BLINK_INTERVAL = 15;
+export interface TitleTypewriterProps {
+  text?: string
+  charsPerFrame?: number
+  fontSize?: number
+  textColor?: string
+  backgroundColor?: string
+  cursorColor?: string
+  cursorBlinkInterval?: number
+}
 
-export const TitleTypewriter: React.FC = () => {
-  const frame = useCurrentFrame();
+export function TitleTypewriter({
+  text = 'Hello, Remotion.',
+  charsPerFrame = 2,
+  fontSize = 72,
+  textColor = '#ffffff',
+  backgroundColor = '#0f172a',
+  cursorColor = '#38bdf8',
+  cursorBlinkInterval = 15,
+}: TitleTypewriterProps) {
+  const frame = useCurrentFrame()
 
   const charsToShow = Math.min(
-    Math.floor(frame * CHARS_PER_FRAME),
-    TEXT.length,
-  );
-  const displayText = TEXT.slice(0, charsToShow);
+    Math.floor(frame * charsPerFrame),
+    text.length,
+  )
+  const displayText = text.slice(0, charsToShow)
 
-  const isDoneTyping = charsToShow >= TEXT.length;
+  const isDoneTyping = charsToShow >= text.length
   const cursorOpacity = isDoneTyping
-    ? Math.floor(frame / CURSOR_BLINK_INTERVAL) % 2 === 0
+    ? Math.floor(frame / cursorBlinkInterval) % 2 === 0
       ? 1
       : 0
-    : 1;
+    : 1
 
   return (
     <AbsoluteFill
       style={{
-        background: BG_COLOR,
-        justifyContent: "center",
-        alignItems: "center",
+        background: backgroundColor,
+        justifyContent: 'center',
+        alignItems: 'center',
         fontFamily: "'Courier New', Courier, monospace",
       }}
     >
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          fontSize: FONT_SIZE,
+          display: 'flex',
+          alignItems: 'center',
+          fontSize,
           fontWeight: 700,
-          color: TEXT_COLOR,
-          letterSpacing: "0.02em",
+          color: textColor,
+          letterSpacing: '0.02em',
         }}
       >
         <span>{displayText}</span>
         <span
           style={{
-            display: "inline-block",
+            display: 'inline-block',
             width: 4,
-            height: FONT_SIZE * 1.1,
-            background: CURSOR_COLOR,
+            height: fontSize * 1.1,
+            background: cursorColor,
             marginLeft: 6,
             opacity: cursorOpacity,
             borderRadius: 2,
@@ -58,7 +68,15 @@ export const TitleTypewriter: React.FC = () => {
         />
       </div>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const titleTypewriterDefaultProps = {}
+export const titleTypewriterDefaultProps: TitleTypewriterProps = {
+  text: 'Hello, Remotion.',
+  charsPerFrame: 2,
+  fontSize: 72,
+  textColor: '#ffffff',
+  backgroundColor: '#0f172a',
+  cursorColor: '#38bdf8',
+  cursorBlinkInterval: 15,
+}

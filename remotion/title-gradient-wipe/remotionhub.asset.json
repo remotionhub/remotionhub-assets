@@ -1,0 +1,71 @@
+{
+  "slug": "title-gradient-wipe",
+  "displayName": "Title Gradient Wipe",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-gradient-wipe",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-gradient-wipe/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-gradient-wipe/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-gradient-wipe/fdc291a944eb-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-gradient-wipe/983a067e8102-thumb.jpg",
+  "entryPoint": "src/TitleGradientWipe.tsx",
+  "compositionId": "TitleGradientWipe",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的渐层擦拭字卡组件（文件：GradientWipeTitle.tsx），请帮我做以下调整： 1. 把显示文字从 \"Your Story Starts Here\" 改成「___」 2. 把渐层色从青蓝→紫→琥珀（#06b6d4 → #8b5cf6 → #f59e0b）改成「___」→「___」→「___」 3. 把底层暗色文字从 #1f2937 改成「___」（越深越不明显） 4. 把背景色从近黑 #030712 改成「___」 5. 把字体大小从 96px 改成 ___px 6. 把擦拭速度调整：想更快请把 stiffness 从 50 改大（例如 100）；想更慢请改小（例如 20） 请保留原本的由左至右渐层擦拭效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "text",
+      "type": "string",
+      "defaultValue": "Your Story Starts Here",
+      "description": "The text content to display."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#030712",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "baseTextColor",
+      "type": "string",
+      "defaultValue": "#1f2937",
+      "description": "CSS color of the dark base text."
+    },
+    {
+      "name": "gradient",
+      "type": "string",
+      "defaultValue": "linear-gradient(90deg, #06b6d4 0%, #8b5cf6 50%, #f59e0b 100%)",
+      "description": "CSS gradient background for the text reveal."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 96,
+      "description": "Font size of the text in pixels."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 50,
+      "description": "Stiffness configuration for the spring physics animation."
+    },
+    {
+      "name": "damping",
+      "type": "number",
+      "defaultValue": 30,
+      "description": "Damping configuration for the spring physics animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-gradient-wipe.md",
+    "updatedAt": "2026-06-22T11:27:51.960Z"
+  }
+}

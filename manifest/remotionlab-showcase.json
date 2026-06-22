@@ -275,10 +275,10 @@
     },
     {
       "slug": "title-blur-focus",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/title-blur-focus.md",
       "assetPath": "remotion/title-blur-focus",
-      "updatedAt": "2026-06-22T06:17:00.458Z"
+      "updatedAt": "2026-06-22T11:27:46.811Z"
     },
     {
       "slug": "title-glitch-text",
@@ -289,17 +289,17 @@
     },
     {
       "slug": "title-gradient-wipe",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/title-gradient-wipe.md",
       "assetPath": "remotion/title-gradient-wipe",
-      "updatedAt": "2026-06-22T06:17:01.141Z"
+      "updatedAt": "2026-06-22T11:27:51.960Z"
     },
     {
       "slug": "title-handwriting",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/title-handwriting.md",
       "assetPath": "remotion/title-handwriting",
-      "updatedAt": "2026-06-22T06:17:01.510Z"
+      "updatedAt": "2026-06-22T11:27:57.241Z"
     },
     {
       "slug": "title-kinetic-bounce",
@@ -310,24 +310,24 @@
     },
     {
       "slug": "title-neon-glow",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/title-neon-glow.md",
       "assetPath": "remotion/title-neon-glow",
-      "updatedAt": "2026-06-22T06:17:02.196Z"
+      "updatedAt": "2026-06-22T11:28:02.574Z"
     },
     {
       "slug": "title-scramble",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/title-scramble.md",
       "assetPath": "remotion/title-scramble",
-      "updatedAt": "2026-06-22T06:17:02.542Z"
+      "updatedAt": "2026-06-22T11:28:07.879Z"
     },
     {
       "slug": "title-shimmer",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/title-shimmer.md",
       "assetPath": "remotion/title-shimmer",
-      "updatedAt": "2026-06-22T06:17:02.883Z"
+      "updatedAt": "2026-06-22T11:28:13.208Z"
     },
     {
       "slug": "title-slot-reel",
@@ -352,10 +352,10 @@
     },
     {
       "slug": "title-typewriter",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/title-typewriter.md",
       "assetPath": "remotion/title-typewriter",
-      "updatedAt": "2026-06-22T06:17:04.329Z"
+      "updatedAt": "2026-06-22T11:28:18.419Z"
     },
     {
       "slug": "title-wave-text",
@@ -366,10 +366,10 @@
     },
     {
       "slug": "title-word-fade",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/title-word-fade.md",
       "assetPath": "remotion/title-word-fade",
-      "updatedAt": "2026-06-22T06:17:05.031Z"
+      "updatedAt": "2026-06-22T11:28:23.627Z"
     },
     {
       "slug": "title-zoom-punch",

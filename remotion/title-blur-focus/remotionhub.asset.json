@@ -1,0 +1,71 @@
+{
+  "slug": "title-blur-focus",
+  "displayName": "Title Blur Focus",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-blur-focus",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-blur-focus/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-blur-focus/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-blur-focus/e5564135d47b-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-blur-focus/982a7f964f56-thumb.jpg",
+  "entryPoint": "src/TitleBlurFocus.tsx",
+  "compositionId": "TitleBlurFocus",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的模糊聚焦字卡组件（文件：BlurFocusTitle.tsx），请帮我做以下调整： 1. 把显示文字从 \"IN FOCUS\" 改成「___」 2. 把文字颜色从白色 #ffffff 改成「___」 3. 把背景色从纯黑 #000000 改成「___」 4. 把字体大小从 108px 改成 ___px 5. 把起始模糊值从 40px 改成 ___px（数字越大，初始越模糊） 6. 把聚焦速度调整：想更慢请把 stiffness 从 35 改小（例如 15）；想更快请改大（例如 60） 请保留原本的模糊到清晰的聚焦效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "text",
+      "type": "string",
+      "defaultValue": "IN FOCUS",
+      "description": "The text content to display."
+    },
+    {
+      "name": "textColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color of the text."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#000000",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 108,
+      "description": "Font size of the text in pixels."
+    },
+    {
+      "name": "initialBlur",
+      "type": "number",
+      "defaultValue": 40,
+      "description": "Initial blur amount in pixels."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 35,
+      "description": "Stiffness configuration for the spring physics animation."
+    },
+    {
+      "name": "damping",
+      "type": "number",
+      "defaultValue": 40,
+      "description": "Damping configuration for the spring physics animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-blur-focus.md",
+    "updatedAt": "2026-06-22T11:27:46.811Z"
+  }
+}
