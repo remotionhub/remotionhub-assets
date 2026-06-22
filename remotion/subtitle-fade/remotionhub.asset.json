@@ -1,0 +1,86 @@
+{
+  "slug": "subtitle-fade",
+  "displayName": "Subtitle Fade",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/subtitle-fade",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/subtitle-fade/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/subtitle-fade/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/subtitle-fade/15536407a1f6-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/subtitle-fade/fd41b9bd86a2-thumb.jpg",
+  "entryPoint": "src/SubtitleFade.tsx",
+  "compositionId": "SubtitleFade",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的淡入淡出字幕组件（文件：SubtitleFade.tsx），请帮我做以下调整： 1. 把字幕内容改成以下 4 段（修改 SUBTITLES 阵列的 text 栏位）： - 第 1 段：「___」 - 第 2 段：「___」 - 第 3 段：「___」 - 第 4 段：「___」 2. 把字体大小从 52 改成「___」 3. 把字幕背景透明度从 0.72 改成「___」（0 = 全透明，1 = 全黑） 4. 把字幕显示位置从 bottom: 120 改成「___」 请保留原本的淡入淡出动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 52,
+      "description": "Font size of the subtitle text."
+    },
+    {
+      "name": "bgOpacity",
+      "type": "number",
+      "defaultValue": 0.72,
+      "description": "Opacity of the dark background block."
+    },
+    {
+      "name": "bottomOffset",
+      "type": "number",
+      "defaultValue": 120,
+      "description": "Distance from the bottom of the canvas in pixels."
+    },
+    {
+      "name": "transitionFrames",
+      "type": "number",
+      "defaultValue": 12,
+      "description": "Duration of fade in/out transitions in frames."
+    },
+    {
+      "name": "textColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color of the subtitle text."
+    },
+    {
+      "name": "subtitles",
+      "type": "array",
+      "defaultValue": [
+        {
+          "text": "欢迎来到 Remotion 动画世界",
+          "start": 10,
+          "end": 60
+        },
+        {
+          "text": "用代码创作令人惊艳的视频",
+          "start": 70,
+          "end": 120
+        },
+        {
+          "text": "支持 React 组件与所有动画效果",
+          "start": 130,
+          "end": 180
+        },
+        {
+          "text": "开始你的第一个 Remotion 项目吧！",
+          "start": 190,
+          "end": 240
+        }
+      ],
+      "description": "List of subtitles to display."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/subtitle-fade.md",
+    "updatedAt": "2026-06-22T11:20:13.053Z"
+  }
+}

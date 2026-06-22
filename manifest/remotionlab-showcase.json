@@ -233,38 +233,38 @@
     },
     {
       "slug": "subtitle-cinematic",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/subtitle-cinematic.md",
       "assetPath": "remotion/subtitle-cinematic",
-      "updatedAt": "2026-06-22T06:16:58.355Z"
+      "updatedAt": "2026-06-22T11:20:01.927Z"
     },
     {
       "slug": "subtitle-dual-lang",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/subtitle-dual-lang.md",
       "assetPath": "remotion/subtitle-dual-lang",
-      "updatedAt": "2026-06-22T06:16:58.703Z"
+      "updatedAt": "2026-06-22T11:20:07.502Z"
     },
     {
       "slug": "subtitle-fade",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/subtitle-fade.md",
       "assetPath": "remotion/subtitle-fade",
-      "updatedAt": "2026-06-22T06:16:59.040Z"
+      "updatedAt": "2026-06-22T11:20:13.053Z"
     },
     {
       "slug": "subtitle-karaoke",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/subtitle-karaoke.md",
       "assetPath": "remotion/subtitle-karaoke",
-      "updatedAt": "2026-06-22T06:16:59.413Z"
+      "updatedAt": "2026-06-22T11:20:18.614Z"
     },
     {
       "slug": "subtitle-slide",
-      "status": "extracted",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/subtitle-slide.md",
       "assetPath": "remotion/subtitle-slide",
-      "updatedAt": "2026-06-22T06:16:59.763Z"
+      "updatedAt": "2026-06-22T11:20:24.194Z"
     },
     {
       "slug": "title-3d-rotate",

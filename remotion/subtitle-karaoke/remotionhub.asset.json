@@ -1,0 +1,93 @@
+{
+  "slug": "subtitle-karaoke",
+  "displayName": "Subtitle Karaoke",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/subtitle-karaoke",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/subtitle-karaoke/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/subtitle-karaoke/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/subtitle-karaoke/e6e03e6cf4c2-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/subtitle-karaoke/93fce6c388c6-thumb.jpg",
+  "entryPoint": "src/SubtitleKaraoke.tsx",
+  "compositionId": "SubtitleKaraoke",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的卡拉 OK 逐字高亮组件（文件：SubtitleKaraoke.tsx），请帮我做以下调整： 1. 把歌词从「月亮代表我的心」改成「___」（修改 LYRICS 常数） 2. 根据新歌词字数更新 CHAR-HIGHLIGHT-START 阵列（每个字对应一个起始帧，间隔约 25 帧一个字） 3. 把高亮颜色从亮黄色（rgb 250,204,21）改成「___」色系 4. 把字体大小从 88 改成「___」 5. 把标题文字从「月亮代表我的心」改成「___」 请保留逐字高亮与缩放动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "lyrics",
+      "type": "string",
+      "defaultValue": "月亮代表我的心",
+      "description": "Lyrics string to render character by character."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "defaultValue": "月亮代表我的心",
+      "description": "Title display text."
+    },
+    {
+      "name": "charHighlightStart",
+      "type": "array",
+      "defaultValue": [
+        15,
+        40,
+        65,
+        90,
+        115,
+        140,
+        165
+      ],
+      "description": "Start frame of high-light animation for each character."
+    },
+    {
+      "name": "highlightDuration",
+      "type": "number",
+      "defaultValue": 28,
+      "description": "Duration in frames for highlight transition of one character."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 88,
+      "description": "Font size of lyric characters."
+    },
+    {
+      "name": "unhighlightedRGB",
+      "type": "array",
+      "defaultValue": [
+        156,
+        163,
+        175
+      ],
+      "description": "RGB colors array for unhighlighted characters."
+    },
+    {
+      "name": "highlightRGB",
+      "type": "array",
+      "defaultValue": [
+        250,
+        204,
+        21
+      ],
+      "description": "RGB colors array for highlighted characters."
+    },
+    {
+      "name": "totalFrames",
+      "type": "number",
+      "defaultValue": 210,
+      "description": "Total frames of composition used to calibrate the progress bar."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/subtitle-karaoke.md",
+    "updatedAt": "2026-06-22T11:20:18.614Z"
+  }
+}

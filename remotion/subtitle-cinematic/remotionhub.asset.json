@@ -1,0 +1,96 @@
+{
+  "slug": "subtitle-cinematic",
+  "displayName": "Subtitle Cinematic",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/subtitle-cinematic",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/subtitle-cinematic/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/subtitle-cinematic/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/subtitle-cinematic/3e266633a677-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/subtitle-cinematic/8107e2ba7ed3-thumb.jpg",
+  "entryPoint": "src/SubtitleCinematic.tsx",
+  "compositionId": "SubtitleCinematic",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的电影风格字幕组件（文件：SubtitleCinematic.tsx），请帮我做以下调整： 1. 把字幕内容改成以下 4 段（修改 SUBTITLES 阵列的 text 与 speaker 栏位）： - 第 1 段说话者：「___」，字幕：「___」 - 第 2 段说话者：「___」，字幕：「___」 - 第 3 段说话者：「___」，字幕：「___」 - 第 4 段说话者：「___」，字幕：「___」 2. 把字幕主文字大小从 44 改成「___」 3. 把说话者名称文字大小从 22 改成「___」 4. 把电影黑边高度从 135 改成「___」（影响遮幅比例感） 请保留原本的淡入淡出动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "letterboxHeight",
+      "type": "number",
+      "defaultValue": 135,
+      "description": "Height of the cinematic letterbox bands."
+    },
+    {
+      "name": "speakerColor",
+      "type": "string",
+      "defaultValue": "#a0aec0",
+      "description": "CSS color for the speaker name."
+    },
+    {
+      "name": "textColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color for the subtitle text."
+    },
+    {
+      "name": "textFontSize",
+      "type": "number",
+      "defaultValue": 44,
+      "description": "Font size for the subtitle text."
+    },
+    {
+      "name": "speakerFontSize",
+      "type": "number",
+      "defaultValue": 22,
+      "description": "Font size for the speaker name."
+    },
+    {
+      "name": "transitionFrames",
+      "type": "number",
+      "defaultValue": 15,
+      "description": "Duration in frames for fade transitions."
+    },
+    {
+      "name": "subtitles",
+      "type": "array",
+      "defaultValue": [
+        {
+          "speaker": "旁白",
+          "text": "在这个故事开始之前",
+          "start": 15,
+          "end": 65
+        },
+        {
+          "speaker": "林小雨",
+          "text": "我从来不相信命运的安排",
+          "start": 80,
+          "end": 130
+        },
+        {
+          "speaker": "旁白",
+          "text": "直到那个雨夜，他们相遇了",
+          "start": 145,
+          "end": 195
+        },
+        {
+          "speaker": "陈明宇",
+          "text": "有些相遇，是一辈子的缘分",
+          "start": 210,
+          "end": 260
+        }
+      ],
+      "description": "List of subtitles with speaker, text, and timing in frames."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/subtitle-cinematic.md",
+    "updatedAt": "2026-06-22T11:20:01.927Z"
+  }
+}

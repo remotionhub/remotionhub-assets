@@ -1,0 +1,96 @@
+{
+  "slug": "subtitle-dual-lang",
+  "displayName": "Subtitle Dual Lang",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/subtitle-dual-lang",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/subtitle-dual-lang/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/subtitle-dual-lang/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/subtitle-dual-lang/9ed2c24c5dd5-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/subtitle-dual-lang/b87d488b6346-thumb.jpg",
+  "entryPoint": "src/SubtitleDualLang.tsx",
+  "compositionId": "SubtitleDualLang",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的双语字幕组件（文件：SubtitleDualLang.tsx），请帮我做以下调整： 1. 把字幕内容改成以下 4 组（修改 SUBTITLES 阵列的 zh 与 en 栏位）： - 第 1 组中文：「___」，英文：「___」 - 第 2 组中文：「___」，英文：「___」 - 第 3 组中文：「___」，英文：「___」 - 第 4 组中文：「___」，英文：「___」 2. 把繁中字体大小从 58 改成「___」 3. 把英文字体大小从 32 改成「___」 4. 把繁中文字颜色从黄色 #facc15 改成「___」 请保留原本的淡入淡出与位移动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "zhFontSize",
+      "type": "number",
+      "defaultValue": 58,
+      "description": "Font size of the Chinese subtitle."
+    },
+    {
+      "name": "enFontSize",
+      "type": "number",
+      "defaultValue": 32,
+      "description": "Font size of the English subtitle."
+    },
+    {
+      "name": "zhColor",
+      "type": "string",
+      "defaultValue": "#facc15",
+      "description": "CSS color of the Chinese subtitle."
+    },
+    {
+      "name": "enColor",
+      "type": "string",
+      "defaultValue": "#e2e8f0",
+      "description": "CSS color of the English subtitle."
+    },
+    {
+      "name": "transitionFrames",
+      "type": "number",
+      "defaultValue": 14,
+      "description": "Duration in frames for transition effects."
+    },
+    {
+      "name": "bottomOffset",
+      "type": "number",
+      "defaultValue": 100,
+      "description": "Offset from the bottom of the canvas in pixels."
+    },
+    {
+      "name": "subtitles",
+      "type": "array",
+      "defaultValue": [
+        {
+          "zh": "欢迎来到这个美丽的世界",
+          "en": "Welcome to this beautiful world",
+          "start": 10,
+          "end": 65
+        },
+        {
+          "zh": "学习永远不嫌太晚",
+          "en": "It's never too late to learn",
+          "start": 75,
+          "end": 130
+        },
+        {
+          "zh": "每一天都是新的开始",
+          "en": "Every day is a new beginning",
+          "start": 140,
+          "end": 195
+        },
+        {
+          "zh": "相信自己，勇敢前行",
+          "en": "Believe in yourself and move forward",
+          "start": 205,
+          "end": 260
+        }
+      ],
+      "description": "List of dual language subtitles."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/subtitle-dual-lang.md",
+    "updatedAt": "2026-06-22T11:20:07.502Z"
+  }
+}
