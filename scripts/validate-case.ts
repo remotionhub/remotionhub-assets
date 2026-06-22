@@ -98,7 +98,11 @@ function isMarkdownSeparatorRow(cells: string[]) {
   return cells.every((cell) => /^:?-{3,}:?$/.test(cell))
 }
 
-function assertValidPropsTable(readme: string, slug: string) {
+function stripBackticks(str: string) {
+  return str.replace(/^`|`$/g, '')
+}
+
+function assertValidPropsTable(readme: string, slug: string, manifest: AssetManifest) {
   const lines = readme.split('\n')
   const propsIndex = lines.findIndex((line) => line.startsWith('## Props'))
   if (propsIndex === -1) {
@@ -117,7 +121,12 @@ function assertValidPropsTable(readme: string, slug: string) {
     }
   }
 
+  const schemaProps = manifest.propsSchema || []
+
   if (tableRows.length === 0) {
+    if (schemaProps.length > 0) {
+      throw new Error(`README for ${slug} is missing a Props table, but manifest contains props.`)
+    }
     return
   }
 
@@ -133,20 +142,59 @@ function assertValidPropsTable(readme: string, slug: string) {
     )
   }
 
-  for (const row of tableRows.slice(1)) {
+  // Filter out separator row
+  const contentRows = tableRows.slice(1).filter((row) => {
     const cells = parseMarkdownTableCells(row)
+    return !isMarkdownSeparatorRow(cells)
+  })
+
+  if (contentRows.length !== schemaProps.length) {
+    throw new Error(
+      `README for ${slug} Props table has ${contentRows.length} rows, but manifest has ${schemaProps.length} props.`,
+    )
+  }
+
+  for (let i = 0; i < contentRows.length; i++) {
+    const cells = parseMarkdownTableCells(contentRows[i])
     if (cells.length !== expectedHeader.length) {
       throw new Error(
         `README for ${slug} Props table must use columns: ${expectedHeader.join(', ')}.`,
       )
     }
 
-    if (isMarkdownSeparatorRow(cells)) {
-      continue
-    }
-
     if (cells.some((cell) => cell.length === 0)) {
       throw new Error(`README for ${slug} has a malformed Props table.`)
+    }
+
+    const name = stripBackticks(cells[0])
+    const type = stripBackticks(cells[1])
+    const defaultValue = stripBackticks(cells[2])
+    const description = cells[3]
+
+    const expectedProp = schemaProps[i]
+    if (name !== expectedProp.name) {
+      throw new Error(
+        `README for ${slug} Props table row ${i + 1}: expected name '${expectedProp.name}', found '${name}'.`,
+      )
+    }
+
+    if (type !== expectedProp.type) {
+      throw new Error(
+        `README for ${slug} Props table row ${i + 1}: expected type '${expectedProp.type}', found '${type}'.`,
+      )
+    }
+
+    const expectedDefault = String(expectedProp.defaultValue)
+    if (defaultValue !== expectedDefault) {
+      throw new Error(
+        `README for ${slug} Props table row ${i + 1}: expected default value '${expectedDefault}', found '${defaultValue}'.`,
+      )
+    }
+
+    if (description !== expectedProp.description) {
+      throw new Error(
+        `README for ${slug} Props table row ${i + 1}: expected description '${expectedProp.description}', found '${description}'.`,
+      )
     }
   }
 }
@@ -184,7 +232,7 @@ export async function runValidation(options: ValidationOptions = {}) {
   if (!readme.includes('## Props') || !readme.includes('## Agent Prompt')) {
     throw new Error(`README for ${slug} is missing required sections.`)
   }
-  assertValidPropsTable(readme, slug)
+  assertValidPropsTable(readme, slug, manifest)
 
   if (manifestOnly) {
     return { slug, status: manifest.migration.status, manifestOnly: true }
