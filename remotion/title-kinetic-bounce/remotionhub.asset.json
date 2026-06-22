@@ -1,0 +1,87 @@
+{
+  "slug": "title-kinetic-bounce",
+  "displayName": "Title Kinetic Bounce",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-kinetic-bounce",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-kinetic-bounce/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-kinetic-bounce/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-kinetic-bounce/55ef6598a03f-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-kinetic-bounce/5e65427b0c93-thumb.jpg",
+  "entryPoint": "src/TitleKineticBounce.tsx",
+  "compositionId": "TitleKineticBounce",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的弹跳动态字卡组件（文件：KineticBounceTitle.tsx），请帮我做以下调整： 1. 把显示的文字从 [\"Make\", \"Your\", \"Videos\", \"Alive.\"] 改成 [\"___\", \"___\", \"___\", \"___\"] 2. 把最后一个字的强调色从青色 #38bdf8 改成「___」 3. 把字体大小从 96px 改成 ___px 4. 把背景色从深蓝 #0f172a 改成「___」 5. 把弹跳强度改成更「___」（想更弹：把 damping 从 5 改小；想稳定：改大到 12-20） 6. 把每个字的出场间隔从 15 帧改成 ___ 帧（数字越大，字出现得越慢） 请保留原本的每字依序弹跳入场效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "words",
+      "type": "array",
+      "defaultValue": [
+        "Make",
+        "Your",
+        "Videos",
+        "Alive."
+      ],
+      "description": "List of words to bounce in."
+    },
+    {
+      "name": "colors",
+      "type": "array",
+      "defaultValue": [
+        "#ffffff",
+        "#ffffff",
+        "#ffffff",
+        "#38bdf8"
+      ],
+      "description": "Colors matching each word in the list."
+    },
+    {
+      "name": "wordDelay",
+      "type": "number",
+      "defaultValue": 15,
+      "description": "Frames delay between each word starting its bounce."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#0f172a",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 96,
+      "description": "Font size of the text."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 150,
+      "description": "Stiffness configuration for the spring physics animation."
+    },
+    {
+      "name": "damping",
+      "type": "number",
+      "defaultValue": 5,
+      "description": "Damping configuration for the spring physics animation."
+    },
+    {
+      "name": "mass",
+      "type": "number",
+      "defaultValue": 0.6,
+      "description": "Mass configuration for the spring physics animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-kinetic-bounce.md",
+    "updatedAt": "2026-06-22T12:09:58.856Z"
+  }
+}

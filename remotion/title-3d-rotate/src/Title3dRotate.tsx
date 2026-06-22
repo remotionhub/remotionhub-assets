@@ -4,43 +4,73 @@ import {
   spring,
   useCurrentFrame,
   useVideoConfig,
-} from "remotion";
-import React from "react";
+} from 'remotion'
+import React from 'react'
 
-export const Title3dRotate: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+export interface Title3dRotateProps {
+  text?: string
+  textColor?: string
+  backgroundColor?: string
+  fontSize?: number
+  perspective?: string
+  stiffness?: number
+  damping?: number
+}
 
-  const progress = spring({ frame, fps, config: { damping: 15, stiffness: 80 } });
-  const rotateY = interpolate(progress, [0, 1], [-90, 0]);
+export function Title3dRotate({
+  text = '3D ROTATE',
+  textColor = '#fafafa',
+  backgroundColor = '#18181b',
+  fontSize = 110,
+  perspective = '1200px',
+  stiffness = 80,
+  damping = 15,
+}: Title3dRotateProps) {
+  const frame = useCurrentFrame()
+  const { fps } = useVideoConfig()
+
+  const progress = spring({
+    frame,
+    fps,
+    config: { damping, stiffness },
+  })
+  const rotateY = interpolate(progress, [0, 1], [-90, 0])
   const opacity = interpolate(progress, [0, 0.3], [0, 1], {
-    extrapolateRight: "clamp",
-  });
+    extrapolateRight: 'clamp',
+  })
 
   return (
     <AbsoluteFill
       style={{
-        background: "#18181b",
-        justifyContent: "center",
-        alignItems: "center",
-        perspective: "1200px",
+        background: backgroundColor,
+        justifyContent: 'center',
+        alignItems: 'center',
+        perspective,
       }}
     >
       <div
         style={{
           transform: `rotateY(${rotateY}deg)`,
           opacity,
-          fontSize: 110,
+          fontSize,
           fontWeight: 900,
-          color: "#fafafa",
-          fontFamily: "sans-serif",
-          letterSpacing: "-0.02em",
+          color: textColor,
+          fontFamily: 'sans-serif',
+          letterSpacing: '-0.02em',
         }}
       >
-        3D ROTATE
+        {text}
       </div>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const title3dRotateDefaultProps = {}
+export const title3dRotateDefaultProps: Title3dRotateProps = {
+  text: '3D ROTATE',
+  textColor: '#fafafa',
+  backgroundColor: '#18181b',
+  fontSize: 110,
+  perspective: '1200px',
+  stiffness: 80,
+  damping: 15,
+}

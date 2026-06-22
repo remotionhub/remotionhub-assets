@@ -1,0 +1,81 @@
+{
+  "slug": "title-stagger-lines",
+  "displayName": "Title Stagger Lines",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-stagger-lines",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-stagger-lines/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-stagger-lines/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-stagger-lines/ca94cc40e25e-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-stagger-lines/2c3acb67fed2-thumb.jpg",
+  "entryPoint": "src/TitleStaggerLines.tsx",
+  "compositionId": "TitleStaggerLines",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的逐行交错字卡组件（文件：StaggerLinesTitle.tsx），请帮我做以下调整： 1. 把三行文字从 \"Design\" / \"with Purpose.\" / \"Move the World.\" 改成「___」/「___」/「___」 2. 把三行文字的颜色从白/灰/蓝（#ffffff / #94a3b8 / #38bdf8）改成「___」/「___」/「___」 3. 把三行文字的字体大小从 120px / 72px / 58px 改成 ___px / ___px / ___px 4. 把每行的出场方向从 left / right / bottom 改成「___」/「___」/「___」（可选：left、right、bottom） 5. 把背景色从深蓝 #0f172a 改成「___」 6. 把每行的出场延迟从 0 / 20 / 40 帧改成 ___ / ___ / ___ 帧 请保留原本的三行依序滑入效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "lines",
+      "type": "array",
+      "defaultValue": [
+        {
+          "text": "Design",
+          "delay": 0,
+          "from": "left",
+          "color": "#ffffff",
+          "size": 120
+        },
+        {
+          "text": "with Purpose.",
+          "delay": 20,
+          "from": "right",
+          "color": "#94a3b8",
+          "size": 72
+        },
+        {
+          "text": "Move the World.",
+          "delay": 40,
+          "from": "bottom",
+          "color": "#38bdf8",
+          "size": 58
+        }
+      ],
+      "description": "Staggered text lines config with text, delay, animation direction, color, and size."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#0f172a",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "paddingLeft",
+      "type": "number",
+      "defaultValue": 120,
+      "description": "Left padding for text alignment in pixels."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 100,
+      "description": "Stiffness configuration for the spring physics animation."
+    },
+    {
+      "name": "damping",
+      "type": "number",
+      "defaultValue": 18,
+      "description": "Damping configuration for the spring physics animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-stagger-lines.md",
+    "updatedAt": "2026-06-22T12:10:14.641Z"
+  }
+}

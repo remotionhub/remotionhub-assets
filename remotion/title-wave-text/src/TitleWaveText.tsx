@@ -1,51 +1,69 @@
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
-import React from "react";
+import { AbsoluteFill, interpolate, useCurrentFrame } from 'remotion'
+import React from 'react'
 
-const TEXT = "MOTION";
-const AMPLITUDE = 28;
-const PERIOD = 40;
-const COLORS = ["#f472b6", "#c084fc", "#818cf8", "#38bdf8", "#34d399", "#fbbf24"];
+export interface TitleWaveTextProps {
+  text?: string
+  amplitude?: number
+  period?: number
+  colors?: string[]
+  backgroundColor?: string
+  fontSize?: number
+}
 
-export const TitleWaveText: React.FC = () => {
-  const frame = useCurrentFrame();
+export function TitleWaveText({
+  text = 'MOTION',
+  amplitude = 28,
+  period = 40,
+  colors = ['#f472b6', '#c084fc', '#818cf8', '#38bdf8', '#34d399', '#fbbf24'],
+  backgroundColor = '#0f0a1a',
+  fontSize = 140,
+}: TitleWaveTextProps) {
+  const frame = useCurrentFrame()
 
   const opacity = interpolate(frame, [0, 15], [0, 1], {
-    extrapolateRight: "clamp",
-  });
+    extrapolateRight: 'clamp',
+  })
 
   return (
     <AbsoluteFill
       style={{
-        background: "#0f0a1a",
-        justifyContent: "center",
-        alignItems: "center",
+        background: backgroundColor,
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
-      <div style={{ display: "flex", opacity }}>
-        {TEXT.split("").map((char, i) => {
+      <div style={{ display: 'flex', opacity }}>
+        {text.split('').map((char, i) => {
           const phase =
-            (frame / PERIOD) * Math.PI * 2 + (i / TEXT.length) * Math.PI * 2;
-          const y = Math.sin(phase) * AMPLITUDE;
+            (frame / period) * Math.PI * 2 + (i / text.length) * Math.PI * 2
+          const y = Math.sin(phase) * amplitude
           return (
             <span
               key={i}
               style={{
-                display: "inline-block",
+                display: 'inline-block',
                 transform: `translateY(${y}px)`,
-                fontSize: 140,
+                fontSize,
                 fontWeight: 900,
-                color: COLORS[i % COLORS.length],
-                fontFamily: "sans-serif",
-                letterSpacing: "0.04em",
+                color: colors[i % colors.length] || '#ffffff',
+                fontFamily: 'sans-serif',
+                letterSpacing: '0.04em',
               }}
             >
               {char}
             </span>
-          );
+          )
         })}
       </div>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const titleWaveTextDefaultProps = {}
+export const titleWaveTextDefaultProps: TitleWaveTextProps = {
+  text: 'MOTION',
+  amplitude: 28,
+  period: 40,
+  colors: ['#f472b6', '#c084fc', '#818cf8', '#38bdf8', '#34d399', '#fbbf24'],
+  backgroundColor: '#0f0a1a',
+  fontSize: 140,
+}

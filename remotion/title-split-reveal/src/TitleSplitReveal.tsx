@@ -4,41 +4,71 @@ import {
   spring,
   useCurrentFrame,
   useVideoConfig,
-} from "remotion";
-import React from "react";
+} from 'remotion'
+import React from 'react'
 
-const FONT_SIZE = 140;
+export interface TitleSplitRevealProps {
+  topText?: string
+  bottomText?: string
+  fontSize?: number
+  topTextColor?: string
+  bottomTextColor?: string
+  dividerColor?: string
+  backgroundColor?: string
+  lineWidthMax?: number
+  stiffnessLine?: number
+  dampingLine?: number
+  stiffnessReveal?: number
+  dampingReveal?: number
+}
 
-export const TitleSplitReveal: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+export function TitleSplitReveal({
+  topText = 'SPLIT',
+  bottomText = 'REVEAL',
+  fontSize = 140,
+  topTextColor = '#ffffff',
+  bottomTextColor = '#f59e0b',
+  dividerColor = '#f59e0b',
+  backgroundColor = '#111827',
+  lineWidthMax = 700,
+  stiffnessLine = 200,
+  dampingLine = 30,
+  stiffnessReveal = 100,
+  dampingReveal = 20,
+}: TitleSplitRevealProps) {
+  const frame = useCurrentFrame()
+  const { fps } = useVideoConfig()
 
   const lineProgress = spring({
     frame,
     fps,
-    config: { damping: 30, stiffness: 200 },
-  });
+    config: { damping: dampingLine, stiffness: stiffnessLine },
+  })
   const revealProgress = spring({
     frame: frame - 15,
     fps,
-    config: { damping: 20, stiffness: 100 },
-  });
+    config: { damping: dampingReveal, stiffness: stiffnessReveal },
+  })
 
-  const lineWidth = interpolate(lineProgress, [0, 1], [0, 700]);
-  const topY = interpolate(revealProgress, [0, 1], [0, -FONT_SIZE * 0.55]);
-  const bottomY = interpolate(revealProgress, [0, 1], [0, FONT_SIZE * 0.55]);
+  const lineWidth = interpolate(lineProgress, [0, 1], [0, lineWidthMax])
+  const topY = interpolate(revealProgress, [0, 1], [0, -fontSize * 0.55])
+  const bottomY = interpolate(revealProgress, [0, 1], [0, fontSize * 0.55])
 
   return (
     <AbsoluteFill
-      style={{ background: "#111827", justifyContent: "center", alignItems: "center" }}
+      style={{
+        background: backgroundColor,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
     >
       {/* Center divider line */}
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           height: 4,
           width: lineWidth,
-          background: "#f59e0b",
+          background: dividerColor,
           borderRadius: 2,
         }}
       />
@@ -46,62 +76,75 @@ export const TitleSplitReveal: React.FC = () => {
       {/* Top half */}
       <div
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 0,
           left: 0,
           right: 0,
-          bottom: "50%",
-          overflow: "hidden",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-end",
+          bottom: '50%',
+          overflow: 'hidden',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'flex-end',
         }}
       >
         <div
           style={{
             transform: `translateY(${topY}px)`,
-            fontSize: FONT_SIZE,
+            fontSize,
             fontWeight: 900,
-            color: "#ffffff",
-            fontFamily: "sans-serif",
-            letterSpacing: "-0.03em",
+            color: topTextColor,
+            fontFamily: 'sans-serif',
+            letterSpacing: '-0.03em',
             lineHeight: 1,
           }}
         >
-          SPLIT
+          {topText}
         </div>
       </div>
 
       {/* Bottom half */}
       <div
         style={{
-          position: "absolute",
-          top: "50%",
+          position: 'absolute',
+          top: '50%',
           left: 0,
           right: 0,
           bottom: 0,
-          overflow: "hidden",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
+          overflow: 'hidden',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'flex-start',
         }}
       >
         <div
           style={{
             transform: `translateY(${bottomY}px)`,
-            fontSize: FONT_SIZE,
+            fontSize,
             fontWeight: 900,
-            color: "#f59e0b",
-            fontFamily: "sans-serif",
-            letterSpacing: "-0.03em",
+            color: bottomTextColor,
+            fontFamily: 'sans-serif',
+            letterSpacing: '-0.03em',
             lineHeight: 1,
           }}
         >
-          REVEAL
+          {bottomText}
         </div>
       </div>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const titleSplitRevealDefaultProps = {}
+export const titleSplitRevealDefaultProps: TitleSplitRevealProps = {
+  topText: 'SPLIT',
+  bottomText: 'REVEAL',
+  fontSize: 140,
+  topTextColor: '#ffffff',
+  bottomTextColor: '#f59e0b',
+  dividerColor: '#f59e0b',
+  backgroundColor: '#111827',
+  lineWidthMax: 700,
+  stiffnessLine: 200,
+  dampingLine: 30,
+  stiffnessReveal: 100,
+  dampingReveal: 20,
+}

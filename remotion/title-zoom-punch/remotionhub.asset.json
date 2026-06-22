@@ -1,0 +1,71 @@
+{
+  "slug": "title-zoom-punch",
+  "displayName": "Title Zoom Punch",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-zoom-punch",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-zoom-punch/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-zoom-punch/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-zoom-punch/3a3abdc593bb-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-zoom-punch/bcbf45ba8baa-thumb.jpg",
+  "entryPoint": "src/TitleZoomPunch.tsx",
+  "compositionId": "TitleZoomPunch",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的冲击缩放字卡组件（文件：ZoomPunchTitle.tsx），请帮我做以下调整： 1. 把显示文字从 \"IMPACT\" 改成「___」 2. 把背景色从红色 #dc2626 改成「___」 3. 把文字颜色从白色 #ffffff 改成「___」 4. 把字体大小从 130px 改成 ___px 5. 把起始缩放倍数从 6 倍改成 ___ 倍（数字越大，冲击感越强） 6. 把弹跳感调整：想更弹改小 damping（目前 10，试试 6-8）；想更稳定改大（试试 15-20） 请保留原本的缩放冲击效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "text",
+      "type": "string",
+      "defaultValue": "IMPACT",
+      "description": "The text content to display."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#dc2626",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "textColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color of the text."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 130,
+      "description": "Font size of the text."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 250,
+      "description": "Stiffness configuration for the spring physics animation."
+    },
+    {
+      "name": "damping",
+      "type": "number",
+      "defaultValue": 10,
+      "description": "Damping configuration for the spring physics animation."
+    },
+    {
+      "name": "mass",
+      "type": "number",
+      "defaultValue": 0.7,
+      "description": "Mass configuration for the spring physics animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-zoom-punch.md",
+    "updatedAt": "2026-06-22T12:10:25.157Z"
+  }
+}

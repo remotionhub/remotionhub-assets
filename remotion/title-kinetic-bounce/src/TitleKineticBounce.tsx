@@ -4,37 +4,55 @@ import {
   spring,
   useCurrentFrame,
   useVideoConfig,
-} from "remotion";
-import React from "react";
+} from 'remotion'
+import React from 'react'
 
-const WORDS = ["Make", "Your", "Videos", "Alive."];
-const COLORS = ["#ffffff", "#ffffff", "#ffffff", "#38bdf8"];
-const WORD_DELAY = 15;
+export interface TitleKineticBounceProps {
+  words?: string[]
+  colors?: string[]
+  wordDelay?: number
+  backgroundColor?: string
+  fontSize?: number
+  stiffness?: number
+  damping?: number
+  mass?: number
+}
 
-export const TitleKineticBounce: React.FC = () => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+export function TitleKineticBounce({
+  words = ['Make', 'Your', 'Videos', 'Alive.'],
+  colors = ['#ffffff', '#ffffff', '#ffffff', '#38bdf8'],
+  wordDelay = 15,
+  backgroundColor = '#0f172a',
+  fontSize = 96,
+  stiffness = 150,
+  damping = 5,
+  mass = 0.6,
+}: TitleKineticBounceProps) {
+  const frame = useCurrentFrame()
+  const { fps } = useVideoConfig()
 
   return (
     <AbsoluteFill
       style={{
-        background: "#0f172a",
-        justifyContent: "center",
-        alignItems: "center",
+        background: backgroundColor,
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
-      <div style={{ display: "flex", gap: 28, alignItems: "center" }}>
-        {WORDS.map((word, i) => {
-          const delay = i * WORD_DELAY;
+      <div style={{ display: 'flex', gap: 28, alignItems: 'center' }}>
+        {words.map((word, i) => {
+          const delay = i * wordDelay
           const progress = spring({
             frame: frame - delay,
             fps,
-            config: { damping: 5, stiffness: 150, mass: 0.6 },
-          });
-          const y = interpolate(progress, [0, 1], [-400, 0]);
+            config: { damping, stiffness, mass },
+          })
+          const y = interpolate(progress, [0, 1], [-400, 0])
           const opacity = interpolate(progress, [0, 0.2], [0, 1], {
-            extrapolateRight: "clamp",
-          });
+            extrapolateRight: 'clamp',
+          })
+
+          const color = colors[i] || colors[colors.length - 1] || '#ffffff'
 
           return (
             <div
@@ -42,20 +60,29 @@ export const TitleKineticBounce: React.FC = () => {
               style={{
                 transform: `translateY(${y}px)`,
                 opacity,
-                fontSize: 96,
+                fontSize,
                 fontWeight: 900,
-                color: COLORS[i],
-                fontFamily: "sans-serif",
-                letterSpacing: "-0.02em",
+                color,
+                fontFamily: 'sans-serif',
+                letterSpacing: '-0.02em',
               }}
             >
               {word}
             </div>
-          );
+          )
         })}
       </div>
     </AbsoluteFill>
-  );
-};
+  )
+}
 
-export const titleKineticBounceDefaultProps = {}
+export const titleKineticBounceDefaultProps: TitleKineticBounceProps = {
+  words: ['Make', 'Your', 'Videos', 'Alive.'],
+  colors: ['#ffffff', '#ffffff', '#ffffff', '#38bdf8'],
+  wordDelay: 15,
+  backgroundColor: '#0f172a',
+  fontSize: 96,
+  stiffness: 150,
+  damping: 5,
+  mass: 0.6,
+}

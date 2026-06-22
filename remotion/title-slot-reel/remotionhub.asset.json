@@ -1,0 +1,132 @@
+{
+  "slug": "title-slot-reel",
+  "displayName": "Title Slot Reel",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-slot-reel",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-slot-reel/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-slot-reel/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-slot-reel/82c85612a2ab-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-slot-reel/1a6c792a7713-thumb.jpg",
+  "entryPoint": "src/TitleSlotReel.tsx",
+  "compositionId": "TitleSlotReel",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的老虎机字卡组件（文件：SlotReelTitle.tsx），请帮我做以下调整： 1. 把最终显示文字从 \"REWIND\" 改成「___」（需同步更新 FINAL-TEXT 和 REEL-PREFIXES，每个位置提供 4 个过渡字元） 2. 把最终字元的颜色从金黄 #fbbf24 改成「___」 3. 把过渡字元的颜色从深灰 #374151 改成「___」 4. 把背景色从深蓝黑 #1a1a2e 改成「___」 5. 把字体大小从 96px 改成 ___px（需同步调整 ITEM-HEIGHT 为字体大小的 1.15 倍） 6. 把每个字元的出场延迟从 8 帧改成 ___ 帧（数字越大，字元依序出现的间隔越长） 请保留原本的老虎机滚轮效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "text",
+      "type": "string",
+      "defaultValue": "REWIND",
+      "description": "The final resolved text."
+    },
+    {
+      "name": "reelPrefixes",
+      "type": "array",
+      "defaultValue": [
+        [
+          "K",
+          "A",
+          "M",
+          "X"
+        ],
+        [
+          "B",
+          "Z",
+          "T",
+          "E"
+        ],
+        [
+          "Q",
+          "P",
+          "V",
+          "W"
+        ],
+        [
+          "Y",
+          "N",
+          "D",
+          "I"
+        ],
+        [
+          "J",
+          "H",
+          "S",
+          "N"
+        ],
+        [
+          "C",
+          "L",
+          "F",
+          "G"
+        ]
+      ],
+      "description": "Nested array of prefix characters for each slot column."
+    },
+    {
+      "name": "charDelay",
+      "type": "number",
+      "defaultValue": 8,
+      "description": "Frames delay between slot reels beginning to spin."
+    },
+    {
+      "name": "itemHeight",
+      "type": "number",
+      "defaultValue": 110,
+      "description": "Height of each character cell in pixels."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 96,
+      "description": "Font size of the text."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#1a1a2e",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "highlightColor",
+      "type": "string",
+      "defaultValue": "#fbbf24",
+      "description": "CSS color for the final resolved characters."
+    },
+    {
+      "name": "baseColor",
+      "type": "string",
+      "defaultValue": "#374151",
+      "description": "CSS color for the scrolling prefix characters."
+    },
+    {
+      "name": "stiffness",
+      "type": "number",
+      "defaultValue": 70,
+      "description": "Stiffness configuration for the spring physics animation."
+    },
+    {
+      "name": "damping",
+      "type": "number",
+      "defaultValue": 25,
+      "description": "Damping configuration for the spring physics animation."
+    },
+    {
+      "name": "mass",
+      "type": "number",
+      "defaultValue": 1.2,
+      "description": "Mass configuration for the spring physics animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-slot-reel.md",
+    "updatedAt": "2026-06-22T12:10:04.112Z"
+  }
+}

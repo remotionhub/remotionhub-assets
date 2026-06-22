@@ -1,0 +1,101 @@
+{
+  "slug": "title-split-reveal",
+  "displayName": "Title Split Reveal",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/title-split-reveal",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-split-reveal/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/title-split-reveal/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-split-reveal/a5bf75562265-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/title-split-reveal/90598ce7b5cb-thumb.jpg",
+  "entryPoint": "src/TitleSplitReveal.tsx",
+  "compositionId": "TitleSplitReveal",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的分割揭示字卡组件（文件：SplitRevealTitle.tsx），请帮我做以下调整： 1. 把上方文字从 \"SPLIT\" 改成「___」 2. 把下方文字从 \"REVEAL\" 改成「___」 3. 把中间分割线的颜色从琥珀色 #f59e0b 改成「___」 4. 把下方文字的颜色从琥珀色 #f59e0b 改成「___」 5. 把背景色从深灰 #111827 改成「___」 6. 把字体大小从 140px 改成 ___px 请保留原本的分割线展开 → 文字上下分离的入场效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [
+    {
+      "name": "topText",
+      "type": "string",
+      "defaultValue": "SPLIT",
+      "description": "Text displayed in the top half."
+    },
+    {
+      "name": "bottomText",
+      "type": "string",
+      "defaultValue": "REVEAL",
+      "description": "Text displayed in the bottom half."
+    },
+    {
+      "name": "fontSize",
+      "type": "number",
+      "defaultValue": 140,
+      "description": "Font size of the text."
+    },
+    {
+      "name": "topTextColor",
+      "type": "string",
+      "defaultValue": "#ffffff",
+      "description": "CSS color for top text."
+    },
+    {
+      "name": "bottomTextColor",
+      "type": "string",
+      "defaultValue": "#f59e0b",
+      "description": "CSS color for bottom text."
+    },
+    {
+      "name": "dividerColor",
+      "type": "string",
+      "defaultValue": "#f59e0b",
+      "description": "CSS color for the middle dividing line."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "string",
+      "defaultValue": "#111827",
+      "description": "CSS color of the background."
+    },
+    {
+      "name": "lineWidthMax",
+      "type": "number",
+      "defaultValue": 700,
+      "description": "Maximum width of the divider line in pixels."
+    },
+    {
+      "name": "stiffnessLine",
+      "type": "number",
+      "defaultValue": 200,
+      "description": "Stiffness for the divider line animation."
+    },
+    {
+      "name": "dampingLine",
+      "type": "number",
+      "defaultValue": 30,
+      "description": "Damping for the divider line animation."
+    },
+    {
+      "name": "stiffnessReveal",
+      "type": "number",
+      "defaultValue": 100,
+      "description": "Stiffness for the text sliding reveal animation."
+    },
+    {
+      "name": "dampingReveal",
+      "type": "number",
+      "defaultValue": 20,
+      "description": "Damping for the text sliding reveal animation."
+    }
+  ],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/title-split-reveal.md",
+    "updatedAt": "2026-06-22T12:10:09.395Z"
+  }
+}
