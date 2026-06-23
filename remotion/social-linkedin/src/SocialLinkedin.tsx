@@ -240,7 +240,7 @@ export const SocialLinkedin: React.FC = () => {
             <span style={{ fontSize: 16 }}>💡</span>
             <span style={{ marginLeft: 4 }}>{formatCount(currentLikes)} 人</span>
           </div>
-          <div style={{ fontSize: 13, color: "#666666" }}>87 则留言 · 42 次转发</div>
+          <div style={{ fontSize: 13, color: "#666666" }}>87 条评论 · 42 次转发</div>
         </div>
 
         <div style={{ height: 1, background: "#e0e0e0", margin: "0 20px" }} />
@@ -253,8 +253,8 @@ export const SocialLinkedin: React.FC = () => {
           }}
         >
           {[
-            { icon: "👍", label: "按赞" },
-            { icon: "💬", label: "留言" },
+            { icon: "👍", label: "点赞" },
+            { icon: "💬", label: "评论" },
             { icon: "🔄", label: "分享" },
             { icon: "✉", label: "传送" },
           ].map(({ icon, label }) => (

@@ -8,11 +8,11 @@ import {
 import React from "react";
 
 const NOTIFS = [
-  { platform: "IG",  color: "#e1306c", icon: "📸", title: "design.tw 对你的贴文按赞", desc: "你上传的照片获得了新的互动", time: "刚刚" },
+  { platform: "IG",  color: "#e1306c", icon: "📸", title: "design.tw 对你的帖子点赞", desc: "你上传的照片获得了新的互动", time: "刚刚" },
   { platform: "X",   color: "#1d9bf0", icon: "✕",  title: "你的推文被转推了 47 次", desc: "工程师 Kai 等人转推了你的推文", time: "2分钟前" },
   { platform: "YT",  color: "#ff0000", icon: "▶",  title: "你的视频达到 1,000 次观看！", desc: "恭喜！你的最新视频表现亮眼", time: "5分钟前" },
-  { platform: "GH",  color: "#6e40c9", icon: "⑂",  title: "awesome-project 获得新的 Star", desc: "你的储存库累计达到 500 ⭐", time: "12分钟前" },
-  { platform: "LI",  color: "#0a66c2", icon: "in", title: "你的文章有 234 次浏览", desc: "本周 LinkedIn 贴文表现超过 95% 的用户", time: "1小时前" },
+  { platform: "GH",  color: "#6e40c9", icon: "⑂",  title: "awesome-project 获得新的 Star", desc: "你的保存库累计达到 500 ⭐", time: "12分钟前" },
+  { platform: "LI",  color: "#0a66c2", icon: "in", title: "你的文章有 234 次浏览", desc: "本周 LinkedIn 帖子表现超过 95% 的用户", time: "1小时前" },
   { platform: "TK",  color: "#69c9d0", icon: "♪",  title: "你的视频登上推荐页", desc: "TikTok 演算法推荐了你的最新作品", time: "2小时前" },
 ];
 

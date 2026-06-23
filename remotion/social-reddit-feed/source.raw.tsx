@@ -248,9 +248,9 @@ export const RedditFeed: React.FC = () => {
                 }}
               >
                 {[
-                  { icon: "💬", label: `${post.comments} 则留言` },
+                  { icon: "💬", label: `${post.comments} 条评论` },
                   { icon: "↗", label: "分享" },
-                  { icon: "🔖", label: "储存" },
+                  { icon: "🔖", label: "保存" },
                 ].map(({ icon, label }) => (
                   <div
                     key={label}

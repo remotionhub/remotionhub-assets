@@ -23,8 +23,8 @@ const STATS = [
     color: "#e1306c",
     bg: "#1a0010",
     main: 15200,
-    mainLabel: "追踪者",
-    metrics: ["8.2% 触及率", "342 平均按赞"],
+    mainLabel: "关注者",
+    metrics: ["8.2% 触及率", "342 平均点赞"],
   },
   {
     platform: "X (Twitter)",
@@ -32,7 +32,7 @@ const STATS = [
     color: "#1d9bf0",
     bg: "#001a2a",
     main: 9840,
-    mainLabel: "追踪者",
+    mainLabel: "关注者",
     metrics: ["2.1% 互动率", "187 平均转推"],
   },
   {

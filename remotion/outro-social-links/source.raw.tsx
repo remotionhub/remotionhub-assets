@@ -94,7 +94,7 @@ export const SocialLinksOutro: React.FC = () => {
           marginBottom: 80,
         }}
       >
-        追踪我们
+        关注我们
       </div>
 
       {/* 平台列表 */}

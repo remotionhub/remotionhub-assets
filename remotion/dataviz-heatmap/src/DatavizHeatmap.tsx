@@ -7,7 +7,7 @@ import {
 } from "remotion";
 import React from "react";
 
-const ROW_LABELS = ["直播", "短片", "贴文", "Story", "广告", "活动"];
+const ROW_LABELS = ["直播", "短片", "帖子", "Story", "广告", "活动"];
 const COL_LABELS = ["1月", "2月", "3月", "4月", "5月", "6月", "7月"];
 const VALUES = [
   [45, 62, 78, 55, 88, 72, 95],

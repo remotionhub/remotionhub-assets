@@ -200,7 +200,7 @@ export const MapPinDrop: React.FC = () => {
         })}
       </svg>
 
-      {/* 右侧资讯面板 */}
+      {/* 右侧信息面板 */}
       <div
         style={{
           position: "absolute",

@@ -265,9 +265,9 @@ export const SocialReddit: React.FC = () => {
 
           <div style={{ opacity: actionOpacity, display: "flex", gap: 4, alignItems: "center" }}>
             {[
-              { icon: "💬", label: "342 则留言" },
+              { icon: "💬", label: "342 条评论" },
               { icon: "↗", label: "分享" },
-              { icon: "🔖", label: "储存" },
+              { icon: "🔖", label: "保存" },
               { icon: "•••", label: "更多" },
             ].map(({ icon, label }) => (
               <div

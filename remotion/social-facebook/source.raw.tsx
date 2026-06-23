@@ -159,7 +159,7 @@ export const FacebookPost: React.FC = () => {
                     padding: "1px 8px",
                   }}
                 >
-                  追踪中 ▾
+                  关注中 ▾
                 </div>
               </div>
               <div
@@ -259,7 +259,7 @@ export const FacebookPost: React.FC = () => {
             <span style={{ fontSize: 17 }}>😮</span>
             <span style={{ marginLeft: 4 }}>{formatCount(currentReactions)}</span>
           </div>
-          <div style={{ fontSize: 13, color: "#666666" }}>234 则留言 · 56 次分享</div>
+          <div style={{ fontSize: 13, color: "#666666" }}>234 条评论 · 56 次分享</div>
         </div>
 
         <div style={{ height: 1, background: "#e4e6eb", margin: "0 16px" }} />
@@ -272,8 +272,8 @@ export const FacebookPost: React.FC = () => {
           }}
         >
           {[
-            { icon: "👍", label: "按赞" },
-            { icon: "💬", label: "留言" },
+            { icon: "👍", label: "点赞" },
+            { icon: "💬", label: "评论" },
             { icon: "↗", label: "分享" },
           ].map(({ icon, label }) => (
             <div

@@ -215,7 +215,7 @@ export interface CountdownFlipClockProps {
 
 export const countdownFlipClockDefaultProps: CountdownFlipClockProps = {
   totalSeconds: 60,
-  title: "倒数计时",
+  title: "倒计时",
   cardBgColor: "#1a1a2e",
   cardTextColor: "#f5f5f0",
   cardBottomBgColor: "#16213e",
@@ -223,7 +223,7 @@ export const countdownFlipClockDefaultProps: CountdownFlipClockProps = {
 
 export const CountdownFlipClock: React.FC<CountdownFlipClockProps> = ({
   totalSeconds = 60,
-  title = "倒数计时",
+  title = "倒计时",
   cardBgColor = "#1a1a2e",
   cardTextColor = "#f5f5f0",
   cardBottomBgColor = "#16213e",

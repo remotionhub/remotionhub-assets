@@ -335,7 +335,7 @@ export const MapPathTrace: React.FC = () => {
         })}
       </div>
 
-      {/* 左侧资讯面板 */}
+      {/* 左侧信息面板 */}
       <div
         style={{
           position: "absolute",

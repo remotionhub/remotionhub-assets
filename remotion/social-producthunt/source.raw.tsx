@@ -281,7 +281,7 @@ export const ProductHuntCard: React.FC = () => {
               }}
             >
               <span style={{ fontSize: 20 }}>💬</span>
-              <span style={{ fontWeight: 600 }}>{COMMENTS} 则留言</span>
+              <span style={{ fontWeight: 600 }}>{COMMENTS} 条评论</span>
             </div>
 
             {/* Rank */}

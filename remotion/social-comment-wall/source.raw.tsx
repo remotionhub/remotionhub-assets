@@ -76,7 +76,7 @@ export const CommentWall: React.FC = () => {
             }}
           />
           <span style={{ fontSize: 20, fontWeight: 700, color: "#ffffff" }}>
-            直播留言板
+            直播评论板
           </span>
         </div>
         <div
@@ -88,7 +88,7 @@ export const CommentWall: React.FC = () => {
             color: "#aaaaaa",
           }}
         >
-          {visibleCount} 则留言
+          {visibleCount} 条评论
         </div>
       </div>
 

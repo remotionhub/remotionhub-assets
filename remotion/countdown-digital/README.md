@@ -43,7 +43,7 @@ None.
 ## Agent Prompt
 
 ```text
-我有一个用 Remotion 写的 LED 数位倒数计时器组件（文件：CountdownDigital.tsx），请帮我做以下调整： 1. 把倒数秒数从 10 改成「___」秒（修改顶部 TOTAL-SECONDS 常数） 2. 把 LED 颜色从红色 rgba(255,40,40,...) 改成「___」色（需同步修改 onColor、offColor 及 shadow 中的 RGB 值） 3. 把顶部标签从「COUNTDOWN TIMER」改成「___」 4. 把最后几秒警示阈值从 3 改成「___」秒（修改 isLast3 的判断） 5. 把闪烁频率加快：把 blinkRate 的 0.3 改大可更快，改小可更慢 请保留 7-segment 矩形拼组逻辑与扫描线效果，只修改我指定的部分，然后把完整的修改后代码给我。
+我有一个用 Remotion 写的 LED 数位倒计时器组件（文件：CountdownDigital.tsx），请帮我做以下调整： 1. 把倒计时秒数从 10 改成「___」秒（修改顶部 TOTAL-SECONDS 常数） 2. 把 LED 颜色从红色 rgba(255,40,40,...) 改成「___」色（需同步修改 onColor、offColor 及 shadow 中的 RGB 值） 3. 把顶部标签从「COUNTDOWN TIMER」改成「___」 4. 把最后几秒警示阈值从 3 改成「___」秒（修改 isLast3 的判断） 5. 把闪烁频率加快：把 blinkRate 的 0.3 改大可更快，改小可更慢 请保留 7-segment 矩形拼组逻辑与扫描线效果，只修改我指定的部分，然后把完整的修改后代码给我。
 ```
 
 ## Links

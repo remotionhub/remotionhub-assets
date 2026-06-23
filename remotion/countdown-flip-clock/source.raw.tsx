@@ -6,7 +6,7 @@ import {
 } from "remotion";
 import React from "react";
 
-// 从 01:00 倒数至 00:00，共 60 秒
+// 从 01:00 倒计时至 00:00，共 60 秒
 const TOTAL-SECONDS = 60;
 
 function pad(n: number) {
@@ -258,7 +258,7 @@ export const CountdownFlipClock: React.FC = () => {
           textTransform: "uppercase",
         }}
       >
-        倒数计时
+        倒计时
       </div>
 
       {/* 翻页时钟主体 */}

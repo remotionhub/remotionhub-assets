@@ -114,7 +114,7 @@ export const IgMasonryWall: React.FC = () => {
             your-profile
           </div>
           <div style={{ fontSize: 16, color: "#a8a8a8", marginTop: 2 }}>
-            追踪者 12.4K · 追踪中 892
+            关注者 12.4K · 关注中 892
           </div>
         </div>
       </div>

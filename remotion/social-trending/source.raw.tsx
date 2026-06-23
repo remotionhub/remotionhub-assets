@@ -255,7 +255,7 @@ export const TrendingHashtags: React.FC = () => {
                 flexShrink: 0,
               }}
             >
-              {trend.count} 则贴文
+              {trend.count} 则帖子
             </div>
 
             <div
