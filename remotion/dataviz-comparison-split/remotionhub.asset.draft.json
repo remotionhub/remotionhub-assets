@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-comparison-split",
+  "displayName": "Dataviz Comparison Split",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-comparison-split",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-comparison-split/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-comparison-split/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-comparison-split/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-comparison-split/thumb.jpg",
+  "entryPoint": "src/DatavizComparisonSplit.tsx",
+  "compositionId": "DatavizComparisonSplit",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的左右分割对比图组件（文件：ComparisonSplit.tsx），请帮我做以下调整： 1. 把左侧数据替换成我的数值（修改顶部 LEFT 对象的 title 与 metrics 阵列） 2. 把右侧数据替换成我的数值（修改顶部 RIGHT 对象的 title 与 metrics 阵列） 3. 把左侧背景色从深蓝 #0f172a 改成「___」 4. 把右侧背景色从深紫 #1a0533 改成「___」 5. 调整数字计数速度：把 interpolate 的结束帧从 100 改成「___」（数字越小计数越快） 6. 调整指标滑入时间：修改 METRIC-FRAMES 阵列中的帧数（默认 [25, 35, 45, 55]） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-comparison-split.md",
+    "updatedAt": "2026-06-23T01:37:26.020Z"
+  }
+}

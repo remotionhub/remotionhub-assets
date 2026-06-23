@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-funnel",
+  "displayName": "Dataviz Funnel",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-funnel",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-funnel/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-funnel/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-funnel/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-funnel/thumb.jpg",
+  "entryPoint": "src/DatavizFunnel.tsx",
+  "compositionId": "DatavizFunnel",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的转换漏斗组件（文件：Funnel.tsx），请帮我做以下调整： 1. 把漏斗阶段数据替换成我的数据（修改顶部 STAGES 阵列，每笔包含 label、value、color） 2. 把标题从「转换漏斗分析」改成「___」（修改 JSX 中标题文字） 3. 把副标题从「电商全流程转换率概览」改成「___」 4. 调整每个阶段的最大宽度：把 MAX-WIDTH 从 900 改成「___」（数值越大梯形越宽） 5. 调整各阶段弹入速度：把 stiffness 从 110 改成「___」（越大弹入越快） 6. 把右侧转换率标示位置微调：修改 left: centerX + MAX-WIDTH / 2 + 20 中的偏移值 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-funnel.md",
+    "updatedAt": "2026-06-23T01:37:26.379Z"
+  }
+}

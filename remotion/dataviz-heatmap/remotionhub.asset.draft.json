@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-heatmap",
+  "displayName": "Dataviz Heatmap",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-heatmap",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-heatmap/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-heatmap/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-heatmap/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-heatmap/thumb.jpg",
+  "entryPoint": "src/DatavizHeatmap.tsx",
+  "compositionId": "DatavizHeatmap",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的月度活动热力图组件（文件：Heatmap.tsx），请帮我做以下调整： 1. 把 ROW-LABELS 阵列换成我的分类名称（6 项）：「___」 2. 把 COL-LABELS 阵列换成我的栏位名称（7 项）：「___」 3. 把 VALUES 二维阵列（6 列 × 7 栏）换成我的数据，数值范围 0–100 4. 把标题「月度活动热力图」改成「___」，副标题改成「___」 5. 把色阶冷色端从深蓝 #1e3a5f 改成「___」，暖色端从红色 #ef4444 改成「___」 6. 把每格出场间隔从 index * 2 改成 index * ___（数字越大越慢出场） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-heatmap.md",
+    "updatedAt": "2026-06-23T01:37:27.097Z"
+  }
+}

@@ -197,11 +197,53 @@
       "updatedAt": "2026-06-23T01:37:08.653Z"
     },
     {
+      "slug": "dataviz-bullet",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-bullet.md",
+      "assetPath": "remotion/dataviz-bullet",
+      "updatedAt": "2026-06-23T01:37:39.707Z"
+    },
+    {
+      "slug": "dataviz-candlestick",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-candlestick.md",
+      "assetPath": "remotion/dataviz-candlestick",
+      "updatedAt": "2026-06-23T01:37:48.251Z"
+    },
+    {
+      "slug": "dataviz-comparison-split",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-comparison-split.md",
+      "assetPath": "remotion/dataviz-comparison-split",
+      "updatedAt": "2026-06-23T01:37:57.708Z"
+    },
+    {
       "slug": "dataviz-counter-card",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/dataviz-counter-card.md",
       "assetPath": "remotion/dataviz-counter-card",
       "updatedAt": "2026-06-23T01:36:57.546Z"
+    },
+    {
+      "slug": "dataviz-funnel",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-funnel.md",
+      "assetPath": "remotion/dataviz-funnel",
+      "updatedAt": "2026-06-23T01:38:05.961Z"
+    },
+    {
+      "slug": "dataviz-gantt",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-gantt.md",
+      "assetPath": "remotion/dataviz-gantt",
+      "updatedAt": "2026-06-23T01:38:14.543Z"
+    },
+    {
+      "slug": "dataviz-heatmap",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-heatmap.md",
+      "assetPath": "remotion/dataviz-heatmap",
+      "updatedAt": "2026-06-23T01:38:28.920Z"
     },
     {
       "slug": "dataviz-horizontal-bar",
@@ -232,6 +274,20 @@
       "updatedAt": "2026-06-23T01:36:48.756Z"
     },
     {
+      "slug": "dataviz-radar",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-radar.md",
+      "assetPath": "remotion/dataviz-radar",
+      "updatedAt": "2026-06-23T01:38:37.419Z"
+    },
+    {
+      "slug": "dataviz-sankey",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-sankey.md",
+      "assetPath": "remotion/dataviz-sankey",
+      "updatedAt": "2026-06-23T01:38:45.915Z"
+    },
+    {
       "slug": "dataviz-scatter-plot",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/dataviz-scatter-plot.md",
@@ -244,6 +300,20 @@
       "sourceFile": "/tmp/remotionlab/案例/dataviz-stacked-bar.md",
       "assetPath": "remotion/dataviz-stacked-bar",
       "updatedAt": "2026-06-23T01:36:15.795Z"
+    },
+    {
+      "slug": "dataviz-treemap",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-treemap.md",
+      "assetPath": "remotion/dataviz-treemap",
+      "updatedAt": "2026-06-23T01:38:54.630Z"
+    },
+    {
+      "slug": "dataviz-waterfall",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-waterfall.md",
+      "assetPath": "remotion/dataviz-waterfall",
+      "updatedAt": "2026-06-23T01:39:02.851Z"
     },
     {
       "slug": "intro-cinematic-bars",
