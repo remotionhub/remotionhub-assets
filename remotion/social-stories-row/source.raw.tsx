@@ -102,7 +102,7 @@ export const StoriesRow: React.FC = () => {
             letterSpacing: 2,
           }}
         >
-          限时动态
+          快拍
         </span>
       </div>
 

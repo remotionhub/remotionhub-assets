@@ -131,7 +131,7 @@ export const TestimonialWall: React.FC = () => {
               letterSpacing: 2,
             }}
           >
-            使用者评价
+            用户评价
           </span>
           <div
             style={{

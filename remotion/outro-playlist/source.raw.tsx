@@ -250,7 +250,7 @@ export const PlaylistOutro: React.FC = () => {
                 </div>
               </div>
 
-              {/* 资讯区 */}
+              {/* 信息区 */}
               <div
                 style={{
                   height: CARD-INFO-HEIGHT,

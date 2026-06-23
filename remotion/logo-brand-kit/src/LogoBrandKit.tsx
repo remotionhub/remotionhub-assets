@@ -106,7 +106,7 @@ export const LogoBrandKit: React.FC = () => {
           </span>
         </div>
 
-        {/* 右侧品牌资讯区 */}
+        {/* 右侧品牌信息区 */}
         <div
           style={{
             display: "flex",

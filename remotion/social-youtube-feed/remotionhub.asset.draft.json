@@ -17,7 +17,7 @@
     "16:9"
   ],
   "license": "MIT",
-  "prompt": "我有一个用 Remotion 写的 YouTube 视频墙首页组件（文件：YoutubeFeed.tsx），请帮我做以下调整： 1. 把 VIDEOS 阵列中第 N 部视频的 title / channel 改成「___」 2. 把第 N 部视频的缩图渐层从现有值改成「___」 3. 把第 N 部视频的 duration 改成「___」 4. 调整卡片弹入速度：将 cardProgressList 中的 stiffness 从 150 改大（例如 200） 5. 把观看数计数动画时间从 30 帧改成「___」帧（修改 viewProgressList 中的 start + 30） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "prompt": "我有一个用 Remotion 写的 YouTube 视频墙首页组件（文件：YoutubeFeed.tsx），请帮我做以下调整： 1. 把 VIDEOS 数组中第 N 部视频的 title / channel 改成「___」 2. 把第 N 部视频的缩图渐层从现有值改成「___」 3. 把第 N 部视频的 duration 改成「___」 4. 调整卡片弹入速度：将 cardProgressList 中的 stiffness 从 150 改大（例如 200） 5. 把观看数计数动画时间从 30 帧改成「___」帧（修改 viewProgressList 中的 start + 30） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
   "propsSchema": [],
   "extraDependencies": [],
   "migration": {

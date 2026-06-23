@@ -40,7 +40,7 @@ None.
 ## Agent Prompt
 
 ```text
-我有一个用 Remotion 写的 TikTok 视频贴文卡组件（文件：TiktokCard.tsx），请帮我做以下调整： 1. 把显示名称从 "Remotion 创作者" 改成「___」（修改顶部 DISPLAY-NAME 常数） 2. 把帐号 handle 从 "@remotion-creator" 改成「___」（修改 HANDLE 常数） 3. 把说明文字改成「___」（修改 DESCRIPTION 常数） 4. 把音乐名称从 "原创音乐 - 创作者名称" 改成「___」（修改 MUSIC-TEXT 常数） 5. 把按赞数上限从 23400 改成「___」（修改 LIKES-TARGET 常数） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。
+我有一个用 Remotion 写的 TikTok 视频帖子卡组件（文件：TiktokCard.tsx），请帮我做以下调整： 1. 把显示名称从 "Remotion 创作者" 改成「___」（修改顶部 DISPLAY-NAME 常数） 2. 把帐号 handle 从 "@remotion-creator" 改成「___」（修改 HANDLE 常数） 3. 把说明文字改成「___」（修改 DESCRIPTION 常数） 4. 把音乐名称从 "原创音乐 - 创作者名称" 改成「___」（修改 MUSIC-TEXT 常数） 5. 把点赞数上限从 23400 改成「___」（修改 LIKES-TARGET 常数） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。
 ```
 
 ## Links

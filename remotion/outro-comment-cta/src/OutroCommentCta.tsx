@@ -7,7 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 
-// 假留言数据
+// 假评论数据
 const fakeComments = [
   { avatar: "#3b82f6", text: "这个教学真的很有帮助，谢谢分享！" },
   { avatar: "#10b981", text: "已订阅！期待更多视频 🎉" },
@@ -18,8 +18,8 @@ const fakeComments = [
 const QUESTION_IN    = 0;   // 大问号进场
 const MAIN_TEXT_IN   = 35;  // 主问题文字
 const SUB_TEXT_IN    = 65;  // 副文字
-const INPUT_IN       = 90;  // 留言框
-const COMMENTS_START = 110; // 假留言依序滑入
+const INPUT_IN       = 90;  // 评论框
+const COMMENTS_START = 110; // 假评论依序滑入
 const COMMENT_STAGGER = 13;
 
 export const OutroCommentCta: React.FC = () => {
@@ -56,7 +56,7 @@ export const OutroCommentCta: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  // ── 留言框：scale 0.95→1 + opacity ──
+  // ── 评论框：scale 0.95→1 + opacity ──
   const inputSpring = spring({
     frame: frame - INPUT_IN,
     fps,
@@ -145,10 +145,10 @@ export const OutroCommentCta: React.FC = () => {
           marginBottom: 40,
         }}
       >
-        在下方留言告诉我们吧！
+        在下方评论告诉我们吧！
       </div>
 
-      {/* 留言输入框 */}
+      {/* 评论输入框 */}
       <div
         style={{
           transform: `scale(${inputScale})`,
@@ -173,7 +173,7 @@ export const OutroCommentCta: React.FC = () => {
             letterSpacing: "0.5px",
           }}
         >
-          新增留言…
+          新增评论…
         </span>
         <span
           style={{
@@ -188,7 +188,7 @@ export const OutroCommentCta: React.FC = () => {
         </span>
       </div>
 
-      {/* 假留言列表 */}
+      {/* 假评论列表 */}
       <div
         style={{
           display: "flex",

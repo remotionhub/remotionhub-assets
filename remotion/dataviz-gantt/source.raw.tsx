@@ -13,7 +13,7 @@ const TASKS = [
   { name: "前端开发",   start: 3,  end: 9,  color: "#10b981" },
   { name: "后端开发",   start: 3,  end: 10, color: "#06b6d4" },
   { name: "整合测试",   start: 8,  end: 12, color: "#f59e0b" },
-  { name: "使用者测试", start: 11, end: 13, color: "#ec4899" },
+  { name: "用户测试", start: 11, end: 13, color: "#ec4899" },
   { name: "上线部署",   start: 13, end: 14, color: "#ef4444" },
 ];
 

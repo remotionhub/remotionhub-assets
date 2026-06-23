@@ -40,7 +40,7 @@ None.
 ## Agent Prompt
 
 ```text
-我有一个用 Remotion 写的 Instagram 贴文卡片组件（文件：IgPostCard.tsx），请帮我做以下调整： 1. 把使用者名称从 "remotion-dev" 改成「___」（修改顶部 USERNAME 常数） 2. 把图片占位区的渐层颜色改成「___」 3. 把按赞数上限从 1243 改成「___」（修改 LIKES-TARGET 常数） 4. 把贴文说明文字改成「___」（修改 CAPTION 常数） 5. 把留言数从 48 改成「___」（修改 COMMENT-COUNT 常数） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。
+我有一个用 Remotion 写的 Instagram 帖子卡片组件（文件：IgPostCard.tsx），请帮我做以下调整： 1. 把用户名从 "remotion-dev" 改成「___」（修改顶部 USERNAME 常数） 2. 把图片占位区的渐层颜色改成「___」 3. 把点赞数上限从 1243 改成「___」（修改 LIKES-TARGET 常数） 4. 把帖子说明文字改成「___」（修改 CAPTION 常数） 5. 把评论数从 48 改成「___」（修改 COMMENT-COUNT 常数） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。
 ```
 
 ## Links

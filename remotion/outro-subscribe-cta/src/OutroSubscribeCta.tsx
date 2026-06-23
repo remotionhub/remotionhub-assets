@@ -51,7 +51,7 @@ export const OutroSubscribeCta: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  // 按赞图标：frame 100_130 scale 0→1
+  // 点赞图标：frame 100_130 scale 0→1
   const likeSpring = spring({
     frame: frame - 100,
     fps,
@@ -140,7 +140,7 @@ export const OutroSubscribeCta: React.FC = () => {
         我的频道名称
       </div>
 
-      {/* 订阅按钮 + 铃铛 + 按赞 水平排列 */}
+      {/* 订阅按钮 + 铃铛 + 点赞 水平排列 */}
       <div
         style={{
           display: "flex",
@@ -171,7 +171,7 @@ export const OutroSubscribeCta: React.FC = () => {
           <Bell />
         </div>
 
-        {/* 按赞图标 */}
+        {/* 点赞图标 */}
         <div
           style={{
             transform: `scale(${likeScale})`,

@@ -10,7 +10,7 @@ import React from "react";
 const USERNAME = "remotion-dev";
 const LIKES_TARGET = 1243;
 const CAPTION =
-  "这是一段示范的 Instagram 贴文内容，展示如何用 Remotion 制作社群媒体动画。✨ #remotion #动态设计";
+  "这是一段示范的 Instagram 帖子内容，展示如何用 Remotion 制作社群媒体动画。✨ #remotion #动态设计";
 const COMMENT_COUNT = 48;
 
 export const SocialIgPost: React.FC = () => {
@@ -156,7 +156,7 @@ export const SocialIgPost: React.FC = () => {
               cursor: "pointer",
             }}
           >
-            追踪
+            关注
           </div>
 
           {/* Menu */}
@@ -265,7 +265,7 @@ export const SocialIgPost: React.FC = () => {
           <span style={{ fontWeight: 700 }}>
             {currentLikes.toLocaleString()} 人
           </span>
-          按赞
+          点赞
         </div>
 
         {/* Caption */}
@@ -291,7 +291,7 @@ export const SocialIgPost: React.FC = () => {
             opacity: footerOpacity,
           }}
         >
-          查看全部 {COMMENT_COUNT} 则留言
+          查看全部 {COMMENT_COUNT} 条评论
         </div>
 
         {/* Timestamp */}

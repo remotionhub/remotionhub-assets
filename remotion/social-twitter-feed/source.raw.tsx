@@ -24,7 +24,7 @@ const TWEETS = [
     handle: "@mei-design",
     time: "4h",
     verified: false,
-    text: "今天做了一个动态资讯图表，用 Remotion + React 大概花了 2 小时。以前 After Effects 要花 8 小时 😅",
+    text: "今天做了一个动态信息图表，用 Remotion + React 大概花了 2 小时。以前 After Effects 要花 8 小时 😅",
     replies: 31,
     retweets: 256,
     likes: 2187,

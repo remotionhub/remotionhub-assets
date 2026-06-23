@@ -288,7 +288,7 @@ export const SocialTiktok: React.FC = () => {
                 cursor: "pointer",
               }}
             >
-              追踪
+              关注
             </div>
           </div>
 
