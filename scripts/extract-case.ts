@@ -7,6 +7,7 @@ import { parseRemotionLabMarkdown } from './lib/remotionlabMarkdown'
 type DraftAssetManifest = {
   slug: string
   displayName: string
+  displayNameZh?: string
   runtime: 'remotion'
   sourceUrl: string
   originalPreviewUrl: string
@@ -383,6 +384,7 @@ export async function runExtraction(options: ExtractionOptions = {}) {
   const draftManifest: DraftAssetManifest = {
     slug: parsed.slug,
     displayName,
+    displayNameZh: parsed.title,
     runtime: 'remotion',
     sourceUrl: parsed.sourceUrl,
     originalPreviewUrl: parsed.previewUrl,
