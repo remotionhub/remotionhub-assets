@@ -24,7 +24,13 @@ async function main() {
         `| \`${prop.name}\` | \`${prop.type}\` | \`${formatDefaultValue(prop.defaultValue)}\` | ${prop.description} |`,
     )
     .join('\n')
-  const readme = `# ${manifest.displayName}
+  const titleHeader = manifest.displayNameZh
+    ? `# ${manifest.displayNameZh} (${manifest.displayName})`
+    : `# ${manifest.displayName}`
+
+  const readme = `${titleHeader}
+
+> **Attribution Note**: This component is migrated from the original template on [remotionlab.com](https://remotionlab.com/showcase/${manifest.slug}). Credit goes to the original creator at remotionlab.
 
 ![Preview](${manifest.thumbnailUrl})
 
