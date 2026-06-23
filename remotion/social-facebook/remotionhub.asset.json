@@ -1,0 +1,28 @@
+{
+  "slug": "social-facebook",
+  "displayName": "Social Facebook",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-facebook",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-facebook/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-facebook/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-facebook/8dfa13be2749-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-facebook/7220ced71a23-thumb.jpg",
+  "entryPoint": "src/SocialFacebook.tsx",
+  "compositionId": "SocialFacebook",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 Facebook 贴文卡片组件（文件：FacebookPost.tsx），请帮我做以下调整： 1. 把发文者姓名从「陈小华」改成「___」 2. 把贴文内容改成「___」 3. 把图片区的渐层从蓝紫色改成「___」 4. 把反应计数上限从 1200 改成「___」 5. 把留言数和分享数从「234 则留言 · 56 次分享」改成「___」 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/social-facebook.md",
+    "updatedAt": "2026-06-23T01:41:01.235Z"
+  }
+}

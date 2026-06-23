@@ -645,6 +645,146 @@
       "updatedAt": "2026-06-23T01:35:33.359Z"
     },
     {
+      "slug": "social-app-store",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-app-store.md",
+      "assetPath": "remotion/social-app-store",
+      "updatedAt": "2026-06-23T01:40:43.541Z"
+    },
+    {
+      "slug": "social-comment-wall",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-comment-wall.md",
+      "assetPath": "remotion/social-comment-wall",
+      "updatedAt": "2026-06-23T01:40:52.570Z"
+    },
+    {
+      "slug": "social-facebook",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-facebook.md",
+      "assetPath": "remotion/social-facebook",
+      "updatedAt": "2026-06-23T01:41:01.235Z"
+    },
+    {
+      "slug": "social-github",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-github.md",
+      "assetPath": "remotion/social-github",
+      "updatedAt": "2026-06-23T01:41:09.606Z"
+    },
+    {
+      "slug": "social-ig-masonry",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-ig-masonry.md",
+      "assetPath": "remotion/social-ig-masonry",
+      "updatedAt": "2026-06-23T01:41:18.121Z"
+    },
+    {
+      "slug": "social-ig-post",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-ig-post.md",
+      "assetPath": "remotion/social-ig-post",
+      "updatedAt": "2026-06-23T01:41:53.251Z"
+    },
+    {
+      "slug": "social-linkedin",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-linkedin.md",
+      "assetPath": "remotion/social-linkedin",
+      "updatedAt": "2026-06-23T01:42:01.793Z"
+    },
+    {
+      "slug": "social-notifications",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-notifications.md",
+      "assetPath": "remotion/social-notifications",
+      "updatedAt": "2026-06-23T01:42:10.265Z"
+    },
+    {
+      "slug": "social-producthunt",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-producthunt.md",
+      "assetPath": "remotion/social-producthunt",
+      "updatedAt": "2026-06-23T01:42:18.528Z"
+    },
+    {
+      "slug": "social-reddit",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-reddit.md",
+      "assetPath": "remotion/social-reddit",
+      "updatedAt": "2026-06-23T01:42:35.546Z"
+    },
+    {
+      "slug": "social-reddit-feed",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-reddit-feed.md",
+      "assetPath": "remotion/social-reddit-feed",
+      "updatedAt": "2026-06-23T01:42:26.939Z"
+    },
+    {
+      "slug": "social-stats-wall",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-stats-wall.md",
+      "assetPath": "remotion/social-stats-wall",
+      "updatedAt": "2026-06-23T01:42:44.598Z"
+    },
+    {
+      "slug": "social-stories-row",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-stories-row.md",
+      "assetPath": "remotion/social-stories-row",
+      "updatedAt": "2026-06-23T01:42:53.144Z"
+    },
+    {
+      "slug": "social-testimonial-wall",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-testimonial-wall.md",
+      "assetPath": "remotion/social-testimonial-wall",
+      "updatedAt": "2026-06-23T01:43:03.460Z"
+    },
+    {
+      "slug": "social-tiktok",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-tiktok.md",
+      "assetPath": "remotion/social-tiktok",
+      "updatedAt": "2026-06-23T01:43:11.691Z"
+    },
+    {
+      "slug": "social-trending",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-trending.md",
+      "assetPath": "remotion/social-trending",
+      "updatedAt": "2026-06-23T01:43:25.785Z"
+    },
+    {
+      "slug": "social-twitter-feed",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-twitter-feed.md",
+      "assetPath": "remotion/social-twitter-feed",
+      "updatedAt": "2026-06-23T01:43:39.927Z"
+    },
+    {
+      "slug": "social-twitter-quote",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-twitter-quote.md",
+      "assetPath": "remotion/social-twitter-quote",
+      "updatedAt": "2026-06-23T01:43:48.891Z"
+    },
+    {
+      "slug": "social-youtube-feed",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-youtube-feed.md",
+      "assetPath": "remotion/social-youtube-feed",
+      "updatedAt": "2026-06-23T01:43:57.736Z"
+    },
+    {
+      "slug": "social-yt-video",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/social-yt-video.md",
+      "assetPath": "remotion/social-yt-video",
+      "updatedAt": "2026-06-23T01:44:05.851Z"
+    },
+    {
       "slug": "subtitle-cinematic",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/subtitle-cinematic.md",

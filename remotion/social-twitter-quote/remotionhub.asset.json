@@ -1,0 +1,28 @@
+{
+  "slug": "social-twitter-quote",
+  "displayName": "Social Twitter Quote",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-twitter-quote",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-twitter-quote/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-twitter-quote/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-twitter-quote/d37384a90ce4-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-twitter-quote/b7e23dacf71b-thumb.jpg",
+  "entryPoint": "src/SocialTwitterQuote.tsx",
+  "compositionId": "SocialTwitterQuote",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 X / Twitter 语录卡组件（文件：TwitterQuote.tsx），请帮我做以下调整： 1. 把显示名称从「工程师 Kai」改成「___」，并把 @handle 从「@kai-engineer」改成「___」 2. 把语录内容改成「___」（换行请用 \\n） 3. 把喜欢数从 2400 改成「___」、转推数从 891 改成「___」、浏览数从 48000 改成「___」 4. 把时间戳记从「下午 3:42 · 2025年4月9日」改成「___」 5. 把卡片背景色从 #0f0f0f 改成「___」（例如深海军蓝 #0a1628） 6. 把语录字型大小从 38px 改成「___」px 请保留原本的缩放淡入、逐行显示与数字滚动效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/social-twitter-quote.md",
+    "updatedAt": "2026-06-23T01:43:48.891Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "social-reddit",
+  "displayName": "Social Reddit",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-reddit",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-reddit/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-reddit/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-reddit/dd5c90995489-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-reddit/cb6e3513136b-thumb.jpg",
+  "entryPoint": "src/SocialReddit.tsx",
+  "compositionId": "SocialReddit",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 Reddit 贴文卡片组件（文件：RedditPost.tsx），请帮我做以下调整： 1. 把 Subreddit 从「r/webdev」改成「___」 2. 把发文者从「u/remotion-fan」改成「___」 3. 把贴文标题改成「___」 4. 把链结预览的网址从「remotion.dev」改成「___」 5. 把投票数上限从 4200 改成「___」 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/social-reddit.md",
+    "updatedAt": "2026-06-23T01:42:35.546Z"
+  }
+}

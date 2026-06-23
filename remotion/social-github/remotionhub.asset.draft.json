@@ -1,0 +1,28 @@
+{
+  "slug": "social-github",
+  "displayName": "Social Github",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-github",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-github/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-github/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-github/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-github/thumb.jpg",
+  "entryPoint": "src/SocialGithub.tsx",
+  "compositionId": "SocialGithub",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 GitHub Repo 卡片组件（文件：GithubRepoCard.tsx），请帮我做以下调整： 1. 把仓库拥有者名称从 \"username\" 改成「___」（修改顶部 USERNAME 常数） 2. 把仓库名称从 \"awesome-project\" 改成「___」（修改顶部 REPO-NAME 常数） 3. 把描述文字改成「___」（修改顶部 DESCRIPTION 常数） 4. 把主题标签阵列 TOPICS 改成你想要的标签 5. 把星数 STARS、FORKS、WATCHERS 改成你想要的数字 6. 把语言名称 LANGUAGE 与百分比 LANG-PERCENT 改成你的语言 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/social-github.md",
+    "updatedAt": "2026-06-23T01:39:12.335Z"
+  }
+}
