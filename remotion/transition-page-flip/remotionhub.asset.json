@@ -1,0 +1,28 @@
+{
+  "slug": "transition-page-flip",
+  "displayName": "Transition Page Flip",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-page-flip",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-page-flip/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-page-flip/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-page-flip/edd38c27317e-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-page-flip/3f1db4745fee-thumb.jpg",
+  "entryPoint": "src/TransitionPageFlip.tsx",
+  "compositionId": "TransitionPageFlip",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的翻页转场组件（文件：PageFlipTransition.tsx），请帮我做以下调整： 1. 把动画起始延迟从 20 改成「___」（`frame - 20` 中的延迟量） 2. 把 spring 的 damping 从 22 改成「___」 3. 把 spring 的 stiffness 从 90 改成「___」 4. 把 perspective 景深从 1200px 改成「___」px（值越小 3D 效果越夸张） 5. 把翻转轴从水平中心改为左侧边缘（`transformOrigin` 从 `\"center center\"` 改成 `\"left center\"`） 6. 把 Scene A 的背景改成「___」、Scene B 的背景改成「___」 请保留原本的 3D rotateY 翻页逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/transition-page-flip.md",
+    "updatedAt": "2026-06-23T01:32:01.666Z"
+  }
+}

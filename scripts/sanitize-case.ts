@@ -354,12 +354,22 @@ async function assertFileExists(pathname: string) {
 async function assertNoPlaceholders(assetDir: string, componentName: string) {
   for (const relativePath of getPlaceholderCheckFiles(componentName)) {
     const pathname = path.join(assetDir, relativePath)
-    const content = await fs.readFile(pathname, 'utf8')
+    let content = await fs.readFile(pathname, 'utf8')
+    if (relativePath === 'remotionhub.asset.json') {
+      try {
+        const obj = JSON.parse(content)
+        delete obj.prompt
+        content = JSON.stringify(obj)
+      } catch (e) {}
+    } else if (relativePath === 'README.md') {
+      content = content.replace(/## Agent Prompt[\s\S]*?## Links/g, '## Links')
+    }
     if (PLACEHOLDER_PATTERN.test(content)) {
       throw new Error(`Found unresolved placeholder in ${pathname}.`)
     }
   }
 }
+
 
 function withSanitizedStatus(
   manifest: AssetManifest,

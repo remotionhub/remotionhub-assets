@@ -1,0 +1,28 @@
+{
+  "slug": "transition-diagonal-wipe",
+  "displayName": "Transition Diagonal Wipe",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-diagonal-wipe",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-diagonal-wipe/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-diagonal-wipe/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-diagonal-wipe/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-diagonal-wipe/thumb.jpg",
+  "entryPoint": "src/TransitionDiagonalWipe.tsx",
+  "compositionId": "TransitionDiagonalWipe",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的对角线擦除转场组件（文件：DiagonalWipeTransition.tsx），请帮我做以下调整： 1. 把转场进度的起始帧从 15 改成「___」 2. 把转场进度的结束帧从 75 改成「___」 3. 把对角线带状边缘的倾斜宽度从 500 改成「___」（clipPath 中的偏移量） 4. 把 Scene A 的背景渐层从 `linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)` 改成「___」 5. 把 Scene B 的背景渐层从 `linear-gradient(135deg, #1a0533 0%, #0f0a1a 100%)` 改成「___」 请保留原本的对角线擦除逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/transition-diagonal-wipe.md",
+    "updatedAt": "2026-06-23T01:27:10.362Z"
+  }
+}

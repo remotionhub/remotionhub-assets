@@ -1,0 +1,28 @@
+{
+  "slug": "transition-curtain",
+  "displayName": "Transition Curtain",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-curtain",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-curtain/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-curtain/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-curtain/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-curtain/thumb.jpg",
+  "entryPoint": "src/TransitionCurtain.tsx",
+  "compositionId": "TransitionCurtain",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的幕帘转场组件（文件：CurtainTransition.tsx），请帮我做以下调整： 1. 把左右门开始移动的帧从 20 改成「___」 2. 把左右门移动完成的帧从 70 改成「___」 3. 把左门移动距离从 -960 改成「___」（单位 px） 4. 把右门移动距离从 960 改成「___」（单位 px） 5. 把 Scene A 的背景渐层从 `linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)` 改成「___」 6. 把 Scene B 的背景渐层从 `linear-gradient(135deg, #1a0533 0%, #0f0a1a 100%)` 改成「___」 请保留原本的幕帘逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/transition-curtain.md",
+    "updatedAt": "2026-06-23T01:27:10.018Z"
+  }
+}

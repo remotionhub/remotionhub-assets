@@ -1,0 +1,28 @@
+{
+  "slug": "transition-flash-white",
+  "displayName": "Transition Flash White",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-flash-white",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-flash-white/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-flash-white/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-flash-white/94cc8b8e7bd8-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-flash-white/29d88d30dc4f-thumb.jpg",
+  "entryPoint": "src/TransitionFlashWhite.tsx",
+  "compositionId": "TransitionFlashWhite",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的白闪转场组件（文件：FlashWhiteTransition.tsx），请帮我做以下调整： 1. 把闪光淡入的起始帧从 30 改成「___」 2. 把闪光最亮的帧从 45 改成「___」 3. 把闪光淡出的结束帧从 60 改成「___」 4. 把 Scene A 的背景渐层从 `linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)` 改成「___」 5. 把 Scene B 的背景渐层从 `linear-gradient(135deg, #1a0533 0%, #0f0a1a 100%)` 改成「___」 6. 把白色 overlay 改成其他颜色「___」 请保留原本的白闪逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/transition-flash-white.md",
+    "updatedAt": "2026-06-23T01:31:41.582Z"
+  }
+}
