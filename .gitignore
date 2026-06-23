@@ -1,3 +1,4 @@
 node_modules/
 remotion/*/out/
 .env.local
+.worktrees/
