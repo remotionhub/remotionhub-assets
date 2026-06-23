@@ -1,0 +1,28 @@
+{
+  "slug": "transition-ink-spread",
+  "displayName": "Transition Ink Spread",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-ink-spread",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-ink-spread/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-ink-spread/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-ink-spread/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-ink-spread/thumb.jpg",
+  "entryPoint": "src/TransitionInkSpread.tsx",
+  "compositionId": "TransitionInkSpread",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的墨水晕染转场组件（文件：InkSpreadTransition.tsx），请帮我做以下调整： 1. 把墨水扩散的起始帧从 15 改成「___」 2. 把墨水扩散的峰值帧从 50 改成「___」 3. 把墨水完全消退的结束帧从 75 改成「___」 4. 把墨水最大缩放倍率（峰值）从 3 改成「___」 5. 把墨水颜色从 `#000000` 改成「___」（例如 `#1a1a2e` 以配合深色主题） 6. 把墨水的模糊半径从 30px 改成「___」px（值越大边缘越柔和） 7. 把 Scene B 淡入的起始帧从 50 改成「___」、结束帧从 75 改成「___」 请保留原本的圆形缩放晕染逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/transition-ink-spread.md",
+    "updatedAt": "2026-06-23T01:27:12.067Z"
+  }
+}

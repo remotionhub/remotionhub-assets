@@ -1,0 +1,28 @@
+{
+  "slug": "transition-blinds",
+  "displayName": "Transition Blinds",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-blinds",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-blinds/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-blinds/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-blinds/b028fa49a061-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-blinds/93f54d62d7b4-thumb.jpg",
+  "entryPoint": "src/TransitionBlinds.tsx",
+  "compositionId": "TransitionBlinds",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的百叶窗转场组件（文件：BlindsTransition.tsx），请帮我做以下调整： 1. 把百叶窗条纹数量从 8 改成「___」 2. 把每条条纹的收缩起始帧偏移从 `i * 8` 改成「___」 3. 把条纹收缩的开始帧（相对偏移后）从 15 改成「___」 4. 把条纹收缩的结束帧（相对偏移后）从 45 改成「___」 5. 把 Scene A（条纹）的背景渐层从 `linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)` 改成「___」 6. 把 Scene B 的背景渐层从 `linear-gradient(135deg, #1a0533 0%, #0f0a1a 100%)` 改成「___」 请保留原本的百叶窗逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/transition-blinds.md",
+    "updatedAt": "2026-06-23T01:31:05.341Z"
+  }
+}

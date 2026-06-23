@@ -1,0 +1,28 @@
+{
+  "slug": "transition-zoom-out-in",
+  "displayName": "Transition Zoom Out In",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-zoom-out-in",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-zoom-out-in/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-zoom-out-in/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-zoom-out-in/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-zoom-out-in/thumb.jpg",
+  "entryPoint": "src/TransitionZoomOutIn.tsx",
+  "compositionId": "TransitionZoomOutIn",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的缩小放大转场组件（文件：ZoomOutInTransition.tsx），请帮我做以下调整： 1. 把场景 A 缩小的起始帧从 15 改成「___」 2. 把场景 A 缩小的结束帧从 50 改成「___」 3. 把场景 B 放大的起始帧从 50 改成「___」 4. 把场景 B 放大的结束帧从 80 改成「___」 5. 把中间的黑色背景从 `black` 改成「___」 6. 把 Scene A 的背景渐层从 `linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)` 改成「___」 7. 把 Scene B 的背景渐层从 `linear-gradient(135deg, #1a0533 0%, #0f0a1a 100%)` 改成「___」 请保留原本的缩小放大逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/transition-zoom-out-in.md",
+    "updatedAt": "2026-06-23T01:27:14.840Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "transition-fade-cross",
+  "displayName": "Transition Fade Cross",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-fade-cross",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-fade-cross/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-fade-cross/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-fade-cross/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-fade-cross/thumb.jpg",
+  "entryPoint": "src/TransitionFadeCross.tsx",
+  "compositionId": "TransitionFadeCross",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的交叉淡化转场组件（文件：FadeCrossTransition.tsx），请帮我做以下调整： 1. 把淡化的起始帧从 30 改成「___」 2. 把淡化的结束帧从 60 改成「___」 3. 把 Scene A 的背景渐层从 `linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%)` 改成「___」 4. 把 Scene B 的背景渐层从 `linear-gradient(135deg, #1a0533 0%, #0f0a1a 100%)` 改成「___」 5. 把 Scene A 文字的阴影颜色从 `rgba(59,130,246,0.5)` 改成「___」 6. 把 Scene B 文字的阴影颜色从 `rgba(168,85,247,0.5)` 改成「___」 请保留原本的交叉淡化逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/transition-fade-cross.md",
+    "updatedAt": "2026-06-23T01:27:11.040Z"
+  }
+}

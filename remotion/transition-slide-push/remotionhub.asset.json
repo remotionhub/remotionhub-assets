@@ -1,0 +1,28 @@
+{
+  "slug": "transition-slide-push",
+  "displayName": "Transition Slide Push",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-slide-push",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-slide-push/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-slide-push/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-slide-push/9949a1c1a1c7-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-slide-push/061297e07faa-thumb.jpg",
+  "entryPoint": "src/TransitionSlidePush.tsx",
+  "compositionId": "TransitionSlidePush",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的滑动推移转场组件（文件：SlidePushTransition.tsx），请帮我做以下调整： 1. 把动画的起始帧从 20 改成「___」（`frame - 20` 中的延迟量） 2. 把 spring 的 damping 从 20 改成「___」；想更有弹性请改小（例如 10），想更平稳请改大（例如 30） 3. 把 spring 的 stiffness 从 120 改成「___」；想更快请改大（例如 180），想更慢请改小（例如 80） 4. 把推移方向改为从左到右（目前是从右到左），请将 `aTranslateX` 与 `bTranslateX` 的正负号对调 5. 把 Scene A 的背景渐层改成「___」 6. 把 Scene B 的背景渐层改成「___」 请保留原本的滑动推移逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/transition-slide-push.md",
+    "updatedAt": "2026-06-23T01:32:13.871Z"
+  }
+}

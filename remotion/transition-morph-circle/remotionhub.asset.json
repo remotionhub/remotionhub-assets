@@ -1,0 +1,28 @@
+{
+  "slug": "transition-morph-circle",
+  "displayName": "Transition Morph Circle",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-morph-circle",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-morph-circle/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-morph-circle/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-morph-circle/33fc442cfe7d-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-morph-circle/ecb0bc36ccdd-thumb.jpg",
+  "entryPoint": "src/TransitionMorphCircle.tsx",
+  "compositionId": "TransitionMorphCircle",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的圆形遮罩转场组件（文件：MorphCircleTransition.tsx），请帮我做以下调整： 1. 把动画起始延迟从 20 改成「___」（`frame - 20` 中的延迟量） 2. 把 spring 的 damping 从 20 改成「___」 3. 把 spring 的 stiffness 从 80 改成「___」；想更快请改大（例如 120），想更慢请改小（例如 50） 4. 把圆形扩张的最终半径从 1200 改成「___」px 5. 把圆形展开的中心点从画面中心 `960px 540px` 改成「___ ___」 6. 把 Scene A 的背景改成「___」、Scene B 的背景改成「___」 请保留原本的圆形 clipPath 遮罩逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/transition-morph-circle.md",
+    "updatedAt": "2026-06-23T01:31:53.751Z"
+  }
+}

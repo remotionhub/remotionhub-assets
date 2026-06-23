@@ -1,0 +1,28 @@
+{
+  "slug": "transition-split-doors",
+  "displayName": "Transition Split Doors",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/transition-split-doors",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-split-doors/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/transition-split-doors/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-split-doors/498b621a47be-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/transition-split-doors/ecb0bc36ccdd-thumb.jpg",
+  "entryPoint": "src/TransitionSplitDoors.tsx",
+  "compositionId": "TransitionSplitDoors",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的对开门转场组件（文件：SplitDoorsTransition.tsx），请帮我做以下调整： 1. 把动画起始延迟从 20 改成「___」（`frame - 20` 中的延迟量） 2. 把 spring 的 damping 从 18 改成「___」 3. 把 spring 的 stiffness 从 100 改成「___」 4. 把分割点从画面正中央（960px）改成「___」px（例如 640 代表左侧偏移分割） 5. 把左门的移动距离从 -960 改成「___」px 6. 把右门的移动距离从 960 改成「___」px 请保留原本的对开门逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/transition-split-doors.md",
+    "updatedAt": "2026-06-23T01:32:25.934Z"
+  }
+}
