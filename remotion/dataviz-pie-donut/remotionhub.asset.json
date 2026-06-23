@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-pie-donut",
+  "displayName": "Dataviz Pie Donut",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-pie-donut",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-pie-donut/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-pie-donut/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-pie-donut/10d1721c3274-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-pie-donut/dc3d3a67aa3f-thumb.jpg",
+  "entryPoint": "src/DatavizPieDonut.tsx",
+  "compositionId": "DatavizPieDonut",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的甜甜圈图组件（文件：PieDonut.tsx），请帮我做以下调整： 1. 把标题从「收入结构分析」改成「___」 2. 把副标题从「各类别占比分布」改成「___」 3. 把各区段的标签依序改成「___、___、___、___」 4. 把各区段的百分比依序改成「___、___、___、___」（总和必须等于 100） 5. 把各区段的颜色依序改成「___、___、___、___」 6. 把甜甜圈圆环的粗细从 70 改成 ___（数字越大圆环越宽） 请保留原本的逐段填入动画与中心计数效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-pie-donut.md",
+    "updatedAt": "2026-06-23T01:36:40.426Z"
+  }
+}

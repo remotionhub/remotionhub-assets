@@ -176,6 +176,76 @@
       "updatedAt": "2026-06-22T08:18:34.725Z"
     },
     {
+      "slug": "dataviz-area-chart",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-area-chart.md",
+      "assetPath": "remotion/dataviz-area-chart",
+      "updatedAt": "2026-06-23T01:36:32.272Z"
+    },
+    {
+      "slug": "dataviz-bar-chart",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-bar-chart.md",
+      "assetPath": "remotion/dataviz-bar-chart",
+      "updatedAt": "2026-06-23T01:35:59.521Z"
+    },
+    {
+      "slug": "dataviz-bubble",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-bubble.md",
+      "assetPath": "remotion/dataviz-bubble",
+      "updatedAt": "2026-06-23T01:37:08.653Z"
+    },
+    {
+      "slug": "dataviz-counter-card",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-counter-card.md",
+      "assetPath": "remotion/dataviz-counter-card",
+      "updatedAt": "2026-06-23T01:36:57.546Z"
+    },
+    {
+      "slug": "dataviz-horizontal-bar",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-horizontal-bar.md",
+      "assetPath": "remotion/dataviz-horizontal-bar",
+      "updatedAt": "2026-06-23T01:36:07.645Z"
+    },
+    {
+      "slug": "dataviz-line-draw",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-line-draw.md",
+      "assetPath": "remotion/dataviz-line-draw",
+      "updatedAt": "2026-06-23T01:36:23.617Z"
+    },
+    {
+      "slug": "dataviz-pie-donut",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-pie-donut.md",
+      "assetPath": "remotion/dataviz-pie-donut",
+      "updatedAt": "2026-06-23T01:36:40.426Z"
+    },
+    {
+      "slug": "dataviz-progress-ring",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-progress-ring.md",
+      "assetPath": "remotion/dataviz-progress-ring",
+      "updatedAt": "2026-06-23T01:36:48.756Z"
+    },
+    {
+      "slug": "dataviz-scatter-plot",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-scatter-plot.md",
+      "assetPath": "remotion/dataviz-scatter-plot",
+      "updatedAt": "2026-06-23T01:37:17.099Z"
+    },
+    {
+      "slug": "dataviz-stacked-bar",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/dataviz-stacked-bar.md",
+      "assetPath": "remotion/dataviz-stacked-bar",
+      "updatedAt": "2026-06-23T01:36:15.795Z"
+    },
+    {
       "slug": "intro-cinematic-bars",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/intro-cinematic-bars.md",

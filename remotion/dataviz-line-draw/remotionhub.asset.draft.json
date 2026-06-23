@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-line-draw",
+  "displayName": "Dataviz Line Draw",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-line-draw",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-line-draw/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-line-draw/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-line-draw/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-line-draw/thumb.jpg",
+  "entryPoint": "src/DatavizLineDraw.tsx",
+  "compositionId": "DatavizLineDraw",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的月度趋势折线图组件（文件：LineDraw.tsx），请帮我做以下调整： 1. 把标题从「月度趋势比较」改成「___」 2. 把副标题从「系列 A 与系列 B 数据走势」改成「___」 3. 把系列 A 的数据点依序改成「___」（共 8 个数值，范围 0–100） 4. 把系列 B 的数据点依序改成「___」（共 8 个数值，范围 0–100） 5. 把 X 轴月份标签依序改成「___」（共 8 个字符串，例如周次或季度） 6. 把系列 A 的颜色从蓝色 #3b82f6 改成「___」，系列 B 从橘色 #f59e0b 改成「___」 请保留原本的描绘动画与数据点弹出效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-line-draw.md",
+    "updatedAt": "2026-06-23T01:35:46.267Z"
+  }
+}
