@@ -1,0 +1,29 @@
+{
+  "slug": "yt-deploy-cloudflare",
+  "displayName": "Yt Deploy Cloudflare",
+  "displayNameZh": "部署到 Cloudflare",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-deploy-cloudflare",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-deploy-cloudflare/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-deploy-cloudflare/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-deploy-cloudflare/e9edb2e9e285-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-deploy-cloudflare/68d290450a73-thumb.jpg",
+  "entryPoint": "src/YtDeployCloudflare.tsx",
+  "compositionId": "YtDeployCloudflare",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene211-DeployCloudflare.tsx），请帮我做以下调整： 1. 修改左侧前端/后端卡片的描述文字 2. 调整右侧 Cloudflare 部署项目（目前为 Pages、Workers、D1 Database） 3. 更改主标题文字 4. 修改底部成功徽章的文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-deploy-cloudflare.md",
+    "updatedAt": "2026-06-23T12:27:28.134Z"
+  }
+}

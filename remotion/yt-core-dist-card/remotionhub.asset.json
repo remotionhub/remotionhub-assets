@@ -1,0 +1,29 @@
+{
+  "slug": "yt-core-dist-card",
+  "displayName": "Yt Core Dist Card",
+  "displayNameZh": "持续触及核心字卡",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-core-dist-card",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-core-dist-card/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-core-dist-card/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-core-dist-card/8642327c633a-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-core-dist-card/eea1b76b220d-thumb.jpg",
+  "entryPoint": "src/YtCoreDistCard.tsx",
+  "compositionId": "YtCoreDistCard",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene143-CoreDistCard.tsx），请帮我做以下调整： 1. 修改第一行文字（目前是「持续地触及到想吃牛肉面的人，」） 2. 调整第二行文字（目前是「让他来吃、再来吃、还带朋友来吃。」） 3. 更换英文副标（目前是 \"Continuously reach people who crave beef noodles...\"） 4. 调整打字速度（目前 CHARS-PER-FRAME = 0.6） 请保留原本的逐字打字效果、游标闪烁与英文淡入动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-core-dist-card.md",
+    "updatedAt": "2026-06-23T12:26:59.684Z"
+  }
+}

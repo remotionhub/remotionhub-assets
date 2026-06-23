@@ -1,0 +1,29 @@
+{
+  "slug": "yt-shadcn-prompt",
+  "displayName": "Yt Shadcn Prompt",
+  "displayNameZh": "shadcn-ui Skill Prompt 输入动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-shadcn-prompt",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-shadcn-prompt/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-shadcn-prompt/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-shadcn-prompt/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-shadcn-prompt/thumb.jpg",
+  "entryPoint": "src/YtShadcnPrompt.tsx",
+  "compositionId": "YtShadcnPrompt",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene53-ShadcnPrompt.tsx），请帮我做以下调整： 1. 修改 Prompt 的两行文字（目前是「请利用 shadcn-ui skill」和「帮我重新设计这个网站」） 2. 更改高亮关键词（目前高亮的是「shadcn-ui skill」） 3. 调整打字速度（目前从 frame 30 到 105 完成打字） 4. 修改传送按钮的渐层色（目前从 accent 到 accentSecondary） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-shadcn-prompt.md",
+    "updatedAt": "2026-06-23T12:36:27.842Z"
+  }
+}

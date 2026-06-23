@@ -1,0 +1,29 @@
+{
+  "slug": "yt-can-do-animation",
+  "displayName": "Yt Can Do Animation",
+  "displayNameZh": "静态网站能做动画特效吗？",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-can-do-animation",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-can-do-animation/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-can-do-animation/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-can-do-animation/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-can-do-animation/thumb.jpg",
+  "entryPoint": "src/YtCanDoAnimation.tsx",
+  "compositionId": "YtCanDoAnimation",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene58-CanDoAnimation.tsx），请帮我做以下调整： 1. 修改问号前的说明文字（目前是「动画特效」） 2. 更改静态网站的标签文字（目前是「静态网站」） 3. 调整动态网站 mockup 的渐层色（目前是 #8B5CF6 到 #EC4899） 4. 修改问号的颜色（目前使用 warning #FFB547） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-can-do-animation.md",
+    "updatedAt": "2026-06-23T12:26:01.353Z"
+  }
+}

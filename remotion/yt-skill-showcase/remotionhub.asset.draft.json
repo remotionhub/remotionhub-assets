@@ -1,0 +1,29 @@
+{
+  "slug": "yt-skill-showcase",
+  "displayName": "Yt Skill Showcase",
+  "displayNameZh": "四技能展示：Superpowers、shadcn/ui Skills、OWASP、Trail of Bits",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-skill-showcase",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-skill-showcase/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-skill-showcase/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-skill-showcase/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-skill-showcase/thumb.jpg",
+  "entryPoint": "src/YtSkillShowcase.tsx",
+  "compositionId": "YtSkillShowcase",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene130-SkillShowcase.tsx），请帮我做以下调整： 1. 修改四个技能的名称与编号顺序 2. 调整各技能的主题颜色 3. 更改技能 Grid 的排列方式（目前为 2×2） 4. 修改每个技能的放大展示时间长度 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-skill-showcase.md",
+    "updatedAt": "2026-06-23T12:37:02.410Z"
+  }
+}

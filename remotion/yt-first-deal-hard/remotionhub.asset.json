@@ -1,0 +1,29 @@
+{
+  "slug": "yt-first-deal-hard",
+  "displayName": "Yt First Deal Hard",
+  "displayNameZh": "要促成第一笔 KOL 合作不容易",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-first-deal-hard",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-first-deal-hard/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-first-deal-hard/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-first-deal-hard/a5b1f7bd9ce8-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-first-deal-hard/7ac8f3b9d17e-thumb.jpg",
+  "entryPoint": "src/YtFirstDealHard.tsx",
+  "compositionId": "YtFirstDealHard",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene183-FirstDealHard.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整左侧「空白作品集」的视觉呈现 3. 修改右侧「信任桥梁」的描述 4. 更改强调颜色 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-first-deal-hard.md",
+    "updatedAt": "2026-06-23T12:30:09.438Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "yt-tech-boosts-stability",
+  "displayName": "Yt Tech Boosts Stability",
+  "displayNameZh": "产品稳定度可以透过提升技术力增加",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-tech-boosts-stability",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-tech-boosts-stability/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-tech-boosts-stability/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tech-boosts-stability/f42d067b5b8d-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tech-boosts-stability/dfa9ab423f39-thumb.jpg",
+  "entryPoint": "src/YtTechBoostsStability.tsx",
+  "compositionId": "YtTechBoostsStability",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene196-TechBoostsStability.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整技术能力的项目列表 3. 更改上升箭头的颜色 4. 修改稳定度指标的标签 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-tech-boosts-stability.md",
+    "updatedAt": "2026-06-23T12:38:11.636Z"
+  }
+}

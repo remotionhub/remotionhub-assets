@@ -1,0 +1,29 @@
+{
+  "slug": "yt-three-dimensions",
+  "displayName": "Yt Three Dimensions",
+  "displayNameZh": "三个面向拆解：Skill、工具、流程",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-three-dimensions",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-three-dimensions/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-three-dimensions/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-three-dimensions/741a43b2e805-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-three-dimensions/ade93e36314d-thumb.jpg",
+  "entryPoint": "src/YtThreeDimensions.tsx",
+  "compositionId": "YtThreeDimensions",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene204-ThreeDimensions.tsx），请帮我做以下调整： 1. 修改三个面向的标题（目前为 Skill、工具、流程） 2. 调整每个面向的图标与说明 3. 更改各面向的强调颜色 4. 修改主标题文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-three-dimensions.md",
+    "updatedAt": "2026-06-23T12:38:28.916Z"
+  }
+}

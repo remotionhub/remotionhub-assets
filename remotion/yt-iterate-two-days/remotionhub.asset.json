@@ -1,0 +1,29 @@
+{
+  "slug": "yt-iterate-two-days",
+  "displayName": "Yt Iterate Two Days",
+  "displayNameZh": "来回调整与测试",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-iterate-two-days",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-iterate-two-days/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-iterate-two-days/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-iterate-two-days/e11530acf9d0-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-iterate-two-days/3075af1d6bf6-thumb.jpg",
+  "entryPoint": "src/YtIterateTwoDays.tsx",
+  "compositionId": "YtIterateTwoDays",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene213-IterateTwoDays.tsx），请帮我做以下调整： 1. 修改四个步骤的名称（目前为：开发、测试、修正、部署） 2. 调整各步骤的颜色 3. 更改主标题文字 4. 修改底部徽章的完成时间文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-iterate-two-days.md",
+    "updatedAt": "2026-06-23T12:32:47.596Z"
+  }
+}

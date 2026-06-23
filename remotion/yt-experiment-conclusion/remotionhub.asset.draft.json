@@ -1,0 +1,29 @@
+{
+  "slug": "yt-experiment-conclusion",
+  "displayName": "Yt Experiment Conclusion",
+  "displayNameZh": "实验结论三点总结动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-experiment-conclusion",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-experiment-conclusion/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-experiment-conclusion/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-experiment-conclusion/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-experiment-conclusion/thumb.jpg",
+  "entryPoint": "src/YtExperimentConclusion.tsx",
+  "compositionId": "YtExperimentConclusion",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：ConclusionScene.tsx），请帮我做以下调整： 1. 修改三个结论项目的文字（title 与 subtitle 栏位） 2. 调整三个项目的出现时间点（P1、P2、P3，目前分别为第 1、8、15 秒） 3. 修改顶部标题文字（目前为「实验结论」）与字体大小 4. 调整各项目图标的颜色（activeColor） 请保留原本的动画节奏与前项目淡化效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-experiment-conclusion.md",
+    "updatedAt": "2026-06-23T12:29:01.804Z"
+  }
+}

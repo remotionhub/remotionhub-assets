@@ -1,0 +1,29 @@
+{
+  "slug": "yt-core-flow",
+  "displayName": "Yt Core Flow",
+  "displayNameZh": "AI 产品核心流程：输入→搜寻→AI 分析",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-core-flow",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-core-flow/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-core-flow/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-core-flow/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-core-flow/thumb.jpg",
+  "entryPoint": "src/YtCoreFlow.tsx",
+  "compositionId": "YtCoreFlow",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene202-CoreFlow.tsx），请帮我做以下调整： 1. 修改三个流程步骤的标题与描述 2. 调整各步骤的颜色 3. 更改主标题文字 4. 修改流程箭头的样式 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-core-flow.md",
+    "updatedAt": "2026-06-23T12:27:00.376Z"
+  }
+}

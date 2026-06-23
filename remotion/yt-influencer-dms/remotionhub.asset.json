@@ -1,0 +1,29 @@
+{
+  "slug": "yt-influencer-dms",
+  "displayName": "Yt Influencer Dms",
+  "displayNameZh": "网红私讯里充满粉丝问题",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-influencer-dms",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-influencer-dms/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-influencer-dms/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-influencer-dms/33314b8fb447-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-influencer-dms/a91b9129ad72-thumb.jpg",
+  "entryPoint": "src/YtInfluencerDms.tsx",
+  "compositionId": "YtInfluencerDms",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene179-InfluencerDMs.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整 DM 讯息气泡的内容文字 3. 更改手机/网红图标的颜色 4. 修改英文副标题 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-influencer-dms.md",
+    "updatedAt": "2026-06-23T12:32:27.575Z"
+  }
+}

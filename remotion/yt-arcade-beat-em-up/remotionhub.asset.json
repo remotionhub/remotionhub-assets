@@ -1,0 +1,29 @@
+{
+  "slug": "yt-arcade-beat-em-up",
+  "displayName": "Yt Arcade Beat Em Up",
+  "displayNameZh": "街机清版游戏场景动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-arcade-beat-em-up",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-arcade-beat-em-up/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-arcade-beat-em-up/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-arcade-beat-em-up/0d4d96a6c5d4-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-arcade-beat-em-up/769df2e0af20-thumb.jpg",
+  "entryPoint": "src/YtArcadeBeatEmUp.tsx",
+  "compositionId": "YtArcadeBeatEmUp",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene33-ArcadeBeatEmUp.tsx），请帮我做以下调整： 1. 修改敌人数量与位置（目前有 6 个，x 座标分别是 380, 520, 600, 740, 830, 950） 2. 调整主角的移动速度（目前从 frame 50 到 220 横跨整个舞台） 3. 更改主角颜色（目前使用 accent #00D4AA） 4. 修改舞台宽度（目前 stageW = 1100） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-arcade-beat-em-up.md",
+    "updatedAt": "2026-06-23T12:24:33.958Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "yt-not-about-analysis",
+  "displayName": "Yt Not About Analysis",
+  "displayNameZh": "重点不是分析报告",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-not-about-analysis",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-not-about-analysis/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-not-about-analysis/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-not-about-analysis/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-not-about-analysis/thumb.jpg",
+  "entryPoint": "src/YtNotAboutAnalysis.tsx",
+  "compositionId": "YtNotAboutAnalysis",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene157-NotAboutAnalysis.tsx），请帮我做以下调整： 1. 修改主标题（目前是「重点不是分析点子是否有价值」） 2. 调整英文副标（目前是 \"The point is NOT analyzing whether an idea has value\"） 3. 更换底部结论文字（目前是「因为毫无根据和说服力」） 4. 修改崩塌方块的颜色（目前是灰色 #6B7280） 请保留原本的报告打叉、≠ 符号弹入与基座崩塌动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-not-about-analysis.md",
+    "updatedAt": "2026-06-23T12:34:30.306Z"
+  }
+}

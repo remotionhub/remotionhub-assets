@@ -1,0 +1,29 @@
+{
+  "slug": "yt-product-overflow",
+  "displayName": "Yt Product Overflow",
+  "displayNameZh": "AI 时代产品满天飞",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-product-overflow",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-product-overflow/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-product-overflow/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-product-overflow/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-product-overflow/thumb.jpg",
+  "entryPoint": "src/YtProductOverflow.tsx",
+  "compositionId": "YtProductOverflow",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene144-ProductOverflow.tsx），请帮我做以下调整： 1. 修改图标大小（目前 ICON-SIZE = 80） 2. 调整图标之间的间距（目前 GAP = 8） 3. 更换填满动画的速度（目前 delay 以距离中心为基础） 4. 调整最终缩放比例（目前最大放大至 1.15 倍） 请保留原本的波浪式 pop-in、wobble 动画与中心辉光效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-product-overflow.md",
+    "updatedAt": "2026-06-23T12:35:17.734Z"
+  }
+}

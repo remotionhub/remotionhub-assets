@@ -1,0 +1,29 @@
+{
+  "slug": "yt-line-phase-intro",
+  "displayName": "Yt Line Phase Intro",
+  "displayNameZh": "LINE 整合阶段介绍卡",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-line-phase-intro",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-line-phase-intro/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-line-phase-intro/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-line-phase-intro/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-line-phase-intro/thumb.jpg",
+  "entryPoint": "src/YtLinePhaseIntro.tsx",
+  "compositionId": "YtLinePhaseIntro",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene07-LinePhaseIntro.tsx），请帮我做以下调整： 1. 修改 `CHECKLIST-ITEMS` 阵列中的标签文字，换成你自己的整合步骤清单。 2. 调整左侧标题（目前是 \"LINE\"）与副标题（目前是 \"PHASE 2\"）为你想要的名称。 3. 更改 Logo 图标（`LineLogoIcon`）的颜色或形状，使其符合你的品牌。 4. 调整背景底色（目前是 `#0B0B0F`）与 accent 色（目前是 `#00D4AA`）。 请保留原本的勾选动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-line-phase-intro.md",
+    "updatedAt": "2026-06-23T12:32:56.791Z"
+  }
+}

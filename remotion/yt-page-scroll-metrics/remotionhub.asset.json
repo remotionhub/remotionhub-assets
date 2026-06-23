@@ -1,0 +1,29 @@
+{
+  "slug": "yt-page-scroll-metrics",
+  "displayName": "Yt Page Scroll Metrics",
+  "displayNameZh": "页面卷动完成率漏斗",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-page-scroll-metrics",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-page-scroll-metrics/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-page-scroll-metrics/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-page-scroll-metrics/5dfe4ab48a33-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-page-scroll-metrics/72f746775154-thumb.jpg",
+  "entryPoint": "src/YtPageScrollMetrics.tsx",
+  "compositionId": "YtPageScrollMetrics",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene88-PageScrollMetrics.tsx），请帮我做以下调整： 1. 修改顶部漏斗的人数（目前是 1000）与底部人数（目前是 320） 2. 调整完成率数字（目前显示 32%） 3. 更换顶部与底部的说明文字（目前是「点进页面的人」和「滑到底部的人」） 4. 修改颜色主题（顶部蓝色 #4DA3FF，底部橘黄 #FFB547） 请保留原本的计数器动画、漏斗 SVG 形状与卷轴动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-page-scroll-metrics.md",
+    "updatedAt": "2026-06-23T12:35:08.607Z"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@remotionhub/yt-growth-24",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx YtGrowth24 out/yt-growth-24.mp4"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "remotion": ">=4.0.0"
+  }
+}

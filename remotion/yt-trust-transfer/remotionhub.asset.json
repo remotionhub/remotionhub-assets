@@ -1,0 +1,29 @@
+{
+  "slug": "yt-trust-transfer",
+  "displayName": "Yt Trust Transfer",
+  "displayNameZh": "透过粉丝对 KOL 的信任转移到产品",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-trust-transfer",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-trust-transfer/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-trust-transfer/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-trust-transfer/2b5f50f62a0b-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-trust-transfer/e07d01d783ad-thumb.jpg",
+  "entryPoint": "src/YtTrustTransfer.tsx",
+  "compositionId": "YtTrustTransfer",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene181-TrustTransfer.tsx），请帮我做以下调整： 1. 修改流程节点的标签（粉丝→信任→KOL→转移→产品） 2. 调整箭头连线的颜色与样式 3. 更改主标题文字 4. 修改各节点的出场延迟 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-trust-transfer.md",
+    "updatedAt": "2026-06-23T12:39:20.684Z"
+  }
+}

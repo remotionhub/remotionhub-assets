@@ -1,0 +1,29 @@
+{
+  "slug": "yt-idea-check",
+  "displayName": "Yt Idea Check",
+  "displayNameZh": "用 Claude Code 做了 IdeaCheck 产品",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-idea-check",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-idea-check/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-idea-check/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-idea-check/d68b7dd85bca-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-idea-check/c699bbb8027c-thumb.jpg",
+  "entryPoint": "src/YtIdeaCheck.tsx",
+  "compositionId": "YtIdeaCheck",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene201-IdeaCheck.tsx），请帮我做以下调整： 1. 修改产品名称（目前为 IdeaCheck） 2. 调整产品功能描述 3. 更改主强调颜色 4. 修改开发工具的标签 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-idea-check.md",
+    "updatedAt": "2026-06-23T12:32:07.334Z"
+  }
+}

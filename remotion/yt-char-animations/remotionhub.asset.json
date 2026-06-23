@@ -1,0 +1,29 @@
+{
+  "slug": "yt-char-animations",
+  "displayName": "Yt Char Animations",
+  "displayNameZh": "角色动作动画四格展示",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-char-animations",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-char-animations/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-char-animations/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-char-animations/f2839e781ab0-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-char-animations/a72605b1e3f8-thumb.jpg",
+  "entryPoint": "src/YtCharAnimations.tsx",
+  "compositionId": "YtCharAnimations",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene38-CharAnimations.tsx），请帮我做以下调整： 1. 修改四种动作的标签（目前是：走路、跑步、跳跃、攻击） 2. 调整各动作对应的颜色（目前依序是 #4DA3FF、#FFB547、#2ECC71、#E74C3C） 3. 更改动作卡片的大小（目前每张宽高各 200px） 4. 修改动作出现的延迟时间（目前依序为 frame 30, 75, 120, 160） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-char-animations.md",
+    "updatedAt": "2026-06-23T12:26:20.040Z"
+  }
+}

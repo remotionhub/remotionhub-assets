@@ -1,0 +1,17 @@
+{
+  "name": "@remotionhub/yt-easy-channel-hard-dist",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p ../../tsconfig.base.json --noEmit",
+    "render": "remotion render src/Root.tsx YtEasyChannelHardDist out/yt-easy-channel-hard-dist.mp4"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "remotion": ">=4.0.0"
+  }
+}

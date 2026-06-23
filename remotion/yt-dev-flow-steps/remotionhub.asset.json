@@ -1,0 +1,29 @@
+{
+  "slug": "yt-dev-flow-steps",
+  "displayName": "Yt Dev Flow Steps",
+  "displayNameZh": "开发流程四步骤动画卡片",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-dev-flow-steps",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-dev-flow-steps/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-dev-flow-steps/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-dev-flow-steps/7664ae9f01a2-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-dev-flow-steps/481909b5cf34-thumb.jpg",
+  "entryPoint": "src/YtDevFlowSteps.tsx",
+  "compositionId": "YtDevFlowSteps",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：DevFlowStepsScene.tsx），请帮我做以下调整： 1. 修改四个步骤的标签文字与颜色（STEPS 阵列中的 label、icon、color） 2. 调整步骤出现的间隔帧数（STEP-DELAY，目前为 30 帧） 3. 修改卡片外框的圆角、背景色与边框颜色 4. 调整 STEP 文字标签的字体大小（目前为 20px） 请保留 SVG 描边动画与圆形环形渐入效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-dev-flow-steps.md",
+    "updatedAt": "2026-06-23T12:27:46.646Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "yt-service-first",
+  "displayName": "Yt Service First",
+  "displayNameZh": "先做服务，再做产品",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-service-first",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-service-first/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-service-first/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-service-first/dc5b31e78e85-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-service-first/225a12b28acd-thumb.jpg",
+  "entryPoint": "src/YtServiceFirst.tsx",
+  "compositionId": "YtServiceFirst",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene169-ServiceFirst.tsx），请帮我做以下调整： 1. 修改 Phase A 的三个步骤内容（目前为接听电话→累积洞察→打造机器人） 2. 调整电话接听数字（目前倒数至 100） 3. 修改 Phase B 的错误结果描述 4. 调整主标题文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-service-first.md",
+    "updatedAt": "2026-06-23T12:36:27.122Z"
+  }
+}

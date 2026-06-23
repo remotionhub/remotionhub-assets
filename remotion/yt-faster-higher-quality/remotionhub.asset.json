@@ -1,0 +1,29 @@
+{
+  "slug": "yt-faster-higher-quality",
+  "displayName": "Yt Faster Higher Quality",
+  "displayNameZh": "更快做出来，品质门槛也跟着提高",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-faster-higher-quality",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-faster-higher-quality/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-faster-higher-quality/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-faster-higher-quality/dbfbb5560187-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-faster-higher-quality/ec93380b478e-thumb.jpg",
+  "entryPoint": "src/YtFasterHigherQuality.tsx",
+  "compositionId": "YtFasterHigherQuality",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene162-FasterHigherQuality.tsx），请帮我做以下调整： 1. 修改标题文字（目前为「更快做出来，品质门槛也跟着提高」） 2. 调整左侧速度图标的主色（目前为 #4DA3FF 蓝色） 3. 调整右侧品质图标的主色（目前为 #F59E0B 琥珀色） 4. 修改英文副标题文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-faster-higher-quality.md",
+    "updatedAt": "2026-06-23T12:29:59.516Z"
+  }
+}

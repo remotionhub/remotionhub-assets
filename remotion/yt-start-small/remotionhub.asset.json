@@ -1,0 +1,29 @@
+{
+  "slug": "yt-start-small",
+  "displayName": "Yt Start Small",
+  "displayNameZh": "不要一口气做平台，先从小工具开始",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-start-small",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-start-small/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-start-small/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-start-small/173ea6e7d5a3-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-start-small/6bcee35d0908-thumb.jpg",
+  "entryPoint": "src/YtStartSmall.tsx",
+  "compositionId": "YtStartSmall",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene198-StartSmall.tsx），请帮我做以下调整： 1. 修改右侧小起点的项目（目前为趋势报告、小工具） 2. 调整左侧「大平台」的描述文字 3. 更改强调颜色 4. 修改主标题文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-start-small.md",
+    "updatedAt": "2026-06-23T12:37:27.815Z"
+  }
+}

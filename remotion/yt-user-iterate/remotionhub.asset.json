@@ -1,0 +1,29 @@
+{
+  "slug": "yt-user-iterate",
+  "displayName": "Yt User Iterate",
+  "displayNameZh": "透过使用者互动不断优化调整",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-user-iterate",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-user-iterate/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-user-iterate/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-user-iterate/d4628b27fbbf-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-user-iterate/12681663fa41-thumb.jpg",
+  "entryPoint": "src/YtUserIterate.tsx",
+  "compositionId": "YtUserIterate",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene171-UserIterate.tsx），请帮我做以下调整： 1. 修改标题文字（目前为「透过使用者互动，不断优化调整」） 2. 调整使用者端与产品端的颜色 3. 修改中间「不断优化」的标签文字 4. 调整回圈动画的脉冲速度 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-user-iterate.md",
+    "updatedAt": "2026-06-23T12:39:55.350Z"
+  }
+}

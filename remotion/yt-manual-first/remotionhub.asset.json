@@ -1,0 +1,29 @@
+{
+  "slug": "yt-manual-first",
+  "displayName": "Yt Manual First",
+  "displayNameZh": "不要担心手动，先解决问题赚到钱再自动化",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-manual-first",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-manual-first/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-manual-first/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-manual-first/9093729906c0-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-manual-first/8246125822dc-thumb.jpg",
+  "entryPoint": "src/YtManualFirst.tsx",
+  "compositionId": "YtManualFirst",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene170-ManualFirst.tsx），请帮我做以下调整： 1. 修改三个阶段的标题（手动→赚钱→自动化） 2. 调整主标题文字 3. 更改各阶段的代表颜色 4. 修改英文副标题 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-manual-first.md",
+    "updatedAt": "2026-06-23T12:33:25.052Z"
+  }
+}

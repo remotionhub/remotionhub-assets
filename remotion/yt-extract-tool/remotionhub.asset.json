@@ -1,0 +1,29 @@
+{
+  "slug": "yt-extract-tool",
+  "displayName": "Yt Extract Tool",
+  "displayNameZh": "自制 extract.py 工具动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-extract-tool",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-extract-tool/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-extract-tool/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-extract-tool/c9fe5dde34e8-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-extract-tool/4f48b6fbd2ae-thumb.jpg",
+  "entryPoint": "src/YtExtractTool.tsx",
+  "compositionId": "YtExtractTool",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene60-ExtractTool.tsx），请帮我做以下调整： 1. 修改工具名称（目前是 extract.py） 2. 更改终端机中显示的运行步骤文字（目前是 Fetching website、Extracting HTML/CSS 等） 3. 调整灯泡启示阶段的说明文字（目前是「参考了一些做法」） 4. 修改「自制工具」徽章的颜色（目前使用 warning #FFB547） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-extract-tool.md",
+    "updatedAt": "2026-06-23T12:29:20.364Z"
+  }
+}

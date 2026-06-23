@@ -1,0 +1,29 @@
+{
+  "slug": "yt-reach-pain-points",
+  "displayName": "Yt Reach Pain Points",
+  "displayNameZh": "持续触及痛点用户",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-reach-pain-points",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-reach-pain-points/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-reach-pain-points/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-reach-pain-points/744581cadd49-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-reach-pain-points/215efa904ea0-thumb.jpg",
+  "entryPoint": "src/YtReachPainPoints.tsx",
+  "compositionId": "YtReachPainPoints",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene140-ReachPainPoints.tsx），请帮我做以下调整： 1. 修改人群数量（目前是 10 个人） 2. 调整有痛点的人的比例（目前 5/10 有痛点） 3. 更换雷达脉冲的颜色（目前是 #4DA3FF 蓝色） 4. 调整动画总长度（目前是 6 秒 = 180 帧） 请保留原本的天线动画、脉冲扩散、人物弹出与连线动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-reach-pain-points.md",
+    "updatedAt": "2026-06-23T12:35:52.594Z"
+  }
+}

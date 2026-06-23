@@ -1,0 +1,29 @@
+{
+  "slug": "yt-mobile-patience",
+  "displayName": "Yt Mobile Patience",
+  "displayNameZh": "手机耐心只有五秒",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-mobile-patience",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mobile-patience/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mobile-patience/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-mobile-patience/72116b4881e8-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-mobile-patience/f3e081675b16-thumb.jpg",
+  "entryPoint": "src/YtMobilePatience.tsx",
+  "compositionId": "YtMobilePatience",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene94-MobilePatience.tsx），请帮我做以下调整： 1. 修改倒数秒数（目前是 5 秒） 2. 调整两张指标卡片的文字（目前是「打得开网站」和「联络到人」） 3. 更换最后出现的标签文字（目前是「重要指标」） 4. 修改网路不稳定的说明文字（目前是「网路不稳定」） 请保留原本的手机动画、倒数动画与卡片弹入效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-mobile-patience.md",
+    "updatedAt": "2026-06-23T12:34:00.888Z"
+  }
+}

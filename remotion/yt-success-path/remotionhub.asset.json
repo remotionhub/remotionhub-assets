@@ -1,0 +1,29 @@
+{
+  "slug": "yt-success-path",
+  "displayName": "Yt Success Path",
+  "displayNameZh": "成功路径：服务→自动化→产品化",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-success-path",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-success-path/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-success-path/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-success-path/3a9e735546ac-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-success-path/dae924f480fe-thumb.jpg",
+  "entryPoint": "src/YtSuccessPath.tsx",
+  "compositionId": "YtSuccessPath",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene168-SuccessPath.tsx），请帮我做以下调整： 1. 修改三个步骤的标签文字（目前为「先做服务」「创建自动化」「产品化」） 2. 调整每个步骤的颜色（目前为蓝、琥珀、绿） 3. 修改标题文字 4. 调整步骤出现的时间间隔 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-success-path.md",
+    "updatedAt": "2026-06-23T12:37:45.137Z"
+  }
+}

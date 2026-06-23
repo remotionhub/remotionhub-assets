@@ -276,10 +276,228 @@ function toPascalCase(slug: string) {
 }
 
 function replaceHyphenatedVariables(code: string): string {
-  const regex = /\b[A-Z0-9]+(?:-[A-Z0-9]+)+\b/g
-  return code.replace(regex, (match) => {
-    return match.replaceAll('-', '_')
-  })
+  let result = ''
+
+  // State stack
+  const stateStack: string[] = ['code']
+  // brace depth stack for template-expr or jsx expressions
+  const braceDepthStack: number[] = [0]
+  // track if the current jsx-tag is an end tag
+  const jsxTagIsEndStack: boolean[] = []
+
+  let i = 0
+  while (i < code.length) {
+    const char = code[i]
+    const nextChar = code[i + 1]
+    const curState = stateStack[stateStack.length - 1]
+
+    if (curState === 'single-line-comment') {
+      result += char
+      if (char === '\n') {
+        stateStack.pop()
+      }
+      i++
+      continue
+    }
+
+    if (curState === 'multi-line-comment') {
+      result += char
+      if (char === '*' && nextChar === '/') {
+        result += '/'
+        stateStack.pop()
+        i += 2
+      } else {
+        i++
+      }
+      continue
+    }
+
+    if (curState === 'single-quote') {
+      result += char
+      if (char === "'" && code[i - 1] !== '\\') {
+        stateStack.pop()
+      }
+      i++
+      continue
+    }
+
+    if (curState === 'double-quote') {
+      result += char
+      if (char === '"' && code[i - 1] !== '\\') {
+        stateStack.pop()
+      }
+      i++
+      continue
+    }
+
+    if (curState === 'template-literal') {
+      if (char === '`' && code[i - 1] !== '\\') {
+        result += char
+        stateStack.pop()
+        i++
+      } else if (char === '$' && nextChar === '{') {
+        result += '${'
+        stateStack.push('template-expr')
+        braceDepthStack.push(0)
+        i += 2
+      } else {
+        result += char
+        i++
+      }
+      continue
+    }
+
+    // Now we are in one of: 'code', 'template-expr', 'jsx-tag', 'jsx-text'
+    if (curState === 'jsx-text') {
+      if (char === '{') {
+        result += char
+        stateStack.push('code')
+        braceDepthStack.push(1)
+        i++
+      } else if (
+        char === '<' &&
+        (nextChar === '/' || nextChar === '>' || /[a-zA-Z_$]/.test(nextChar))
+      ) {
+        result += char
+        stateStack.push('jsx-tag')
+        jsxTagIsEndStack.push(nextChar === '/')
+        i++
+      } else {
+        result += char
+        i++
+      }
+      continue
+    }
+
+    if (curState === 'jsx-tag') {
+      if (char === '>') {
+        result += char
+        const isEnd = jsxTagIsEndStack.pop()
+        const isSelfClosing = code[i - 1] === '/'
+        stateStack.pop()
+
+        if (isEnd) {
+          if (stateStack[stateStack.length - 1] === 'jsx-text') {
+            stateStack.pop()
+          }
+        } else if (!isSelfClosing) {
+          stateStack.push('jsx-text')
+        }
+        i++
+        continue
+      } else if (char === '{') {
+        result += char
+        stateStack.push('code')
+        braceDepthStack.push(1)
+        i++
+        continue
+      } else if (char === "'") {
+        result += char
+        stateStack.push('single-quote')
+        i++
+        continue
+      } else if (char === '"') {
+        result += char
+        stateStack.push('double-quote')
+        i++
+        continue
+      }
+    }
+
+    if (curState === 'template-expr') {
+      if (char === '{') {
+        braceDepthStack[braceDepthStack.length - 1]++
+      } else if (char === '}') {
+        if (braceDepthStack[braceDepthStack.length - 1] > 0) {
+          braceDepthStack[braceDepthStack.length - 1]--
+        } else {
+          result += '}'
+          stateStack.pop()
+          braceDepthStack.pop()
+          i++
+          continue
+        }
+      }
+    }
+
+    if (curState === 'code' && braceDepthStack.length > 0) {
+      if (char === '{') {
+        braceDepthStack[braceDepthStack.length - 1]++
+      } else if (char === '}') {
+        braceDepthStack[braceDepthStack.length - 1]--
+        if (
+          braceDepthStack[braceDepthStack.length - 1] === 0 &&
+          stateStack.length > 1
+        ) {
+          result += '}'
+          stateStack.pop()
+          braceDepthStack.pop()
+          i++
+          continue
+        }
+      }
+    }
+
+    if (char === '/' && nextChar === '/') {
+      result += '//'
+      stateStack.push('single-line-comment')
+      i += 2
+      continue
+    }
+    if (char === '/' && nextChar === '*') {
+      result += '/*'
+      stateStack.push('multi-line-comment')
+      i += 2
+      continue
+    }
+
+    if (char === "'") {
+      result += char
+      stateStack.push('single-quote')
+      i++
+      continue
+    }
+    if (char === '"') {
+      result += char
+      stateStack.push('double-quote')
+      i++
+      continue
+    }
+    if (char === '`') {
+      result += char
+      stateStack.push('template-literal')
+      i++
+      continue
+    }
+
+    if (
+      curState === 'code' &&
+      char === '<' &&
+      (nextChar === '/' || nextChar === '>' || /[a-zA-Z_$]/.test(nextChar))
+    ) {
+      result += char
+      stateStack.push('jsx-tag')
+      jsxTagIsEndStack.push(nextChar === '/')
+      i++
+      continue
+    }
+
+    // Replace hyphenated identifier (requiring at least one uppercase letter)
+    const match = code
+      .slice(i)
+      .match(
+        /^(?=[A-Za-z0-9_$-]*[A-Z])[a-zA-Z_$][a-zA-Z0-9_$]*(?:-[a-zA-Z0-9_$]+)+/,
+      )
+    if (match) {
+      const matchedStr = match[0]
+      result += matchedStr.replaceAll('-', '_')
+      i += matchedStr.length
+    } else {
+      result += char
+      i++
+    }
+  }
+  return result
 }
 
 async function scaffold(slug: string) {
@@ -301,9 +519,12 @@ async function scaffold(slug: string) {
   // 3. Clean hyphenated variables dynamically
   code = replaceHyphenatedVariables(code)
 
+  // Patch any known template typos
+  code = code.replaceAll('whoushOut', 'whooshOut')
+
   // 4. Align component name with PascalCase of slug
   const compMatch = code.match(
-    /export\s+const\s+(\w+)\s*(?::\s*React\.FC)?\s*=/,
+    /export\s+const\s+([A-Z][A-Za-z0-9_-]*[a-z][A-Za-z0-9_-]*)\s*(?::\s*React\.FC)?\s*=/,
   )
   if (compMatch?.[1]) {
     const originalName = compMatch[1]
@@ -311,7 +532,12 @@ async function scaffold(slug: string) {
       console.log(
         `Renaming component from ${originalName} to ${compName} in ${slug}`,
       )
-      code = code.replaceAll(new RegExp(`\\b${originalName}\\b`, 'g'), compName)
+      const escapedName = originalName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
+      const regex = new RegExp(
+        `(?<![a-zA-Z0-9_$])${escapedName}(?![a-zA-Z0-9_$])`,
+        'g',
+      )
+      code = code.replace(regex, compName)
     }
   }
 

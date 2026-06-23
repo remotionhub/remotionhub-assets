@@ -1,0 +1,29 @@
+{
+  "slug": "yt-first-version",
+  "displayName": "Yt First Version",
+  "displayNameZh": "先来看第一版",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-first-version",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-first-version/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-first-version/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-first-version/059242be9566-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-first-version/d80478d36679-thumb.jpg",
+  "entryPoint": "src/YtFirstVersion.tsx",
+  "compositionId": "YtFirstVersion",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene73-FirstVersion.tsx），请帮我做以下调整： 1. 修改主标题文字（目前是「第一版」） 2. 更改数字「1」的渐层色（目前是从 accent #00D4AA 到 accentSecondary #4DA3FF） 3. 调整装饰环的样式（目前使用虚线圆环） 4. 修改眼睛图标的颜色（目前使用与数字相同的渐层） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-first-version.md",
+    "updatedAt": "2026-06-23T12:30:19.419Z"
+  }
+}

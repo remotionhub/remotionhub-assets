@@ -1,0 +1,29 @@
+{
+  "slug": "yt-svg-cards",
+  "displayName": "Yt Svg Cards",
+  "displayNameZh": "SVG 渐层边框卡片：视频学习成果展示",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-svg-cards",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-svg-cards/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-svg-cards/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-svg-cards/45dd5e050512-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-svg-cards/a1b83dfbc4c6-thumb.jpg",
+  "entryPoint": "src/YtSvgCards.tsx",
+  "compositionId": "YtSvgCards",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：SvgCardsScene.tsx），请帮我做以下调整： 1. 修改两张卡片的文字内容（cardData 阵列中的 text 栏位） 2. 调整两张卡片的渐层颜色（每张卡片的 colors.c1、colors.c2） 3. 修改顶部标题的数字（目前为「2 个答案」） 4. 调整卡片尺寸（目前为 640×280） 请保留 SVG 描边动画与光晕脉动效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-svg-cards.md",
+    "updatedAt": "2026-06-23T12:37:54.297Z"
+  }
+}

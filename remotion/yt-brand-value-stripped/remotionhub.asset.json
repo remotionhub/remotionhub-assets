@@ -1,0 +1,29 @@
+{
+  "slug": "yt-brand-value-stripped",
+  "displayName": "Yt Brand Value Stripped",
+  "displayNameZh": "品牌装饰剥除：价值还剩什么？",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-brand-value-stripped",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-brand-value-stripped/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-brand-value-stripped/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-brand-value-stripped/ab41b2be20f3-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-brand-value-stripped/8b31e36b940b-thumb.jpg",
+  "entryPoint": "src/YtBrandValueStripped.tsx",
+  "compositionId": "YtBrandValueStripped",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene78-BrandValueLeft.tsx），请帮我做以下调整： 1. 调整装饰元素的剥除速度（目前各元素间隔约 4-8 帧） 2. 修改品牌卡片上的字母（目前是「B」） 3. 更换最终问号底部的说明文字（目前是「价值还剩什么？」） 4. 调整动画总长度（目前是 7 秒 = 210 帧） 请保留原本的装饰卡片弹入、逐步剥除动画与问号弹跳效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-brand-value-stripped.md",
+    "updatedAt": "2026-06-23T12:25:30.959Z"
+  }
+}

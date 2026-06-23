@@ -1,0 +1,29 @@
+{
+  "slug": "yt-tool-selection",
+  "displayName": "Yt Tool Selection",
+  "displayNameZh": "工具选择标准：免费额度多且效果好",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-tool-selection",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-tool-selection/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-tool-selection/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tool-selection/341b36d9c3df-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tool-selection/4d63895cd943-thumb.jpg",
+  "entryPoint": "src/YtToolSelection.tsx",
+  "compositionId": "YtToolSelection",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene205-ToolSelection.tsx），请帮我做以下调整： 1. 修改选工具的两个标准（目前为免费额度多、效果好） 2. 调整右侧工具选项的名称 3. 更改主标题文字 4. 修改强调颜色 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-tool-selection.md",
+    "updatedAt": "2026-06-23T12:38:54.546Z"
+  }
+}

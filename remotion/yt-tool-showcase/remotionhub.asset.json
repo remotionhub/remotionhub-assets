@@ -1,0 +1,29 @@
+{
+  "slug": "yt-tool-showcase",
+  "displayName": "Yt Tool Showcase",
+  "displayNameZh": "六工具展示：Cloudflare、GitHub、Lemon Squeezy、Resend、Tavily、Gemini",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-tool-showcase",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-tool-showcase/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-tool-showcase/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tool-showcase/5afd7e35a78e-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tool-showcase/edbddcb25b7d-thumb.jpg",
+  "entryPoint": "src/YtToolShowcase.tsx",
+  "compositionId": "YtToolShowcase",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene129-ToolShowcase.tsx），请帮我做以下调整： 1. 修改六个工具的名称与编号顺序 2. 调整各工具的主题颜色 3. 更改工具 Grid 的排列方式（目前为 3×2） 4. 修改每个工具的放大展示时间长度 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-tool-showcase.md",
+    "updatedAt": "2026-06-23T12:39:03.367Z"
+  }
+}

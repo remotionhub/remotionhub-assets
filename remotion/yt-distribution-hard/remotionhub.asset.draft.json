@@ -1,0 +1,29 @@
+{
+  "slug": "yt-distribution-hard",
+  "displayName": "Yt Distribution Hard",
+  "displayNameZh": "Distribution 怎么解决？真正困难的地方",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-distribution-hard",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-distribution-hard/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-distribution-hard/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-distribution-hard/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-distribution-hard/thumb.jpg",
+  "entryPoint": "src/YtDistributionHard.tsx",
+  "compositionId": "YtDistributionHard",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene172-DistributionHard.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整「真正困难」徽章的颜色与文字 3. 更改连结痛点来源的描述文字 4. 调整动画出现的时间点 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-distribution-hard.md",
+    "updatedAt": "2026-06-23T12:27:56.472Z"
+  }
+}
