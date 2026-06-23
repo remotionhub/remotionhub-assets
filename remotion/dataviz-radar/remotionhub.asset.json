@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-radar",
+  "displayName": "Dataviz Radar",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-radar",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-radar/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-radar/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-radar/9d2ab7319868-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-radar/e58140dde33e-thumb.jpg",
+  "entryPoint": "src/DatavizRadar.tsx",
+  "compositionId": "DatavizRadar",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的能力雷达图组件（文件：RadarChart.tsx），请帮我做以下调整： 1. 把六个轴标签从「技术、沟通、创意、运行、协作、领导」改成「___」（修改顶部 AXES 阵列） 2. 把候选人 A 的数值从 [85, 72, 90, 78, 88, 65] 改成「___」（修改 SERIES-A.values） 3. 把候选人 B 的数值从 [70, 88, 75, 92, 80, 85] 改成「___」（修改 SERIES-B.values） 4. 把候选人 A 的颜色从蓝色 #3b82f6 改成「___」 5. 把候选人 B 的颜色从橙色 #f59e0b 改成「___」 6. 把图表半径从 300 改成「___」（修改顶部 RADIUS 常数，数值愈大图形愈大） 请保留原本的同心六边形格线与弹性动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-radar.md",
+    "updatedAt": "2026-06-23T01:38:37.419Z"
+  }
+}

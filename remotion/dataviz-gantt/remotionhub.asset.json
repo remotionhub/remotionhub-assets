@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-gantt",
+  "displayName": "Dataviz Gantt",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-gantt",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-gantt/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-gantt/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-gantt/cc5d567f8470-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-gantt/822ad5fb6214-thumb.jpg",
+  "entryPoint": "src/DatavizGantt.tsx",
+  "compositionId": "DatavizGantt",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的项目时程甘特图组件（文件：GanttChart.tsx），请帮我做以下调整： 1. 把标题从「项目时程甘特图」改成「___」 2. 把副标题从「14 周开发周期总览」改成「___」 3. 在 TASKS 阵列中，把任务名称（`name`）依序改成「___、___、…」 4. 把各任务的开始周（`start`）与结束周（`end`）依序调整为「___」（单位为周，从 0 起算） 5. 把 `TODAY-WEEK` 从 9 改成 ___（代表今日标记线出现在第几周） 6. 把每条 bar 的出场间隔从 15 帧改成 ___（数字越小出场越密集） 请保留原本的弹簧展开动画、发光效果与今日线淡入，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-gantt.md",
+    "updatedAt": "2026-06-23T01:38:14.543Z"
+  }
+}

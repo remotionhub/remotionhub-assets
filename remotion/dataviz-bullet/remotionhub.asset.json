@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-bullet",
+  "displayName": "Dataviz Bullet",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-bullet",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-bullet/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-bullet/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-bullet/506e214ecbc8-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-bullet/d70d3411d590-thumb.jpg",
+  "entryPoint": "src/DatavizBullet.tsx",
+  "compositionId": "DatavizBullet",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 KPI 达成率子弹图组件（文件：BulletChart.tsx），请帮我做以下调整： 1. 把标题从「KPI 达成率」改成「___」 2. 把指标名称依序改成「___、___、___、___、___」 3. 把各指标的单位依序改成「___、___、___、___、___」 4. 把各指标的最大值、满意值、目标值、实际值依序调整为符合新数据的数字 5. 把各指标的颜色依序改成「___、___、___、___、___」 6. 把每列的入场间隔从 20 帧改成 ___（数字越小出场越密集） 请保留原本的弹簧动画与达标判断逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-bullet.md",
+    "updatedAt": "2026-06-23T01:37:39.707Z"
+  }
+}
