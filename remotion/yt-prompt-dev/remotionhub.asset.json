@@ -1,0 +1,29 @@
+{
+  "slug": "yt-prompt-dev",
+  "displayName": "Yt Prompt Dev",
+  "displayNameZh": "根据技术规格做开发",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-prompt-dev",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-prompt-dev/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-prompt-dev/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-prompt-dev/1976efbbf14c-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-prompt-dev/10fc51a554fa-thumb.jpg",
+  "entryPoint": "src/YtPromptDev.tsx",
+  "compositionId": "YtPromptDev",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene208-PromptDev.tsx），请帮我做以下调整： 1. 修改左侧规格文件的四个模组名称 2. 调整右侧代码编辑器显示的代码内容 3. 更改主标题文字 4. 修改底部徽章的文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-prompt-dev.md",
+    "updatedAt": "2026-06-23T12:35:35.292Z"
+  }
+}

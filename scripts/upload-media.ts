@@ -184,20 +184,33 @@ export async function runMediaMirror(options?: {
   const baseManifest = existing ?? raw
   const updatedAt = options?.now?.() ?? new Date().toISOString()
 
-  const preview = await mirrorOne({
-    slug,
-    url: raw.originalPreviewUrl,
-    publicBaseUrl,
-    dryRun,
-    uploadTarget,
-  })
-  const thumbnail = await mirrorOne({
-    slug,
-    url: raw.originalThumbnailUrl,
-    publicBaseUrl,
-    dryRun,
-    uploadTarget,
-  })
+  let preview: { targetUrl: string }
+  let thumbnail: { targetUrl: string }
+
+  if (
+    existing?.migration?.status === 'media-mirrored' &&
+    existing?.previewUrl &&
+    existing?.thumbnailUrl
+  ) {
+    console.log(`Media already mirrored for ${slug}, using cached URLs.`)
+    preview = { targetUrl: existing.previewUrl }
+    thumbnail = { targetUrl: existing.thumbnailUrl }
+  } else {
+    preview = await mirrorOne({
+      slug,
+      url: raw.originalPreviewUrl,
+      publicBaseUrl,
+      dryRun,
+      uploadTarget,
+    })
+    thumbnail = await mirrorOne({
+      slug,
+      url: raw.originalThumbnailUrl,
+      publicBaseUrl,
+      dryRun,
+      uploadTarget,
+    })
+  }
   const migrationStatus: AssetManifest['migration']['status'] = dryRun
     ? 'extracted'
     : 'media-mirrored'

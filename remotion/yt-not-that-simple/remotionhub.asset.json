@@ -1,0 +1,29 @@
+{
+  "slug": "yt-not-that-simple",
+  "displayName": "Yt Not That Simple",
+  "displayNameZh": "做产品真的不容易，不是做出来发出去这么简单",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-not-that-simple",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-not-that-simple/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-not-that-simple/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-not-that-simple/3c353712d250-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-not-that-simple/1685e39cd4a7-thumb.jpg",
+  "entryPoint": "src/YtNotThatSimple.tsx",
+  "compositionId": "YtNotThatSimple",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene199-NotThatSimple.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整冰山下方的隐藏复杂度项目 3. 更改冰山的颜色渐层 4. 修改左侧「天真想法」的描述 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-not-that-simple.md",
+    "updatedAt": "2026-06-23T12:34:58.918Z"
+  }
+}

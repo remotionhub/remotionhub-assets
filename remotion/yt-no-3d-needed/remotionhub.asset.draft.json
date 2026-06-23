@@ -1,0 +1,29 @@
+{
+  "slug": "yt-no-3d-needed",
+  "displayName": "Yt No 3d Needed",
+  "displayNameZh": "不需要建 3D 模型，固定动画就够了",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-no-3d-needed",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-no-3d-needed/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-no-3d-needed/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-no-3d-needed/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-no-3d-needed/thumb.jpg",
+  "entryPoint": "src/YtNo3dNeeded.tsx",
+  "compositionId": "YtNo3dNeeded",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene65-No3DNeeded.tsx），请帮我做以下调整： 1. 修改禁止标签文字（目前是「不需要建 3D 模型」） 2. 更改固定动画徽章文字（目前是「固定动画就够了」） 3. 调整 3D 立方体的颜色（目前使用 accentSecondary #4DA3FF） 4. 修改播放器标题（目前是「Animation.mp4」） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-no-3d-needed.md",
+    "updatedAt": "2026-06-23T12:34:20.773Z"
+  }
+}

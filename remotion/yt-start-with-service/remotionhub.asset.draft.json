@@ -1,0 +1,29 @@
+{
+  "slug": "yt-start-with-service",
+  "displayName": "Yt Start With Service",
+  "displayNameZh": "先从服务做起，累积经验和作品",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-start-with-service",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-start-with-service/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-start-with-service/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-start-with-service/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-start-with-service/thumb.jpg",
+  "entryPoint": "src/YtStartWithService.tsx",
+  "compositionId": "YtStartWithService",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene194-StartWithService.tsx），请帮我做以下调整： 1. 修改主标题文字（目前为「3. 先从服务做起，累积经验和作品」） 2. 调整服务流程的步骤描述 3. 更改强调颜色 4. 修改英文副标题 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-start-with-service.md",
+    "updatedAt": "2026-06-23T12:37:28.537Z"
+  }
+}

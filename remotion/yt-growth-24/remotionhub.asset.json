@@ -1,0 +1,29 @@
+{
+  "slug": "yt-growth-24",
+  "displayName": "Yt Growth 24",
+  "displayNameZh": "年增长 24% 数据动画卡片",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-growth-24",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-growth-24/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-growth-24/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-growth-24/75a639b501ab-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-growth-24/30eecbeab986-thumb.jpg",
+  "entryPoint": "src/YtGrowth24.tsx",
+  "compositionId": "YtGrowth24",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene161-Growth24.tsx），请帮我做以下调整： 1. 修改成长百分比数字（目前为 24%）为其他数值 2. 更改主要强调色（目前为 #10B981 绿色） 3. 调整柱状图的年份标签范围 4. 修改副标题文字「Year-over-year growth」 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-growth-24.md",
+    "updatedAt": "2026-06-23T12:31:54.476Z"
+  }
+}

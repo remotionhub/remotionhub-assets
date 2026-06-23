@@ -1,0 +1,29 @@
+{
+  "slug": "yt-dev-flow-intro",
+  "displayName": "Yt Dev Flow Intro",
+  "displayNameZh": "有了工具和 Skill，开发流程长这样",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-dev-flow-intro",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-dev-flow-intro/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-dev-flow-intro/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-dev-flow-intro/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-dev-flow-intro/thumb.jpg",
+  "entryPoint": "src/YtDevFlowIntro.tsx",
+  "compositionId": "YtDevFlowIntro",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene206-DevFlowIntro.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整 Skill 和工具的标签 3. 更改汇聚箭头的颜色 4. 修改右侧「流程」的图标与文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-dev-flow-intro.md",
+    "updatedAt": "2026-06-23T12:27:28.829Z"
+  }
+}

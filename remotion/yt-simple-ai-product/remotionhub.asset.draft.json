@@ -1,0 +1,29 @@
+{
+  "slug": "yt-simple-ai-product",
+  "displayName": "Yt Simple Ai Product",
+  "displayNameZh": "针对这样一个简单的 AI 产品",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-simple-ai-product",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-simple-ai-product/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-simple-ai-product/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-simple-ai-product/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-simple-ai-product/thumb.jpg",
+  "entryPoint": "src/YtSimpleAiProduct.tsx",
+  "compositionId": "YtSimpleAiProduct",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene203-SimpleAIProduct.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整产品卡片的图标与名称 3. 更改「简单」徽章的文字与颜色 4. 修改英文副标题 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-simple-ai-product.md",
+    "updatedAt": "2026-06-23T12:36:53.695Z"
+  }
+}

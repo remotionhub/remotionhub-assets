@@ -1,0 +1,29 @@
+{
+  "slug": "yt-far-to-near",
+  "displayName": "Yt Far To Near",
+  "displayNameZh": "从远到近的受众分层",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-far-to-near",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-far-to-near/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-far-to-near/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-far-to-near/fa35cd832775-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-far-to-near/76538e53b0f9-thumb.jpg",
+  "entryPoint": "src/YtFarToNear.tsx",
+  "compositionId": "YtFarToNear",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene174-FarToNear.tsx），请帮我做以下调整： 1. 修改标题文字（目前为「从远到近可以分成」） 2. 调整同心圆的颜色（远端为蓝色，近端为绿色） 3. 修改「远」「近」的标签文字 4. 调整圆圈动画的出场间隔 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-far-to-near.md",
+    "updatedAt": "2026-06-23T12:29:49.819Z"
+  }
+}

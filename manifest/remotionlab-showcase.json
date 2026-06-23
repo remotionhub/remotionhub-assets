@@ -1049,6 +1049,762 @@
       "sourceFile": "/tmp/remotionlab/案例/transition-zoom-through.md",
       "assetPath": "remotion/transition-zoom-through",
       "updatedAt": "2026-06-23T01:29:51.889Z"
+    },
+    {
+      "slug": "yt-acq-ret-ref",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-acq-ret-ref.md",
+      "assetPath": "remotion/yt-acq-ret-ref",
+      "updatedAt": "2026-06-23T12:23:15.761Z"
+    },
+    {
+      "slug": "yt-ai-not-understand",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-ai-not-understand.md",
+      "assetPath": "remotion/yt-ai-not-understand",
+      "updatedAt": "2026-06-23T12:23:25.409Z"
+    },
+    {
+      "slug": "yt-ai-reads-only",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-ai-reads-only.md",
+      "assetPath": "remotion/yt-ai-reads-only",
+      "updatedAt": "2026-06-23T12:23:35.054Z"
+    },
+    {
+      "slug": "yt-ai-report-doubt",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-ai-report-doubt.md",
+      "assetPath": "remotion/yt-ai-report-doubt",
+      "updatedAt": "2026-06-23T12:23:45.326Z"
+    },
+    {
+      "slug": "yt-ai-skill-network",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-ai-skill-network.md",
+      "assetPath": "remotion/yt-ai-skill-network",
+      "updatedAt": "2026-06-23T12:23:53.930Z"
+    },
+    {
+      "slug": "yt-ai-use-cases",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-ai-use-cases.md",
+      "assetPath": "remotion/yt-ai-use-cases",
+      "updatedAt": "2026-06-23T12:24:04.055Z"
+    },
+    {
+      "slug": "yt-ai-wrappers-dead",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-ai-wrappers-dead.md",
+      "assetPath": "remotion/yt-ai-wrappers-dead",
+      "updatedAt": "2026-06-23T12:24:13.569Z"
+    },
+    {
+      "slug": "yt-animation-suffice",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-animation-suffice.md",
+      "assetPath": "remotion/yt-animation-suffice",
+      "updatedAt": "2026-06-23T12:24:24.147Z"
+    },
+    {
+      "slug": "yt-arcade-beat-em-up",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-arcade-beat-em-up.md",
+      "assetPath": "remotion/yt-arcade-beat-em-up",
+      "updatedAt": "2026-06-23T12:24:33.958Z"
+    },
+    {
+      "slug": "yt-ask-ai-tip",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-ask-ai-tip.md",
+      "assetPath": "remotion/yt-ask-ai-tip",
+      "updatedAt": "2026-06-23T12:24:43.385Z"
+    },
+    {
+      "slug": "yt-audio-control",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-audio-control.md",
+      "assetPath": "remotion/yt-audio-control",
+      "updatedAt": "2026-06-23T12:24:53.997Z"
+    },
+    {
+      "slug": "yt-audio-lets-start",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-audio-lets-start.md",
+      "assetPath": "remotion/yt-audio-lets-start",
+      "updatedAt": "2026-06-23T12:25:03.327Z"
+    },
+    {
+      "slug": "yt-audio-prompt-skill",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-audio-prompt-skill.md",
+      "assetPath": "remotion/yt-audio-prompt-skill",
+      "updatedAt": "2026-06-23T12:25:11.465Z"
+    },
+    {
+      "slug": "yt-audio-software-criteria",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-audio-software-criteria.md",
+      "assetPath": "remotion/yt-audio-software-criteria",
+      "updatedAt": "2026-06-23T12:25:20.817Z"
+    },
+    {
+      "slug": "yt-brand-value-stripped",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-brand-value-stripped.md",
+      "assetPath": "remotion/yt-brand-value-stripped",
+      "updatedAt": "2026-06-23T12:25:30.959Z"
+    },
+    {
+      "slug": "yt-bug-fix-loop",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-bug-fix-loop.md",
+      "assetPath": "remotion/yt-bug-fix-loop",
+      "updatedAt": "2026-06-23T12:25:41.058Z"
+    },
+    {
+      "slug": "yt-build-stability",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-build-stability.md",
+      "assetPath": "remotion/yt-build-stability",
+      "updatedAt": "2026-06-23T12:25:50.650Z"
+    },
+    {
+      "slug": "yt-build-trust-first",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-build-trust-first.md",
+      "assetPath": "remotion/yt-build-trust-first",
+      "updatedAt": "2026-06-23T12:26:00.644Z"
+    },
+    {
+      "slug": "yt-can-do-animation",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-can-do-animation.md",
+      "assetPath": "remotion/yt-can-do-animation",
+      "updatedAt": "2026-06-23T12:26:10.387Z"
+    },
+    {
+      "slug": "yt-char-animations",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-char-animations.md",
+      "assetPath": "remotion/yt-char-animations",
+      "updatedAt": "2026-06-23T12:26:20.040Z"
+    },
+    {
+      "slug": "yt-cloudflare-api-key",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-cloudflare-api-key.md",
+      "assetPath": "remotion/yt-cloudflare-api-key",
+      "updatedAt": "2026-06-23T12:26:29.652Z"
+    },
+    {
+      "slug": "yt-code-controls",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-code-controls.md",
+      "assetPath": "remotion/yt-code-controls",
+      "updatedAt": "2026-06-23T12:26:39.115Z"
+    },
+    {
+      "slug": "yt-consistent-output",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-consistent-output.md",
+      "assetPath": "remotion/yt-consistent-output",
+      "updatedAt": "2026-06-23T12:26:50.075Z"
+    },
+    {
+      "slug": "yt-core-dist-card",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-core-dist-card.md",
+      "assetPath": "remotion/yt-core-dist-card",
+      "updatedAt": "2026-06-23T12:26:59.684Z"
+    },
+    {
+      "slug": "yt-core-flow",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-core-flow.md",
+      "assetPath": "remotion/yt-core-flow",
+      "updatedAt": "2026-06-23T12:27:08.914Z"
+    },
+    {
+      "slug": "yt-customize-own",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-customize-own.md",
+      "assetPath": "remotion/yt-customize-own",
+      "updatedAt": "2026-06-23T12:27:18.642Z"
+    },
+    {
+      "slug": "yt-deploy-cloudflare",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-deploy-cloudflare.md",
+      "assetPath": "remotion/yt-deploy-cloudflare",
+      "updatedAt": "2026-06-23T12:27:28.134Z"
+    },
+    {
+      "slug": "yt-dev-flow-intro",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-dev-flow-intro.md",
+      "assetPath": "remotion/yt-dev-flow-intro",
+      "updatedAt": "2026-06-23T12:27:37.481Z"
+    },
+    {
+      "slug": "yt-dev-flow-steps",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-dev-flow-steps.md",
+      "assetPath": "remotion/yt-dev-flow-steps",
+      "updatedAt": "2026-06-23T12:27:46.646Z"
+    },
+    {
+      "slug": "yt-distribution-first",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-distribution-first.md",
+      "assetPath": "remotion/yt-distribution-first",
+      "updatedAt": "2026-06-23T12:27:55.778Z"
+    },
+    {
+      "slug": "yt-distribution-hard",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-distribution-hard.md",
+      "assetPath": "remotion/yt-distribution-hard",
+      "updatedAt": "2026-06-23T12:28:05.025Z"
+    },
+    {
+      "slug": "yt-easy-channel-hard-dist",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-easy-channel-hard-dist.md",
+      "assetPath": "remotion/yt-easy-channel-hard-dist",
+      "updatedAt": "2026-06-23T12:28:14.390Z"
+    },
+    {
+      "slug": "yt-engine-abilities",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-engine-abilities.md",
+      "assetPath": "remotion/yt-engine-abilities",
+      "updatedAt": "2026-06-23T12:28:23.645Z"
+    },
+    {
+      "slug": "yt-engine-criteria",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-engine-criteria.md",
+      "assetPath": "remotion/yt-engine-criteria",
+      "updatedAt": "2026-06-23T12:28:32.827Z"
+    },
+    {
+      "slug": "yt-equity-design",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-equity-design.md",
+      "assetPath": "remotion/yt-equity-design",
+      "updatedAt": "2026-06-23T12:28:42.253Z"
+    },
+    {
+      "slug": "yt-exclusive-app",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-exclusive-app.md",
+      "assetPath": "remotion/yt-exclusive-app",
+      "updatedAt": "2026-06-23T12:28:51.584Z"
+    },
+    {
+      "slug": "yt-execute-validate",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-execute-validate.md",
+      "assetPath": "remotion/yt-execute-validate",
+      "updatedAt": "2026-06-23T12:29:01.088Z"
+    },
+    {
+      "slug": "yt-experiment-conclusion",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-experiment-conclusion.md",
+      "assetPath": "remotion/yt-experiment-conclusion",
+      "updatedAt": "2026-06-23T12:29:10.489Z"
+    },
+    {
+      "slug": "yt-extract-tool",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-extract-tool.md",
+      "assetPath": "remotion/yt-extract-tool",
+      "updatedAt": "2026-06-23T12:29:20.364Z"
+    },
+    {
+      "slug": "yt-far-stranger-pains",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-far-stranger-pains.md",
+      "assetPath": "remotion/yt-far-stranger-pains",
+      "updatedAt": "2026-06-23T12:29:29.871Z"
+    },
+    {
+      "slug": "yt-far-strangers",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-far-strangers.md",
+      "assetPath": "remotion/yt-far-strangers",
+      "updatedAt": "2026-06-23T12:29:39.330Z"
+    },
+    {
+      "slug": "yt-far-to-near",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-far-to-near.md",
+      "assetPath": "remotion/yt-far-to-near",
+      "updatedAt": "2026-06-23T12:29:49.819Z"
+    },
+    {
+      "slug": "yt-faster-higher-quality",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-faster-higher-quality.md",
+      "assetPath": "remotion/yt-faster-higher-quality",
+      "updatedAt": "2026-06-23T12:29:59.516Z"
+    },
+    {
+      "slug": "yt-first-deal-hard",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-first-deal-hard.md",
+      "assetPath": "remotion/yt-first-deal-hard",
+      "updatedAt": "2026-06-23T12:30:09.438Z"
+    },
+    {
+      "slug": "yt-first-version",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-first-version.md",
+      "assetPath": "remotion/yt-first-version",
+      "updatedAt": "2026-06-23T12:30:19.419Z"
+    },
+    {
+      "slug": "yt-focus-one-topic",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-focus-one-topic.md",
+      "assetPath": "remotion/yt-focus-one-topic",
+      "updatedAt": "2026-06-23T12:30:29.257Z"
+    },
+    {
+      "slug": "yt-four-ai-tools",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-four-ai-tools.md",
+      "assetPath": "remotion/yt-four-ai-tools",
+      "updatedAt": "2026-06-23T12:30:39.286Z"
+    },
+    {
+      "slug": "yt-from-scratch",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-from-scratch.md",
+      "assetPath": "remotion/yt-from-scratch",
+      "updatedAt": "2026-06-23T12:30:47.877Z"
+    },
+    {
+      "slug": "yt-game-mashup",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-game-mashup.md",
+      "assetPath": "remotion/yt-game-mashup",
+      "updatedAt": "2026-06-23T12:31:14.325Z"
+    },
+    {
+      "slug": "yt-generic-chatbot",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-generic-chatbot.md",
+      "assetPath": "remotion/yt-generic-chatbot",
+      "updatedAt": "2026-06-23T12:31:33.852Z"
+    },
+    {
+      "slug": "yt-generic-means-lacking",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-generic-means-lacking.md",
+      "assetPath": "remotion/yt-generic-means-lacking",
+      "updatedAt": "2026-06-23T12:31:44.079Z"
+    },
+    {
+      "slug": "yt-growth-24",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-growth-24.md",
+      "assetPath": "remotion/yt-growth-24",
+      "updatedAt": "2026-06-23T12:31:54.476Z"
+    },
+    {
+      "slug": "yt-idea-check",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-idea-check.md",
+      "assetPath": "remotion/yt-idea-check",
+      "updatedAt": "2026-06-23T12:32:07.334Z"
+    },
+    {
+      "slug": "yt-idea-feasibility",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-idea-feasibility.md",
+      "assetPath": "remotion/yt-idea-feasibility",
+      "updatedAt": "2026-06-23T12:32:17.609Z"
+    },
+    {
+      "slug": "yt-influencer-dms",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-influencer-dms.md",
+      "assetPath": "remotion/yt-influencer-dms",
+      "updatedAt": "2026-06-23T12:32:27.575Z"
+    },
+    {
+      "slug": "yt-inside-the-problem",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-inside-the-problem.md",
+      "assetPath": "remotion/yt-inside-the-problem",
+      "updatedAt": "2026-06-23T12:32:37.337Z"
+    },
+    {
+      "slug": "yt-iterate-two-days",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-iterate-two-days.md",
+      "assetPath": "remotion/yt-iterate-two-days",
+      "updatedAt": "2026-06-23T12:32:47.596Z"
+    },
+    {
+      "slug": "yt-like-subscribe-bell",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-like-subscribe-bell.md",
+      "assetPath": "remotion/yt-like-subscribe-bell",
+      "updatedAt": "2026-06-23T12:32:56.073Z"
+    },
+    {
+      "slug": "yt-line-phase-intro",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-line-phase-intro.md",
+      "assetPath": "remotion/yt-line-phase-intro",
+      "updatedAt": "2026-06-23T12:33:04.594Z"
+    },
+    {
+      "slug": "yt-magazine-layout",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-magazine-layout.md",
+      "assetPath": "remotion/yt-magazine-layout",
+      "updatedAt": "2026-06-23T12:33:14.791Z"
+    },
+    {
+      "slug": "yt-manual-first",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-manual-first.md",
+      "assetPath": "remotion/yt-manual-first",
+      "updatedAt": "2026-06-23T12:33:25.052Z"
+    },
+    {
+      "slug": "yt-mcp-chapter-card",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-mcp-chapter-card.md",
+      "assetPath": "remotion/yt-mcp-chapter-card",
+      "updatedAt": "2026-06-23T12:33:33.485Z"
+    },
+    {
+      "slug": "yt-mcp-pipeline",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-mcp-pipeline.md",
+      "assetPath": "remotion/yt-mcp-pipeline",
+      "updatedAt": "2026-06-23T12:33:41.856Z"
+    },
+    {
+      "slug": "yt-mid-ask-experts",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-mid-ask-experts.md",
+      "assetPath": "remotion/yt-mid-ask-experts",
+      "updatedAt": "2026-06-23T12:33:51.469Z"
+    },
+    {
+      "slug": "yt-mobile-patience",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-mobile-patience.md",
+      "assetPath": "remotion/yt-mobile-patience",
+      "updatedAt": "2026-06-23T12:34:00.888Z"
+    },
+    {
+      "slug": "yt-narrative-redesign",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-narrative-redesign.md",
+      "assetPath": "remotion/yt-narrative-redesign",
+      "updatedAt": "2026-06-23T12:34:10.372Z"
+    },
+    {
+      "slug": "yt-near-self-friends",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-near-self-friends.md",
+      "assetPath": "remotion/yt-near-self-friends",
+      "updatedAt": "2026-06-23T12:34:20.044Z"
+    },
+    {
+      "slug": "yt-no-3d-needed",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-no-3d-needed.md",
+      "assetPath": "remotion/yt-no-3d-needed",
+      "updatedAt": "2026-06-23T12:34:29.583Z"
+    },
+    {
+      "slug": "yt-not-about-analysis",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-not-about-analysis.md",
+      "assetPath": "remotion/yt-not-about-analysis",
+      "updatedAt": "2026-06-23T12:34:39.247Z"
+    },
+    {
+      "slug": "yt-not-just-effects",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-not-just-effects.md",
+      "assetPath": "remotion/yt-not-just-effects",
+      "updatedAt": "2026-06-23T12:34:49.335Z"
+    },
+    {
+      "slug": "yt-not-that-simple",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-not-that-simple.md",
+      "assetPath": "remotion/yt-not-that-simple",
+      "updatedAt": "2026-06-23T12:34:58.918Z"
+    },
+    {
+      "slug": "yt-page-scroll-metrics",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-page-scroll-metrics.md",
+      "assetPath": "remotion/yt-page-scroll-metrics",
+      "updatedAt": "2026-06-23T12:35:08.607Z"
+    },
+    {
+      "slug": "yt-pencil-intro",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-pencil-intro.md",
+      "assetPath": "remotion/yt-pencil-intro",
+      "updatedAt": "2026-06-23T12:35:17.013Z"
+    },
+    {
+      "slug": "yt-product-overflow",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-product-overflow.md",
+      "assetPath": "remotion/yt-product-overflow",
+      "updatedAt": "2026-06-23T12:35:26.530Z"
+    },
+    {
+      "slug": "yt-prompt-dev",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-prompt-dev.md",
+      "assetPath": "remotion/yt-prompt-dev",
+      "updatedAt": "2026-06-23T12:35:35.292Z"
+    },
+    {
+      "slug": "yt-prompt-spec",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-prompt-spec.md",
+      "assetPath": "remotion/yt-prompt-spec",
+      "updatedAt": "2026-06-23T12:35:43.947Z"
+    },
+    {
+      "slug": "yt-reach-pain-points",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-reach-pain-points.md",
+      "assetPath": "remotion/yt-reach-pain-points",
+      "updatedAt": "2026-06-23T12:35:52.594Z"
+    },
+    {
+      "slug": "yt-rejected-ideas",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-rejected-ideas.md",
+      "assetPath": "remotion/yt-rejected-ideas",
+      "updatedAt": "2026-06-23T12:36:01.251Z"
+    },
+    {
+      "slug": "yt-report-transform",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-report-transform.md",
+      "assetPath": "remotion/yt-report-transform",
+      "updatedAt": "2026-06-23T12:36:09.872Z"
+    },
+    {
+      "slug": "yt-scatter-shot",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-scatter-shot.md",
+      "assetPath": "remotion/yt-scatter-shot",
+      "updatedAt": "2026-06-23T12:36:18.459Z"
+    },
+    {
+      "slug": "yt-service-first",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-service-first.md",
+      "assetPath": "remotion/yt-service-first",
+      "updatedAt": "2026-06-23T12:36:27.122Z"
+    },
+    {
+      "slug": "yt-shadcn-prompt",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-shadcn-prompt.md",
+      "assetPath": "remotion/yt-shadcn-prompt",
+      "updatedAt": "2026-06-23T12:36:35.769Z"
+    },
+    {
+      "slug": "yt-shadcn-results",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-shadcn-results.md",
+      "assetPath": "remotion/yt-shadcn-results",
+      "updatedAt": "2026-06-23T12:36:44.341Z"
+    },
+    {
+      "slug": "yt-shortest-path",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-shortest-path.md",
+      "assetPath": "remotion/yt-shortest-path",
+      "updatedAt": "2026-06-23T12:36:52.949Z"
+    },
+    {
+      "slug": "yt-simple-ai-product",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-simple-ai-product.md",
+      "assetPath": "remotion/yt-simple-ai-product",
+      "updatedAt": "2026-06-23T12:37:01.679Z"
+    },
+    {
+      "slug": "yt-skill-showcase",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-skill-showcase.md",
+      "assetPath": "remotion/yt-skill-showcase",
+      "updatedAt": "2026-06-23T12:37:10.424Z"
+    },
+    {
+      "slug": "yt-solve-first-point",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-solve-first-point.md",
+      "assetPath": "remotion/yt-solve-first-point",
+      "updatedAt": "2026-06-23T12:37:19.137Z"
+    },
+    {
+      "slug": "yt-start-small",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-start-small.md",
+      "assetPath": "remotion/yt-start-small",
+      "updatedAt": "2026-06-23T12:37:27.815Z"
+    },
+    {
+      "slug": "yt-start-with-service",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-start-with-service.md",
+      "assetPath": "remotion/yt-start-with-service",
+      "updatedAt": "2026-06-23T12:37:36.474Z"
+    },
+    {
+      "slug": "yt-success-path",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-success-path.md",
+      "assetPath": "remotion/yt-success-path",
+      "updatedAt": "2026-06-23T12:37:45.137Z"
+    },
+    {
+      "slug": "yt-svg-cards",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-svg-cards.md",
+      "assetPath": "remotion/yt-svg-cards",
+      "updatedAt": "2026-06-23T12:37:54.297Z"
+    },
+    {
+      "slug": "yt-tailor-for-audience",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-tailor-for-audience.md",
+      "assetPath": "remotion/yt-tailor-for-audience",
+      "updatedAt": "2026-06-23T12:38:02.992Z"
+    },
+    {
+      "slug": "yt-tech-boosts-stability",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-tech-boosts-stability.md",
+      "assetPath": "remotion/yt-tech-boosts-stability",
+      "updatedAt": "2026-06-23T12:38:11.636Z"
+    },
+    {
+      "slug": "yt-think-distribution",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-think-distribution.md",
+      "assetPath": "remotion/yt-think-distribution",
+      "updatedAt": "2026-06-23T12:38:20.295Z"
+    },
+    {
+      "slug": "yt-three-dimensions",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-three-dimensions.md",
+      "assetPath": "remotion/yt-three-dimensions",
+      "updatedAt": "2026-06-23T12:38:28.916Z"
+    },
+    {
+      "slug": "yt-three-questions",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-three-questions.md",
+      "assetPath": "remotion/yt-three-questions",
+      "updatedAt": "2026-06-23T12:38:37.400Z"
+    },
+    {
+      "slug": "yt-too-many-coincidences",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-too-many-coincidences.md",
+      "assetPath": "remotion/yt-too-many-coincidences",
+      "updatedAt": "2026-06-23T12:38:45.986Z"
+    },
+    {
+      "slug": "yt-tool-selection",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-tool-selection.md",
+      "assetPath": "remotion/yt-tool-selection",
+      "updatedAt": "2026-06-23T12:38:54.546Z"
+    },
+    {
+      "slug": "yt-tool-showcase",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-tool-showcase.md",
+      "assetPath": "remotion/yt-tool-showcase",
+      "updatedAt": "2026-06-23T12:39:03.367Z"
+    },
+    {
+      "slug": "yt-trust-is-currency",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-trust-is-currency.md",
+      "assetPath": "remotion/yt-trust-is-currency",
+      "updatedAt": "2026-06-23T12:39:12.047Z"
+    },
+    {
+      "slug": "yt-trust-transfer",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-trust-transfer.md",
+      "assetPath": "remotion/yt-trust-transfer",
+      "updatedAt": "2026-06-23T12:39:20.684Z"
+    },
+    {
+      "slug": "yt-two-errors-detail",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-two-errors-detail.md",
+      "assetPath": "remotion/yt-two-errors-detail",
+      "updatedAt": "2026-06-23T12:39:29.381Z"
+    },
+    {
+      "slug": "yt-two-focus",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-two-focus.md",
+      "assetPath": "remotion/yt-two-focus",
+      "updatedAt": "2026-06-23T12:39:37.831Z"
+    },
+    {
+      "slug": "yt-two-lessons",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-two-lessons.md",
+      "assetPath": "remotion/yt-two-lessons",
+      "updatedAt": "2026-06-23T12:39:46.551Z"
+    },
+    {
+      "slug": "yt-user-iterate",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-user-iterate.md",
+      "assetPath": "remotion/yt-user-iterate",
+      "updatedAt": "2026-06-23T12:39:55.350Z"
+    },
+    {
+      "slug": "yt-version-2-card",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-version-2-card.md",
+      "assetPath": "remotion/yt-version-2-card",
+      "updatedAt": "2026-06-23T12:40:04.048Z"
+    },
+    {
+      "slug": "yt-version-3-card",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-version-3-card.md",
+      "assetPath": "remotion/yt-version-3-card",
+      "updatedAt": "2026-06-23T12:40:12.711Z"
+    },
+    {
+      "slug": "yt-zero-revenue",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/yt-zero-revenue.md",
+      "assetPath": "remotion/yt-zero-revenue",
+      "updatedAt": "2026-06-23T12:40:21.427Z"
     }
   ]
 }

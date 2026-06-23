@@ -1,0 +1,29 @@
+{
+  "slug": "yt-version-2-card",
+  "displayName": "Yt Version 2 Card",
+  "displayNameZh": "第二版转场卡片",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-version-2-card",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-version-2-card/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-version-2-card/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-version-2-card/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-version-2-card/thumb.jpg",
+  "entryPoint": "src/YtVersion2Card.tsx",
+  "compositionId": "YtVersion2Card",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene74-SecondVersion.tsx），请帮我做以下调整： 1. 将显示的版本数字从 2 改为其他数字（例如 4） 2. 调整主色调，目前是橘黄色渐层，改为你指定的颜色 3. 修改「第二版」标题文字为其他文字（例如「最终版」） 4. 调整动画总长度（目前是 4 秒 = 120 帧） 请保留原本的弹簧进场、眼睛图标与闪烁点动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-version-2-card.md",
+    "updatedAt": "2026-06-23T12:39:56.076Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "yt-near-self-friends",
+  "displayName": "Yt Near Self Friends",
+  "displayNameZh": "近：从自己和亲友出发",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-near-self-friends",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-near-self-friends/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-near-self-friends/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-near-self-friends/2dc8fb99ba08-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-near-self-friends/3fd411869270-thumb.jpg",
+  "entryPoint": "src/YtNearSelfFriends.tsx",
+  "compositionId": "YtNearSelfFriends",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene185-NearSelfFriends.tsx），请帮我做以下调整： 1. 修改主标题文字（目前为「近：从自己和亲友」） 2. 调整亲友节点的标签（目前为固定位置排列） 3. 更改连线颜色 4. 修改中心节点的颜色 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-near-self-friends.md",
+    "updatedAt": "2026-06-23T12:34:20.044Z"
+  }
+}

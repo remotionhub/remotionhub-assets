@@ -1,0 +1,29 @@
+{
+  "slug": "yt-ai-reads-only",
+  "displayName": "Yt Ai Reads Only",
+  "displayNameZh": "AI 只能读取线条、颜色、文字",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-ai-reads-only",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-reads-only/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-reads-only/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-reads-only/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-reads-only/thumb.jpg",
+  "entryPoint": "src/YtAiReadsOnly.tsx",
+  "compositionId": "YtAiReadsOnly",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene47-AiReadsOnly.tsx），请帮我做以下调整： 1. 修改三个元素的标签（目前是：线条、颜色、文字） 2. 调整各元素图标的主色（目前依序使用 accent #00D4AA、warning #FFB547、accentSecondary #4DA3FF） 3. 更改标题文字（目前是「AI 只能读取」） 4. 修改扫描线颜色与速度 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-ai-reads-only.md",
+    "updatedAt": "2026-06-23T12:23:26.156Z"
+  }
+}

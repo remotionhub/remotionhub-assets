@@ -1,0 +1,29 @@
+{
+  "slug": "yt-easy-channel-hard-dist",
+  "displayName": "Yt Easy Channel Hard Dist",
+  "displayNameZh": "题目管道多，但 Distribution 很有挑战",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-easy-channel-hard-dist",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-easy-channel-hard-dist/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-easy-channel-hard-dist/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-easy-channel-hard-dist/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-easy-channel-hard-dist/thumb.jpg",
+  "entryPoint": "src/YtEasyChannelHardDist.tsx",
+  "compositionId": "YtEasyChannelHardDist",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene176-EasyChannelHardDist.tsx），请帮我做以下调整： 1. 修改左侧管道列表（目前为网路陌生人、社群媒体、论坛/社团） 2. 调整右侧 Distribution 挑战的描述 3. 更改主标题文字 4. 调整左右两侧的颜色主题 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-easy-channel-hard-dist.md",
+    "updatedAt": "2026-06-23T12:28:05.715Z"
+  }
+}

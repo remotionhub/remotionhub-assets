@@ -1,0 +1,29 @@
+{
+  "slug": "yt-like-subscribe-bell",
+  "displayName": "Yt Like Subscribe Bell",
+  "displayNameZh": "YouTube 按赞订阅通知动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-like-subscribe-bell",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-like-subscribe-bell/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-like-subscribe-bell/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-like-subscribe-bell/637819b92b9d-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-like-subscribe-bell/e54a7076f08c-thumb.jpg",
+  "entryPoint": "src/YtLikeSubscribeBell.tsx",
+  "compositionId": "YtLikeSubscribeBell",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：LikeSubscribeBellScene.tsx），请帮我做以下调整： 1. 修改频道名称（目前为「Debug 土拨鼠」） 2. 调整三个互动事件的触发时间（likeStart、subStart、bellStart，目前分别为第 90、150、210 帧） 3. 替换频道头像图片路径（目前使用 `avatar-2.png`） 4. 调整订阅按钮的颜色（目前为 `#CC0000`） 请保留原本的波纹、弹跳与摇铃动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-like-subscribe-bell.md",
+    "updatedAt": "2026-06-23T12:32:56.073Z"
+  }
+}

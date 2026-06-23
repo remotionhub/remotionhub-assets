@@ -1,0 +1,29 @@
+{
+  "slug": "yt-too-many-coincidences",
+  "displayName": "Yt Too Many Coincidences",
+  "displayNameZh": "除非刚好...刚好...刚好...",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-too-many-coincidences",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-too-many-coincidences/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-too-many-coincidences/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-too-many-coincidences/3a2796ead68f-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-too-many-coincidences/12e5c8d475a5-thumb.jpg",
+  "entryPoint": "src/YtTooManyCoincidences.tsx",
+  "compositionId": "YtTooManyCoincidences",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene186-TooManyCoincidences.tsx），请帮我做以下调整： 1. 修改「刚好」的条件内容（可替换为其他低机率情境） 2. 调整每个条件的机率显示数字 3. 更改颜色主题 4. 修改标题文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-too-many-coincidences.md",
+    "updatedAt": "2026-06-23T12:38:45.986Z"
+  }
+}

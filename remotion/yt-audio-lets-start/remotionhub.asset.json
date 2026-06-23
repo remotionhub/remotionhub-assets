@@ -1,0 +1,29 @@
+{
+  "slug": "yt-audio-lets-start",
+  "displayName": "Yt Audio Lets Start",
+  "displayNameZh": "我们开始！能量爆发动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-audio-lets-start",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-lets-start/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-lets-start/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-audio-lets-start/4961967a8ccc-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-audio-lets-start/8a7c9e664614-thumb.jpg",
+  "entryPoint": "src/YtAudioLetsStart.tsx",
+  "compositionId": "YtAudioLetsStart",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene27-LetsStart.tsx），请帮我做以下调整： 1. 修改主文字（目前是 \"我们开始\"）与字体大小（目前是 88px）、字距（目前是 12）。 2. 更换播放图标（`PlayIcon`）的颜色（目前是 `#00D4AA` 绿色）。 3. 调整能量射线的颜色（目前是绿色/蓝色/白色交替）与数量（目前 12 道）。 4. 修改星点（`Sparkle`）的颜色与数量（`revealSparkles` 阵列有 6 个）。 请保留原本的脉冲环动画与弹跳入场效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-audio-lets-start.md",
+    "updatedAt": "2026-06-23T12:25:03.327Z"
+  }
+}

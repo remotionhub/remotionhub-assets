@@ -1,0 +1,29 @@
+{
+  "slug": "yt-rejected-ideas",
+  "displayName": "Yt Rejected Ideas",
+  "displayNameZh": "那些被投资人拒绝的点子",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-rejected-ideas",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-rejected-ideas/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-rejected-ideas/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-rejected-ideas/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-rejected-ideas/thumb.jpg",
+  "entryPoint": "src/YtRejectedIdeas.tsx",
+  "compositionId": "YtRejectedIdeas",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene155-RejectedIdeas.tsx），请帮我做以下调整： 1. 新增或更换公司（目前是 Airbnb、Uber、Instagram、Slack 四家） 2. 修改每家公司的拒绝语录（目前各有中英文版本） 3. 调整市值数字（目前 Airbnb $80B+、Uber $150B+、Instagram $1B→收购、Slack $27.7B→收购） 4. 更换每家公司的主色（目前 Airbnb 红、Uber 黑、Instagram 粉、Slack 紫） 请保留原本的公司名称弹入、拒绝语出现加删除线、市值反转显示动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-rejected-ideas.md",
+    "updatedAt": "2026-06-23T12:35:53.312Z"
+  }
+}

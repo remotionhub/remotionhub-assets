@@ -1,0 +1,29 @@
+{
+  "slug": "yt-inside-the-problem",
+  "displayName": "Yt Inside The Problem",
+  "displayNameZh": "要在问题的圈子里",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-inside-the-problem",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-inside-the-problem/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-inside-the-problem/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-inside-the-problem/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-inside-the-problem/thumb.jpg",
+  "entryPoint": "src/YtInsideTheProblem.tsx",
+  "compositionId": "YtInsideTheProblem",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene217-InsideTheProblem.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整左侧「不在圈子里」的标签文字 3. 更改右侧「在圈子里」的标签文字 4. 修改底部说明文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-inside-the-problem.md",
+    "updatedAt": "2026-06-23T12:32:28.288Z"
+  }
+}

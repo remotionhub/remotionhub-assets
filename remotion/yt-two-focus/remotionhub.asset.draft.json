@@ -1,0 +1,29 @@
+{
+  "slug": "yt-two-focus",
+  "displayName": "Yt Two Focus",
+  "displayNameZh": "两大核心问题聚焦展示",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-two-focus",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-focus/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-focus/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-focus/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-focus/thumb.jpg",
+  "entryPoint": "src/YtTwoFocus.tsx",
+  "compositionId": "YtTwoFocus",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：TwoFocusScene.tsx），请帮我做以下调整： 1. 修改两张卡片的文字内容（number 与 text 栏位） 2. 调整两张卡片出现的时间间隔（目前第二张在第 10 秒出现） 3. 修改卡片尺寸（目前为 480×480）与圆角（目前为 28px） 4. 调整卡片之间的 gap（目前为 60px） 请保留原本的 spring 动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-two-focus.md",
+    "updatedAt": "2026-06-23T12:39:30.107Z"
+  }
+}

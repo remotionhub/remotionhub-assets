@@ -1,0 +1,29 @@
+{
+  "slug": "yt-build-stability",
+  "displayName": "Yt Build Stability",
+  "displayNameZh": "提升自己的稳定度",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-build-stability",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-build-stability/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-build-stability/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-build-stability/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-build-stability/thumb.jpg",
+  "entryPoint": "src/YtBuildStability.tsx",
+  "compositionId": "YtBuildStability",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene193-BuildStability.tsx），请帮我做以下调整： 1. 修改主标题文字（目前为「2. 提升自己的稳定度」） 2. 调整摇晃到稳定的动画速度 3. 更改稳定结构的颜色 4. 修改补充说明文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-build-stability.md",
+    "updatedAt": "2026-06-23T12:25:41.750Z"
+  }
+}

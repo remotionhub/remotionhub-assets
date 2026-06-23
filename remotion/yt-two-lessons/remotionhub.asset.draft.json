@@ -1,0 +1,29 @@
+{
+  "slug": "yt-two-lessons",
+  "displayName": "Yt Two Lessons",
+  "displayNameZh": "使用 AI 工具学到的两件事",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-two-lessons",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-lessons/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-lessons/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-lessons/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-lessons/thumb.jpg",
+  "entryPoint": "src/YtTwoLessons.tsx",
+  "compositionId": "YtTwoLessons",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene54-TwoLessons.tsx），请帮我做以下调整： 1. 修改两个重点的标题（目前是「随意下 Prompt」和「要透过 Skill 的方式」） 2. 更改副标说明文字（目前是「→ 做出 2014 年以前风格的网站」和「→ 才能再优化网站的风格」） 3. 调整两个卡片的颜色（目前第一个 danger #FF6B6B，第二个 accent #00D4AA） 4. 修改标题文字（目前是「学到两件事」） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-two-lessons.md",
+    "updatedAt": "2026-06-23T12:39:38.546Z"
+  }
+}

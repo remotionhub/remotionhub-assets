@@ -1,0 +1,29 @@
+{
+  "slug": "yt-solve-first-point",
+  "displayName": "Yt Solve First Point",
+  "displayNameZh": "我们先解决第一点",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-solve-first-point",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-solve-first-point/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-solve-first-point/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-solve-first-point/12babc936b46-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-solve-first-point/f1bb3d75c897-thumb.jpg",
+  "entryPoint": "src/YtSolveFirstPoint.tsx",
+  "compositionId": "YtSolveFirstPoint",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene153-SolveFirstPoint.tsx），请帮我做以下调整： 1. 修改标题文字（目前是「我们先解决第一点」） 2. 调整数字圆圈的颜色（目前是蓝色渐层 #4DA3FF → #3B82F6） 3. 更换英文副标（目前是 \"Let's solve the first issue first\"） 4. 修改数字（目前是「1」） 请保留原本的数字圆圈弹入、标题滑入与底部横线伸展动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-solve-first-point.md",
+    "updatedAt": "2026-06-23T12:37:19.137Z"
+  }
+}

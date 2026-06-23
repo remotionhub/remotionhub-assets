@@ -1,0 +1,29 @@
+{
+  "slug": "yt-engine-criteria",
+  "displayName": "Yt Engine Criteria",
+  "displayNameZh": "挑选游戏引擎的两个条件",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-engine-criteria",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-engine-criteria/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-engine-criteria/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-engine-criteria/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-engine-criteria/thumb.jpg",
+  "entryPoint": "src/YtEngineCriteria.tsx",
+  "compositionId": "YtEngineCriteria",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene04-EngineCriteria.tsx），请帮我做以下调整： 1. 修改两个条件的说明文字（目前是：「完全透过代码生成，不需要操作 GUI」和「GUI 介面有 MCP 可以串接更好」） 2. 调整标题文字（目前是：「挑选引擎的两个条件」） 3. 修改编号徽章的渐层颜色（目前从 #00D4AA 到 #4DA3FF） 4. 调整两个条件卡片的出场延迟（目前第一个从 frame 40 开始，第二个从 frame 120 开始） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-engine-criteria.md",
+    "updatedAt": "2026-06-23T12:28:24.350Z"
+  }
+}

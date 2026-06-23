@@ -1,0 +1,29 @@
+{
+  "slug": "yt-narrative-redesign",
+  "displayName": "Yt Narrative Redesign",
+  "displayNameZh": "叙事式网站设计",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-narrative-redesign",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-narrative-redesign/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-narrative-redesign/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-narrative-redesign/e4009727c3e3-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-narrative-redesign/f3fa3c9cb696-thumb.jpg",
+  "entryPoint": "src/YtNarrativeRedesign.tsx",
+  "compositionId": "YtNarrativeRedesign",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene76-NarrativeRedesign.tsx），请帮我做以下调整： 1. 修改主色调（目前是橘黄色 #FFB547），改为你指定的颜色 2. 调整网站 mockup 的章节数量（目前有 4 个章节区块） 3. 修改最后出现的标签文字（目前是「叙事式设计」） 4. 调整动画总长度（目前是 6 秒 = 180 帧） 请保留原本的书本图标动画、箭头转场与网站 mockup 弹入效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-narrative-redesign.md",
+    "updatedAt": "2026-06-23T12:34:10.372Z"
+  }
+}

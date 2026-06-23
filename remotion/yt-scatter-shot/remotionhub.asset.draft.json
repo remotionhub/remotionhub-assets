@@ -1,0 +1,29 @@
+{
+  "slug": "yt-scatter-shot",
+  "displayName": "Yt Scatter Shot",
+  "displayNameZh": "乱枪打鸟：管道多但受众痛点不符",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-scatter-shot",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-scatter-shot/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-scatter-shot/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-scatter-shot/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-scatter-shot/thumb.jpg",
+  "entryPoint": "src/YtScatterShot.tsx",
+  "compositionId": "YtScatterShot",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene187-ScatterShot.tsx），请帮我做以下调整： 1. 修改左侧的乱枪打鸟管道列表 2. 调整右侧不匹配的描述文字 3. 更改主标题文字 4. 修改动画颜色主题 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-scatter-shot.md",
+    "updatedAt": "2026-06-23T12:36:10.601Z"
+  }
+}

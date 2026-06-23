@@ -1,0 +1,29 @@
+{
+  "slug": "yt-bug-fix-loop",
+  "displayName": "Yt Bug Fix Loop",
+  "displayNameZh": "反复修正直到完美",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-bug-fix-loop",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-bug-fix-loop/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-bug-fix-loop/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-bug-fix-loop/2cd034a39ad7-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-bug-fix-loop/56864ebf3acb-thumb.jpg",
+  "entryPoint": "src/YtBugFixLoop.tsx",
+  "compositionId": "YtBugFixLoop",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene209-BugFixLoop.tsx），请帮我做以下调整： 1. 修改四个问题的描述（目前为：有 Bug、太丑、缺字、寄信失败） 2. 调整对应的解决方案文字 3. 更改主标题文字 4. 修改问题/解决方案的颜色 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-bug-fix-loop.md",
+    "updatedAt": "2026-06-23T12:25:41.058Z"
+  }
+}

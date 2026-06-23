@@ -1,0 +1,29 @@
+{
+  "slug": "yt-ai-wrappers-dead",
+  "displayName": "Yt Ai Wrappers Dead",
+  "displayNameZh": "AI 套壳产品为什么死光？",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-ai-wrappers-dead",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-wrappers-dead/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-wrappers-dead/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-ai-wrappers-dead/d149e024c8c0-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-ai-wrappers-dead/c1dd02ae55ea-thumb.jpg",
+  "entryPoint": "src/YtAiWrappersDead.tsx",
+  "compositionId": "YtAiWrappersDead",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene152-AiWrappersDead.tsx），请帮我做以下调整： 1. 修改主标题（目前是「替代品很多，AI 套壳产品为什么死光？」） 2. 调整竞品方块的数量（目前是 11 个） 3. 更换崩溃后的底部文字（目前是「没有理由使用我的服务」） 4. 修改墓碑的数量（目前是 6 个） 请保留原本的方块弹入、我有 AI 大家也有 AI 标签、打叉崩溃与墓碑出现动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-ai-wrappers-dead.md",
+    "updatedAt": "2026-06-23T12:24:13.569Z"
+  }
+}

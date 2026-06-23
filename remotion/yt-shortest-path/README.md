@@ -1,0 +1,55 @@
+# 资讯架构最短路径 (Yt Shortest Path)
+
+> **Attribution Note**: This component is migrated from the original template on [remotionlab.com](https://remotionlab.com/showcase/yt-shortest-path). Credit goes to the original creator at remotionlab.
+
+![Preview](https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-shortest-path/3b066969bed5-thumb.jpg)
+
+Reusable Remotion component migrated from https://remotionlab.com/showcase/yt-shortest-path.
+
+## Usage
+
+Copy `src/YtShortestPath.tsx` into your Remotion project and register it in your composition root.
+
+```tsx
+import { Composition } from 'remotion'
+import { YtShortestPath, ytShortestPathDefaultProps } from './YtShortestPath'
+
+export function RemotionRoot() {
+  return (
+    <Composition
+      id="YtShortestPath"
+      component={YtShortestPath}
+      durationInFrames={120}
+      fps={30}
+      width={1920}
+      height={1080}
+      defaultProps={ytShortestPathDefaultProps}
+    />
+  )
+}
+```
+
+## Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+
+
+## Extra Dependencies
+
+None.
+
+## Agent Prompt
+
+```text
+我有一个用 Remotion 写的场景组件（文件：Scene91-ShortestPath.tsx），请帮我做以下调整： 1. 修改节点图的层数（目前有 6 层，含起始与终点） 2. 调整最短路径高亮的颜色（目前是蓝色渐层） 3. 更改最后显示的文字（目前是「最短路径」） 4. 调整节点大小（目前一般节点 radius=14，起点/终点 radius=24） 请保留原本的节点逐步出现、非最短路径淡出、最短路径逐段点亮动画，只修改我指定的部分，然后把完整的修改后代码给我。
+```
+
+## Links
+
+- RemotionHub: https://remotionhub.ai/terence/yt-shortest-path
+- Source: https://github.com/remotionhub/remotionhub-assets/tree/main/remotion/yt-shortest-path
+
+## License
+
+MIT

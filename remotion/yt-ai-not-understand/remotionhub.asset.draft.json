@@ -1,0 +1,29 @@
+{
+  "slug": "yt-ai-not-understand",
+  "displayName": "Yt Ai Not Understand",
+  "displayNameZh": "AI 看图不理解语意的视觉解说",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-ai-not-understand",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-not-understand/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-not-understand/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-not-understand/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-not-understand/thumb.jpg",
+  "entryPoint": "src/YtAiNotUnderstand.tsx",
+  "compositionId": "YtAiNotUnderstand",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：NotUnderstandScene.tsx），请帮我做以下调整： 1. 修改顶部说明文字（AnimatedTitle 中的 text 字符串） 2. 调整机器人与图像图标的出现时间（ROBOT-DELAY、IMAGE-DELAY，目前为第 60、90 帧） 3. 修改底部副标题文字（目前为「它看到的是像素，不是语意」） 4. 调整散落问号的数量与位置（scatterPositions 阵列） 请保留逐字动画与流光连线效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-ai-not-understand.md",
+    "updatedAt": "2026-06-23T12:23:16.473Z"
+  }
+}

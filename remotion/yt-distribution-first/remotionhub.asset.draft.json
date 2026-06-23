@@ -1,0 +1,29 @@
+{
+  "slug": "yt-distribution-first",
+  "displayName": "Yt Distribution First",
+  "displayNameZh": "先想通路再做产品",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-distribution-first",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-distribution-first/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-distribution-first/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-distribution-first/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-distribution-first/thumb.jpg",
+  "entryPoint": "src/YtDistributionFirst.tsx",
+  "compositionId": "YtDistributionFirst",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene145-DistributionFirst.tsx），请帮我做以下调整： 1. 修改两个方块的标签（目前是「Build」和「Distribution」） 2. 调整方块颜色（Build 目前是 #4DA3FF 蓝色，Distribution 是 #10B981 绿色） 3. 更换灰色产品的数量（目前是 18 个） 4. 调整灯泡出现的时间（目前是 frame 125） 请保留原本的方块弹入、金星被埋没、互换动画与灯泡闪烁效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-distribution-first.md",
+    "updatedAt": "2026-06-23T12:27:47.345Z"
+  }
+}

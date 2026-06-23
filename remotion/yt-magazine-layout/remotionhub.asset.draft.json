@@ -1,0 +1,29 @@
+{
+  "slug": "yt-magazine-layout",
+  "displayName": "Yt Magazine Layout",
+  "displayNameZh": "杂志／书本式网站排版",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-magazine-layout",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-magazine-layout/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-magazine-layout/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-magazine-layout/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-magazine-layout/thumb.jpg",
+  "entryPoint": "src/YtMagazineLayout.tsx",
+  "compositionId": "YtMagazineLayout",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene77-MagazineStyle.tsx），请帮我做以下调整： 1. 修改杂志页面的主色调（目前是暖黄 #FFB547） 2. 调整左页的大标题文字（目前是「设计的艺术」） 3. 修改右页的引用语（目前是「像翻书一样的浏览体验」） 4. 更换最后显示的标签文字（目前是「阅读式体验」） 请保留原本的浏览器框架、书脊折痕效果与内容逐步淡入动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-magazine-layout.md",
+    "updatedAt": "2026-06-23T12:33:05.312Z"
+  }
+}

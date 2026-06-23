@@ -1,0 +1,29 @@
+{
+  "slug": "yt-acq-ret-ref",
+  "displayName": "Yt Acq Ret Ref",
+  "displayNameZh": "Acquisition / Retention / Referral",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-acq-ret-ref",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-acq-ret-ref/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-acq-ret-ref/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-acq-ret-ref/c6740f1031cf-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-acq-ret-ref/2946cc9b4177-thumb.jpg",
+  "entryPoint": "src/YtAcqRetRef.tsx",
+  "compositionId": "YtAcqRetRef",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene141-AcqRetRef.tsx），请帮我做以下调整： 1. 修改三张卡片的标题（目前是 Acquisition / Retention / Referral） 2. 调整各卡片的副标题（目前是「怎么让人知道」、「怎么让客人回来」、「怎么让客人拉客人」） 3. 更换卡片颜色（目前是蓝 #4DA3FF / 绿 #10B981 / 橘 #F59E0B） 4. 修改各卡片的策略项目（目前 Acq 有 4 项，Ret 有 3 项，Ref 有 3 项） 请保留原本的卡片弹入、顶部色条与图标逐步出现动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-acq-ret-ref.md",
+    "updatedAt": "2026-06-23T12:23:15.761Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "yt-audio-prompt-skill",
+  "displayName": "Yt Audio Prompt Skill",
+  "displayNameZh": "AI Prompt 生成 Skill 动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-audio-prompt-skill",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-prompt-skill/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-prompt-skill/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-prompt-skill/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-prompt-skill/thumb.jpg",
+  "entryPoint": "src/YtAudioPromptSkill.tsx",
+  "compositionId": "YtAudioPromptSkill",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene11-PromptSkill.tsx），请帮我做以下调整： 1. 修改 `WORD-GROUPS` 阵列中的打字文字内容，换成你自己想要展示的 AI Prompt。 2. 调整三个行动图标（`ACTION-ITEMS`）的 label 文字与出现时间点（`appearFrame`）。 3. 更换终端机标题（目前是 \"Claude Code\"）。 4. 修改 accent 颜色（目前是 `#4DA3FF`）与高亮文字颜色（例如 \"sonic pi\" 的红色 `#FF6B6B`）。 请保留原本的打字机效果与行动图标连线动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-audio-prompt-skill.md",
+    "updatedAt": "2026-06-23T12:25:04.020Z"
+  }
+}

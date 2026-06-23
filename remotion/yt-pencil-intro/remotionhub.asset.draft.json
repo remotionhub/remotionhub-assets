@@ -1,0 +1,29 @@
+{
+  "slug": "yt-pencil-intro",
+  "displayName": "Yt Pencil Intro",
+  "displayNameZh": "Pencil 工具 Logo 动画介绍",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-pencil-intro",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-pencil-intro/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-pencil-intro/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-pencil-intro/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-pencil-intro/thumb.jpg",
+  "entryPoint": "src/YtPencilIntro.tsx",
+  "compositionId": "YtPencilIntro",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：PencilIntroScene.tsx），请帮我做以下调整： 1. 将白色卡片的图片来源从 `pencil-logo.jpeg` 改成其他静态图片（例如我的品牌 Logo） 2. 调整卡片尺寸（目前是 200×200）与圆角大小（目前是 32px） 3. 修改 sparkle 的颜色与数量（目前使用 accent 色，共 4 个） 4. 调整光晕强度（glowOp 的基准值目前为 0.12） 请保留原本的 spring 弹跳动画与闪光特效，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-pencil-intro.md",
+    "updatedAt": "2026-06-23T12:35:09.331Z"
+  }
+}

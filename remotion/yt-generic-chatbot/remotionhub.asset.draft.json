@@ -1,0 +1,29 @@
+{
+  "slug": "yt-generic-chatbot",
+  "displayName": "Yt Generic Chatbot",
+  "displayNameZh": "做出一个通用型的客服机器人",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-generic-chatbot",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-generic-chatbot/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-generic-chatbot/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-generic-chatbot/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-generic-chatbot/thumb.jpg",
+  "entryPoint": "src/YtGenericChatbot.tsx",
+  "compositionId": "YtGenericChatbot",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene219-GenericChatbot.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整围绕机器人的行业名称（目前为电商、餐饮、教育、医疗、金融、旅游、科技） 3. 更改行业的排列角度或颜色 4. 修改英文副标题 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-generic-chatbot.md",
+    "updatedAt": "2026-06-23T12:31:15.031Z"
+  }
+}

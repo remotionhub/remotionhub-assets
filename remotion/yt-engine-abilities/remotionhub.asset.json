@@ -1,0 +1,29 @@
+{
+  "slug": "yt-engine-abilities",
+  "displayName": "Yt Engine Abilities",
+  "displayNameZh": "游戏引擎六大能力展示",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-engine-abilities",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-engine-abilities/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-engine-abilities/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-engine-abilities/4e721f56a691-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-engine-abilities/9d515d5803a5-thumb.jpg",
+  "entryPoint": "src/YtEngineAbilities.tsx",
+  "compositionId": "YtEngineAbilities",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene03-EngineAbilities.tsx），请帮我做以下调整： 1. 修改六张卡片的标签文字（目前是：会跑、会跳、会打人、按键反应、碰撞侦测、画面更新） 2. 调整卡片背景色与 SVG 图标的主色（目前使用 #00D4AA、#FFB547、#FF6B6B、#4DA3FF） 3. 更改整体背景渐层（目前是深蓝黑色 linear-gradient(135deg, #0A0E14, #131A24)） 4. 调整每张卡片的弹入延迟时间（目前第一排从 frame 28/53/78 开始，第二排从 108/133/158 开始） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-engine-abilities.md",
+    "updatedAt": "2026-06-23T12:28:23.645Z"
+  }
+}

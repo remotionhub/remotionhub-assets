@@ -1,0 +1,29 @@
+{
+  "slug": "yt-exclusive-app",
+  "displayName": "Yt Exclusive App",
+  "displayNameZh": "直接为 KOL 粉丝做一个专属 APP",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-exclusive-app",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-exclusive-app/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-exclusive-app/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-exclusive-app/f1ad3367e2ae-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-exclusive-app/206bc5ba4de1-thumb.jpg",
+  "entryPoint": "src/YtExclusiveApp.tsx",
+  "compositionId": "YtExclusiveApp",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene180-ExclusiveApp.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整三个 APP 卡片的标题与描述 3. 更改强调颜色（目前为 #10B981 绿色） 4. 修改 APP 卡片的出场动画延迟 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-exclusive-app.md",
+    "updatedAt": "2026-06-23T12:28:51.584Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "yt-execute-validate",
+  "displayName": "Yt Execute Validate",
+  "displayNameZh": "怎么运行与验证点子",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-execute-validate",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-execute-validate/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-execute-validate/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-execute-validate/e70c4a63c956-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-execute-validate/96cc910cfb34-thumb.jpg",
+  "entryPoint": "src/YtExecuteValidate.tsx",
+  "compositionId": "YtExecuteValidate",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene158-ExecuteValidate.tsx），请帮我做以下调整： 1. 修改主标题（目前是「重点在：怎么运行与验证点子」） 2. 调整左侧方块标签（目前是「运行」，英文 Execute） 3. 更换右侧方块标签（目前是「验证」，英文 Validate） 4. 修改两个方块的颜色（运行目前是 #10B981 绿，验证是 #4DA3FF 蓝） 请保留原本的方块弹入、虚线箭头与底部循环箭头动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-execute-validate.md",
+    "updatedAt": "2026-06-23T12:29:01.088Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "yt-generic-means-lacking",
+  "displayName": "Yt Generic Means Lacking",
+  "displayNameZh": "通用 = 什么都缺了一点",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-generic-means-lacking",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-generic-means-lacking/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-generic-means-lacking/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-generic-means-lacking/397ec60bcccc-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-generic-means-lacking/e7c12309c21e-thumb.jpg",
+  "entryPoint": "src/YtGenericMeansLacking.tsx",
+  "compositionId": "YtGenericMeansLacking",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene220-GenericMeansLacking.tsx），请帮我做以下调整： 1. 修改雷达图的六个维度名称（目前为速度、精准度、深度、客制化、体验、信任） 2. 调整各维度的填充比例 3. 更改主标题文字 4. 修改缺口指示器的颜色 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-generic-means-lacking.md",
+    "updatedAt": "2026-06-23T12:31:44.079Z"
+  }
+}

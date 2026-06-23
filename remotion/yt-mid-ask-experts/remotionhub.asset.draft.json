@@ -1,0 +1,29 @@
+{
+  "slug": "yt-mid-ask-experts",
+  "displayName": "Yt Mid Ask Experts",
+  "displayNameZh": "中：问懂痛点的人",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-mid-ask-experts",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mid-ask-experts/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mid-ask-experts/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mid-ask-experts/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mid-ask-experts/thumb.jpg",
+  "entryPoint": "src/YtMidAskExperts.tsx",
+  "compositionId": "YtMidAskExperts",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene178-MidAskExperts.tsx），请帮我做以下调整： 1. 修改五个专家节点的标签（目前为业界前辈、产品经理、资深用户、领域专家、社群 KOL） 2. 调整节点的排列角度 3. 修改主标题文字 4. 更改连线颜色 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-mid-ask-experts.md",
+    "updatedAt": "2026-06-23T12:33:42.574Z"
+  }
+}

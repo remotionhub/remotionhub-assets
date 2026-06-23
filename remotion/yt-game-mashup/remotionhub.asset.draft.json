@@ -1,0 +1,29 @@
+{
+  "slug": "yt-game-mashup",
+  "displayName": "Yt Game Mashup",
+  "displayNameZh": "三款游戏机制大融合",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-game-mashup",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-game-mashup/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-game-mashup/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-game-mashup/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-game-mashup/thumb.jpg",
+  "entryPoint": "src/YtGameMashup.tsx",
+  "compositionId": "YtGameMashup",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene23-GameMashup.tsx），请帮我做以下调整： 1. 修改三个游戏来源的名称与副标（目前是：小朋友上楼梯/派对游戏/玛利欧赛车） 2. 更改各游戏卡片的主色（目前分别是 #2ECC71、#FFB547、#FF6B6B） 3. 调整最终结果的文字（目前是「我的全新游戏」） 4. 修改卡片背景渐层色 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-game-mashup.md",
+    "updatedAt": "2026-06-23T12:30:48.596Z"
+  }
+}

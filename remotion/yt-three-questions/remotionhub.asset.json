@@ -1,0 +1,29 @@
+{
+  "slug": "yt-three-questions",
+  "displayName": "Yt Three Questions",
+  "displayNameZh": "三大 AI 设计情境逐步揭示",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-three-questions",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-three-questions/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-three-questions/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-three-questions/915d7991e5b1-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-three-questions/80780295a37d-thumb.jpg",
+  "entryPoint": "src/YtThreeQuestions.tsx",
+  "compositionId": "YtThreeQuestions",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：ThreeQuestionsScene.tsx），请帮我做以下调整： 1. 修改三张卡片的文字内容（number、title、text 三个栏位） 2. 调整每张卡片出现的间隔时间（目前每 10 秒一张） 3. 修改卡片的圆角、边框颜色与背景色 4. 调整卡片宽度（目前为 1400px）与 padding 请保留原本的 spring 弹跳与淡入动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-three-questions.md",
+    "updatedAt": "2026-06-23T12:38:37.400Z"
+  }
+}

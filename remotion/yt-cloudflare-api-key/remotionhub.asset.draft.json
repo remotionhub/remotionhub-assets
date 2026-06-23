@@ -1,0 +1,29 @@
+{
+  "slug": "yt-cloudflare-api-key",
+  "displayName": "Yt Cloudflare Api Key",
+  "displayNameZh": "把 API Key 给 Claude Code",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-cloudflare-api-key",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-cloudflare-api-key/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-cloudflare-api-key/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-cloudflare-api-key/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-cloudflare-api-key/thumb.jpg",
+  "entryPoint": "src/YtCloudflareApiKey.tsx",
+  "compositionId": "YtCloudflareApiKey",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene212-CloudflareApiKey.tsx），请帮我做以下调整： 1. 修改主标题文字 2. 调整 API Key 的显示格式（目前为 cf-sk_••••••） 3. 更改底部连接成功徽章的文字 4. 修改右侧终端机显示的指令 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-cloudflare-api-key.md",
+    "updatedAt": "2026-06-23T12:26:20.750Z"
+  }
+}

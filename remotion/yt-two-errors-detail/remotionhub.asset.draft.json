@@ -1,0 +1,29 @@
+{
+  "slug": "yt-two-errors-detail",
+  "displayName": "Yt Two Errors Detail",
+  "displayNameZh": "致命的两个错误详解",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-two-errors-detail",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-errors-detail/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-errors-detail/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-errors-detail/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-two-errors-detail/thumb.jpg",
+  "entryPoint": "src/YtTwoErrorsDetail.tsx",
+  "compositionId": "YtTwoErrorsDetail",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene150-TwoErrorsDetail.tsx），请帮我做以下调整： 1. 修改第一个错误的标题（目前是「痛点有问题」） 2. 调整第二个错误的标题（目前是「Distribution 不深」） 3. 更换错误编号圆圈的颜色（目前是红色 #EF4444） 4. 修改英文副标（第一个目前是 \"The pain point itself is questionable\"） 请保留原本的两段依序出现动画、问号 wobble 与人群出现效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-two-errors-detail.md",
+    "updatedAt": "2026-06-23T12:39:21.407Z"
+  }
+}

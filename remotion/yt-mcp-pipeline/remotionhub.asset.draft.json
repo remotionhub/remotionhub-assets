@@ -1,0 +1,29 @@
+{
+  "slug": "yt-mcp-pipeline",
+  "displayName": "Yt Mcp Pipeline",
+  "displayNameZh": "MCP 部署流水线 HUD",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-mcp-pipeline",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mcp-pipeline/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mcp-pipeline/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mcp-pipeline/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-mcp-pipeline/thumb.jpg",
+  "entryPoint": "src/YtMcpPipeline.tsx",
+  "compositionId": "YtMcpPipeline",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene12-McpPipeline.tsx），请帮我做以下调整： 1. 修改 `DEFAULT-STEPS` 阵列（目前是 [\"Commit\", \"Push\", \"PR\", \"Deploy\", \"Ready\"]）为你自己的流程步骤名称。 2. 调整各步骤完成的时间点（`STEPS.COMMIT-DONE` 等常数，单位：帧）。 3. 更换底部右侧的 Evidence Label 文字（目前是 \"GitHub PR\" 与 \"Vercel Deploy\"）。 4. 修改 HUD 的颜色方案（完成色 `#00D4AA`、进行中色 `#4DA3FF`）。 请保留原本的 HUD 滑入动画与步骤切换效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-mcp-pipeline.md",
+    "updatedAt": "2026-06-23T12:33:34.213Z"
+  }
+}

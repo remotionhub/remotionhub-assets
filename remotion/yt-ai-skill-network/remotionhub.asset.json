@@ -1,0 +1,29 @@
+{
+  "slug": "yt-ai-skill-network",
+  "displayName": "Yt Ai Skill Network",
+  "displayNameZh": "AI 技能节点网路连线动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-ai-skill-network",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-skill-network/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-skill-network/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-ai-skill-network/7bb005871c50-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-ai-skill-network/3d820ae75241-thumb.jpg",
+  "entryPoint": "src/YtAiSkillNetwork.tsx",
+  "compositionId": "YtAiSkillNetwork",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Experiment1Scene.tsx），请帮我做以下调整： 1. 修改五个技能节点的图标路径与颜色（modules 阵列中的 path、color1、color2） 2. 调整底部标签文字（目前为「新增 Skill」） 3. 修改五个节点的飞入时间间隔（MODULE-DELAYS，目前为 50、66、82、98、114 帧） 4. 调整中心六角形的轨道半径（ORBIT-R，目前为 300px） 请保留 SVG 描边动画与光波扩散效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-ai-skill-network.md",
+    "updatedAt": "2026-06-23T12:23:53.930Z"
+  }
+}

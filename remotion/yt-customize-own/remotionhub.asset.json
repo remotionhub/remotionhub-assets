@@ -1,0 +1,29 @@
+{
+  "slug": "yt-customize-own",
+  "displayName": "Yt Customize Own",
+  "displayNameZh": "客制化调整打造专属网站",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-customize-own",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-customize-own/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-customize-own/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-customize-own/fbdc2fc4620c-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-customize-own/f728e4856bda-thumb.jpg",
+  "entryPoint": "src/YtCustomizeOwn.tsx",
+  "compositionId": "YtCustomizeOwn",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene63-CustomizeOwn.tsx），请帮我做以下调整： 1. 修改客制化进行中的说明文字（目前是「客制化调整中...」） 2. 更改最终网站的品牌色（目前使用 accent #00D4AA 和 accentSecondary #4DA3FF） 3. 调整徽章文字（目前是「专属于我们的网站」） 4. 修改网站 watermark 文字（目前是「YOUR WEBSITE」） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-customize-own.md",
+    "updatedAt": "2026-06-23T12:27:18.642Z"
+  }
+}

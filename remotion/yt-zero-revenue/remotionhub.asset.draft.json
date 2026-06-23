@@ -1,0 +1,29 @@
+{
+  "slug": "yt-zero-revenue",
+  "displayName": "Yt Zero Revenue",
+  "displayNameZh": "10 人注册 0 人付费",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-zero-revenue",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-zero-revenue/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-zero-revenue/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-zero-revenue/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-zero-revenue/thumb.jpg",
+  "entryPoint": "src/YtZeroRevenue.tsx",
+  "compositionId": "YtZeroRevenue",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene127-ZeroRevenue.tsx），请帮我做以下调整： 1. 修改「10 人注册」的数字（目前是 10） 2. 调整「0 人付费」的文字（目前是 0） 3. 更换线图颜色（目前开始是 #00D4AA 绿色，崩盘后转为 #FF6B6B 红色） 4. 调整动画总长度（目前是 5 秒 = 150 帧） 请保留原本的折线绘制动画、崩盘过场与红色 flatline，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-zero-revenue.md",
+    "updatedAt": "2026-06-23T12:40:13.434Z"
+  }
+}

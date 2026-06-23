@@ -1,0 +1,29 @@
+{
+  "slug": "yt-focus-one-topic",
+  "displayName": "Yt Focus One Topic",
+  "displayNameZh": "深耕一个主题，不要今天做这个明天做那个",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-focus-one-topic",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-focus-one-topic/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-focus-one-topic/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-focus-one-topic/90219c36e4e5-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-focus-one-topic/e42fc4b68e0a-thumb.jpg",
+  "entryPoint": "src/YtFocusOneTopic.tsx",
+  "compositionId": "YtFocusOneTopic",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene197-FocusOneTopic.tsx），请帮我做以下调整： 1. 修改左侧散乱主题的列表 2. 调整右侧专注主题的标题 3. 更改强调颜色 4. 修改主标题文字 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-focus-one-topic.md",
+    "updatedAt": "2026-06-23T12:30:29.257Z"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "yt-four-ai-tools",
+  "displayName": "Yt Four Ai Tools",
+  "displayNameZh": "四个 AI 工具大揭露",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-four-ai-tools",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-four-ai-tools/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-four-ai-tools/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-four-ai-tools/a14ab37f7903-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-four-ai-tools/a72605b1e3f8-thumb.jpg",
+  "entryPoint": "src/YtFourAiTools.tsx",
+  "compositionId": "YtFourAiTools",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene35-FourToolsReveal.tsx），请帮我做以下调整： 1. 修改四个工具的名称、描述与颜色（目前是 Banana 2、Grok、Suno、Blender，对应颜色 #00D4AA、#FFB547、#2ECC71、#9B59B6） 2. 调整每张卡片的出现延迟（目前依序为 frame 30, 75, 120, 165） 3. 更改卡片尺寸（目前宽 570，高 300） 4. 修改卡片的圆角半径（目前 borderRadius: 28） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-four-ai-tools.md",
+    "updatedAt": "2026-06-23T12:30:39.286Z"
+  }
+}

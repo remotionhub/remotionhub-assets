@@ -360,7 +360,9 @@ async function assertNoPlaceholders(assetDir: string, componentName: string) {
         const obj = JSON.parse(content)
         delete obj.prompt
         content = JSON.stringify(obj)
-      } catch (e) {}
+      } catch {
+        // Ignore JSON parsing errors for placeholder checks
+      }
     } else if (relativePath === 'README.md') {
       content = content.replace(/## Agent Prompt[\s\S]*?## Links/g, '## Links')
     }
@@ -369,7 +371,6 @@ async function assertNoPlaceholders(assetDir: string, componentName: string) {
     }
   }
 }
-
 
 function withSanitizedStatus(
   manifest: AssetManifest,

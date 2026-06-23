@@ -1,0 +1,29 @@
+{
+  "slug": "yt-ai-use-cases",
+  "displayName": "Yt Ai Use Cases",
+  "displayNameZh": "AI 设计工具三大使用情境动态图解",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-ai-use-cases",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-use-cases/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-use-cases/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-use-cases/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-use-cases/thumb.jpg",
+  "entryPoint": "src/YtAiUseCases.tsx",
+  "compositionId": "YtAiUseCases",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：TypewriterScene.tsx），请帮我做以下调整： 1. 修改三个情境的说明文字（items 阵列中的 lines 栏位） 2. 调整三个阶段的出现时间点（P1、P2、P3，目前分别为第 2、12、17 秒） 3. 替换 SVG 图标（LayoutIcon、RestyleIcon、ImageToUiIcon）为其他几何图形 4. 修改文字颜色，让主标（第一行）使用不同于 dimmed 的颜色 请保留原本的图标收拢动画与文字滑入效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-ai-use-cases.md",
+    "updatedAt": "2026-06-23T12:23:54.667Z"
+  }
+}

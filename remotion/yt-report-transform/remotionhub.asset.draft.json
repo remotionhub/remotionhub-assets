@@ -1,0 +1,29 @@
+{
+  "slug": "yt-report-transform",
+  "displayName": "Yt Report Transform",
+  "displayNameZh": "报告从评分改成建议怎么开始做",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-report-transform",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-report-transform/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-report-transform/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-report-transform/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-report-transform/thumb.jpg",
+  "entryPoint": "src/YtReportTransform.tsx",
+  "compositionId": "YtReportTransform",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene159-ReportTransform.tsx），请帮我做以下调整： 1. 修改标题文字为其他 BEFORE/AFTER 对比情境（例如：「从『问题清单』改成『行动计划』」） 2. 调整 BEFORE 标签颜色（目前为 #EF4444 红色） 3. 调整 AFTER 标签颜色（目前为 #10B981 绿色） 4. 修改箭头颜色与样式 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-report-transform.md",
+    "updatedAt": "2026-06-23T12:36:01.969Z"
+  }
+}

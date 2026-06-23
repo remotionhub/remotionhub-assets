@@ -1,0 +1,29 @@
+{
+  "slug": "yt-ai-report-doubt",
+  "displayName": "Yt Ai Report Doubt",
+  "displayNameZh": "AI 报告未必有用",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-ai-report-doubt",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-report-doubt/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-report-doubt/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-report-doubt/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-ai-report-doubt/thumb.jpg",
+  "entryPoint": "src/YtAiReportDoubt.tsx",
+  "compositionId": "YtAiReportDoubt",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene151-AiReportDoubt.tsx），请帮我做以下调整： 1. 修改主标题文字（目前是「AI 给的报告未必是有用资讯」） 2. 调整英文副标（目前是 \"AI-generated reports aren't necessarily useful information\"） 3. 更换怀疑标记的颜色（目前是红色 #EF4444） 4. 修改 AI 机器人的颜色（目前是蓝色 #4DA3FF） 请保留原本的机器人动画、箭头飞向报告与问号叠加动画，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-ai-report-doubt.md",
+    "updatedAt": "2026-06-23T12:23:35.798Z"
+  }
+}

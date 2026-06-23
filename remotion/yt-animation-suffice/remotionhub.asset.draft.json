@@ -1,0 +1,29 @@
+{
+  "slug": "yt-animation-suffice",
+  "displayName": "Yt Animation Suffice",
+  "displayNameZh": "用户不转模型，做动画就可以",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-animation-suffice",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-animation-suffice/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-animation-suffice/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-animation-suffice/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-animation-suffice/thumb.jpg",
+  "entryPoint": "src/YtAnimationSuffice.tsx",
+  "compositionId": "YtAnimationSuffice",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene66-AnimationSuffice.tsx），请帮我做以下调整： 1. 修改第一阶段的说明文字（目前是「用户不会转动模型」） 2. 更改第三阶段的徽章文字（目前是「做动画就可以」） 3. 调整播放器内动画球体的颜色（目前使用 accent #00D4AA） 4. 修改禁止图标的颜色（目前使用 danger #FF6B6B） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-animation-suffice.md",
+    "updatedAt": "2026-06-23T12:24:14.287Z"
+  }
+}
