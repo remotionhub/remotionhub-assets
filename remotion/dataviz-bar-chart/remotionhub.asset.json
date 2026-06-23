@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-bar-chart",
+  "displayName": "Dataviz Bar Chart",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-bar-chart",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-bar-chart/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-bar-chart/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-bar-chart/a1f2985acce8-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/dataviz-bar-chart/edca650c997b-thumb.jpg",
+  "entryPoint": "src/DatavizBarChart.tsx",
+  "compositionId": "DatavizBarChart",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的季度业绩长条图组件（文件：BarChart.tsx），请帮我做以下调整： 1. 把标题从「季度业绩」改成「___」 2. 把副标题从「各季销售表现概览」改成「___」 3. 把各长条的颜色依序改成「___、___、___、___、___、___」 4. 把各季的数值依序改成「___、___、___、___、___、___」（最大值建议不超过 100） 5. 把各季的标签依序改成「___、___、___、___、___、___」（例如月份或部门名称） 6. 把每根长条的出场间隔从 12 帧改成 ___（数字越小出场越密集） 请保留原本的弹簧动画与计数效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-bar-chart.md",
+    "updatedAt": "2026-06-23T01:35:59.521Z"
+  }
+}

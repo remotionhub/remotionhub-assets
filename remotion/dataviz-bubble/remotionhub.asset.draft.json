@@ -1,0 +1,28 @@
+{
+  "slug": "dataviz-bubble",
+  "displayName": "Dataviz Bubble",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/dataviz-bubble",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-bubble/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-bubble/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-bubble/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/dataviz-bubble/thumb.jpg",
+  "entryPoint": "src/DatavizBubble.tsx",
+  "compositionId": "DatavizBubble",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的市场分析气泡图组件（文件：BubbleChart.tsx），请帮我做以下调整： 1. 把标题从「市场分析气泡图」改成「___」 2. 把副标题从「市场规模 × 成长率 × 市占率」改成「___」 3. 在 BUBBLES 阵列中，把 X 轴标签（`label`）依序改成「___、___、…」 4. 把每个气泡的 `size` 数值依序改成「___、___、…」（数字越大圆圈越大，建议范围 10–80） 5. 把三个群组的颜色 `color` 依序改成「___、___、___」（支持任何 hex 色码） 6. 把每颗气泡的出场间隔从 8 帧改成 ___（数字越小出场越密集） 请保留原本的弹簧缩放动画与发光效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/dataviz-bubble.md",
+    "updatedAt": "2026-06-23T01:35:48.027Z"
+  }
+}
