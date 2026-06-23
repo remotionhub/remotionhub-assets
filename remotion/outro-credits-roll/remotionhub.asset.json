@@ -1,0 +1,28 @@
+{
+  "slug": "outro-credits-roll",
+  "displayName": "Outro Credits Roll",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/outro-credits-roll",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-credits-roll/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-credits-roll/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/outro-credits-roll/cf38d8e14d5a-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/outro-credits-roll/de438265c5fc-thumb.jpg",
+  "entryPoint": "src/OutroCreditsRoll.tsx",
+  "compositionId": "OutroCreditsRoll",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的卷动字幕片尾组件（文件：CreditsRollOutro.tsx），请帮我做以下调整： 1. 把制作人姓名从 `张小明` 改成「___」 2. 把导演姓名从 `李美丽` 改成「___」 3. 把感谢观看文字从 `感谢观看` 改成「___」 4. 把感谢副文字从 `Thank you for watching` 改成「___」 5. 把字幕栏宽从 600px 改成「___」 6. 在字幕列表中新增一组职称「___」、姓名「___」 请保留原本的卷动动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/outro-credits-roll.md",
+    "updatedAt": "2026-06-23T01:34:54.329Z"
+  }
+}

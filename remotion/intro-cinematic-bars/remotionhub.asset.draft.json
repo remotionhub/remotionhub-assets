@@ -1,0 +1,28 @@
+{
+  "slug": "intro-cinematic-bars",
+  "displayName": "Intro Cinematic Bars",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/intro-cinematic-bars",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-cinematic-bars/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-cinematic-bars/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-cinematic-bars/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-cinematic-bars/thumb.jpg",
+  "entryPoint": "src/IntroCinematicBars.tsx",
+  "compositionId": "IntroCinematicBars",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的电影感黑边片头组件（文件：CinematicBarsIntro.tsx），请帮我做以下调整： 1. 把黑边高度从 216px 改成「___」 2. 把主标题从 `Cinematic Title` 改成「___」 3. 把副标题从 `A Film by Your Name` 改成「___」 4. 把主标题字型大小从 72 改成「___」 5. 把背景渐层从 `linear-gradient(180deg, #111111 0%, #1a1a2e 100%)` 改成「___」 6. 把黑边进场结束帧从 40 改成「___」 请保留原本的黑边动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/intro-cinematic-bars.md",
+    "updatedAt": "2026-06-23T01:32:50.338Z"
+  }
+}

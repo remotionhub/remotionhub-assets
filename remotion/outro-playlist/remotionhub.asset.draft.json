@@ -1,0 +1,28 @@
+{
+  "slug": "outro-playlist",
+  "displayName": "Outro Playlist",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/outro-playlist",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-playlist/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-playlist/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-playlist/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-playlist/thumb.jpg",
+  "entryPoint": "src/OutroPlaylist.tsx",
+  "compositionId": "OutroPlaylist",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的播放清单推荐片尾组件（文件：PlaylistOutro.tsx），请帮我做以下调整： 1. 把标题从「你可能也喜欢」改成「___」 2. 把第一张视频卡片标题改成「___」 3. 把所有卡片的频道名称从「Remotion 中文社群」改成「___」 4. 把进度条颜色从 `#3b82f6` 改成「___」 5. 把「播放全部」文字改成「___」 6. 把背景色从 `#0f0f0f` 改成「___」 请保留原本的依序滑入与进度条动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/outro-playlist.md",
+    "updatedAt": "2026-06-23T01:32:55.379Z"
+  }
+}

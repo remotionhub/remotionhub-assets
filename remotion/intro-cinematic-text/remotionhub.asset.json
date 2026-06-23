@@ -1,0 +1,28 @@
+{
+  "slug": "intro-cinematic-text",
+  "displayName": "Intro Cinematic Text",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/intro-cinematic-text",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-cinematic-text/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-cinematic-text/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-cinematic-text/01ad8f875911-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-cinematic-text/ede91a906541-thumb.jpg",
+  "entryPoint": "src/IntroCinematicText.tsx",
+  "compositionId": "IntroCinematicText",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的电影感字幕片头组件（文件：CinematicTextIntro.tsx），请帮我做以下调整： 1. 把第一行小字从 `A FILM BY REMOTION` 改成「___」 2. 把大字标题从 `The Story Begins` 改成「___」 3. 把第三行小字从 `COMING SOON` 改成「___」 4. 把大字标题字型大小从 64 改成「___」 5. 把第三行小字颜色从 `#888888` 改成「___」 6. 把细线长度从 120 改成「___」 请保留原本的依序淡入动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/intro-cinematic-text.md",
+    "updatedAt": "2026-06-23T01:33:27.130Z"
+  }
+}

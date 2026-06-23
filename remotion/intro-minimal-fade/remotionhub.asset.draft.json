@@ -1,0 +1,28 @@
+{
+  "slug": "intro-minimal-fade",
+  "displayName": "Intro Minimal Fade",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/intro-minimal-fade",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-minimal-fade/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-minimal-fade/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-minimal-fade/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-minimal-fade/thumb.jpg",
+  "entryPoint": "src/IntroMinimalFade.tsx",
+  "compositionId": "IntroMinimalFade",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的极简淡入片头组件（文件：MinimalFadeIntro.tsx），请帮我做以下调整： 1. 把 Logo 文字从 `YOUR LOGO` 改成「___」 2. 把主标题从 `Main Title Here` 改成「___」 3. 把副标题从 `Subtitle goes here` 改成「___」 4. 把主标题字型大小从 72 改成「___」 5. 把副标题颜色从 `#888888` 改成「___」 6. 把背景颜色从 `#000000` 改成「___」 请保留原本的淡入动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/intro-minimal-fade.md",
+    "updatedAt": "2026-06-23T01:32:52.098Z"
+  }
+}

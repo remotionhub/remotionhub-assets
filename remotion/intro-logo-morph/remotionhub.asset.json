@@ -1,0 +1,28 @@
+{
+  "slug": "intro-logo-morph",
+  "displayName": "Intro Logo Morph",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/intro-logo-morph",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-logo-morph/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-logo-morph/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-logo-morph/4cf2151b2fa3-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-logo-morph/07ebeede1167-thumb.jpg",
+  "entryPoint": "src/IntroLogoMorph.tsx",
+  "compositionId": "IntroLogoMorph",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 Logo 变形片头组件（文件：LogoMorphIntro.tsx），请帮我做以下调整： 1. 把品牌缩写从 `RC` 改成「___」 2. 把品牌全名从 `Remotion Community` 改成「___」 3. 把副标语从 `繁体中文社群入口网站` 改成「___」 4. 把形状最终颜色从蓝色（`rgb(59, 130, 246)`）改成「___」 5. 把形状最终 border-radius 从 12px 改成「___」 6. 把背景颜色从 `#0f172a` 改成「___」 请保留原本的形状变形与文字进场动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/intro-logo-morph.md",
+    "updatedAt": "2026-06-23T01:33:50.894Z"
+  }
+}
