@@ -1,0 +1,28 @@
+{
+  "slug": "intro-countdown-3",
+  "displayName": "Intro Countdown 3",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/intro-countdown-3",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-countdown-3/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-countdown-3/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-countdown-3/fede21ab3d2c-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-countdown-3/c33ac99079ce-thumb.jpg",
+  "entryPoint": "src/IntroCountdown3.tsx",
+  "compositionId": "IntroCountdown3",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的三秒倒数片头组件（文件：Countdown3Intro.tsx），请帮我做以下调整： 1. 把每个数字的持续帧数从 30 改成「___」 2. 把数字 3 的圆环颜色从 `#ef4444` 改成「___」 3. 把数字 2 的圆环颜色从 `#f59e0b` 改成「___」 4. 把数字 1 的圆环颜色从 `#22c55e` 改成「___」 5. 把「GO」的圆环颜色从 `#3b82f6` 改成「___」 6. 把背景颜色从 `#0f172a` 改成「___」 请保留原本的倒数与圆环动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/intro-countdown-3.md",
+    "updatedAt": "2026-06-23T01:33:35.244Z"
+  }
+}

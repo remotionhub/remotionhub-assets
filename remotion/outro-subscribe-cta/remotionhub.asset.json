@@ -1,0 +1,28 @@
+{
+  "slug": "outro-subscribe-cta",
+  "displayName": "Outro Subscribe Cta",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/outro-subscribe-cta",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-subscribe-cta/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-subscribe-cta/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/outro-subscribe-cta/64b2048a6e15-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/outro-subscribe-cta/5e439a71a36b-thumb.jpg",
+  "entryPoint": "src/OutroSubscribeCta.tsx",
+  "compositionId": "OutroSubscribeCta",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的订阅 CTA 片尾组件（文件：SubscribeCtaOutro.tsx），请帮我做以下调整： 1. 把频道名称从 `我的频道名称` 改成「___」 2. 把订阅按钮文字从 `订阅` 改成「___」 3. 把订阅按钮颜色从 `#ff0000` 改成「___」 4. 把提示文字从 `记得打开通知，不错过任何新视频！` 改成「___」 5. 把频道名称字型大小从 72 改成「___」 6. 把背景颜色从 `#0f0f0f` 改成「___」 请保留原本的弹簧动画与铃铛摇摆逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/outro-subscribe-cta.md",
+    "updatedAt": "2026-06-23T01:35:33.359Z"
+  }
+}

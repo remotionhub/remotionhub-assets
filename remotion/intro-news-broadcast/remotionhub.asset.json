@@ -1,0 +1,28 @@
+{
+  "slug": "intro-news-broadcast",
+  "displayName": "Intro News Broadcast",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/intro-news-broadcast",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-news-broadcast/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-news-broadcast/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-news-broadcast/4e215eedac2b-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-news-broadcast/a8910f1e05e7-thumb.jpg",
+  "entryPoint": "src/IntroNewsBroadcast.tsx",
+  "compositionId": "IntroNewsBroadcast",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的新闻播报片头组件（文件：NewsBroadcastIntro.tsx），请帮我做以下调整： 1. 把频道名称从 `NEWS CHANNEL` 改成「___」 2. 把主标题从 `Breaking News` 改成「___」 3. 把副标题从 `今日头条 ● LIVE` 改成「___」 4. 把跑马灯文字改成「___」 5. 把顶部横条与跑马灯颜色从 `#dc2626` 改成「___」 6. 把背景色从 `#0a0a0a` 改成「___」 请保留原本的滑入与跑马灯动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/intro-news-broadcast.md",
+    "updatedAt": "2026-06-23T01:34:06.274Z"
+  }
+}

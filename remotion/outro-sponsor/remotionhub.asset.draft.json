@@ -1,0 +1,28 @@
+{
+  "slug": "outro-sponsor",
+  "displayName": "Outro Sponsor",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/outro-sponsor",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-sponsor/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-sponsor/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-sponsor/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/outro-sponsor/thumb.jpg",
+  "entryPoint": "src/OutroSponsor.tsx",
+  "compositionId": "OutroSponsor",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的赞助感谢片尾组件（文件：SponsorOutro.tsx），请帮我做以下调整： 1. 把品牌名称从 `BRAND NAME` 改成「___」 2. 把品牌 Slogan 从 `Empowering creators worldwide` 改成「___」 3. 把优惠码文字从「输入优惠码 REMOTION 享 85 折优惠」改成「___」 4. 把「了解更多 →」按钮文字改成「___」 5. 把背景渐层从 `#0f172a → #0c1445` 改成「___」 6. 把优惠码文字颜色从 `#fbbf24` 改成「___」 请保留原本的淡入与缩放动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/outro-sponsor.md",
+    "updatedAt": "2026-06-23T01:32:56.084Z"
+  }
+}

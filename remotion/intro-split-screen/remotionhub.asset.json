@@ -1,0 +1,28 @@
+{
+  "slug": "intro-split-screen",
+  "displayName": "Intro Split Screen",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/intro-split-screen",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-split-screen/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/intro-split-screen/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-split-screen/16ee8a7ad04c-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/intro-split-screen/bda8fca3e26a-thumb.jpg",
+  "entryPoint": "src/IntroSplitScreen.tsx",
+  "compositionId": "IntroSplitScreen",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的分割萤幕片头组件（文件：SplitScreenIntro.tsx），请帮我做以下调整： 1. 把左格副标题从 `Subtitle Text` 改成「___」 2. 把右格主标题从 `Main Title` 改成「___」 3. 把右格下方副标题从 `Additional Subtitle` 改成「___」 4. 把左格背景色从 `#1e293b` 改成「___」 5. 把右格背景色从 `#0f172a` 改成「___」 6. 把中央分隔线颜色从 `#3b82f6` 改成「___」 请保留原本的弹性滑入动画逻辑，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/intro-split-screen.md",
+    "updatedAt": "2026-06-23T01:34:21.668Z"
+  }
+}

@@ -176,6 +176,83 @@
       "updatedAt": "2026-06-22T08:18:34.725Z"
     },
     {
+      "slug": "intro-cinematic-bars",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-cinematic-bars.md",
+      "assetPath": "remotion/intro-cinematic-bars",
+      "updatedAt": "2026-06-23T01:33:06.646Z"
+    },
+    {
+      "slug": "intro-cinematic-text",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-cinematic-text.md",
+      "assetPath": "remotion/intro-cinematic-text",
+      "updatedAt": "2026-06-23T01:33:27.130Z"
+    },
+    {
+      "slug": "intro-countdown-3",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-countdown-3.md",
+      "assetPath": "remotion/intro-countdown-3",
+      "updatedAt": "2026-06-23T01:33:35.244Z"
+    },
+    {
+      "slug": "intro-geometric",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-geometric.md",
+      "assetPath": "remotion/intro-geometric",
+      "updatedAt": "2026-06-23T01:33:42.809Z"
+    },
+    {
+      "slug": "intro-logo-morph",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-logo-morph.md",
+      "assetPath": "remotion/intro-logo-morph",
+      "updatedAt": "2026-06-23T01:33:50.894Z"
+    },
+    {
+      "slug": "intro-minimal-fade",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-minimal-fade.md",
+      "assetPath": "remotion/intro-minimal-fade",
+      "updatedAt": "2026-06-23T01:33:58.218Z"
+    },
+    {
+      "slug": "intro-news-broadcast",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-news-broadcast.md",
+      "assetPath": "remotion/intro-news-broadcast",
+      "updatedAt": "2026-06-23T01:34:06.274Z"
+    },
+    {
+      "slug": "intro-particle-burst",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-particle-burst.md",
+      "assetPath": "remotion/intro-particle-burst",
+      "updatedAt": "2026-06-23T01:34:14.155Z"
+    },
+    {
+      "slug": "intro-split-screen",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-split-screen.md",
+      "assetPath": "remotion/intro-split-screen",
+      "updatedAt": "2026-06-23T01:34:21.668Z"
+    },
+    {
+      "slug": "intro-typewriter",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-typewriter.md",
+      "assetPath": "remotion/intro-typewriter",
+      "updatedAt": "2026-06-23T01:34:29.675Z"
+    },
+    {
+      "slug": "intro-vhs-retro",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/intro-vhs-retro.md",
+      "assetPath": "remotion/intro-vhs-retro",
+      "updatedAt": "2026-06-23T01:34:37.510Z"
+    },
+    {
       "slug": "logo-badge-unfold",
       "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/logo-badge-unfold.md",
@@ -377,6 +454,55 @@
       "sourceFile": "/tmp/remotionlab/案例/map-route-progress.md",
       "assetPath": "remotion/map-route-progress",
       "updatedAt": "2026-06-22T09:47:04.151Z"
+    },
+    {
+      "slug": "outro-comment-cta",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/outro-comment-cta.md",
+      "assetPath": "remotion/outro-comment-cta",
+      "updatedAt": "2026-06-23T01:34:45.732Z"
+    },
+    {
+      "slug": "outro-credits-roll",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/outro-credits-roll.md",
+      "assetPath": "remotion/outro-credits-roll",
+      "updatedAt": "2026-06-23T01:34:54.329Z"
+    },
+    {
+      "slug": "outro-end-screen",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/outro-end-screen.md",
+      "assetPath": "remotion/outro-end-screen",
+      "updatedAt": "2026-06-23T01:35:01.914Z"
+    },
+    {
+      "slug": "outro-playlist",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/outro-playlist.md",
+      "assetPath": "remotion/outro-playlist",
+      "updatedAt": "2026-06-23T01:35:10.057Z"
+    },
+    {
+      "slug": "outro-social-links",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/outro-social-links.md",
+      "assetPath": "remotion/outro-social-links",
+      "updatedAt": "2026-06-23T01:35:17.966Z"
+    },
+    {
+      "slug": "outro-sponsor",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/outro-sponsor.md",
+      "assetPath": "remotion/outro-sponsor",
+      "updatedAt": "2026-06-23T01:35:25.679Z"
+    },
+    {
+      "slug": "outro-subscribe-cta",
+      "status": "validated",
+      "sourceFile": "/tmp/remotionlab/案例/outro-subscribe-cta.md",
+      "assetPath": "remotion/outro-subscribe-cta",
+      "updatedAt": "2026-06-23T01:35:33.359Z"
     },
     {
       "slug": "subtitle-cinematic",
