@@ -43,6 +43,7 @@ export const propSchema = z.object({
 export const assetManifestSchema = z.object({
   slug: slugSchema,
   displayName: z.string().min(1),
+  displayNameZh: z.string().min(1).optional(),
   runtime: z.literal('remotion'),
   sourceUrl: httpsUrlSchema,
   originalPreviewUrl: httpsUrlSchema,
@@ -73,6 +74,7 @@ export type AssetManifest = z.infer<typeof assetManifestSchema>
 export const draftAssetManifestSchema = z.object({
   slug: slugSchema,
   displayName: z.string().min(1),
+  displayNameZh: z.string().min(1).optional(),
   runtime: z.literal('remotion'),
   sourceUrl: httpsUrlSchema,
   originalPreviewUrl: sourceSiteMediaUrlSchema,

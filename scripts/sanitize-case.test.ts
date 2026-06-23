@@ -176,7 +176,12 @@ afterEach(async () => {
 describe('runSanitization', () => {
   it('rejects unresolved placeholders before marking the asset sanitized', async () => {
     const tempDir = await makeTempDir()
-    await writeWorkspace(tempDir, { manifestPrompt: 'Replace ___ later.' })
+    await writeWorkspace(tempDir)
+    await fs.writeFile(
+      path.join(tempDir, 'remotion', 'card-avatar', 'src', 'CardAvatar.tsx'),
+      'export const CardAvatar = () => { /* TODO: implement */ return null }\n',
+      'utf8',
+    )
 
     await expect(
       runSanitization({
