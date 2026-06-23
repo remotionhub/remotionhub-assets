@@ -1,0 +1,28 @@
+{
+  "slug": "social-comment-wall",
+  "displayName": "Social Comment Wall",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-comment-wall",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-comment-wall/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-comment-wall/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-comment-wall/4b4f672d6e48-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-comment-wall/c9bcf9bb26a6-thumb.jpg",
+  "entryPoint": "src/SocialCommentWall.tsx",
+  "compositionId": "SocialCommentWall",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的直播留言板组件（文件：CommentWall.tsx），请帮我做以下调整： 1. 把 COMMENTS 阵列中的使用者名称和留言文字改成「___」 2. 把每则留言的出现间隔从 15 帧改成「___」帧 3. 把留言容器宽度从 800px 改成「___」px 4. 把最多可见留言数从 6 则改成「___」则 5. 把留言卡片背景透明度从 0.04 改成「___」 6. 把背景颜色从 #0f0f0f 改成「___」 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/social-comment-wall.md",
+    "updatedAt": "2026-06-23T01:40:52.570Z"
+  }
+}

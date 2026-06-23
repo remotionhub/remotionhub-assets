@@ -1,0 +1,28 @@
+{
+  "slug": "social-yt-video",
+  "displayName": "Social Yt Video",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-yt-video",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-yt-video/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-yt-video/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-yt-video/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-yt-video/thumb.jpg",
+  "entryPoint": "src/SocialYtVideo.tsx",
+  "compositionId": "SocialYtVideo",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 YouTube 视频推荐卡组件（文件：YtVideoCard.tsx），请帮我做以下调整： 1. 把视频标题改成「___」（修改顶部 VIDEO-TITLE 常数，用 \\n 换行） 2. 把频道名称从 \"Remotion 中文频道\" 改成「___」（修改 CHANNEL-NAME 常数） 3. 把观看次数上限从 12000 改成「___」（修改 VIEWS-TARGET 常数） 4. 把视频时长标签从 \"10:42\" 改成「___」（修改 DURATION-LABEL 常数） 5. 把缩图渐层颜色改成「___」 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/social-yt-video.md",
+    "updatedAt": "2026-06-23T01:39:18.072Z"
+  }
+}

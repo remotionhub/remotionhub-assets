@@ -1,0 +1,28 @@
+{
+  "slug": "social-tiktok",
+  "displayName": "Social Tiktok",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-tiktok",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-tiktok/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-tiktok/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-tiktok/a8a82b9cb092-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-tiktok/7fde308d905a-thumb.jpg",
+  "entryPoint": "src/SocialTiktok.tsx",
+  "compositionId": "SocialTiktok",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 TikTok 视频贴文卡组件（文件：TiktokCard.tsx），请帮我做以下调整： 1. 把显示名称从 \"Remotion 创作者\" 改成「___」（修改顶部 DISPLAY-NAME 常数） 2. 把帐号 handle 从 \"@remotion-creator\" 改成「___」（修改 HANDLE 常数） 3. 把说明文字改成「___」（修改 DESCRIPTION 常数） 4. 把音乐名称从 \"原创音乐 - 创作者名称\" 改成「___」（修改 MUSIC-TEXT 常数） 5. 把按赞数上限从 23400 改成「___」（修改 LIKES-TARGET 常数） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/social-tiktok.md",
+    "updatedAt": "2026-06-23T01:43:11.691Z"
+  }
+}

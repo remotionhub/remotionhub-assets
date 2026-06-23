@@ -1,0 +1,28 @@
+{
+  "slug": "social-app-store",
+  "displayName": "Social App Store",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-app-store",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-app-store/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-app-store/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-app-store/e938f1255f04-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-app-store/ff86c1a0ec23-thumb.jpg",
+  "entryPoint": "src/SocialAppStore.tsx",
+  "compositionId": "SocialAppStore",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 App Store 上架卡片组件（文件：AppStoreCard.tsx），请帮我做以下调整： 1. 把 App 名称从 \"SuperApp\" 改成「___」（修改顶部 APP-NAME 常数） 2. 把开发者名称从 \"Dev Studio Inc.\" 改成「___」（修改顶部 DEVELOPER 常数） 3. 把评分从 \"4.8\" 改成「___」（修改顶部 RATING 常数） 4. 把评分人数从 \"12.3k 评分\" 改成「___」（修改顶部 RATING-COUNT 常数） 5. 把描述文字改成「___」（修改顶部 DESCRIPTION 常数） 6. 把版本号 VERSION 与大小 SIZE 改成你的应用程序资讯 7. 把 RATING-BARS 阵列中的 fill 比例改成符合你评分分布的数值（总和建议接近 1） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/social-app-store.md",
+    "updatedAt": "2026-06-23T01:40:43.541Z"
+  }
+}

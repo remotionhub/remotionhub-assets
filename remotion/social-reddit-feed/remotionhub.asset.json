@@ -1,0 +1,28 @@
+{
+  "slug": "social-reddit-feed",
+  "displayName": "Social Reddit Feed",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/social-reddit-feed",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-reddit-feed/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/social-reddit-feed/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-reddit-feed/ee0a729abda5-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/social-reddit-feed/4aba743a73ba-thumb.jpg",
+  "entryPoint": "src/SocialRedditFeed.tsx",
+  "compositionId": "SocialRedditFeed",
+  "durationFrames": 120,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的 Reddit 动态墙组件（文件：RedditFeed.tsx），请帮我做以下调整： 1. 把第 N 篇贴文的 Subreddit 从「___」改成「___」 2. 把第 N 篇贴文的标题改成「___」 3. 把第 N 篇贴文的投票数从「___」改成「___」 4. 调整卡片入场的交错延迟（目前每张间隔 18 帧） 请保留原本的动画效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/social-reddit-feed.md",
+    "updatedAt": "2026-06-23T01:42:26.939Z"
+  }
+}
