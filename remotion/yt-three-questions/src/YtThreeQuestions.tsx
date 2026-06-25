@@ -33,7 +33,7 @@ const cards = [
   },
 ];
 
-export const THREE_QUESTIONS_DURATION_FRAMES = 630;
+export const THREE_QUESTIONS_DURATION_FRAMES = 900;
 
 export const YtThreeQuestions: React.FC = () => {
   const frame = useCurrentFrame();
