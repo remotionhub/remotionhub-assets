@@ -17,7 +17,8 @@
     "sanitize": "tsx scripts/sanitize-case.ts",
     "validate": "tsx scripts/validate-case.ts",
     "manifest:validate": "tsx scripts/validate-case.ts --manifest-only",
-    "readme:generate": "tsx scripts/generate-readme.ts"
+    "readme:generate": "tsx scripts/generate-readme.ts",
+    "verify:yt-assets": "tsx scripts/verify-yt-assets.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.731.1",
