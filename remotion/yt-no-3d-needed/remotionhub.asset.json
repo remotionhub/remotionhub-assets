@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-no-3d-needed/c75e15e1a54f-thumb.jpg",
   "entryPoint": "src/YtNo3dNeeded.tsx",
   "compositionId": "YtNo3dNeeded",
-  "durationFrames": 120,
+  "durationFrames": 240,
   "fps": 30,
   "width": 1920,
   "height": 1080,

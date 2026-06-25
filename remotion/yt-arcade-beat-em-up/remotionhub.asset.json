@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-arcade-beat-em-up/769df2e0af20-thumb.jpg",
   "entryPoint": "src/YtArcadeBeatEmUp.tsx",
   "compositionId": "YtArcadeBeatEmUp",
-  "durationFrames": 120,
+  "durationFrames": 270,
   "fps": 30,
   "width": 1920,
   "height": 1080,

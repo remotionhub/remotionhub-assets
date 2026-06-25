@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-can-do-animation/bc762dcc59d1-thumb.jpg",
   "entryPoint": "src/YtCanDoAnimation.tsx",
   "compositionId": "YtCanDoAnimation",
-  "durationFrames": 120,
+  "durationFrames": 210,
   "fps": 30,
   "width": 1920,
   "height": 1080,

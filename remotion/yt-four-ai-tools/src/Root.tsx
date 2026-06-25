@@ -6,7 +6,7 @@ export function RemotionRoot() {
     <Composition
       id="YtFourAiTools"
       component={YtFourAiTools}
-      durationInFrames={120}
+      durationInFrames={270}
       fps={30}
       width={1920}
       height={1080}

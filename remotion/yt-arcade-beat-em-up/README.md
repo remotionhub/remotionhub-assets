@@ -19,7 +19,7 @@ export function RemotionRoot() {
     <Composition
       id="YtArcadeBeatEmUp"
       component={YtArcadeBeatEmUp}
-      durationInFrames={120}
+      durationInFrames={270}
       fps={30}
       width={1920}
       height={1080}

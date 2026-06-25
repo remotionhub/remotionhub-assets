@@ -6,7 +6,7 @@ export function RemotionRoot() {
     <Composition
       id="YtAiUseCases"
       component={YtAiUseCases}
-      durationInFrames={120}
+      durationInFrames={530}
       fps={30}
       width={1920}
       height={1080}

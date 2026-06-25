@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-execute-validate/96cc910cfb34-thumb.jpg",
   "entryPoint": "src/YtExecuteValidate.tsx",
   "compositionId": "YtExecuteValidate",
-  "durationFrames": 120,
+  "durationFrames": 150,
   "fps": 30,
   "width": 1920,
   "height": 1080,

@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-animation-suffice/26bab50553a2-thumb.jpg",
   "entryPoint": "src/YtAnimationSuffice.tsx",
   "compositionId": "YtAnimationSuffice",
-  "durationFrames": 120,
+  "durationFrames": 240,
   "fps": 30,
   "width": 1920,
   "height": 1080,

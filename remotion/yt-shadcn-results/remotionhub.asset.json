@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-shadcn-results/6954f9afc221-thumb.jpg",
   "entryPoint": "src/YtShadcnResults.tsx",
   "compositionId": "YtShadcnResults",
-  "durationFrames": 120,
+  "durationFrames": 240,
   "fps": 30,
   "width": 1920,
   "height": 1080,
