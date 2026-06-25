@@ -11,6 +11,7 @@ import {
 } from './lib/assetManifest'
 import {
   buildObjectKey,
+  buildRuntimeObjectKey,
   createUploadTargetFromEnv,
   downloadMedia,
   isSourceSiteMediaUrl,
@@ -18,6 +19,11 @@ import {
   sha256,
   uploadMediaObject,
 } from './lib/media'
+import {
+  generateRuntimeAssetsModule,
+  parseStaticFileCalls,
+  type RuntimeAssetEntry,
+} from './lib/runtimeAssets'
 
 const INVENTORY_PATH = path.join('manifest', 'remotionlab-showcase.json')
 
@@ -40,6 +46,12 @@ function contentTypeFor(filename: string) {
   }
   if (filename.endsWith('.png')) {
     return 'image/png'
+  }
+  if (filename.endsWith('.mp3')) {
+    return 'audio/mpeg'
+  }
+  if (filename.endsWith('.wav')) {
+    return 'audio/wav'
   }
 
   return 'application/octet-stream'
@@ -158,6 +170,75 @@ async function mirrorOne(args: {
   return { sourceUrl: args.url, targetUrl, hash, byteSize: body.byteLength }
 }
 
+async function mirrorRuntimeMedia(args: {
+  cwd: string
+  slug: string
+  publicBaseUrl: string
+  dryRun: boolean
+  uploadTarget: MediaUploadTarget | null
+}): Promise<RuntimeAssetEntry[]> {
+  const srcDir = path.join(args.cwd, 'remotion', args.slug, 'src')
+  let sourceFiles: string[]
+  try {
+    const entries = await fs.readdir(srcDir, { withFileTypes: true })
+    sourceFiles = entries
+      .filter((e) => e.isFile() && /\.(tsx?|jsx?)$/.test(e.name))
+      .map((e) => path.join(srcDir, e.name))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      return []
+    }
+    throw error
+  }
+
+  const seen = new Map<string, RuntimeAssetEntry>()
+  const results: RuntimeAssetEntry[] = []
+
+  for (const sourceFile of sourceFiles) {
+    let calls: ReturnType<typeof parseStaticFileCalls>
+    try {
+      calls = parseStaticFileCalls(sourceFile)
+    } catch {
+      continue
+    }
+
+    for (const call of calls) {
+      if (seen.has(call.arg)) {
+        results.push(seen.get(call.arg)!)
+        continue
+      }
+
+      const filePath = path.join(args.cwd, 'public', call.arg)
+      const body = await fs.readFile(filePath)
+      const hash = sha256(body)
+      const key = buildRuntimeObjectKey(hash)
+      const contentType = contentTypeFor(path.basename(call.arg))
+      const targetUrl = `${args.publicBaseUrl.replace(/\/$/, '')}/${key}`
+
+      if (args.uploadTarget) {
+        await uploadMediaObject({
+          target: args.uploadTarget,
+          key,
+          body,
+          contentType,
+        })
+      }
+
+      const entry: RuntimeAssetEntry = {
+        sourcePath: call.arg,
+        url: targetUrl,
+        sha256: hash,
+        byteSize: body.byteLength,
+        contentType,
+      }
+      seen.set(call.arg, entry)
+      results.push(entry)
+    }
+  }
+
+  return results
+}
+
 export async function runMediaMirror(options?: {
   cwd?: string
   slug?: string
@@ -215,10 +296,24 @@ export async function runMediaMirror(options?: {
     ? 'extracted'
     : 'media-mirrored'
 
+  const runtimeEntries = await mirrorRuntimeMedia({
+    cwd,
+    slug,
+    publicBaseUrl,
+    dryRun,
+    uploadTarget,
+  })
+
+  if (runtimeEntries.length > 0 && !dryRun) {
+    const runtimeModulePath = path.join(cwd, 'remotion', slug, 'src', 'runtime-assets.ts')
+    await fs.writeFile(runtimeModulePath, generateRuntimeAssetsModule(runtimeEntries), 'utf8')
+  }
+
   const nextManifest: AssetManifest = {
     ...baseManifest,
     previewUrl: preview.targetUrl,
     thumbnailUrl: thumbnail.targetUrl,
+    runtimeAssets: runtimeEntries,
     migration: {
       sourceFile: baseManifest.migration.sourceFile,
       status: migrationStatus,
@@ -249,7 +344,7 @@ export async function runMediaMirror(options?: {
     await writeInventory(inventoryPath, nextInventory)
   }
 
-  return { slug, preview, thumbnail, dryRun, finalPath }
+  return { slug, preview, thumbnail, runtimeEntries, dryRun, finalPath }
 }
 
 async function main() {
