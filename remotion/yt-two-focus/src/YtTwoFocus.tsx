@@ -26,6 +26,8 @@ const cards = [
   },
 ];
 
+export const TWO_FOCUS_DURATION_FRAMES = 320;
+
 export const YtTwoFocus: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

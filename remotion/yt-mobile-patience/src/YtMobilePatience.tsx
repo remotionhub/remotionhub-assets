@@ -116,6 +116,8 @@ const MetricCard: React.FC<{ icon: React.ReactNode; label: string; delay: number
   );
 };
 
+export const MOBILE_PATIENCE_DURATION_FRAMES = 240;
+
 export const YtMobilePatience: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

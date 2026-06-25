@@ -49,6 +49,8 @@ const renderIcon = (icon: IconType, cx: number, cy: number, s: number) => {
   }
 };
 
+export const PRODUCT_OVERFLOW_DURATION_FRAMES = 150;
+
 export const YtProductOverflow: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

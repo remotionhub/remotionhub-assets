@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtFirstVersion, ytFirstVersionDefaultProps } from './YtFirstVersion'
+import { YtFirstVersion, ytFirstVersionDefaultProps, FIRST_VERSION_DURATION_FRAMES } from './YtFirstVersion'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtFirstVersion"
       component={YtFirstVersion}
-      durationInFrames={120}
+      durationInFrames={FIRST_VERSION_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

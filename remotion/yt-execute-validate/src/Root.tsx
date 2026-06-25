@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtExecuteValidate, ytExecuteValidateDefaultProps } from './YtExecuteValidate'
+import { YtExecuteValidate, ytExecuteValidateDefaultProps, EXECUTE_VALIDATE_DURATION_FRAMES } from './YtExecuteValidate'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtExecuteValidate"
       component={YtExecuteValidate}
-      durationInFrames={150}
+      durationInFrames={EXECUTE_VALIDATE_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

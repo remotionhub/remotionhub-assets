@@ -58,6 +58,8 @@ const SiteThumbnail: React.FC<{ accent: string; label: string; frame: number }> 
   );
 };
 
+export const SHADCN_RESULTS_DURATION_FRAMES = 240;
+
 export const YtShadcnResults: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

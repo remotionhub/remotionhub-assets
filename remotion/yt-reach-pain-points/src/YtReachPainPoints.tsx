@@ -24,6 +24,8 @@ const Lightning: React.FC<{ x: number; y: number; opacity: number }> = ({ x, y, 
   />
 );
 
+export const REACH_PAIN_POINTS_DURATION_FRAMES = 180;
+
 export const YtReachPainPoints: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

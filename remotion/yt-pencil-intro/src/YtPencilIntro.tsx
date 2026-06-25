@@ -117,6 +117,8 @@ const sparkles = [
   { x: 110, y: 80, size: 24, delay: 32 },
 ];
 
+export const PENCIL_INTRO_DURATION_FRAMES = 120;
+
 export const YtPencilIntro: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

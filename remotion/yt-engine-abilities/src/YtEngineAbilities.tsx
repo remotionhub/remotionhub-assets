@@ -163,6 +163,8 @@ const AbilityCard: React.FC<{ children: React.ReactNode; label: string; progress
   );
 };
 
+export const ENGINE_ABILITIES_DURATION_FRAMES = 270;
+
 export const YtEngineAbilities: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

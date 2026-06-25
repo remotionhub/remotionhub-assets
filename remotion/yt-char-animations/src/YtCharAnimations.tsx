@@ -25,6 +25,8 @@ const ACTIONS = [
 
 const ACTION_COLORS = ["#4DA3FF", "#FFB547", "#2ECC71", "#E74C3C"];
 
+export const CHAR_ANIMATIONS_DURATION_FRAMES = 240;
+
 export const YtCharAnimations: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

@@ -53,6 +53,8 @@ const COMPANIES = [
   },
 ];
 
+export const REJECTED_IDEAS_DURATION_FRAMES = 480;
+
 export const YtRejectedIdeas: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

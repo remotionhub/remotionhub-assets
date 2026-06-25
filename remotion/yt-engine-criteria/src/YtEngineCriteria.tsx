@@ -92,6 +92,8 @@ const CriteriaCard: React.FC<{ number: number; text: string; highlight: string; 
   );
 };
 
+export const ENGINE_CRITERIA_DURATION_FRAMES = 240;
+
 export const YtEngineCriteria: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

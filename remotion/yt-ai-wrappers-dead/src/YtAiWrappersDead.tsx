@@ -11,6 +11,8 @@ const fonts = { main: "'Noto Sans TC', 'Inter', sans-serif" };
 
 const seeded = (seed: number) => { const x = Math.sin(seed * 9301 + 49297) * 233280; return x - Math.floor(x); };
 
+export const AI_WRAPPERS_DEAD_DURATION_FRAMES = 240;
+
 export const YtAiWrappersDead: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

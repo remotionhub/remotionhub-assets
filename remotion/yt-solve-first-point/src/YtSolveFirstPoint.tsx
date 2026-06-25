@@ -9,6 +9,8 @@ import {
 
 const fonts = { main: "'Noto Sans TC', 'Inter', sans-serif" };
 
+export const SOLVE_FIRST_POINT_DURATION_FRAMES = 120;
+
 export const YtSolveFirstPoint: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

@@ -65,6 +65,8 @@ const items = [
   },
 ];
 
+export const EXPERIMENT_CONCLUSION_DURATION_FRAMES = 470;
+
 export const YtExperimentConclusion: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

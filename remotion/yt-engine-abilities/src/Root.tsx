@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtEngineAbilities, ytEngineAbilitiesDefaultProps } from './YtEngineAbilities'
+import { YtEngineAbilities, ytEngineAbilitiesDefaultProps, ENGINE_ABILITIES_DURATION_FRAMES } from './YtEngineAbilities'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtEngineAbilities"
       component={YtEngineAbilities}
-      durationInFrames={270}
+      durationInFrames={ENGINE_ABILITIES_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

@@ -7,6 +7,8 @@ import {
   spring,
 } from "remotion";
 
+export const DISTRIBUTION_FIRST_DURATION_FRAMES = 180;
+
 export const YtDistributionFirst: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

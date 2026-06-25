@@ -127,6 +127,8 @@ const FlowDiagram: React.FC<{ frame: number; fps: number }> = ({ frame, fps }) =
   );
 };
 
+export const ASK_AI_TIP_DURATION_FRAMES = 240;
+
 export const YtAskAiTip: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

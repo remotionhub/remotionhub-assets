@@ -28,6 +28,8 @@ const ENEMIES = [
   { x: 950, color: "#C0392B", size: 28, delay: 165 },
 ];
 
+export const ARCADE_BEAT_EM_UP_DURATION_FRAMES = 270;
+
 export const YtArcadeBeatEmUp: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

@@ -18,6 +18,8 @@ const colors = {
 
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
+export const NOT_JUST_EFFECTS_DURATION_FRAMES = 210;
+
 export const YtNotJustEffects: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

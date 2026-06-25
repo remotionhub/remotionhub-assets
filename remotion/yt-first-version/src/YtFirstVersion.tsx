@@ -18,6 +18,8 @@ const colors = {
 
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
+export const FIRST_VERSION_DURATION_FRAMES = 120;
+
 export const YtFirstVersion: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

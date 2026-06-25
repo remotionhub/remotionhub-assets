@@ -80,6 +80,8 @@ const items = [
   },
 ];
 
+export const AI_USE_CASES_DURATION_FRAMES = 530;
+
 export const YtAiUseCases: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

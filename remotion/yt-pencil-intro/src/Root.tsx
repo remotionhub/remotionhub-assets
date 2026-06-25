@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtPencilIntro, ytPencilIntroDefaultProps } from './YtPencilIntro'
+import { YtPencilIntro, ytPencilIntroDefaultProps, PENCIL_INTRO_DURATION_FRAMES } from './YtPencilIntro'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtPencilIntro"
       component={YtPencilIntro}
-      durationInFrames={120}
+      durationInFrames={PENCIL_INTRO_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}
