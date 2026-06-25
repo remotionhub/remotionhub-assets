@@ -393,7 +393,7 @@ export async function runExtraction(options: ExtractionOptions = {}) {
     thumbnailUrl: parsed.thumbnailUrl,
     entryPoint: `src/${componentName}.tsx`,
     compositionId: componentName,
-    durationFrames: 120,
+    durationFrames: 120, // Draft default; corrected during validation
     fps: 30,
     width: 1920,
     height: 1080,
