@@ -120,6 +120,64 @@ describe('asset manifest schema', () => {
     ).toThrow(/RemotionHub-controlled/)
   })
 
+  it('defaults runtimeAssets to an empty array', () => {
+    const parsed = assetManifestSchema.parse(baseManifest)
+    expect(parsed.runtimeAssets).toEqual([])
+  })
+
+  it('accepts valid runtimeAssets entries', () => {
+    const parsed = assetManifestSchema.parse({
+      ...baseManifest,
+      runtimeAssets: [
+        {
+          sourcePath: 'public/overlay.png',
+          url: 'https://assets.remotionhub.ai/showcase/card-avatar/overlay.png',
+          sha256:
+            'a'.repeat(64),
+          byteSize: 4096,
+          contentType: 'image/png',
+        },
+      ],
+    })
+
+    expect(parsed.runtimeAssets).toHaveLength(1)
+    expect(parsed.runtimeAssets[0].sourcePath).toBe('public/overlay.png')
+  })
+
+  it('rejects runtimeAssets with invalid SHA-256', () => {
+    expect(() =>
+      assetManifestSchema.parse({
+        ...baseManifest,
+        runtimeAssets: [
+          {
+            sourcePath: 'public/overlay.png',
+            url: 'https://assets.remotionhub.ai/showcase/card-avatar/overlay.png',
+            sha256: 'not-a-valid-sha256',
+            byteSize: 4096,
+            contentType: 'image/png',
+          },
+        ],
+      }),
+    ).toThrow()
+  })
+
+  it('rejects runtimeAssets with non-RemotionHub URLs', () => {
+    expect(() =>
+      assetManifestSchema.parse({
+        ...baseManifest,
+        runtimeAssets: [
+          {
+            sourcePath: 'public/overlay.png',
+            url: 'https://example.com/overlay.png',
+            sha256: 'a'.repeat(64),
+            byteSize: 4096,
+            contentType: 'image/png',
+          },
+        ],
+      }),
+    ).toThrow(/RemotionHub-controlled/)
+  })
+
   it('rejects third-party thumbnail media URLs', () => {
     expect(() =>
       assetManifestSchema.parse({
