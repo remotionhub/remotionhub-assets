@@ -4,10 +4,10 @@ import {
   Sequence,
   interpolate,
   spring,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const colors = {
   background: "#0B0F17",
@@ -21,10 +21,10 @@ const colors = {
 export const FROM_SCRATCH_DURATION_FRAMES = 270;
 
 const SFX = {
-  woosh: staticFile("audio/connection/woosh.wav"),
-  softImpact: staticFile("audio/connection/soft-impact.wav"),
-  softClick: staticFile("audio/connection/soft-click.wav"),
-  tinyPop: staticFile("audio/connection/tiny-pop.mp3"),
+  woosh: runtimeAsset("audio/connection/woosh.wav"),
+  softImpact: runtimeAsset("audio/connection/soft-impact.wav"),
+  softClick: runtimeAsset("audio/connection/soft-click.wav"),
+  tinyPop: runtimeAsset("audio/connection/tiny-pop.mp3"),
 };
 
 const EX = {

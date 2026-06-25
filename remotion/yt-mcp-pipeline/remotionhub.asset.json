@@ -21,9 +21,25 @@
   "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene12-McpPipeline.tsx），请帮我做以下调整： 1. 修改 `DEFAULT-STEPS` 阵列（目前是 [\"Commit\", \"Push\", \"PR\", \"Deploy\", \"Ready\"]）为你自己的流程步骤名称。 2. 调整各步骤完成的时间点（`STEPS.COMMIT-DONE` 等常数，单位：帧）。 3. 更换底部右侧的 Evidence Label 文字（目前是 \"GitHub PR\" 与 \"Vercel Deploy\"）。 4. 修改 HUD 的颜色方案（完成色 `#00D4AA`、进行中色 `#4DA3FF`）。 请保留原本的 HUD 滑入动画与步骤切换效果，只修改我指定的部分，然后把完整的修改后代码给我。",
   "propsSchema": [],
   "extraDependencies": [],
+  "runtimeAssets": [
+    {
+      "sourcePath": "audio/connection/tick.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    },
+    {
+      "sourcePath": "audio/connection/ding.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    }
+  ],
   "migration": {
-    "status": "validated",
+    "status": "media-mirrored",
     "sourceFile": "/tmp/remotionlab/案例/yt-mcp-pipeline.md",
-    "updatedAt": "2026-06-23T12:33:41.856Z"
+    "updatedAt": "2026-06-25T06:54:07.488Z"
   }
 }

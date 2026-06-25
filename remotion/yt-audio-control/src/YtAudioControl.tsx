@@ -7,8 +7,8 @@ import {
   interpolate,
   spring,
   Audio,
-  staticFile,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const colors = {
   background: "#0B0F17",
@@ -20,14 +20,14 @@ const colors = {
 };
 
 const AUDIO = {
-  tick: staticFile("audio/connection/tick.wav"),
-  whoosh: staticFile("audio/connection/woosh.wav"),
-  whooshOut: staticFile("audio/connection/whoosh-out.mp3"),
-  ding: staticFile("audio/connection/ding.mp3"),
-  microRiser: staticFile("audio/connection/micro-riser.mp3"),
-  tinyPop: staticFile("audio/connection/tiny-pop.mp3"),
-  softClick: staticFile("audio/connection/soft-click.wav"),
-  satisfyingFill: staticFile("audio/connection/satisfying-fill.wav"),
+  tick: runtimeAsset("audio/connection/tick.wav"),
+  whoosh: runtimeAsset("audio/connection/woosh.wav"),
+  whooshOut: runtimeAsset("audio/connection/whoosh-out.mp3"),
+  ding: runtimeAsset("audio/connection/ding.mp3"),
+  microRiser: runtimeAsset("audio/connection/micro-riser.mp3"),
+  tinyPop: runtimeAsset("audio/connection/tiny-pop.mp3"),
+  softClick: runtimeAsset("audio/connection/soft-click.wav"),
+  satisfyingFill: runtimeAsset("audio/connection/satisfying-fill.wav"),
 };
 
 const SliderControl: React.FC<{

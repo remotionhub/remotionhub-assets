@@ -7,8 +7,8 @@ import {
   interpolate,
   spring,
   Audio,
-  staticFile,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const colors = {
   background: "#0A0E14",
@@ -24,9 +24,9 @@ const colors = {
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
 const AUDIO = {
-  whooshIn: staticFile("audio/connection/woosh.wav"),
-  thumpSoft: staticFile("audio/connection/soft-impact.wav"),
-  tick: staticFile("audio/connection/tick.wav"),
+  whooshIn: runtimeAsset("audio/connection/woosh.wav"),
+  thumpSoft: runtimeAsset("audio/connection/soft-impact.wav"),
+  tick: runtimeAsset("audio/connection/tick.wav"),
 };
 
 export const LINE_PHASE_INTRO_DURATION_FRAMES = 180;

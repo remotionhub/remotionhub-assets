@@ -21,9 +21,18 @@
   "prompt": "我有一个用 Remotion 写的场景组件（文件：PencilIntroScene.tsx），请帮我做以下调整： 1. 将白色卡片的图片来源从 `pencil-logo.jpeg` 改成其他静态图片（例如我的品牌 Logo） 2. 调整卡片尺寸（目前是 200×200）与圆角大小（目前是 32px） 3. 修改 sparkle 的颜色与数量（目前使用 accent 色，共 4 个） 4. 调整光晕强度（glowOp 的基准值目前为 0.12） 请保留原本的 spring 弹跳动画与闪光特效，只修改我指定的部分，然后把完整的修改后代码给我。",
   "propsSchema": [],
   "extraDependencies": [],
+  "runtimeAssets": [
+    {
+      "sourcePath": "pencil-logo.jpeg",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/07f07701f273c4717cf6f857eda793985a79cd99faeabb824278c854aa9e2990",
+      "sha256": "07f07701f273c4717cf6f857eda793985a79cd99faeabb824278c854aa9e2990",
+      "byteSize": 148774,
+      "contentType": "image/jpeg"
+    }
+  ],
   "migration": {
-    "status": "validated",
+    "status": "media-mirrored",
     "sourceFile": "/tmp/remotionlab/案例/yt-pencil-intro.md",
-    "updatedAt": "2026-06-23T12:35:17.013Z"
+    "updatedAt": "2026-06-25T06:54:09.474Z"
   }
 }

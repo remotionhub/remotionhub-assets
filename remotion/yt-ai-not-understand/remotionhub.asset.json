@@ -21,9 +21,53 @@
   "prompt": "我有一个用 Remotion 写的场景组件（文件：NotUnderstandScene.tsx），请帮我做以下调整： 1. 修改顶部说明文字（AnimatedTitle 中的 text 字符串） 2. 调整机器人与图像图标的出现时间（ROBOT-DELAY、IMAGE-DELAY，目前为第 60、90 帧） 3. 修改底部副标题文字（目前为「它看到的是像素，不是语意」） 4. 调整散落问号的数量与位置（scatterPositions 阵列） 请保留逐字动画与流光连线效果，只修改我指定的部分，然后把完整的修改后代码给我。",
   "propsSchema": [],
   "extraDependencies": [],
+  "runtimeAssets": [
+    {
+      "sourcePath": "audio/connection/woosh.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    },
+    {
+      "sourcePath": "audio/connection/soft-impact.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    },
+    {
+      "sourcePath": "audio/connection/soft-click.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    },
+    {
+      "sourcePath": "audio/connection/tiny-pop.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "sourcePath": "audio/connection/micro-riser.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "sourcePath": "audio/connection/ding.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    }
+  ],
   "migration": {
-    "status": "validated",
+    "status": "media-mirrored",
     "sourceFile": "/tmp/remotionlab/案例/yt-ai-not-understand.md",
-    "updatedAt": "2026-06-23T12:23:25.409Z"
+    "updatedAt": "2026-06-25T06:53:20.916Z"
   }
 }

@@ -21,9 +21,25 @@
   "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene09-McpChapterCard.tsx），请帮我做以下调整： 1. 修改左侧标签（目前是 \"PHASE 3\"）与主标题（目前是 \"MCP\"）的文字。 2. 更换右侧两个平台图标（目前是 GitHub 与 Vercel），改成你想要的服务图标。 3. 调整 accent 色（目前是 `#00D4AA`）与 accentSecondary（目前是 `#4DA3FF`）。 4. 修改动画持续时长（目前 75 帧 / 2.5 秒）。 请保留原本的插头描边动画与连接线效果，只修改我指定的部分，然后把完整的修改后代码给我。",
   "propsSchema": [],
   "extraDependencies": [],
+  "runtimeAssets": [
+    {
+      "sourcePath": "audio/connection/woosh.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    },
+    {
+      "sourcePath": "audio/connection/soft-impact.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    }
+  ],
   "migration": {
-    "status": "validated",
+    "status": "media-mirrored",
     "sourceFile": "/tmp/remotionlab/案例/yt-mcp-chapter-card.md",
-    "updatedAt": "2026-06-23T12:33:33.485Z"
+    "updatedAt": "2026-06-25T06:54:05.583Z"
   }
 }

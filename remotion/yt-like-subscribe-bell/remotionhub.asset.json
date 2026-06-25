@@ -21,9 +21,32 @@
   "prompt": "我有一个用 Remotion 写的场景组件（文件：LikeSubscribeBellScene.tsx），请帮我做以下调整： 1. 修改频道名称（目前为「Debug 土拨鼠」） 2. 调整三个互动事件的触发时间（likeStart、subStart、bellStart，目前分别为第 90、150、210 帧） 3. 替换频道头像图片路径（目前使用 `avatar-2.png`） 4. 调整订阅按钮的颜色（目前为 `#CC0000`） 请保留原本的波纹、弹跳与摇铃动画，只修改我指定的部分，然后把完整的修改后代码给我。",
   "propsSchema": [],
   "extraDependencies": [],
+  "runtimeAssets": [
+    {
+      "sourcePath": "click.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "sourcePath": "bell-notification.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "sourcePath": "avatar-2.png",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00",
+      "sha256": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00",
+      "byteSize": 5347,
+      "contentType": "image/png"
+    }
+  ],
   "migration": {
-    "status": "validated",
+    "status": "media-mirrored",
     "sourceFile": "/tmp/remotionlab/案例/yt-like-subscribe-bell.md",
-    "updatedAt": "2026-06-23T12:32:56.073Z"
+    "updatedAt": "2026-06-25T06:53:54.486Z"
   }
 }

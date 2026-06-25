@@ -4,10 +4,10 @@ import {
   Sequence,
   interpolate,
   spring,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const colors = {
   background: "#0B0F17",
@@ -21,9 +21,9 @@ const colors = {
 export const SVG_CARDS_DURATION_FRAMES = 270;
 
 const SFX = {
-  woosh: staticFile("audio/connection/woosh.wav"),
-  softImpact: staticFile("audio/connection/soft-impact.wav"),
-  softClick: staticFile("audio/connection/soft-click.wav"),
+  woosh: runtimeAsset("audio/connection/woosh.wav"),
+  softImpact: runtimeAsset("audio/connection/soft-impact.wav"),
+  softClick: runtimeAsset("audio/connection/soft-click.wav"),
 };
 
 const SvgTitle: React.FC<{ frame: number; fps: number }> = ({ frame, fps }) => {

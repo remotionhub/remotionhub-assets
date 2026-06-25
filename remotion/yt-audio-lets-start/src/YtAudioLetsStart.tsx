@@ -7,8 +7,8 @@ import {
   interpolate,
   spring,
   Audio,
-  staticFile,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const GREEN = "#00D4AA";
 const BLUE = "#4DA3FF";
@@ -17,12 +17,12 @@ const FONT_FAMILY = "'Noto Sans TC', 'Inter', sans-serif";
 const BACKGROUND = "#0B0F17";
 
 const AUDIO = {
-  softClick: staticFile("audio/connection/soft-click.wav"),
-  whooshOut: staticFile("audio/connection/whoosh-out.mp3"),
-  ding: staticFile("audio/connection/ding.mp3"),
-  microRiser: staticFile("audio/connection/micro-riser.mp3"),
-  softImpact: staticFile("audio/connection/soft-impact.wav"),
-  satisfyingFill: staticFile("audio/connection/satisfying-fill.wav"),
+  softClick: runtimeAsset("audio/connection/soft-click.wav"),
+  whooshOut: runtimeAsset("audio/connection/whoosh-out.mp3"),
+  ding: runtimeAsset("audio/connection/ding.mp3"),
+  microRiser: runtimeAsset("audio/connection/micro-riser.mp3"),
+  softImpact: runtimeAsset("audio/connection/soft-impact.wav"),
+  satisfyingFill: runtimeAsset("audio/connection/satisfying-fill.wav"),
 };
 
 const PlayIcon: React.FC<{ size?: number; strokeProgress?: number; fillOpacity?: number; glowIntensity?: number }> = ({

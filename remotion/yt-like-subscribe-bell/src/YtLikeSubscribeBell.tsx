@@ -5,10 +5,10 @@ import {
   Sequence,
   interpolate,
   spring,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const colors = {
   background: "#0B0F17",
@@ -73,8 +73,8 @@ export const YtLikeSubscribeBell: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const clickSrc = staticFile("click.mp3");
-  const bellSrc = staticFile("bell-notification.mp3");
+  const clickSrc = runtimeAsset("click.mp3");
+  const bellSrc = runtimeAsset("bell-notification.mp3");
 
   const EX = {
     extrapolateRight: "clamp" as const,
@@ -196,7 +196,7 @@ export const YtLikeSubscribeBell: React.FC = () => {
             }}
           >
             <Img
-              src={staticFile("avatar-2.png")}
+              src={runtimeAsset("avatar-2.png")}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
