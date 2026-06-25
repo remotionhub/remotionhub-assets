@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtMcpPipeline, ytMcpPipelineDefaultProps } from './YtMcpPipeline'
+import { YtMcpPipeline, ytMcpPipelineDefaultProps , MCP_PIPELINE_DURATION_FRAMES } from './YtMcpPipeline'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtMcpPipeline"
       component={YtMcpPipeline}
-      durationInFrames={600}
+      durationInFrames={MCP_PIPELINE_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

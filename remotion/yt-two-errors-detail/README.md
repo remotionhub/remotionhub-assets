@@ -19,7 +19,7 @@ export function RemotionRoot() {
     <Composition
       id="YtTwoErrorsDetail"
       component={YtTwoErrorsDetail}
-      durationInFrames={210}
+      durationInFrames={300}
       fps={30}
       width={1920}
       height={1080}

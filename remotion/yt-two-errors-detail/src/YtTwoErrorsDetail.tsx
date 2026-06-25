@@ -9,6 +9,8 @@ import {
 
 const fonts = { main: "'Noto Sans TC', 'Inter', sans-serif" };
 
+export const TWO_ERRORS_DETAIL_DURATION_FRAMES = 300;
+
 export const YtTwoErrorsDetail: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

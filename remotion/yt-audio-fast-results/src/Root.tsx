@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtAudioFastResults, ytAudioFastResultsDefaultProps } from './YtAudioFastResults'
+import { YtAudioFastResults, ytAudioFastResultsDefaultProps , FAST_RESULTS_DURATION_FRAMES } from './YtAudioFastResults'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtAudioFastResults"
       component={YtAudioFastResults}
-      durationInFrames={240}
+      durationInFrames={FAST_RESULTS_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

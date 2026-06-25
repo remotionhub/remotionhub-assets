@@ -54,6 +54,8 @@ function lerpColor(c1: [number, number, number], c2: [number, number, number], t
   return `rgb(${r},${g},${b})`;
 }
 
+export const ZERO_REVENUE_DURATION_FRAMES = 150;
+
 export const YtZeroRevenue: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

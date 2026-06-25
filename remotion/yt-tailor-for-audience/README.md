@@ -19,7 +19,7 @@ export function RemotionRoot() {
     <Composition
       id="YtTailorForAudience"
       component={YtTailorForAudience}
-      durationInFrames={210}
+      durationInFrames={180}
       fps={30}
       width={1920}
       height={1080}
