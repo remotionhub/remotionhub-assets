@@ -16,6 +16,7 @@ import {
   downloadMedia,
   isSourceSiteMediaUrl,
   type MediaUploadTarget,
+  objectExists,
   sha256,
   uploadMediaObject,
 } from './lib/media'
@@ -159,12 +160,17 @@ async function mirrorOne(args: {
   const targetUrl = `${args.publicBaseUrl.replace(/\/$/, '')}/${key}`
 
   if (args.uploadTarget) {
-    await uploadMediaObject({
-      target: args.uploadTarget,
-      key,
-      body,
-      contentType: contentTypeFor(filename),
-    })
+    const exists = await objectExists(args.uploadTarget, key)
+    if (exists) {
+      console.log(`Object already exists, skipping: ${key}`)
+    } else {
+      await uploadMediaObject({
+        target: args.uploadTarget,
+        key,
+        body,
+        contentType: contentTypeFor(filename),
+      })
+    }
   }
 
   return { sourceUrl: args.url, targetUrl, hash, byteSize: body.byteLength }
@@ -219,12 +225,17 @@ async function mirrorRuntimeMedia(args: {
       const targetUrl = `${args.publicBaseUrl.replace(/\/$/, '')}/${key}`
 
       if (args.uploadTarget) {
-        await uploadMediaObject({
-          target: args.uploadTarget,
-          key,
-          body,
-          contentType,
-        })
+        const exists = await objectExists(args.uploadTarget, key)
+        if (exists) {
+          console.log(`Object already exists, skipping: ${key}`)
+        } else {
+          await uploadMediaObject({
+            target: args.uploadTarget,
+            key,
+            body,
+            contentType,
+          })
+        }
       }
 
       const entry: RuntimeAssetEntry = {
