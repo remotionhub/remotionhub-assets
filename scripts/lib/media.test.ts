@@ -5,6 +5,7 @@ import {
   downloadMedia,
   isSourceSiteMediaUrl,
   objectExists,
+  type R2MediaClient,
   sha256,
   uploadMediaObject,
 } from './media'
@@ -42,11 +43,12 @@ describe('media helpers', () => {
 
   it('uploads to OSS without object ACL by default', async () => {
     const put = vi.fn(async () => undefined)
+    const head = vi.fn(async () => { throw new Error('not found') })
 
     await uploadMediaObject({
       target: {
         provider: 'oss',
-        client: { put },
+        client: { put, head },
       },
       key: 'showcase/card-avatar/preview.mp4',
       body: Buffer.from('preview-media'),
@@ -68,6 +70,7 @@ describe('media helpers', () => {
   it('sets OSS object ACL when explicitly configured', async () => {
     const originalEnv = { ...process.env }
     const put = vi.fn(async () => undefined)
+    const head = vi.fn(async () => { throw new Error('not found') })
 
     try {
       process.env.OSS_OBJECT_ACL = 'public-read'
@@ -75,7 +78,7 @@ describe('media helpers', () => {
       await uploadMediaObject({
         target: {
           provider: 'oss',
-          client: { put },
+          client: { put, head },
         },
         key: 'showcase/card-avatar/preview.mp4',
         body: Buffer.from('preview-media'),
@@ -142,7 +145,7 @@ describe('media helpers', () => {
 
   it('returns true when R2 HeadObject succeeds', async () => {
     const send = vi.fn(async () => ({ ContentLength: 1024 }))
-    const target = { provider: 'r2' as const, client: { send }, bucket: 'assets' }
+    const target = { provider: 'r2' as const, client: { send } as unknown as R2MediaClient, bucket: 'assets' }
 
     await expect(objectExists(target, 'runtime/sha256/abc')).resolves.toBe(true)
   })
@@ -151,7 +154,7 @@ describe('media helpers', () => {
     const send = vi.fn(async () => {
       throw Object.assign(new Error('NotFound'), { name: 'NotFound' })
     })
-    const target = { provider: 'r2' as const, client: { send }, bucket: 'assets' }
+    const target = { provider: 'r2' as const, client: { send } as unknown as R2MediaClient, bucket: 'assets' }
 
     await expect(objectExists(target, 'runtime/sha256/abc')).resolves.toBe(false)
   })
