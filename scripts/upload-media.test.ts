@@ -19,6 +19,7 @@ type MockUploadTarget =
 
 const downloadMediaMock = vi.fn(async () => Buffer.from('mock-media'))
 const uploadMediaObjectMock = vi.fn(async () => undefined)
+const objectExistsMock = vi.fn(async () => false)
 const createUploadTargetFromEnvMock = vi.fn<() => MockUploadTarget | null>(
   () => ({
     provider: 'r2' as const,
@@ -30,9 +31,11 @@ const createUploadTargetFromEnvMock = vi.fn<() => MockUploadTarget | null>(
 vi.mock('./lib/media', async () => ({
   buildObjectKey: (slug: string, filename: string, hash: string) =>
     `showcase/${slug}/${hash.slice(0, 12)}-${filename}`,
+  buildRuntimeObjectKey: (hash: string) => `runtime/sha256/${hash}`,
   createUploadTargetFromEnv: createUploadTargetFromEnvMock,
   downloadMedia: downloadMediaMock,
   isSourceSiteMediaUrl: () => true,
+  objectExists: objectExistsMock,
   sha256: () => 'abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123',
   uploadMediaObject: uploadMediaObjectMock,
 }))
@@ -365,6 +368,34 @@ describe('runMediaMirror', () => {
     )
     expect(manifest.previewUrl).toBe(
       'https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-avatar/abc123abc123-preview.mp4',
+    )
+    expect(manifest.migration.status).toBe('media-mirrored')
+  })
+
+  it('skips upload when object already exists', async () => {
+    const tempDir = await makeTempDir()
+    await writeWorkspace(tempDir)
+    process.env.ASSETS_PUBLIC_BASE_URL = 'https://assets.remotionhub.ai'
+    createUploadTargetFromEnvMock.mockReturnValue({
+      provider: 'r2',
+      client: { send: vi.fn() },
+      bucket: 'assets-bucket',
+    })
+    objectExistsMock.mockResolvedValue(true)
+
+    const { runMediaMirror } = await import('./upload-media')
+    await runMediaMirror({
+      cwd: tempDir,
+      slug: 'card-avatar',
+      dryRun: false,
+      now: () => '2026-06-20T12:34:56.000Z',
+    })
+
+    expect(uploadMediaObjectMock).not.toHaveBeenCalled()
+    expect(objectExistsMock).toHaveBeenCalledTimes(2)
+
+    const manifest = await readJson(
+      path.join(tempDir, 'remotion', 'card-avatar', 'remotionhub.asset.json'),
     )
     expect(manifest.migration.status).toBe('media-mirrored')
   })
