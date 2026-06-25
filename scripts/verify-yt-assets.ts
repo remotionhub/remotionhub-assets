@@ -369,7 +369,9 @@ async function verifyRemoteAssets(
       const corsResponse = await fetch(entry.url, {
         headers: { Origin: 'https://remotionhub.ai' },
       })
-      const allowOrigin = corsResponse.headers.get('access-control-allow-origin')
+      const allowOrigin = corsResponse.headers.get(
+        'access-control-allow-origin',
+      )
       if (!allowOrigin) {
         errors.push({
           slug,

@@ -1,5 +1,9 @@
 import crypto from 'node:crypto'
-import { HeadObjectCommand, PutObjectCommand, S3Client } from '@aws-sdk/client-s3'
+import {
+  HeadObjectCommand,
+  PutObjectCommand,
+  S3Client,
+} from '@aws-sdk/client-s3'
 import OSS from 'ali-oss'
 
 const SOURCE_SITE_MEDIA_HOST = 'pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev'
@@ -112,7 +116,10 @@ export function createUploadTargetFromEnv(): MediaUploadTarget | null {
   return null
 }
 
-export async function objectExists(target: MediaUploadTarget, key: string): Promise<boolean> {
+export async function objectExists(
+  target: MediaUploadTarget,
+  key: string,
+): Promise<boolean> {
   if (target.provider === 'oss') {
     try {
       await target.client.head(key)

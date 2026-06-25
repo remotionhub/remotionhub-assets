@@ -43,7 +43,9 @@ describe('media helpers', () => {
 
   it('uploads to OSS without object ACL by default', async () => {
     const put = vi.fn(async () => undefined)
-    const head = vi.fn(async () => { throw new Error('not found') })
+    const head = vi.fn(async () => {
+      throw new Error('not found')
+    })
 
     await uploadMediaObject({
       target: {
@@ -70,7 +72,9 @@ describe('media helpers', () => {
   it('sets OSS object ACL when explicitly configured', async () => {
     const originalEnv = { ...process.env }
     const put = vi.fn(async () => undefined)
-    const head = vi.fn(async () => { throw new Error('not found') })
+    const head = vi.fn(async () => {
+      throw new Error('not found')
+    })
 
     try {
       process.env.OSS_OBJECT_ACL = 'public-read'
@@ -140,12 +144,18 @@ describe('media helpers', () => {
     })
     const target = { provider: 'oss' as const, client: { head, put: vi.fn() } }
 
-    await expect(objectExists(target, 'runtime/sha256/abc')).resolves.toBe(false)
+    await expect(objectExists(target, 'runtime/sha256/abc')).resolves.toBe(
+      false,
+    )
   })
 
   it('returns true when R2 HeadObject succeeds', async () => {
     const send = vi.fn(async () => ({ ContentLength: 1024 }))
-    const target = { provider: 'r2' as const, client: { send } as unknown as R2MediaClient, bucket: 'assets' }
+    const target = {
+      provider: 'r2' as const,
+      client: { send } as unknown as R2MediaClient,
+      bucket: 'assets',
+    }
 
     await expect(objectExists(target, 'runtime/sha256/abc')).resolves.toBe(true)
   })
@@ -154,8 +164,14 @@ describe('media helpers', () => {
     const send = vi.fn(async () => {
       throw Object.assign(new Error('NotFound'), { name: 'NotFound' })
     })
-    const target = { provider: 'r2' as const, client: { send } as unknown as R2MediaClient, bucket: 'assets' }
+    const target = {
+      provider: 'r2' as const,
+      client: { send } as unknown as R2MediaClient,
+      bucket: 'assets',
+    }
 
-    await expect(objectExists(target, 'runtime/sha256/abc')).resolves.toBe(false)
+    await expect(objectExists(target, 'runtime/sha256/abc')).resolves.toBe(
+      false,
+    )
   })
 })
