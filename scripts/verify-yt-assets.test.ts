@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, describe, expect, it } from 'vitest'
 import { runVerification } from './verify-yt-assets'
 
 const createdDirs: string[] = []
@@ -54,8 +54,10 @@ async function createWorkspace(
       displayName: 'Test Asset',
       runtime: 'remotion',
       sourceUrl: 'https://remotionlab.com/showcase/test',
-      originalPreviewUrl: 'https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/test/preview.mp4',
-      originalThumbnailUrl: 'https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/test/thumb.jpg',
+      originalPreviewUrl:
+        'https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/test/preview.mp4',
+      originalThumbnailUrl:
+        'https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/test/thumb.jpg',
       previewUrl: 'https://assets.remotionhub.ai/showcase/test/preview.mp4',
       thumbnailUrl: 'https://assets.remotionhub.ai/showcase/test/thumb.jpg',
       entryPoint: `src/${toPascalCase(slug)}.tsx`,
@@ -139,7 +141,8 @@ export const ${pascalName}: React.FC = () => {
   }
 
   if (options.hasRuntimeAssetsFile) {
-    const assetsForFile = options.runtimeAssetsInFile ?? options.runtimeAssets ?? []
+    const assetsForFile =
+      options.runtimeAssetsInFile ?? options.runtimeAssets ?? []
     const runtimeAssetsContent = `export const runtimeAssets = {
 ${assetsForFile.map((a) => `  '${a.sourcePath}': '${a.url}',`).join('\n')}
 } as const
@@ -181,21 +184,29 @@ describe('runVerification', () => {
       'utf8',
     )
 
-    await createWorkspace(tempDir, { slug: 'yt-test-asset', durationFrames: 120, rootDuration: 120 })
+    await createWorkspace(tempDir, {
+      slug: 'yt-test-asset',
+      durationFrames: 120,
+      rootDuration: 120,
+    })
 
     await fs.writeFile(
       path.join(tempDir, 'package-lock.json'),
-      JSON.stringify({
-        name: '@remotionhub/assets',
-        version: '0.0.0',
-        lockfileVersion: 3,
-        packages: {
-          '': { name: '@remotionhub/assets', version: '0.0.0' },
-          'node_modules/@remotionhub/yt-test-asset': {
-            resolved: 'remotion/yt-test-asset',
+      JSON.stringify(
+        {
+          name: '@remotionhub/assets',
+          version: '0.0.0',
+          lockfileVersion: 3,
+          packages: {
+            '': { name: '@remotionhub/assets', version: '0.0.0' },
+            'node_modules/@remotionhub/yt-test-asset': {
+              resolved: 'remotion/yt-test-asset',
+            },
           },
         },
-      }, null, 2),
+        null,
+        2,
+      ),
       'utf8',
     )
 
@@ -222,7 +233,9 @@ describe('runVerification', () => {
     )
 
     const result = await runVerification({ cwd: tempDir })
-    const dirErrors = result.errors.filter((e) => e.check === 'directory-exists')
+    const dirErrors = result.errors.filter(
+      (e) => e.check === 'directory-exists',
+    )
     expect(dirErrors).toHaveLength(1)
     expect(dirErrors[0]).toEqual({
       slug: 'yt-missing-dir',
@@ -255,7 +268,8 @@ describe('runVerification', () => {
     expect(result.errors[0]).toEqual({
       slug: 'yt-extra-dir',
       check: 'reverse-mapping',
-      message: 'Directory remotion/yt-extra-dir/ has remotionhub.asset.json but slug is not in canonical list',
+      message:
+        'Directory remotion/yt-extra-dir/ has remotionhub.asset.json but slug is not in canonical list',
     })
   })
 
@@ -283,7 +297,9 @@ describe('runVerification', () => {
     )
 
     const result = await runVerification({ cwd: tempDir })
-    const durErrors = result.errors.filter((e) => e.check === 'duration-manifest-root')
+    const durErrors = result.errors.filter(
+      (e) => e.check === 'duration-manifest-root',
+    )
     expect(durErrors).toHaveLength(1)
     expect(durErrors[0]).toEqual({
       slug: 'yt-dur-mismatch',
@@ -317,12 +333,15 @@ describe('runVerification', () => {
     )
 
     const result = await runVerification({ cwd: tempDir })
-    const compDurErrors = result.errors.filter((e) => e.check === 'duration-manifest-component')
+    const compDurErrors = result.errors.filter(
+      (e) => e.check === 'duration-manifest-component',
+    )
     expect(compDurErrors).toHaveLength(1)
     expect(compDurErrors[0]).toEqual({
       slug: 'yt-comp-dur-mismatch',
       check: 'duration-manifest-component',
-      message: 'Duration mismatch: manifest=120, YtCompDurMismatch.tsx YTCOMPDURMISMATCH_DURATION_FRAMES=240',
+      message:
+        'Duration mismatch: manifest=120, YtCompDurMismatch.tsx YTCOMPDURMISMATCH_DURATION_FRAMES=240',
     })
   })
 
@@ -389,7 +408,9 @@ describe('runVerification', () => {
     )
 
     const result = await runVerification({ cwd: tempDir })
-    const runtimeErrors = result.errors.filter((e) => e.check === 'runtime-assets-file')
+    const runtimeErrors = result.errors.filter(
+      (e) => e.check === 'runtime-assets-file',
+    )
     expect(runtimeErrors).toHaveLength(1)
     expect(runtimeErrors[0]).toEqual({
       slug: 'yt-runtime-missing',
@@ -445,12 +466,15 @@ describe('runVerification', () => {
     )
 
     const result = await runVerification({ cwd: tempDir })
-    const entryErrors = result.errors.filter((e) => e.check === 'runtime-assets-entry')
+    const entryErrors = result.errors.filter(
+      (e) => e.check === 'runtime-assets-entry',
+    )
     expect(entryErrors).toHaveLength(1)
     expect(entryErrors[0]).toEqual({
       slug: 'yt-runtime-entry',
       check: 'runtime-assets-entry',
-      message: 'Runtime asset entry "audio/missing.wav" not found in src/runtime-assets.ts',
+      message:
+        'Runtime asset entry "audio/missing.wav" not found in src/runtime-assets.ts',
     })
   })
 
@@ -465,18 +489,26 @@ describe('runVerification', () => {
       'utf8',
     )
 
-    await createWorkspace(tempDir, { slug: 'yt-test-asset', durationFrames: 120, rootDuration: 120 })
+    await createWorkspace(tempDir, {
+      slug: 'yt-test-asset',
+      durationFrames: 120,
+      rootDuration: 120,
+    })
 
     await fs.writeFile(
       path.join(tempDir, 'package-lock.json'),
-      JSON.stringify({
-        name: '@remotionhub/assets',
-        version: '0.0.0',
-        lockfileVersion: 3,
-        packages: {
-          '': { name: '@remotionhub/assets', version: '0.0.0' },
+      JSON.stringify(
+        {
+          name: '@remotionhub/assets',
+          version: '0.0.0',
+          lockfileVersion: 3,
+          packages: {
+            '': { name: '@remotionhub/assets', version: '0.0.0' },
+          },
         },
-      }, null, 2),
+        null,
+        2,
+      ),
       'utf8',
     )
 
@@ -485,7 +517,8 @@ describe('runVerification', () => {
     expect(result.errors[0]).toEqual({
       slug: 'yt-test-asset',
       check: 'lockfile-workspace',
-      message: 'Workspace "@remotionhub/yt-test-asset" not found in package-lock.json',
+      message:
+        'Workspace "@remotionhub/yt-test-asset" not found in package-lock.json',
     })
   })
 
@@ -523,7 +556,9 @@ describe('runVerification', () => {
     )
 
     const result = await runVerification({ cwd: tempDir })
-    const remoteErrors = result.errors.filter((e) => e.check.startsWith('remote-asset'))
+    const remoteErrors = result.errors.filter((e) =>
+      e.check.startsWith('remote-asset'),
+    )
     expect(remoteErrors).toHaveLength(0)
   })
 })

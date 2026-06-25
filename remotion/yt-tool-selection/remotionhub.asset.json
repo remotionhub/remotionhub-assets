@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tool-selection/4d63895cd943-thumb.jpg",
   "entryPoint": "src/YtToolSelection.tsx",
   "compositionId": "YtToolSelection",
-  "durationFrames": 120,
+  "durationFrames": 180,
   "fps": 30,
   "width": 1920,
   "height": 1080,

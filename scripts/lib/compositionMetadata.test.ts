@@ -165,7 +165,7 @@ export function RemotionRoot() {
     )
   })
 
-  it('throws when durationInFrames is not a numeric literal', async () => {
+  it('throws when durationInFrames is an unresolvable identifier', async () => {
     const filePath = await writeTempFile(
       'Root.tsx',
       `import { Composition } from 'remotion'
@@ -176,7 +176,7 @@ export function RemotionRoot() {
 `,
     )
     expect(() => parseRootDuration(filePath)).toThrow(
-      /not a numeric literal/i,
+      /Cannot resolve import for "frames"/i,
     )
   })
 })

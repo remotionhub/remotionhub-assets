@@ -305,8 +305,18 @@ export async function runMediaMirror(options?: {
   })
 
   if (runtimeEntries.length > 0 && !dryRun) {
-    const runtimeModulePath = path.join(cwd, 'remotion', slug, 'src', 'runtime-assets.ts')
-    await fs.writeFile(runtimeModulePath, generateRuntimeAssetsModule(runtimeEntries), 'utf8')
+    const runtimeModulePath = path.join(
+      cwd,
+      'remotion',
+      slug,
+      'src',
+      'runtime-assets.ts',
+    )
+    await fs.writeFile(
+      runtimeModulePath,
+      generateRuntimeAssetsModule(runtimeEntries),
+      'utf8',
+    )
   }
 
   const nextManifest: AssetManifest = {

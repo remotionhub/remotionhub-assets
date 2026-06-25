@@ -132,8 +132,7 @@ describe('asset manifest schema', () => {
         {
           sourcePath: 'public/overlay.png',
           url: 'https://assets.remotionhub.ai/showcase/card-avatar/overlay.png',
-          sha256:
-            'a'.repeat(64),
+          sha256: 'a'.repeat(64),
           byteSize: 4096,
           contentType: 'image/png',
         },

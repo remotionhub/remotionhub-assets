@@ -35,7 +35,10 @@ export function parseStaticFileCalls(sourceFilePath: string): StaticFileCall[] {
       return
     }
 
-    if (!ts.isIdentifier(node.expression) || node.expression.text !== 'staticFile') {
+    if (
+      !ts.isIdentifier(node.expression) ||
+      node.expression.text !== 'staticFile'
+    ) {
       ts.forEachChild(node, visit)
       return
     }
@@ -90,9 +93,7 @@ export function generateRuntimeAssetsModule(
   lines.push('')
   lines.push('export type RuntimeAssetPath = keyof typeof runtimeAssets')
   lines.push('')
-  lines.push(
-    'export function runtimeAsset(path: RuntimeAssetPath): string {',
-  )
+  lines.push('export function runtimeAsset(path: RuntimeAssetPath): string {')
   lines.push('  return runtimeAssets[path]')
   lines.push('}')
   lines.push('')
