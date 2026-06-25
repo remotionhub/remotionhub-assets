@@ -217,7 +217,16 @@ async function mirrorRuntimeMedia(args: {
         continue
       }
 
-      const filePath = path.join(args.cwd, 'public', call.arg)
+      const publicDir = path.resolve(args.cwd, 'public')
+      const filePath = path.resolve(path.join(args.cwd, 'public', call.arg))
+      if (
+        !filePath.startsWith(publicDir + path.sep) &&
+        filePath !== publicDir
+      ) {
+        throw new Error(
+          `Path traversal detected: ${call.arg} resolves outside public/`,
+        )
+      }
       const body = await fs.readFile(filePath)
       const hash = sha256(body)
       const key = buildRuntimeObjectKey(hash)
@@ -337,7 +346,12 @@ export async function runMediaMirror(options?: {
     ...baseManifest,
     previewUrl: preview.targetUrl,
     thumbnailUrl: thumbnail.targetUrl,
-    runtimeAssets: runtimeEntries,
+    runtimeAssets:
+      runtimeEntries.length > 0
+        ? runtimeEntries
+        : ('runtimeAssets' in baseManifest
+            ? (baseManifest.runtimeAssets ?? [])
+            : []),
     migration: {
       sourceFile: baseManifest.migration.sourceFile,
       status: migrationStatus,

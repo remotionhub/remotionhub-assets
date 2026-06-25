@@ -159,8 +159,23 @@ async function verifyComponentDuration(
         message: `Duration mismatch: manifest=${manifest.durationFrames}, ${pascalName}.tsx ${durationInfo.name}=${durationInfo.value}`,
       })
     }
-  } catch {
-    // No *_DURATION_FRAMES export found — that's OK
+  } catch (error: unknown) {
+    if (
+      error instanceof Error &&
+      error.message.includes('No *_DURATION_FRAMES export found')
+    ) {
+      errors.push({
+        slug,
+        check: 'duration-constant-missing',
+        message: error.message,
+      })
+    } else if (error instanceof Error) {
+      errors.push({
+        slug,
+        check: 'duration-parse-error',
+        message: error.message,
+      })
+    }
   }
 
   return errors
@@ -193,8 +208,14 @@ async function verifyNoStaticFileCalls(
         message: `staticFile() call found at ${componentPath}:${call.line}: staticFile("${call.arg}")`,
       })
     }
-  } catch {
-    // Parse error — that's OK for this check
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      errors.push({
+        slug,
+        check: 'staticfile-parse-error',
+        message: error.message,
+      })
+    }
   }
 
   return errors
