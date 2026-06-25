@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-char-animations/a72605b1e3f8-thumb.jpg",
   "entryPoint": "src/YtCharAnimations.tsx",
   "compositionId": "YtCharAnimations",
-  "durationFrames": 120,
+  "durationFrames": 240,
   "fps": 30,
   "width": 1920,
   "height": 1080,

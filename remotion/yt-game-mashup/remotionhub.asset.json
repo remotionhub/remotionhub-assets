@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-game-mashup/2857bef522d6-thumb.jpg",
   "entryPoint": "src/YtGameMashup.tsx",
   "compositionId": "YtGameMashup",
-  "durationFrames": 120,
+  "durationFrames": 240,
   "fps": 30,
   "width": 1920,
   "height": 1080,

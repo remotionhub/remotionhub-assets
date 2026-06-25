@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-core-dist-card/eea1b76b220d-thumb.jpg",
   "entryPoint": "src/YtCoreDistCard.tsx",
   "compositionId": "YtCoreDistCard",
-  "durationFrames": 120,
+  "durationFrames": 210,
   "fps": 30,
   "width": 1920,
   "height": 1080,

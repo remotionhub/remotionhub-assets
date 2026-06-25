@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-acq-ret-ref/2946cc9b4177-thumb.jpg",
   "entryPoint": "src/YtAcqRetRef.tsx",
   "compositionId": "YtAcqRetRef",
-  "durationFrames": 120,
+  "durationFrames": 300,
   "fps": 30,
   "width": 1920,
   "height": 1080,
