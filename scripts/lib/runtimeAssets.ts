@@ -13,6 +13,35 @@ export type RuntimeAssetEntry = {
   contentType: string
 }
 
+export function validateAst(sourceFilePath: string): void {
+  const program = ts.createProgram([sourceFilePath], {
+    jsx: ts.JsxEmit.ReactJSX,
+    module: ts.ModuleKind.ESNext,
+    moduleResolution: ts.ModuleResolutionKind.Bundler,
+    target: ts.ScriptTarget.ESNext,
+    strict: true,
+    noEmit: true,
+    skipLibCheck: true,
+  })
+
+  const diagnostics = ts.getPreEmitDiagnostics(program)
+  const errors = diagnostics.filter(
+    (d) => d.category === ts.DiagnosticCategory.Error,
+  )
+
+  if (errors.length > 0) {
+    const messages = errors.map((d) => {
+      const pos = d.file
+        ? `${d.file.fileName}:${d.file.getLineAndCharacterOfPosition(d.start ?? 0).line + 1}`
+        : '(unknown)'
+      return `  ${pos}: ${ts.flattenDiagnosticMessageText(d.messageText, '\n')}`
+    })
+    throw new Error(
+      `AST validation failed for ${sourceFilePath} with ${errors.length} error(s):\n${messages.join('\n')}`,
+    )
+  }
+}
+
 export function parseStaticFileCalls(sourceFilePath: string): StaticFileCall[] {
   const sourceText = ts.sys.readFile(sourceFilePath)
   if (!sourceText) {

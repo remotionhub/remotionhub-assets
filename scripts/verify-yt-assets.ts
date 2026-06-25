@@ -186,35 +186,35 @@ async function verifyNoStaticFileCalls(
   slug: string,
 ): Promise<VerificationError[]> {
   const errors: VerificationError[] = []
-  const pascalName = toPascalCase(slug)
-  const componentPath = path.join(
-    cwd,
-    'remotion',
-    slug,
-    'src',
-    `${pascalName}.tsx`,
-  )
+  const srcDir = path.join(cwd, 'remotion', slug, 'src')
 
-  if (!(await fileExists(componentPath))) {
+  if (!(await fileExists(srcDir))) {
     return errors
   }
 
-  try {
-    const calls = parseStaticFileCalls(componentPath)
-    for (const call of calls) {
-      errors.push({
-        slug,
-        check: 'no-staticFile',
-        message: `staticFile() call found at ${componentPath}:${call.line}: staticFile("${call.arg}")`,
-      })
-    }
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      errors.push({
-        slug,
-        check: 'staticfile-parse-error',
-        message: error.message,
-      })
+  const entries = await fs.readdir(srcDir, { withFileTypes: true })
+  const tsxFiles = entries
+    .filter((e) => e.isFile() && e.name.endsWith('.tsx'))
+    .map((e) => path.join(srcDir, e.name))
+
+  for (const filePath of tsxFiles) {
+    try {
+      const calls = parseStaticFileCalls(filePath)
+      for (const call of calls) {
+        errors.push({
+          slug,
+          check: 'no-staticFile',
+          message: `staticFile() call found at ${filePath}:${call.line}: staticFile("${call.arg}")`,
+        })
+      }
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        errors.push({
+          slug,
+          check: 'staticfile-parse-error',
+          message: error.message,
+        })
+      }
     }
   }
 

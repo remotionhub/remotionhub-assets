@@ -80,7 +80,7 @@ export function createS3ClientFromEnv() {
   })
 }
 
-export function createOssClientFromEnv(): OssMediaClient | null {
+export function createRawOssClientFromEnv(): { client: OSS; bucket: string } | null {
   const accessKeyId = process.env.OSS_ACCESS_KEY_ID
   const accessKeySecret = process.env.OSS_ACCESS_KEY_SECRET
   const bucket = process.env.OSS_BUCKET
@@ -91,14 +91,23 @@ export function createOssClientFromEnv(): OssMediaClient | null {
     return null
   }
 
-  return new OSS({
-    accessKeyId,
-    accessKeySecret,
+  return {
+    client: new OSS({
+      accessKeyId,
+      accessKeySecret,
+      bucket,
+      region,
+      endpoint,
+      secure: true,
+    }),
     bucket,
-    region,
-    endpoint,
-    secure: true,
-  }) as OssMediaClient
+  }
+}
+
+export function createOssClientFromEnv(): OssMediaClient | null {
+  const raw = createRawOssClientFromEnv()
+  if (!raw) return null
+  return raw.client as OssMediaClient
 }
 
 export function createUploadTargetFromEnv(): MediaUploadTarget | null {
@@ -124,8 +133,13 @@ export async function objectExists(
     try {
       await target.client.head(key)
       return true
-    } catch {
-      return false
+    } catch (error: unknown) {
+      const status = (error as { status?: number }).status
+      const code = (error as { code?: string }).code
+      if (status === 404 || code === 'NoSuchKey') {
+        return false
+      }
+      throw error
     }
   }
 
@@ -137,8 +151,13 @@ export async function objectExists(
       }),
     )
     return true
-  } catch {
-    return false
+  } catch (error: unknown) {
+    const name = (error as { name?: string }).name
+    const httpStatus = (error as { $metadata?: { httpStatusCode?: number } }).$metadata?.httpStatusCode
+    if (name === 'NotFound' || httpStatus === 404) {
+      return false
+    }
+    throw error
   }
 }
 
