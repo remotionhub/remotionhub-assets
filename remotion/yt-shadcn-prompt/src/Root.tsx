@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtShadcnPrompt, ytShadcnPromptDefaultProps } from './YtShadcnPrompt'
+import { YtShadcnPrompt, ytShadcnPromptDefaultProps, SHADCN_PROMPT_DURATION_FRAMES } from './YtShadcnPrompt'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtShadcnPrompt"
       component={YtShadcnPrompt}
-      durationInFrames={180}
+      durationInFrames={SHADCN_PROMPT_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

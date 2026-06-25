@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtCustomizeOwn, ytCustomizeOwnDefaultProps } from './YtCustomizeOwn'
+import { YtCustomizeOwn, ytCustomizeOwnDefaultProps, CUSTOMIZE_OWN_DURATION_FRAMES } from './YtCustomizeOwn'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtCustomizeOwn"
       component={YtCustomizeOwn}
-      durationInFrames={210}
+      durationInFrames={CUSTOMIZE_OWN_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

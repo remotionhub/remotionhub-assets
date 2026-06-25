@@ -34,6 +34,8 @@ const estimateTextWidth = (text: string, fontSize: number): number => {
   return width;
 };
 
+export const SHADCN_PROMPT_DURATION_FRAMES = 180;
+
 export const YtShadcnPrompt: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

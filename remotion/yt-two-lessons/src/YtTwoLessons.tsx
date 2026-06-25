@@ -40,6 +40,8 @@ const LESSONS = [
   },
 ];
 
+export const TWO_LESSONS_DURATION_FRAMES = 300;
+
 export const YtTwoLessons: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

@@ -9,6 +9,8 @@ import {
 
 const fonts = { main: "'Noto Sans TC', 'Inter', sans-serif" };
 
+export const AI_REPORT_DOUBT_DURATION_FRAMES = 180;
+
 export const YtAiReportDoubt: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

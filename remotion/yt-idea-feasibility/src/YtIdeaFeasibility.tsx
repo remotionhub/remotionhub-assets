@@ -9,6 +9,8 @@ import {
 
 const fonts = { main: "'Noto Sans TC', 'Inter', sans-serif" };
 
+export const IDEA_FEASIBILITY_DURATION_FRAMES = 150;
+
 export const YtIdeaFeasibility: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

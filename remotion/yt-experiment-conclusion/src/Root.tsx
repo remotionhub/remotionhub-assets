@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtExperimentConclusion, ytExperimentConclusionDefaultProps } from './YtExperimentConclusion'
+import { YtExperimentConclusion, ytExperimentConclusionDefaultProps, EXPERIMENT_CONCLUSION_DURATION_FRAMES } from './YtExperimentConclusion'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtExperimentConclusion"
       component={YtExperimentConclusion}
-      durationInFrames={470}
+      durationInFrames={EXPERIMENT_CONCLUSION_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

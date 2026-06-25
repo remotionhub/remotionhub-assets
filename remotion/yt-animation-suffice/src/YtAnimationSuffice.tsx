@@ -18,6 +18,8 @@ const colors = {
 
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
+export const ANIMATION_SUFFICE_DURATION_FRAMES = 240;
+
 export const YtAnimationSuffice: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

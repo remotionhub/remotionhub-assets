@@ -125,6 +125,8 @@ const CARDS = [
   },
 ];
 
+export const ACQ_RET_REF_DURATION_FRAMES = 300;
+
 export const YtAcqRetRef: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

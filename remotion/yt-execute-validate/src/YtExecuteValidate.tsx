@@ -9,6 +9,8 @@ import {
 
 const fonts = { main: "'Noto Sans TC', 'Inter', sans-serif" };
 
+export const EXECUTE_VALIDATE_DURATION_FRAMES = 150;
+
 export const YtExecuteValidate: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

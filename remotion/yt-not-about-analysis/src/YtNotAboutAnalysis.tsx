@@ -9,6 +9,8 @@ import {
 
 const fonts = { main: "'Noto Sans TC', 'Inter', sans-serif" };
 
+export const NOT_ABOUT_ANALYSIS_DURATION_FRAMES = 180;
+
 export const YtNotAboutAnalysis: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtEngineCriteria, ytEngineCriteriaDefaultProps } from './YtEngineCriteria'
+import { YtEngineCriteria, ytEngineCriteriaDefaultProps, ENGINE_CRITERIA_DURATION_FRAMES } from './YtEngineCriteria'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtEngineCriteria"
       component={YtEngineCriteria}
-      durationInFrames={240}
+      durationInFrames={ENGINE_CRITERIA_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

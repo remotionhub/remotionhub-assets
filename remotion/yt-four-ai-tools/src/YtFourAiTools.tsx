@@ -26,6 +26,8 @@ const TOOLS = [
   { num: 4, name: "Blender", desc: "视频去背", color: "#9B59B6", delay: 165 },
 ];
 
+export const FOUR_AI_TOOLS_DURATION_FRAMES = 270;
+
 export const YtFourAiTools: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

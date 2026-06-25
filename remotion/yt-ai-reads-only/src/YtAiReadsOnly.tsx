@@ -70,6 +70,8 @@ const TextIcon: React.FC<{ color: string; progress: number; frame: number }> = (
 
 const ICONS = [LineIcon, ColorIcon, TextIcon];
 
+export const AI_READS_ONLY_DURATION_FRAMES = 180;
+
 export const YtAiReadsOnly: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

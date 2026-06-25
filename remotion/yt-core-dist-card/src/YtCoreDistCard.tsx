@@ -14,6 +14,8 @@ const ZH_LINE2 = "让他来吃、再来吃、还带朋友来吃。";
 const EN = "Continuously reach people who crave beef noodles — get them to come, come back, and bring friends.";
 const CHARS_PER_FRAME = 0.6;
 
+export const CORE_DIST_CARD_DURATION_FRAMES = 210;
+
 export const YtCoreDistCard: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

@@ -18,6 +18,8 @@ const colors = {
 
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
+export const NO_3D_NEEDED_DURATION_FRAMES = 240;
+
 export const YtNo3dNeeded: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

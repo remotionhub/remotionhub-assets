@@ -17,6 +17,8 @@ const colors = {
 
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
+export const EXTRACT_TOOL_DURATION_FRAMES = 180;
+
 export const YtExtractTool: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

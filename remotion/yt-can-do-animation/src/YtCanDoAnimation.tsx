@@ -17,6 +17,8 @@ const colors = {
 
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
+export const CAN_DO_ANIMATION_DURATION_FRAMES = 210;
+
 export const YtCanDoAnimation: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

@@ -93,6 +93,8 @@ const KartIcon: React.FC<{ progress: number; frame: number }> = ({ progress, fra
   );
 };
 
+export const GAME_MASHUP_DURATION_FRAMES = 240;
+
 export const YtGameMashup: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
