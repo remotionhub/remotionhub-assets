@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-consistent-output/fdff4a3ac2d3-thumb.jpg",
   "entryPoint": "src/YtConsistentOutput.tsx",
   "compositionId": "YtConsistentOutput",
-  "durationFrames": 120,
+  "durationFrames": 180,
   "fps": 30,
   "width": 1920,
   "height": 1080,

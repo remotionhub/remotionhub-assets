@@ -6,7 +6,7 @@ export function RemotionRoot() {
     <Composition
       id="YtNotThatSimple"
       component={YtNotThatSimple}
-      durationInFrames={120}
+      durationInFrames={240}
       fps={30}
       width={1920}
       height={1080}

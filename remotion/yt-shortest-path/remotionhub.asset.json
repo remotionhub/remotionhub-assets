@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-shortest-path/3b066969bed5-thumb.jpg",
   "entryPoint": "src/YtShortestPath.tsx",
   "compositionId": "YtShortestPath",
-  "durationFrames": 120,
+  "durationFrames": 210,
   "fps": 30,
   "width": 1920,
   "height": 1080,

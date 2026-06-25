@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-audio-prompt-skill/bdfc15be5012-thumb.jpg",
   "entryPoint": "src/YtAudioPromptSkill.tsx",
   "compositionId": "YtAudioPromptSkill",
-  "durationFrames": 120,
+  "durationFrames": 300,
   "fps": 30,
   "width": 1920,
   "height": 1080,

@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-manual-first/8246125822dc-thumb.jpg",
   "entryPoint": "src/YtManualFirst.tsx",
   "compositionId": "YtManualFirst",
-  "durationFrames": 120,
+  "durationFrames": 360,
   "fps": 30,
   "width": 1920,
   "height": 1080,

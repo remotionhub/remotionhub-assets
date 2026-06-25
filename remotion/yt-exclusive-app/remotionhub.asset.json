@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-exclusive-app/206bc5ba4de1-thumb.jpg",
   "entryPoint": "src/YtExclusiveApp.tsx",
   "compositionId": "YtExclusiveApp",
-  "durationFrames": 120,
+  "durationFrames": 210,
   "fps": 30,
   "width": 1920,
   "height": 1080,

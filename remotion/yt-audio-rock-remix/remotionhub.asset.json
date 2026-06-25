@@ -1,0 +1,29 @@
+{
+  "slug": "yt-audio-rock-remix",
+  "displayName": "Yt Audio Rock Remix",
+  "displayNameZh": "Rock 曲风混音轨道动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-audio-rock-remix",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-rock-remix/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-rock-remix/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-audio-rock-remix/615f32ae7c5c-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-audio-rock-remix/af6f2aaf2234-thumb.jpg",
+  "entryPoint": "src/YtAudioRockRemix.tsx",
+  "compositionId": "YtAudioRockRemix",
+  "durationFrames": 300,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene15-RockRemix.tsx），请帮我做以下调整： 1. 修改 `TRACKS` 阵列中四条轨道的 `label`（目前是 Piano/Guitar/Drums/Bass）与出现时间点（`appearFrame`）。 2. 修改顶部徽章文字（目前是 \"ROCK\"）与颜色。 3. 调整速度计最终显示值（目前是 \"1.5x\"）与指针目标角度。 4. 更换四种乐器的颜色配置（目前是白/红/黄/蓝）。 请保留原本的波形动画与速度计效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-audio-rock-remix.md",
+    "updatedAt": "2026-06-24T01:05:34.597Z"
+  }
+}

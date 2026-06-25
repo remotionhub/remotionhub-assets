@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-think-distribution/bab7eaebfdc1-thumb.jpg",
   "entryPoint": "src/YtThinkDistribution.tsx",
   "compositionId": "YtThinkDistribution",
-  "durationFrames": 120,
+  "durationFrames": 180,
   "fps": 30,
   "width": 1920,
   "height": 1080,

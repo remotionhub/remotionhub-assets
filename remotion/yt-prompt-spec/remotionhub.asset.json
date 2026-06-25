@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-prompt-spec/51ead17062f3-thumb.jpg",
   "entryPoint": "src/YtPromptSpec.tsx",
   "compositionId": "YtPromptSpec",
-  "durationFrames": 120,
+  "durationFrames": 240,
   "fps": 30,
   "width": 1920,
   "height": 1080,

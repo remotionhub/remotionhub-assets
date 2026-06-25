@@ -19,7 +19,7 @@ export function RemotionRoot() {
     <Composition
       id="YtMcpChapterCard"
       component={YtMcpChapterCard}
-      durationInFrames={120}
+      durationInFrames={75}
       fps={30}
       width={1920}
       height={1080}

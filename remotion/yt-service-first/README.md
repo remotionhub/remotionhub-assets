@@ -19,7 +19,7 @@ export function RemotionRoot() {
     <Composition
       id="YtServiceFirst"
       component={YtServiceFirst}
-      durationInFrames={120}
+      durationInFrames={450}
       fps={30}
       width={1920}
       height={1080}

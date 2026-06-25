@@ -1,0 +1,29 @@
+{
+  "slug": "yt-audio-complex-pop-question",
+  "displayName": "Yt Audio Complex Pop Question",
+  "displayNameZh": "复杂流行音乐能改编吗？",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-audio-complex-pop-question",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-complex-pop-question/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-complex-pop-question/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-complex-pop-question/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-complex-pop-question/thumb.jpg",
+  "entryPoint": "src/YtAudioComplexPopQuestion.tsx",
+  "compositionId": "YtAudioComplexPopQuestion",
+  "durationFrames": 240,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene20-ComplexPopQuestion.tsx），请帮我做以下调整： 1. 修改左侧标签（目前是 \"简单音乐\"）与状态标签（目前是 \"可以改编\"）。 2. 修改右侧标题（目前是 \"复杂流行音乐\"）与疑问标签（目前是 \"是否可行？\"）。 3. 调整中间过渡文字（目前是 \"那...\"）。 4. 更换问号颜色（目前是 `#FFB547` 警告橘）与复杂波形的层数颜色。 请保留原本的左右滑入动画与问号脉冲效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-audio-complex-pop-question.md",
+    "updatedAt": "2026-06-24T01:05:05.519Z"
+  }
+}

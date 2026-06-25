@@ -19,7 +19,7 @@ export function RemotionRoot() {
     <Composition
       id="YtSkillShowcase"
       component={YtSkillShowcase}
-      durationInFrames={120}
+      durationInFrames={600}
       fps={30}
       width={1920}
       height={1080}
