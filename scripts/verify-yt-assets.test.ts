@@ -1,7 +1,8 @@
+import { createHash } from 'node:crypto'
 import fs from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
-import { afterEach, describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { runVerification } from './verify-yt-assets'
 
 const createdDirs: string[] = []
@@ -560,5 +561,271 @@ describe('runVerification', () => {
       e.check.startsWith('remote-asset'),
     )
     expect(remoteErrors).toHaveLength(0)
+  })
+
+  it('detects SHA-256 hash mismatch for remote assets', async () => {
+    const tempDir = await makeTempDir()
+    const slugs = ['yt-remote-hash']
+    const body = Buffer.from('actual content')
+    const wrongHash = '0'.repeat(64)
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug: 'yt-remote-hash',
+      durationFrames: 120,
+      rootDuration: 120,
+      runtimeAssets: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/audio.wav',
+          sha256: wrongHash,
+          byteSize: body.byteLength,
+          contentType: 'audio/wav',
+        },
+      ],
+      hasRuntimeAssetsFile: true,
+    })
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const fetchMock = vi.fn()
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      headers: new Map([
+        ['content-length', String(body.byteLength)],
+        ['content-type', 'audio/wav'],
+      ]),
+    })
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      arrayBuffer: () => Promise.resolve(body.buffer),
+    })
+    fetchMock.mockResolvedValueOnce({
+      headers: new Map([['access-control-allow-origin', '*']]),
+    })
+    fetchMock.mockResolvedValueOnce({ status: 206 })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const result = await runVerification({
+      cwd: tempDir,
+      checkRemote: true,
+    })
+    const hashErrors = result.errors.filter(
+      (e) => e.check === 'remote-asset-sha256',
+    )
+    expect(hashErrors).toHaveLength(1)
+    expect(hashErrors[0].message).toContain(wrongHash)
+
+    vi.unstubAllGlobals()
+  })
+
+  it('detects body size mismatch for remote assets', async () => {
+    const tempDir = await makeTempDir()
+    const slugs = ['yt-remote-bodysize']
+    const body = Buffer.from('short')
+    const realHash = createHash('sha256').update(body).digest('hex')
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug: 'yt-remote-bodysize',
+      durationFrames: 120,
+      rootDuration: 120,
+      runtimeAssets: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/audio.wav',
+          sha256: realHash,
+          byteSize: 9999,
+          contentType: 'audio/wav',
+        },
+      ],
+      hasRuntimeAssetsFile: true,
+    })
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const fetchMock = vi.fn()
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      headers: new Map([
+        ['content-length', '9999'],
+        ['content-type', 'audio/wav'],
+      ]),
+    })
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      arrayBuffer: () => Promise.resolve(body.buffer),
+    })
+    fetchMock.mockResolvedValueOnce({
+      headers: new Map([['access-control-allow-origin', '*']]),
+    })
+    fetchMock.mockResolvedValueOnce({ status: 206 })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const result = await runVerification({
+      cwd: tempDir,
+      checkRemote: true,
+    })
+    const sizeErrors = result.errors.filter(
+      (e) => e.check === 'remote-asset-body-size',
+    )
+    expect(sizeErrors).toHaveLength(1)
+    expect(sizeErrors[0].message).toContain('9999')
+    expect(sizeErrors[0].message).toContain(String(body.byteLength))
+
+    vi.unstubAllGlobals()
+  })
+
+  it('detects missing CORS header for remote assets', async () => {
+    const tempDir = await makeTempDir()
+    const slugs = ['yt-remote-cors']
+    const body = Buffer.from('test content')
+    const realHash = createHash('sha256').update(body).digest('hex')
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug: 'yt-remote-cors',
+      durationFrames: 120,
+      rootDuration: 120,
+      runtimeAssets: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/audio.wav',
+          sha256: realHash,
+          byteSize: body.byteLength,
+          contentType: 'audio/wav',
+        },
+      ],
+      hasRuntimeAssetsFile: true,
+    })
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const fetchMock = vi.fn()
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      headers: new Map([
+        ['content-length', String(body.byteLength)],
+        ['content-type', 'audio/wav'],
+      ]),
+    })
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      arrayBuffer: () => Promise.resolve(body.buffer),
+    })
+    fetchMock.mockResolvedValueOnce({
+      headers: new Map(),
+    })
+    fetchMock.mockResolvedValueOnce({ status: 206 })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const result = await runVerification({
+      cwd: tempDir,
+      checkRemote: true,
+    })
+    const corsErrors = result.errors.filter(
+      (e) => e.check === 'remote-asset-cors',
+    )
+    expect(corsErrors).toHaveLength(1)
+    expect(corsErrors[0].message).toContain('Access-Control-Allow-Origin')
+
+    vi.unstubAllGlobals()
+  })
+
+  it('detects non-206 Range request response for remote assets', async () => {
+    const tempDir = await makeTempDir()
+    const slugs = ['yt-remote-range']
+    const body = Buffer.from('test content')
+    const realHash = createHash('sha256').update(body).digest('hex')
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug: 'yt-remote-range',
+      durationFrames: 120,
+      rootDuration: 120,
+      runtimeAssets: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/audio.wav',
+          sha256: realHash,
+          byteSize: body.byteLength,
+          contentType: 'audio/wav',
+        },
+      ],
+      hasRuntimeAssetsFile: true,
+    })
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const fetchMock = vi.fn()
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      headers: new Map([
+        ['content-length', String(body.byteLength)],
+        ['content-type', 'audio/wav'],
+      ]),
+    })
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      arrayBuffer: () => Promise.resolve(body.buffer),
+    })
+    fetchMock.mockResolvedValueOnce({
+      headers: new Map([['access-control-allow-origin', '*']]),
+    })
+    fetchMock.mockResolvedValueOnce({ status: 200 })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const result = await runVerification({
+      cwd: tempDir,
+      checkRemote: true,
+    })
+    const rangeErrors = result.errors.filter(
+      (e) => e.check === 'remote-asset-range',
+    )
+    expect(rangeErrors).toHaveLength(1)
+    expect(rangeErrors[0].message).toContain('200')
+    expect(rangeErrors[0].message).toContain('206')
+
+    vi.unstubAllGlobals()
   })
 })
