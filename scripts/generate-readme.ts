@@ -49,7 +49,7 @@ export function RemotionRoot() {
     <Composition
       id="${componentName}"
       component={${componentName}}
-      durationInFrames={120}
+      durationInFrames={${manifest.durationFrames}}
       fps={30}
       width={1920}
       height={1080}

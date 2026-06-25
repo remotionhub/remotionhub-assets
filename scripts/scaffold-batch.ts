@@ -512,17 +512,22 @@ async function scaffold(slug: string) {
     stdio: 'inherit',
   })
 
-  // 2. Read raw source code from source.raw.tsx
+  // 2. Read draft manifest for duration
+  const draftManifestPath = path.join(dir, 'remotionhub.asset.draft.json')
+  const draftManifest = JSON.parse(await fs.readFile(draftManifestPath, 'utf8'))
+  const durationFrames = draftManifest.durationFrames ?? 120
+
+  // 3. Read raw source code from source.raw.tsx
   const rawCodePath = path.join(dir, 'source.raw.tsx')
   let code = await fs.readFile(rawCodePath, 'utf8')
 
-  // 3. Clean hyphenated variables dynamically
+  // 4. Clean hyphenated variables dynamically
   code = replaceHyphenatedVariables(code)
 
   // Patch any known template typos
   code = code.replaceAll('whoushOut', 'whooshOut')
 
-  // 4. Align component name with PascalCase of slug
+  // 5. Align component name with PascalCase of slug
   const compMatch = code.match(
     /export\s+const\s+([A-Z][A-Za-z0-9_-]*[a-z][A-Za-z0-9_-]*)\s*(?::\s*React\.FC)?\s*=/,
   )
@@ -541,18 +546,18 @@ async function scaffold(slug: string) {
     }
   }
 
-  // 5. Append default props placeholder
+  // 6. Append default props placeholder
   code += `\nexport const ${propName} = {}\n`
 
-  // 6. Write component file
+  // 7. Write component file
   await fs.mkdir(path.join(dir, 'src'), { recursive: true })
   await fs.writeFile(path.join(dir, 'src', `${compName}.tsx`), code, 'utf8')
 
-  // 7. Write LICENSE
+  // 8. Write LICENSE
   const license = `MIT License\n\nCopyright (c) 2026 remotionlab (https://remotionlab.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n`
   await fs.writeFile(path.join(dir, 'LICENSE'), license, 'utf8')
 
-  // 8. Write package.json
+  // 9. Write package.json
   const pkg = {
     name: `@remotionhub/${slug}`,
     version: '1.0.0',
@@ -576,15 +581,15 @@ async function scaffold(slug: string) {
     'utf8',
   )
 
-  // 9. Write remotion.config.ts
+  // 10. Write remotion.config.ts
   const config = `import { Config } from '@remotion/cli/config'\n\nConfig.setVideoImageFormat('jpeg')\n`
   await fs.writeFile(path.join(dir, 'remotion.config.ts'), config, 'utf8')
 
-  // 10. Write src/Root.tsx
-  const root = `import { Composition, registerRoot } from 'remotion'\nimport { ${compName}, ${propName} } from './${compName}'\n\nexport function RemotionRoot() {\n  return (\n    <Composition\n      id="${compName}"\n      component={${compName}}\n      durationInFrames={120}\n      fps={30}\n      width={1920}\n      height={1080}\n      defaultProps={${propName}}\n    />\n  )\n}\n\nregisterRoot(RemotionRoot)\n`
+  // 11. Write src/Root.tsx
+  const root = `import { Composition, registerRoot } from 'remotion'\nimport { ${compName}, ${propName} } from './${compName}'\n\nexport function RemotionRoot() {\n  return (\n    <Composition\n      id="${compName}"\n      component={${compName}}\n      durationInFrames={${durationFrames}}\n      fps={30}\n      width={1920}\n      height={1080}\n      defaultProps={${propName}}\n    />\n  )\n}\n\nregisterRoot(RemotionRoot)\n`
   await fs.writeFile(path.join(dir, 'src/Root.tsx'), root, 'utf8')
 
-  // 11. Write src/index.ts
+  // 12. Write src/index.ts
   const index = `export { ${compName}, ${propName} } from './${compName}'\n`
   await fs.writeFile(path.join(dir, 'src/index.ts'), index, 'utf8')
 
