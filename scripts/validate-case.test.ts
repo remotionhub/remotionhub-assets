@@ -98,6 +98,8 @@ registerRoot(RemotionRoot)
     `import React from 'react'
 import { AbsoluteFill } from 'remotion'
 
+export const CARD_AVATAR_DURATION_FRAMES = 120
+
 export const CardAvatar: React.FC = () => {
   return <AbsoluteFill />
 }
