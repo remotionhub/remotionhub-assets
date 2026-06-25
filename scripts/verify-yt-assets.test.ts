@@ -189,6 +189,7 @@ describe('runVerification', () => {
       slug: 'yt-test-asset',
       durationFrames: 120,
       rootDuration: 120,
+      componentDuration: 120,
     })
 
     await fs.writeFile(
@@ -494,6 +495,7 @@ describe('runVerification', () => {
       slug: 'yt-test-asset',
       durationFrames: 120,
       rootDuration: 120,
+      componentDuration: 120,
     })
 
     await fs.writeFile(
