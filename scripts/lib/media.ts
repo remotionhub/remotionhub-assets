@@ -32,6 +32,10 @@ export function buildObjectKey(slug: string, filename: string, hash: string) {
   return `showcase/${slug}/${hash.slice(0, 12)}-${filename}`
 }
 
+export function buildRuntimeObjectKey(hash: string) {
+  return `runtime/sha256/${hash}`
+}
+
 export async function downloadMedia(url: string) {
   let lastError: unknown
 
