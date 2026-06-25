@@ -198,8 +198,11 @@ async function mirrorRuntimeMedia(args: {
     let calls: ReturnType<typeof parseStaticFileCalls>
     try {
       calls = parseStaticFileCalls(sourceFile)
-    } catch {
-      continue
+    } catch (error: unknown) {
+      if (error instanceof Error && (error.message.includes('staticFile()') || error.message.includes('Cannot read file'))) {
+        continue
+      }
+      throw error
     }
 
     for (const call of calls) {

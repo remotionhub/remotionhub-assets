@@ -22,8 +22,9 @@ async function writeWorkspace(
   } = {},
 ) {
   const assetDir = path.join(tempDir, 'remotion', 'card-avatar')
+  const srcDir = path.join(assetDir, 'src')
   const manifestDir = path.join(tempDir, 'manifest')
-  await fs.mkdir(assetDir, { recursive: true })
+  await fs.mkdir(srcDir, { recursive: true })
   await fs.mkdir(manifestDir, { recursive: true })
 
   const status = options.status ?? 'sanitized'
@@ -68,6 +69,39 @@ async function writeWorkspace(
   await fs.writeFile(
     path.join(assetDir, 'README.md'),
     '# Card Avatar\n\n## Props\n\n## Agent Prompt\n',
+    'utf8',
+  )
+  await fs.writeFile(
+    path.join(srcDir, 'Root.tsx'),
+    `import { Composition, registerRoot } from 'remotion'
+import { CardAvatar } from './CardAvatar'
+
+export function RemotionRoot() {
+  return (
+    <Composition
+      id="CardAvatar"
+      component={CardAvatar}
+      durationInFrames={120}
+      fps={30}
+      width={1920}
+      height={1080}
+    />
+  )
+}
+
+registerRoot(RemotionRoot)
+`,
+    'utf8',
+  )
+  await fs.writeFile(
+    path.join(srcDir, 'CardAvatar.tsx'),
+    `import React from 'react'
+import { AbsoluteFill } from 'remotion'
+
+export const CardAvatar: React.FC = () => {
+  return <AbsoluteFill />
+}
+`,
     'utf8',
   )
   await fs.writeFile(

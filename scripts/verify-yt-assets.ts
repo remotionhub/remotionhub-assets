@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
@@ -286,18 +287,18 @@ async function verifyRemoteAssets(
 
   for (const entry of manifest.runtimeAssets) {
     try {
-      const response = await fetch(entry.url, { method: 'HEAD' })
+      const headResponse = await fetch(entry.url, { method: 'HEAD' })
 
-      if (!response.ok) {
+      if (!headResponse.ok) {
         errors.push({
           slug,
           check: 'remote-asset-downloadable',
-          message: `Runtime asset "${entry.sourcePath}" URL not downloadable: ${entry.url} (status: ${response.status})`,
+          message: `Runtime asset "${entry.sourcePath}" URL not downloadable: ${entry.url} (status: ${headResponse.status})`,
         })
         continue
       }
 
-      const contentLength = response.headers.get('content-length')
+      const contentLength = headResponse.headers.get('content-length')
       if (contentLength && Number(contentLength) !== entry.byteSize) {
         errors.push({
           slug,
@@ -306,12 +307,64 @@ async function verifyRemoteAssets(
         })
       }
 
-      const contentType = response.headers.get('content-type')
+      const contentType = headResponse.headers.get('content-type')
       if (contentType && !contentType.includes(entry.contentType)) {
         errors.push({
           slug,
           check: 'remote-asset-type',
           message: `Runtime asset "${entry.sourcePath}" content-type mismatch: manifest=${entry.contentType}, remote=${contentType}`,
+        })
+      }
+
+      const getResponse = await fetch(entry.url)
+      if (!getResponse.ok) {
+        errors.push({
+          slug,
+          check: 'remote-asset-download',
+          message: `Runtime asset "${entry.sourcePath}" GET failed: ${entry.url} (status: ${getResponse.status})`,
+        })
+        continue
+      }
+
+      const body = Buffer.from(await getResponse.arrayBuffer())
+
+      if (body.byteLength !== entry.byteSize) {
+        errors.push({
+          slug,
+          check: 'remote-asset-body-size',
+          message: `Runtime asset "${entry.sourcePath}" body size mismatch: manifest=${entry.byteSize}, actual=${body.byteLength}`,
+        })
+      }
+
+      const hash = createHash('sha256').update(body).digest('hex')
+      if (hash !== entry.sha256) {
+        errors.push({
+          slug,
+          check: 'remote-asset-sha256',
+          message: `Runtime asset "${entry.sourcePath}" SHA-256 mismatch: manifest=${entry.sha256}, actual=${hash}`,
+        })
+      }
+
+      const corsResponse = await fetch(entry.url, {
+        headers: { Origin: 'https://remotionhub.ai' },
+      })
+      const allowOrigin = corsResponse.headers.get('access-control-allow-origin')
+      if (!allowOrigin) {
+        errors.push({
+          slug,
+          check: 'remote-asset-cors',
+          message: `Runtime asset "${entry.sourcePath}" missing Access-Control-Allow-Origin header`,
+        })
+      }
+
+      const rangeResponse = await fetch(entry.url, {
+        headers: { Range: 'bytes=0-1023' },
+      })
+      if (rangeResponse.status !== 206) {
+        errors.push({
+          slug,
+          check: 'remote-asset-range',
+          message: `Runtime asset "${entry.sourcePath}" Range request returned ${rangeResponse.status} instead of 206`,
         })
       }
     } catch (error) {

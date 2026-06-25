@@ -247,8 +247,12 @@ export async function runValidation(options: ValidationOptions = {}) {
     )
     const durationInfo = parseDurationFrames(componentPath)
     sourceDuration = durationInfo.value
-  } catch {
-    // No duration constant found — that's OK, not all components export one
+  } catch (error: unknown) {
+    if (error instanceof Error && error.message.includes('No *_DURATION_FRAMES export found')) {
+      // Expected: not all components export a duration constant
+    } else {
+      throw error
+    }
   }
 
   assertDurationConsistency({
