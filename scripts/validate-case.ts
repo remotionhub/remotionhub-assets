@@ -10,6 +10,11 @@ import {
   writeAssetManifest,
   formatDefaultValue,
 } from './lib/assetManifest'
+import {
+  parseDurationFrames,
+  parseRootDuration,
+  assertDurationConsistency,
+} from './lib/compositionMetadata'
 
 const INVENTORY_PATH = path.join('manifest', 'remotionlab-showcase.json')
 
@@ -42,6 +47,13 @@ async function readInventory(pathname: string) {
 async function writeInventory(pathname: string, inventory: Inventory) {
   const parsed = inventorySchema.parse(inventory)
   await fs.writeFile(pathname, `${JSON.stringify(parsed, null, 2)}\n`, 'utf8')
+}
+
+function toPascalCase(slug: string) {
+  return slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')
 }
 
 function withValidatedStatus(
@@ -220,6 +232,31 @@ export async function runValidation(options: ValidationOptions = {}) {
   )
   const inventoryPath = path.join(cwd, INVENTORY_PATH)
   const manifest = await readAssetManifest(manifestPath)
+
+  const rootPath = path.join(cwd, 'remotion', slug, 'src', 'Root.tsx')
+  const rootDuration = parseRootDuration(rootPath)
+
+  let sourceDuration: number | undefined
+  try {
+    const componentPath = path.join(
+      cwd,
+      'remotion',
+      slug,
+      'src',
+      `${toPascalCase(slug)}.tsx`,
+    )
+    const durationInfo = parseDurationFrames(componentPath)
+    sourceDuration = durationInfo.value
+  } catch {
+    // No duration constant found — that's OK, not all components export one
+  }
+
+  assertDurationConsistency({
+    slug,
+    manifestDuration: manifest.durationFrames,
+    rootDuration,
+    sourceDuration,
+  })
 
   if (!manifestOnly) {
     runCommand('npx', ['tsc', '-p', 'tsconfig.base.json', '--noEmit'])
