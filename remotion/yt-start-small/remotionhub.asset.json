@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-start-small/6bcee35d0908-thumb.jpg",
   "entryPoint": "src/YtStartSmall.tsx",
   "compositionId": "YtStartSmall",
-  "durationFrames": 120,
+  "durationFrames": 210,
   "fps": 30,
   "width": 1920,
   "height": 1080,

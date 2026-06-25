@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-deploy-cloudflare/68d290450a73-thumb.jpg",
   "entryPoint": "src/YtDeployCloudflare.tsx",
   "compositionId": "YtDeployCloudflare",
-  "durationFrames": 120,
+  "durationFrames": 210,
   "fps": 30,
   "width": 1920,
   "height": 1080,

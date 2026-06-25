@@ -6,7 +6,7 @@ export function RemotionRoot() {
     <Composition
       id="YtShortestPath"
       component={YtShortestPath}
-      durationInFrames={120}
+      durationInFrames={210}
       fps={30}
       width={1920}
       height={1080}

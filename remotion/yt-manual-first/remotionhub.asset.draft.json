@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-manual-first/thumb.jpg",
   "entryPoint": "src/YtManualFirst.tsx",
   "compositionId": "YtManualFirst",
-  "durationFrames": 120,
+  "durationFrames": 360,
   "fps": 30,
   "width": 1920,
   "height": 1080,

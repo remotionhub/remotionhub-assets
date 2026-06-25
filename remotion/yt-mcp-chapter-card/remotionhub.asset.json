@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-mcp-chapter-card/02a45fc12b65-thumb.jpg",
   "entryPoint": "src/YtMcpChapterCard.tsx",
   "compositionId": "YtMcpChapterCard",
-  "durationFrames": 120,
+  "durationFrames": 75,
   "fps": 30,
   "width": 1920,
   "height": 1080,

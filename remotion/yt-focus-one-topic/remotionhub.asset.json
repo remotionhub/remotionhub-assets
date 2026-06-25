@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-focus-one-topic/e42fc4b68e0a-thumb.jpg",
   "entryPoint": "src/YtFocusOneTopic.tsx",
   "compositionId": "YtFocusOneTopic",
-  "durationFrames": 120,
+  "durationFrames": 210,
   "fps": 30,
   "width": 1920,
   "height": 1080,

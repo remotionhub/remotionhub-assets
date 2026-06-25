@@ -1,0 +1,29 @@
+{
+  "slug": "yt-audio-fast-results",
+  "displayName": "Yt Audio Fast Results",
+  "displayNameZh": "AI 快速产出多版本成果",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-audio-fast-results",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-fast-results/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-fast-results/thumb.jpg",
+  "previewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-fast-results/preview.mp4",
+  "thumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-fast-results/thumb.jpg",
+  "entryPoint": "src/YtAudioFastResults.tsx",
+  "compositionId": "YtAudioFastResults",
+  "durationFrames": 240,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene19-FastResults.tsx），请帮我做以下调整： 1. 修改计时器显示文字（目前是 \"< 5 min\"）与时钟快转的帧范围（[10, 55]）。 2. 更改版本卡片数量（目前是 12 张）与格线排版（目前 4 列）。 3. 调整「AI 不会生气」的文字与 AI 脸孔图标的颜色。 4. 修改最终选中的卡片索引（目前是第 7 张，`SELECTED-INDEX = 6`）。 请保留原本的弹出动画与选版高亮效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "extracted",
+    "sourceFile": "/tmp/remotionlab/案例/yt-audio-fast-results.md",
+    "updatedAt": "2026-06-24T01:06:18.120Z"
+  }
+}

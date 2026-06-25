@@ -6,7 +6,7 @@ export function RemotionRoot() {
     <Composition
       id="YtLinePhaseIntro"
       component={YtLinePhaseIntro}
-      durationInFrames={120}
+      durationInFrames={180}
       fps={30}
       width={1920}
       height={1080}

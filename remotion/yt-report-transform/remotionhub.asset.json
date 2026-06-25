@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-report-transform/05201623b930-thumb.jpg",
   "entryPoint": "src/YtReportTransform.tsx",
   "compositionId": "YtReportTransform",
-  "durationFrames": 120,
+  "durationFrames": 300,
   "fps": 30,
   "width": 1920,
   "height": 1080,

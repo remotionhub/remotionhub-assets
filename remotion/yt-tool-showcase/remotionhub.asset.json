@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tool-showcase/edbddcb25b7d-thumb.jpg",
   "entryPoint": "src/YtToolShowcase.tsx",
   "compositionId": "YtToolShowcase",
-  "durationFrames": 120,
+  "durationFrames": 900,
   "fps": 30,
   "width": 1920,
   "height": 1080,

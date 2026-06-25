@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-like-subscribe-bell/e54a7076f08c-thumb.jpg",
   "entryPoint": "src/YtLikeSubscribeBell.tsx",
   "compositionId": "YtLikeSubscribeBell",
-  "durationFrames": 120,
+  "durationFrames": 300,
   "fps": 30,
   "width": 1920,
   "height": 1080,

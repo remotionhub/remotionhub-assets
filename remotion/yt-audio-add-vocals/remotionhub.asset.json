@@ -1,0 +1,29 @@
+{
+  "slug": "yt-audio-add-vocals",
+  "displayName": "Yt Audio Add Vocals",
+  "displayNameZh": "为乐曲加入人声动画",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-audio-add-vocals",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-add-vocals/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-audio-add-vocals/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-audio-add-vocals/56eebb5c64d1-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-audio-add-vocals/30f3b6e62795-thumb.jpg",
+  "entryPoint": "src/YtAudioAddVocals.tsx",
+  "compositionId": "YtAudioAddVocals",
+  "durationFrames": 240,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene23-AddVocals.tsx），请帮我做以下调整： 1. 修改乐器轨道的标签与颜色（伴奏轨道与人声轨道）。 2. 调整人声麦克风图标的样式（`MicrophoneIcon` 组件）。 3. 更改人声轨道的波形颜色（目前是 `colors.accent` 蓝色）。 4. 修改背景底色（目前是 `colors.background`）。 请保留原本的波形描边动画与人声加入的渐入效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-audio-add-vocals.md",
+    "updatedAt": "2026-06-24T01:05:04.402Z"
+  }
+}

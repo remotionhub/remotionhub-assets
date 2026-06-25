@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-cloudflare-api-key/0ed169a434f9-thumb.jpg",
   "entryPoint": "src/YtCloudflareApiKey.tsx",
   "compositionId": "YtCloudflareApiKey",
-  "durationFrames": 120,
+  "durationFrames": 150,
   "fps": 30,
   "width": 1920,
   "height": 1080,

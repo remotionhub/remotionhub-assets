@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-audio-control/e7c5308aac9f-thumb.jpg",
   "entryPoint": "src/YtAudioControl.tsx",
   "compositionId": "YtAudioControl",
-  "durationFrames": 120,
+  "durationFrames": 240,
   "fps": 30,
   "width": 1920,
   "height": 1080,

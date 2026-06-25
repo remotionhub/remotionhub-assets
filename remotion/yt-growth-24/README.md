@@ -19,7 +19,7 @@ export function RemotionRoot() {
     <Composition
       id="YtGrowth24"
       component={YtGrowth24}
-      durationInFrames={120}
+      durationInFrames={180}
       fps={30}
       width={1920}
       height={1080}

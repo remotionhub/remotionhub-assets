@@ -1,0 +1,29 @@
+{
+  "slug": "yt-connection-recap-outro",
+  "displayName": "Yt Connection Recap Outro",
+  "displayNameZh": "Connection 系列总结片尾",
+  "runtime": "remotion",
+  "sourceUrl": "https://remotionlab.com/showcase/yt-connection-recap-outro",
+  "originalPreviewUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-connection-recap-outro/preview.mp4",
+  "originalThumbnailUrl": "https://pub-1cc20f8a898349ab9b2823b040fcd0b8.r2.dev/showcase/yt-connection-recap-outro/thumb.jpg",
+  "previewUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-connection-recap-outro/7bd023a9c4d3-preview.mp4",
+  "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-connection-recap-outro/ed2a71c5b891-thumb.jpg",
+  "entryPoint": "src/YtConnectionRecapOutro.tsx",
+  "compositionId": "YtConnectionRecapOutro",
+  "durationFrames": 480,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "aspectRatios": [
+    "16:9"
+  ],
+  "license": "MIT",
+  "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene16-RecapOutro.tsx），请帮我做以下调整： 1. 修改 `recapCards` 阵列中三张卡片的 `title`、`subtitle` 与 `color`，换成你自己的成果摘要。 2. 更换 `channelPills` 阵列（目前是 [\"Discord\", \"Slack\", \"Email\"]）为你的社群频道名称。 3. 调整片尾频道名称（目前是 \"土拨鼠日志\"）。 4. 修改 GitHub 连结文字（目前是 \"github.com/woodlandcreature/...\"）。 请保留原本的卡片入场动画与 CTA 按钮效果，只修改我指定的部分，然后把完整的修改后代码给我。",
+  "propsSchema": [],
+  "extraDependencies": [],
+  "migration": {
+    "status": "validated",
+    "sourceFile": "/tmp/remotionlab/案例/yt-connection-recap-outro.md",
+    "updatedAt": "2026-06-24T01:05:45.907Z"
+  }
+}

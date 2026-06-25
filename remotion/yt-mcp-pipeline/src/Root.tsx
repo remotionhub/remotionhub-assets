@@ -6,7 +6,7 @@ export function RemotionRoot() {
     <Composition
       id="YtMcpPipeline"
       component={YtMcpPipeline}
-      durationInFrames={120}
+      durationInFrames={600}
       fps={30}
       width={1920}
       height={1080}

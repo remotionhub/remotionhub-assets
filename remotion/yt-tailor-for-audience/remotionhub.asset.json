@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-tailor-for-audience/68bb5cf3db6a-thumb.jpg",
   "entryPoint": "src/YtTailorForAudience.tsx",
   "compositionId": "YtTailorForAudience",
-  "durationFrames": 120,
+  "durationFrames": 210,
   "fps": 30,
   "width": 1920,
   "height": 1080,

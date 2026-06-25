@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-too-many-coincidences/12e5c8d475a5-thumb.jpg",
   "entryPoint": "src/YtTooManyCoincidences.tsx",
   "compositionId": "YtTooManyCoincidences",
-  "durationFrames": 120,
+  "durationFrames": 240,
   "fps": 30,
   "width": 1920,
   "height": 1080,

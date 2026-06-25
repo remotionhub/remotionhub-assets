@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-prompt-dev/10fc51a554fa-thumb.jpg",
   "entryPoint": "src/YtPromptDev.tsx",
   "compositionId": "YtPromptDev",
-  "durationFrames": 120,
+  "durationFrames": 180,
   "fps": 30,
   "width": 1920,
   "height": 1080,

@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-build-stability/320d7b3f3315-thumb.jpg",
   "entryPoint": "src/YtBuildStability.tsx",
   "compositionId": "YtBuildStability",
-  "durationFrames": 120,
+  "durationFrames": 180,
   "fps": 30,
   "width": 1920,
   "height": 1080,

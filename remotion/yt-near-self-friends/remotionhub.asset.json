@@ -10,7 +10,7 @@
   "thumbnailUrl": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/yt-near-self-friends/3fd411869270-thumb.jpg",
   "entryPoint": "src/YtNearSelfFriends.tsx",
   "compositionId": "YtNearSelfFriends",
-  "durationFrames": 120,
+  "durationFrames": 150,
   "fps": 30,
   "width": 1920,
   "height": 1080,
