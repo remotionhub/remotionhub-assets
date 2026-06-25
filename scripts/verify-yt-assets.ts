@@ -1,10 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
-import {
-  type AssetManifest,
-  assetManifestSchema,
-} from './lib/assetManifest'
+import { type AssetManifest, assetManifestSchema } from './lib/assetManifest'
 import {
   parseDurationFrames,
   parseRootDuration,
@@ -27,11 +24,6 @@ function toPascalCase(slug: string) {
     .split('-')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join('')
-}
-
-async function readJsonFile(filePath: string) {
-  const raw = await fs.readFile(filePath, 'utf8')
-  return JSON.parse(raw)
 }
 
 async function readManifest(filePath: string): Promise<AssetManifest> {
@@ -218,7 +210,13 @@ async function verifyRuntimeAssets(
     return errors
   }
 
-  const runtimeAssetsPath = path.join(cwd, 'remotion', slug, 'src', 'runtime-assets.ts')
+  const runtimeAssetsPath = path.join(
+    cwd,
+    'remotion',
+    slug,
+    'src',
+    'runtime-assets.ts',
+  )
 
   if (!(await fileExists(runtimeAssetsPath))) {
     errors.push({
@@ -330,20 +328,28 @@ async function verifyRemoteAssets(
 
 export async function runVerification(options: VerificationOptions = {}) {
   const cwd = options.cwd ?? process.cwd()
-  const checkRemote = options.checkRemote ?? process.argv.includes('--check-remote')
+  const checkRemote =
+    options.checkRemote ?? process.argv.includes('--check-remote')
 
   const slugsPath = path.join(cwd, 'manifest', 'yt-animation-slugs.json')
-  const canonicalSlugs: string[] = JSON.parse(await fs.readFile(slugsPath, 'utf8'))
+  const canonicalSlugs: string[] = JSON.parse(
+    await fs.readFile(slugsPath, 'utf8'),
+  )
   const canonicalSlugSet = new Set(canonicalSlugs)
 
   const errors: VerificationError[] = []
 
-  errors.push(...await verifySlugDirectoryMapping(cwd, canonicalSlugs))
-  errors.push(...await verifyReverseMapping(cwd, canonicalSlugSet))
-  errors.push(...await verifyLockfileEntries(cwd, canonicalSlugs))
+  errors.push(...(await verifySlugDirectoryMapping(cwd, canonicalSlugs)))
+  errors.push(...(await verifyReverseMapping(cwd, canonicalSlugSet)))
+  errors.push(...(await verifyLockfileEntries(cwd, canonicalSlugs)))
 
   for (const slug of canonicalSlugs) {
-    const manifestPath = path.join(cwd, 'remotion', slug, 'remotionhub.asset.json')
+    const manifestPath = path.join(
+      cwd,
+      'remotion',
+      slug,
+      'remotionhub.asset.json',
+    )
 
     if (!(await fileExists(manifestPath))) {
       errors.push({
@@ -366,13 +372,13 @@ export async function runVerification(options: VerificationOptions = {}) {
       continue
     }
 
-    errors.push(...await verifyDurationConsistency(cwd, slug, manifest))
-    errors.push(...await verifyComponentDuration(cwd, slug, manifest))
-    errors.push(...await verifyNoStaticFileCalls(cwd, slug))
-    errors.push(...await verifyRuntimeAssets(cwd, slug, manifest))
+    errors.push(...(await verifyDurationConsistency(cwd, slug, manifest)))
+    errors.push(...(await verifyComponentDuration(cwd, slug, manifest)))
+    errors.push(...(await verifyNoStaticFileCalls(cwd, slug)))
+    errors.push(...(await verifyRuntimeAssets(cwd, slug, manifest)))
 
     if (checkRemote) {
-      errors.push(...await verifyRemoteAssets(slug, manifest))
+      errors.push(...(await verifyRemoteAssets(slug, manifest)))
     }
   }
 

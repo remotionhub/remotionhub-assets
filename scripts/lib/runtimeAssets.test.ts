@@ -63,9 +63,7 @@ const name = "foo.wav"
 const x = staticFile(name)
 `,
     )
-    expect(() => parseStaticFileCalls(filePath)).toThrow(
-      /dynamic argument/i,
-    )
+    expect(() => parseStaticFileCalls(filePath)).toThrow(/dynamic argument/i)
   })
 
   it('throws on dynamic staticFile arguments (template literal)', async () => {
@@ -75,9 +73,7 @@ const x = staticFile(name)
 const x = staticFile(\`audio/\${name}.wav\`)
 `,
     )
-    expect(() => parseStaticFileCalls(filePath)).toThrow(
-      /dynamic argument/i,
-    )
+    expect(() => parseStaticFileCalls(filePath)).toThrow(/dynamic argument/i)
   })
 
   it('throws on dynamic staticFile arguments (no arguments)', async () => {
@@ -187,8 +183,12 @@ describe('generateRuntimeAssetsModule', () => {
     expect(result).toContain("'avatar-2.png'")
 
     const lines = result.split('\n')
-    const tickIdx = lines.findIndex((l) => l.includes("'audio/connection/tick.wav'"))
-    const wooshIdx = lines.findIndex((l) => l.includes("'audio/connection/woosh.wav'"))
+    const tickIdx = lines.findIndex((l) =>
+      l.includes("'audio/connection/tick.wav'"),
+    )
+    const wooshIdx = lines.findIndex((l) =>
+      l.includes("'audio/connection/woosh.wav'"),
+    )
     const avatarIdx = lines.findIndex((l) => l.includes("'avatar-2.png'"))
     expect(tickIdx).toBeLessThan(wooshIdx)
     expect(wooshIdx).toBeLessThan(avatarIdx)
@@ -236,7 +236,9 @@ describe('generateRuntimeAssetsModule', () => {
       },
     ]
     const result = generateRuntimeAssetsModule(entries)
-    expect(result).toContain('export function runtimeAsset(path: RuntimeAssetPath)')
+    expect(result).toContain(
+      'export function runtimeAsset(path: RuntimeAssetPath)',
+    )
     expect(result).toContain('return runtimeAssets[path]')
   })
 

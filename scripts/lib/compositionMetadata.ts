@@ -1,3 +1,4 @@
+import path from 'node:path'
 import ts from 'typescript'
 
 export type DurationInfo = {
@@ -6,9 +7,7 @@ export type DurationInfo = {
   filePath: string
 }
 
-function extractNumericValue(
-  expr: ts.Expression,
-): number | undefined {
+function extractNumericValue(expr: ts.Expression): number | undefined {
   if (ts.isNumericLiteral(expr)) {
     return Number(expr.text)
   }
@@ -41,9 +40,7 @@ export function parseDurationFrames(sourceFilePath: string): DurationInfo {
 
   ts.forEachChild(sourceFile, (node) => {
     if (!ts.isVariableStatement(node)) return
-    if (
-      !(node.modifiers?.some((m) => m.kind === ts.SyntaxKind.ExportKeyword))
-    )
+    if (!node.modifiers?.some((m) => m.kind === ts.SyntaxKind.ExportKeyword))
       return
 
     for (const decl of node.declarationList.declarations) {
@@ -75,9 +72,7 @@ export function parseDurationFrames(sourceFilePath: string): DurationInfo {
   })
 
   if (candidates.length === 0) {
-    throw new Error(
-      `No *_DURATION_FRAMES export found in ${sourceFilePath}`,
-    )
+    throw new Error(`No *_DURATION_FRAMES export found in ${sourceFilePath}`)
   }
 
   if (candidates.length > 1) {
@@ -88,6 +83,39 @@ export function parseDurationFrames(sourceFilePath: string): DurationInfo {
   }
 
   return candidates[0]
+}
+
+function resolveIdentifierImport(
+  sourceFile: ts.SourceFile,
+  identifierName: string,
+  rootFilePath: string,
+): string | undefined {
+  let importPath: string | undefined
+
+  ts.forEachChild(sourceFile, (node) => {
+    if (!ts.isImportDeclaration(node)) return
+    if (!node.importClause) return
+
+    const namedBindings = node.importClause.namedBindings
+    if (!namedBindings || !ts.isNamedImports(namedBindings)) return
+
+    for (const element of namedBindings.elements) {
+      if (element.name.text === identifierName) {
+        if (ts.isStringLiteral(node.moduleSpecifier)) {
+          importPath = node.moduleSpecifier.text
+        }
+      }
+    }
+  })
+
+  if (!importPath) return undefined
+
+  const resolved = path.resolve(path.dirname(rootFilePath), importPath)
+  for (const ext of ['.ts', '.tsx']) {
+    if (ts.sys.fileExists(resolved + ext)) return resolved + ext
+  }
+  if (ts.sys.fileExists(resolved)) return resolved
+  return undefined
 }
 
 export function parseRootDuration(rootFilePath: string): number {
@@ -116,25 +144,35 @@ export function parseRootDuration(rootFilePath: string): number {
           if (attr.name.text !== 'durationInFrames') continue
 
           if (!attr.initializer) {
-            throw new Error(
-              `durationInFrames has no value in ${rootFilePath}`,
-            )
+            throw new Error(`durationInFrames has no value in ${rootFilePath}`)
           }
 
           if (ts.isJsxExpression(attr.initializer)) {
             const expr = attr.initializer.expression
             if (!expr) {
-              throw new Error(
-                `durationInFrames in ${rootFilePath} is not a numeric literal`,
-              )
+              throw new Error(`durationInFrames in ${rootFilePath} is empty`)
             }
             const val = extractNumericValue(expr)
-            if (val === undefined) {
+            if (val !== undefined) {
+              result = val
+            } else if (ts.isIdentifier(expr)) {
+              const sourcePath = resolveIdentifierImport(
+                sourceFile,
+                expr.text,
+                rootFilePath,
+              )
+              if (!sourcePath) {
+                throw new Error(
+                  `Cannot resolve import for "${expr.text}" in ${rootFilePath}`,
+                )
+              }
+              const durationInfo = parseDurationFrames(sourcePath)
+              result = durationInfo.value
+            } else {
               throw new Error(
-                `durationInFrames in ${rootFilePath} is not a numeric literal`,
+                `durationInFrames in ${rootFilePath} is not a numeric literal or identifier`,
               )
             }
-            result = val
           } else {
             throw new Error(
               `durationInFrames in ${rootFilePath} is not a numeric literal`,
