@@ -8,7 +8,7 @@ Reusable Remotion component migrated from https://remotionlab.com/showcase/yt-li
 
 ## Usage
 
-Copy `src/YtLinePhaseIntro.tsx` into your Remotion project and register it in your composition root.
+Copy `src/YtLinePhaseIntro.tsx` into your Remotion project and register it in your composition root. Also copy `src/runtime-assets.ts` which provides the runtime asset URLs required by this component.
 
 ```tsx
 import { Composition } from 'remotion'
