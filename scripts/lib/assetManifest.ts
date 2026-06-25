@@ -61,6 +61,17 @@ export const assetManifestSchema = z.object({
   prompt: z.string().min(1),
   propsSchema: z.array(propSchema),
   extraDependencies: z.array(z.string().min(1)),
+  runtimeAssets: z
+    .array(
+      z.object({
+        sourcePath: z.string().min(1),
+        url: remotionHubMediaUrlSchema,
+        sha256: z.string().regex(/^[0-9a-f]{64}$/),
+        byteSize: z.number().int().positive(),
+        contentType: z.string().min(1),
+      }),
+    )
+    .default([]),
   migration: z.object({
     status: migrationStatusSchema,
     sourceFile: z.string().min(1),
