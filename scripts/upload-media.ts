@@ -205,7 +205,11 @@ async function mirrorRuntimeMedia(args: {
     try {
       calls = parseStaticFileCalls(sourceFile)
     } catch (error: unknown) {
-      if (error instanceof Error && (error.message.includes('staticFile()') || error.message.includes('Cannot read file'))) {
+      if (
+        error instanceof Error &&
+        (error.message.includes('staticFile()') ||
+          error.message.includes('Cannot read file'))
+      ) {
         continue
       }
       throw error
@@ -349,9 +353,9 @@ export async function runMediaMirror(options?: {
     runtimeAssets:
       runtimeEntries.length > 0
         ? runtimeEntries
-        : ('runtimeAssets' in baseManifest
-            ? (baseManifest.runtimeAssets ?? [])
-            : []),
+        : 'runtimeAssets' in baseManifest
+          ? (baseManifest.runtimeAssets ?? [])
+          : [],
     migration: {
       sourceFile: baseManifest.migration.sourceFile,
       status: migrationStatus,
