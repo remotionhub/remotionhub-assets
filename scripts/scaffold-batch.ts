@@ -532,7 +532,7 @@ async function scaffold(slug: string) {
       console.log(
         `Renaming component from ${originalName} to ${compName} in ${slug}`,
       )
-      const escapedName = originalName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
+      const escapedName = originalName.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
       const regex = new RegExp(
         `(?<![a-zA-Z0-9_$])${escapedName}(?![a-zA-Z0-9_$])`,
         'g',

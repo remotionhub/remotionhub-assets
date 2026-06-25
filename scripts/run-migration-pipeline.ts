@@ -1,6 +1,4 @@
 import { execSync } from 'node:child_process'
-import fs from 'node:fs/promises'
-import path from 'node:path'
 
 const slugs = [
   'yt-acq-ret-ref',
