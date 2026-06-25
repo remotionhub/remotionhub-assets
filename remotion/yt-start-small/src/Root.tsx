@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtStartSmall, ytStartSmallDefaultProps } from './YtStartSmall'
+import { YtStartSmall, ytStartSmallDefaultProps , START_SMALL_DURATION_FRAMES } from './YtStartSmall'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtStartSmall"
       component={YtStartSmall}
-      durationInFrames={210}
+      durationInFrames={START_SMALL_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtReportTransform, ytReportTransformDefaultProps } from './YtReportTransform'
+import { YtReportTransform, ytReportTransformDefaultProps , REPORT_TRANSFORM_DURATION_FRAMES } from './YtReportTransform'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtReportTransform"
       component={YtReportTransform}
-      durationInFrames={300}
+      durationInFrames={REPORT_TRANSFORM_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

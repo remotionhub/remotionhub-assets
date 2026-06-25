@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtConsistentOutput, ytConsistentOutputDefaultProps } from './YtConsistentOutput'
+import { YtConsistentOutput, ytConsistentOutputDefaultProps , CONSISTENT_OUTPUT_DURATION_FRAMES } from './YtConsistentOutput'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtConsistentOutput"
       component={YtConsistentOutput}
-      durationInFrames={180}
+      durationInFrames={CONSISTENT_OUTPUT_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

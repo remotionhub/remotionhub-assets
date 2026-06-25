@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtBuildStability, ytBuildStabilityDefaultProps } from './YtBuildStability'
+import { YtBuildStability, ytBuildStabilityDefaultProps , BUILD_STABILITY_DURATION_FRAMES } from './YtBuildStability'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtBuildStability"
       component={YtBuildStability}
-      durationInFrames={180}
+      durationInFrames={BUILD_STABILITY_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

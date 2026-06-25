@@ -24,6 +24,8 @@ const AUDIENCES = [
   { label: "消费者", color: "#4DA3FF", delay: 60 },
 ];
 
+export const TAILOR_FOR_AUDIENCE_DURATION_FRAMES = 180;
+
 export const YtTailorForAudience: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();

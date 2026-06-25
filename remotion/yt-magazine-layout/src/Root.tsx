@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtMagazineLayout, ytMagazineLayoutDefaultProps } from './YtMagazineLayout'
+import { YtMagazineLayout, ytMagazineLayoutDefaultProps , MAGAZINE_STYLE_DURATION_FRAMES } from './YtMagazineLayout'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtMagazineLayout"
       component={YtMagazineLayout}
-      durationInFrames={180}
+      durationInFrames={MAGAZINE_STYLE_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

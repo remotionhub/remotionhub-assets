@@ -19,7 +19,7 @@ export function RemotionRoot() {
     <Composition
       id="YtThreeQuestions"
       component={YtThreeQuestions}
-      durationInFrames={210}
+      durationInFrames={630}
       fps={30}
       width={1920}
       height={1080}

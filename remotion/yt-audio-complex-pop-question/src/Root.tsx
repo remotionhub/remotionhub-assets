@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtAudioComplexPopQuestion, ytAudioComplexPopQuestionDefaultProps } from './YtAudioComplexPopQuestion'
+import { YtAudioComplexPopQuestion, ytAudioComplexPopQuestionDefaultProps , COMPLEX_POP_QUESTION_DURATION_FRAMES } from './YtAudioComplexPopQuestion'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtAudioComplexPopQuestion"
       component={YtAudioComplexPopQuestion}
-      durationInFrames={240}
+      durationInFrames={COMPLEX_POP_QUESTION_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

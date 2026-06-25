@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtAudioPromptSkill, ytAudioPromptSkillDefaultProps } from './YtAudioPromptSkill'
+import { YtAudioPromptSkill, ytAudioPromptSkillDefaultProps , PROMPT_SKILL_DURATION_FRAMES } from './YtAudioPromptSkill'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtAudioPromptSkill"
       component={YtAudioPromptSkill}
-      durationInFrames={300}
+      durationInFrames={PROMPT_SKILL_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

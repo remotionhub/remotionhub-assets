@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtSimpleAiProduct, ytSimpleAiProductDefaultProps } from './YtSimpleAiProduct'
+import { YtSimpleAiProduct, ytSimpleAiProductDefaultProps , SIMPLE_AI_PRODUCT_203_DURATION_FRAMES } from './YtSimpleAiProduct'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtSimpleAiProduct"
       component={YtSimpleAiProduct}
-      durationInFrames={120}
+      durationInFrames={SIMPLE_AI_PRODUCT_203_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}

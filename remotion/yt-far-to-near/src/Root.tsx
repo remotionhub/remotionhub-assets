@@ -1,12 +1,12 @@
 import { Composition, registerRoot } from 'remotion'
-import { YtFarToNear, ytFarToNearDefaultProps } from './YtFarToNear'
+import { YtFarToNear, ytFarToNearDefaultProps , FAR_TO_NEAR_DURATION_FRAMES } from './YtFarToNear'
 
 export function RemotionRoot() {
   return (
     <Composition
       id="YtFarToNear"
       component={YtFarToNear}
-      durationInFrames={120}
+      durationInFrames={FAR_TO_NEAR_DURATION_FRAMES}
       fps={30}
       width={1920}
       height={1080}
