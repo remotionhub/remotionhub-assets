@@ -21,9 +21,32 @@
   "prompt": "我有一个用 Remotion 写的场景组件（文件：Experiment1Scene.tsx），请帮我做以下调整： 1. 修改五个技能节点的图标路径与颜色（modules 阵列中的 path、color1、color2） 2. 调整底部标签文字（目前为「新增 Skill」） 3. 修改五个节点的飞入时间间隔（MODULE-DELAYS，目前为 50、66、82、98、114 帧） 4. 调整中心六角形的轨道半径（ORBIT-R，目前为 300px） 请保留 SVG 描边动画与光波扩散效果，只修改我指定的部分，然后把完整的修改后代码给我。",
   "propsSchema": [],
   "extraDependencies": [],
+  "runtimeAssets": [
+    {
+      "sourcePath": "audio/connection/woosh.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    },
+    {
+      "sourcePath": "audio/connection/soft-impact.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    },
+    {
+      "sourcePath": "audio/connection/soft-click.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    }
+  ],
   "migration": {
-    "status": "validated",
+    "status": "media-mirrored",
     "sourceFile": "/tmp/remotionlab/案例/yt-ai-skill-network.md",
-    "updatedAt": "2026-06-23T12:23:53.930Z"
+    "updatedAt": "2026-06-25T06:53:32.383Z"
   }
 }

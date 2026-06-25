@@ -7,8 +7,8 @@ import {
   interpolate,
   spring,
   Audio,
-  staticFile,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const colors = {
   background: "#0A0E14",
@@ -20,8 +20,8 @@ const colors = {
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
 const AUDIO = {
-  whooshIn: staticFile("audio/connection/woosh.wav"),
-  thump: staticFile("audio/connection/soft-impact.wav"),
+  whooshIn: runtimeAsset("audio/connection/woosh.wav"),
+  thump: runtimeAsset("audio/connection/soft-impact.wav"),
 };
 
 export const MCP_CHAPTER_CARD_DURATION_FRAMES = 75;

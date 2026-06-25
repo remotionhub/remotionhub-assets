@@ -21,9 +21,46 @@
   "prompt": "我有一个用 Remotion 写的场景组件（文件：Scene07-SoftwareCriteria.tsx），请帮我做以下调整： 1. 修改 `cards` 阵列中三张卡片的 `text` 文字内容，换成你自己的评选条件。 2. 更换三个 SVG 图标（`ImportEditIcon`、`MCPConnectorIcon`、`OpenSourceIcon`），可改用更适合主题的形状。 3. 调整标题文字（目前是 \"软体选择的三个条件\"）。 4. 修改卡片宽度（目前是 1400px）与卡片间距（目前是 32px）以适应不同萤幕比例。 请保留原本的从左侧滑入动画与徽章脉冲效果，只修改我指定的部分，然后把完整的修改后代码给我。",
   "propsSchema": [],
   "extraDependencies": [],
+  "runtimeAssets": [
+    {
+      "sourcePath": "audio/connection/soft-click.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    },
+    {
+      "sourcePath": "audio/connection/whoosh-out.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "sourcePath": "audio/connection/ding.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "sourcePath": "audio/connection/tiny-pop.mp3",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "sha256": "5a309ff187cf60974240256500ac6927e7d36c9aedbcb264a10d3fc423152934",
+      "byteSize": 366464,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "sourcePath": "audio/connection/tick.wav",
+      "url": "https://remotionhub.oss-cn-shenzhen.aliyuncs.com/runtime/sha256/3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "sha256": "3cf5b39164b9f8282b10705ecff18d5c73d4e2efb8193a1e6e7ad8f53fc34d24",
+      "byteSize": 58638,
+      "contentType": "audio/wav"
+    }
+  ],
   "migration": {
-    "status": "validated",
+    "status": "media-mirrored",
     "sourceFile": "/tmp/remotionlab/案例/yt-audio-software-criteria.md",
-    "updatedAt": "2026-06-23T12:25:20.817Z"
+    "updatedAt": "2026-06-25T06:53:50.737Z"
   }
 }

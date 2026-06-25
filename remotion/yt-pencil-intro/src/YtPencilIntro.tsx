@@ -5,12 +5,12 @@ import {
   Sequence,
   interpolate,
   spring,
-  staticFile,
   useCurrentFrame,
   useVideoConfig,
   delayRender,
   continueRender,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 import { useEffect, useState } from "react";
 
 const colors = {
@@ -184,7 +184,7 @@ export const YtPencilIntro: React.FC = () => {
           }}
         >
           <Img
-            src={staticFile("pencil-logo.jpeg")}
+            src={runtimeAsset("pencil-logo.jpeg")}
             style={{
               width: 140,
               height: 140,

@@ -7,8 +7,8 @@ import {
   interpolate,
   spring,
   Audio,
-  staticFile,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const colors = {
   background: "#0B0F17",
@@ -18,13 +18,13 @@ const colors = {
 };
 
 const AUDIO = {
-  softClick: staticFile("audio/connection/soft-click.wav"),
-  whoosh: staticFile("audio/connection/woosh.wav"),
-  whooshOut: staticFile("audio/connection/whoosh-out.mp3"),
-  ding: staticFile("audio/connection/ding.mp3"),
-  tinyPop: staticFile("audio/connection/tiny-pop.mp3"),
-  tick: staticFile("audio/connection/tick.wav"),
-  satisfyingFill: staticFile("audio/connection/satisfying-fill.wav"),
+  softClick: runtimeAsset("audio/connection/soft-click.wav"),
+  whoosh: runtimeAsset("audio/connection/woosh.wav"),
+  whooshOut: runtimeAsset("audio/connection/whoosh-out.mp3"),
+  ding: runtimeAsset("audio/connection/ding.mp3"),
+  tinyPop: runtimeAsset("audio/connection/tiny-pop.mp3"),
+  tick: runtimeAsset("audio/connection/tick.wav"),
+  satisfyingFill: runtimeAsset("audio/connection/satisfying-fill.wav"),
 };
 
 const WORD_GROUPS = [

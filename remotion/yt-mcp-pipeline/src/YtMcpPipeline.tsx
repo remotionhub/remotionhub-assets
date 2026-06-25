@@ -7,8 +7,8 @@ import {
   interpolate,
   spring,
   Audio,
-  staticFile,
 } from "remotion";
+import { runtimeAsset } from "./runtime-assets";
 
 const colors = {
   background: "#0A0E14",
@@ -20,8 +20,8 @@ const colors = {
 const fonts = { main: "'Inter', 'Noto Sans TC', sans-serif" };
 
 const AUDIO = {
-  tick: staticFile("audio/connection/tick.wav"),
-  ding: staticFile("audio/connection/ding.mp3"),
+  tick: runtimeAsset("audio/connection/tick.wav"),
+  ding: runtimeAsset("audio/connection/ding.mp3"),
 };
 
 export const MCP_PIPELINE_DURATION_FRAMES = 600;
