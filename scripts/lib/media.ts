@@ -11,6 +11,7 @@ export type OssMediaClient = {
     body: Buffer,
     options?: { mime?: string; headers?: Record<string, string> },
   ) => Promise<unknown>
+  head: (key: string) => Promise<unknown>
 }
 
 export type MediaUploadTarget =
