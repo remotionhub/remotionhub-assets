@@ -28,6 +28,15 @@ async function main() {
     ? `# ${manifest.displayNameZh} (${manifest.displayName})`
     : `# ${manifest.displayName}`
 
+  const runtimeAssetsPath = `remotion/${slug}/src/runtime-assets.ts`
+  let hasRuntimeAssets = false
+  try {
+    await fs.access(runtimeAssetsPath)
+    hasRuntimeAssets = true
+  } catch {
+    // no runtime-assets.ts
+  }
+
   const readme = `${titleHeader}
 
 > **Attribution Note**: This component is migrated from the original template on [remotionlab.com](https://remotionlab.com/showcase/${manifest.slug}). Credit goes to the original creator at remotionlab.
@@ -38,7 +47,11 @@ Reusable Remotion component migrated from ${manifest.sourceUrl}.
 
 ## Usage
 
-Copy \`src/${componentName}.tsx\` into your Remotion project and register it in your composition root.
+Copy \`src/${componentName}.tsx\` into your Remotion project and register it in your composition root.${
+    hasRuntimeAssets
+      ? ` Also copy \`src/runtime-assets.ts\` which provides the runtime asset URLs required by this component.`
+      : ''
+  }
 
 \`\`\`tsx
 import { Composition } from 'remotion'

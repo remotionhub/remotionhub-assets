@@ -1,5 +1,7 @@
 # Card Avatar
 
+> **Attribution Note**: This component is migrated from the original template on [remotionlab.com](https://remotionlab.com/showcase/card-avatar). Credit goes to the original creator at remotionlab.
+
 ![Preview](https://remotionhub.oss-cn-shenzhen.aliyuncs.com/showcase/card-avatar/15c7ad983dc4-thumb.jpg)
 
 Reusable Remotion component migrated from https://remotionlab.com/showcase/card-avatar.
