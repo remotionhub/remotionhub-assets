@@ -393,7 +393,7 @@ export async function runExtraction(options: ExtractionOptions = {}) {
     thumbnailUrl: parsed.thumbnailUrl,
     entryPoint: `src/${componentName}.tsx`,
     compositionId: componentName,
-    durationFrames: 120, // Placeholder: real duration comes from component's *_DURATION_FRAMES export. Validation enforces consistency.
+    durationFrames: 120, // Placeholder; overwritten by scaffold/validate from *_DURATION_FRAMES
     fps: 30,
     width: 1920,
     height: 1080,
@@ -411,6 +411,25 @@ export async function runExtraction(options: ExtractionOptions = {}) {
 
   const assetDir = path.join(cwd, assetPath)
   const inventoryPath = path.join(cwd, INVENTORY_PATH)
+
+  // Preserve existing verified duration if present
+  const existingDraftPath = path.join(assetDir, 'remotionhub.asset.draft.json')
+  let existingDuration: number | undefined
+  try {
+    const existing = JSON.parse(await fs.readFile(existingDraftPath, 'utf8'))
+    if (
+      typeof existing.durationFrames === 'number' &&
+      existing.durationFrames !== 120
+    ) {
+      existingDuration = existing.durationFrames
+    }
+  } catch {
+    // No existing draft, use default
+  }
+  if (existingDuration) {
+    draftManifest.durationFrames = existingDuration
+  }
+
   const inventory = upsertInventoryCase(await readInventory(inventoryPath), {
     slug: parsed.slug,
     status: 'extracted',
