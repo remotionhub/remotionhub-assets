@@ -172,7 +172,9 @@ export function parseRootDuration(rootFilePath: string): number {
     throw new Error(`No <Composition> element found in ${rootFilePath}`)
   }
   if (result === undefined) {
-    throw new Error(`durationInFrames not found in <Composition> in ${rootFilePath}`)
+    throw new Error(
+      `durationInFrames not found in <Composition> in ${rootFilePath}`,
+    )
   }
 
   return result
