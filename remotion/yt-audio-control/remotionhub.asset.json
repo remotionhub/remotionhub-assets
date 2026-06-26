@@ -80,8 +80,8 @@
     }
   ],
   "migration": {
-    "status": "media-mirrored",
+    "status": "validated",
     "sourceFile": "/tmp/remotionlab/案例/yt-audio-control.md",
-    "updatedAt": "2026-06-25T06:53:34.231Z"
+    "updatedAt": "2026-06-26T14:18:35.952Z"
   }
 }

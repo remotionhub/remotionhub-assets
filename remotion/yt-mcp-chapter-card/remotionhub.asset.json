@@ -38,8 +38,8 @@
     }
   ],
   "migration": {
-    "status": "media-mirrored",
+    "status": "validated",
     "sourceFile": "/tmp/remotionlab/案例/yt-mcp-chapter-card.md",
-    "updatedAt": "2026-06-25T06:54:05.583Z"
+    "updatedAt": "2026-06-26T14:18:35.952Z"
   }
 }

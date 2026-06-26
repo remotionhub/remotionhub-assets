@@ -291,10 +291,16 @@ export async function runMediaMirror(options?: {
   let preview: { targetUrl: string }
   let thumbnail: { targetUrl: string }
 
+  const shouldReMirror =
+    existing?.migration?.status === 'media-mirrored' &&
+    (existing.originalPreviewUrl !== raw.originalPreviewUrl ||
+      existing.originalThumbnailUrl !== raw.originalThumbnailUrl)
+
   if (
     existing?.migration?.status === 'media-mirrored' &&
     existing?.previewUrl &&
-    existing?.thumbnailUrl
+    existing?.thumbnailUrl &&
+    !shouldReMirror
   ) {
     console.log(`Media already mirrored for ${slug}, using cached URLs.`)
     preview = { targetUrl: existing.previewUrl }

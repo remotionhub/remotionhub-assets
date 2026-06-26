@@ -45,8 +45,8 @@
     }
   ],
   "migration": {
-    "status": "media-mirrored",
+    "status": "validated",
     "sourceFile": "/tmp/remotionlab/案例/yt-like-subscribe-bell.md",
-    "updatedAt": "2026-06-25T06:53:54.486Z"
+    "updatedAt": "2026-06-26T14:18:35.952Z"
   }
 }
