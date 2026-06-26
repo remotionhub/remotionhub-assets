@@ -268,3 +268,45 @@ export function generateRuntimeAssetsModule(
 
   return lines.join('\n')
 }
+
+export function rewriteStaticFileCalls(sourceFilePath: string): boolean {
+  const sourceText = ts.sys.readFile(sourceFilePath)
+  if (!sourceText) return false
+
+  const calls = parseStaticFileCalls(sourceFilePath)
+  if (calls.length === 0) return false
+
+  let result = sourceText
+
+  // Replace all staticFile('...') with runtimeAsset('...')
+  result = result.replace(
+    /staticFile\s*\(\s*(['"`])(.*?)\1\s*\)/g,
+    "runtimeAsset('$2')",
+  )
+
+  // Remove staticFile from remotion import
+  result = result.replace(
+    /import\s*\{([^}]*)\}\s*from\s*['"]remotion['"]/g,
+    (match, imports: string) => {
+      const items = imports
+        .split(',')
+        .map((s: string) => s.trim())
+        .filter((s: string) => s !== 'staticFile' && s !== '')
+      if (items.length === 0) return ''
+      return `import { ${items.join(', ')} } from 'remotion'`
+    },
+  )
+
+  // Add runtimeAsset import if not present
+  if (!result.includes("from './runtime-assets'")) {
+    const lastImport = result.lastIndexOf('import ')
+    const insertPos = result.indexOf('\n', lastImport) + 1
+    result =
+      result.slice(0, insertPos) +
+      "import { runtimeAsset } from './runtime-assets'\n" +
+      result.slice(insertPos)
+  }
+
+  ts.sys.writeFile(sourceFilePath, result)
+  return true
+}

@@ -21,12 +21,20 @@ import {
   uploadMediaObject,
 } from './lib/media'
 import {
+  type RuntimeAssetEntry,
   generateRuntimeAssetsModule,
   parseStaticFileCalls,
-  type RuntimeAssetEntry,
+  rewriteStaticFileCalls,
 } from './lib/runtimeAssets'
 
 const INVENTORY_PATH = path.join('manifest', 'remotionlab-showcase.json')
+
+function toPascalCase(slug: string) {
+  return slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('')
+}
 
 function readArg(name: string) {
   return process.argv
@@ -332,6 +340,20 @@ export async function runMediaMirror(options?: {
       generateRuntimeAssetsModule(runtimeEntries),
       'utf8',
     )
+
+    // Rewrite component source: staticFile() → runtimeAsset()
+    const componentName = toPascalCase(slug)
+    const componentPath = path.join(
+      cwd,
+      'remotion',
+      slug,
+      'src',
+      `${componentName}.tsx`,
+    )
+    const rewritten = rewriteStaticFileCalls(componentPath)
+    if (rewritten) {
+      console.log(`Rewrote staticFile() calls in ${componentPath}`)
+    }
   }
 
   const nextManifest: AssetManifest = {
