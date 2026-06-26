@@ -35,6 +35,13 @@ export function parseSourceFileOrThrow(
     scriptKind,
   )
 
+  // parseDiagnostics is an internal ts.SourceFile property that catches
+  // syntax errors before type checking. We use it here because
+  // ts.getPreEmitDiagnostics (the public API) runs full semantic analysis
+  // including module resolution, which would reject files with unresolvable
+  // imports even when only syntax validation is needed. This access is
+  // safe: the property has existed since TS 2.x, and the fallback below
+  // handles the case where it becomes unavailable.
   const parseDiagnostics =
     (
       sourceFile as ts.SourceFile & {
