@@ -3,7 +3,7 @@ import { createRawOssClientFromEnv } from './lib/media'
 
 const CORS_RULES = [
   {
-    allowedOrigin: ['*'],
+    allowedOrigin: ['https://remotionhub.ai'],
     allowedMethod: ['GET', 'HEAD'],
     allowedHeader: ['Range', 'Origin'],
     exposeHeader: [
