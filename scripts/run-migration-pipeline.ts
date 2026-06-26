@@ -138,7 +138,13 @@ async function runPipeline(slug: string) {
       stdio: 'inherit',
     })
 
-    // 4. Validate
+    // 4. Sanitize
+    console.log(`Running sanitize-case.ts...`)
+    execSync(`npx tsx scripts/sanitize-case.ts --slug=${slug}`, {
+      stdio: 'inherit',
+    })
+
+    // 5. Validate
     console.log(`Running validate-case.ts...`)
     execSync(`npx tsx scripts/validate-case.ts --slug=${slug}`, {
       stdio: 'inherit',
