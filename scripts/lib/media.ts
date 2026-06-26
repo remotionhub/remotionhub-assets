@@ -80,7 +80,10 @@ export function createS3ClientFromEnv() {
   })
 }
 
-export function createRawOssClientFromEnv(): { client: OSS; bucket: string } | null {
+export function createRawOssClientFromEnv(): {
+  client: OSS
+  bucket: string
+} | null {
   const accessKeyId = process.env.OSS_ACCESS_KEY_ID
   const accessKeySecret = process.env.OSS_ACCESS_KEY_SECRET
   const bucket = process.env.OSS_BUCKET
@@ -153,7 +156,8 @@ export async function objectExists(
     return true
   } catch (error: unknown) {
     const name = (error as { name?: string }).name
-    const httpStatus = (error as { $metadata?: { httpStatusCode?: number } }).$metadata?.httpStatusCode
+    const httpStatus = (error as { $metadata?: { httpStatusCode?: number } })
+      .$metadata?.httpStatusCode
     if (name === 'NotFound' || httpStatus === 404) {
       return false
     }
