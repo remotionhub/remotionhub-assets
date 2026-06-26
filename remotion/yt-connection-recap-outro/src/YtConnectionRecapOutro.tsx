@@ -153,6 +153,6 @@ export const YtConnectionRecapOutro: React.FC = () => {
   );
 };
 
-export const RECAP_OUTRO_DURATION_FRAMES = 480;
+export const YT_CONNECTION_RECAP_OUTRO_DURATION_FRAMES = 480;
 
 export const ytConnectionRecapOutroDefaultProps = {}
