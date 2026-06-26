@@ -6,7 +6,12 @@ const CORS_RULES = [
     allowedOrigin: ['https://remotionhub.ai', 'http://localhost:3000'],
     allowedMethod: ['GET', 'HEAD'],
     allowedHeader: ['Range', 'Origin'],
-    exposeHeader: ['Content-Length', 'Content-Type', 'Content-Range', 'Accept-Ranges'],
+    exposeHeader: [
+      'Content-Length',
+      'Content-Type',
+      'Content-Range',
+      'Accept-Ranges',
+    ],
     maxAgeSeconds: 86400,
   },
 ]
