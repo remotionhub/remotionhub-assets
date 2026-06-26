@@ -236,15 +236,18 @@ export async function runValidation(options: ValidationOptions = {}) {
   const rootPath = path.join(cwd, 'remotion', slug, 'src', 'Root.tsx')
   const rootDuration = parseRootDuration(rootPath)
 
-  const componentPath = path.join(
-    cwd,
-    'remotion',
-    slug,
-    'src',
-    `${toPascalCase(slug)}.tsx`,
-  )
-  const durationInfo = parseDurationFrames(componentPath)
-  const sourceDuration = durationInfo.value
+  let sourceDuration: number | undefined
+  if (slug.startsWith('yt-')) {
+    const componentPath = path.join(
+      cwd,
+      'remotion',
+      slug,
+      'src',
+      `${toPascalCase(slug)}.tsx`,
+    )
+    const durationInfo = parseDurationFrames(componentPath)
+    sourceDuration = durationInfo.value
+  }
 
   assertDurationConsistency({
     slug,
