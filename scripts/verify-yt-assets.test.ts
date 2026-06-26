@@ -913,6 +913,78 @@ export const ${pascalName} = () => {
     vi.unstubAllGlobals()
   })
 
+  it('detects CORS headers that do not allow RemotionHub', async () => {
+    const tempDir = await makeTempDir()
+    const slugs = ['yt-remote-cors-origin']
+    const body = Buffer.from('test content')
+    const realHash = createHash('sha256').update(body).digest('hex')
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug: 'yt-remote-cors-origin',
+      durationFrames: 120,
+      rootDuration: 120,
+      runtimeAssets: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/audio.wav',
+          sha256: realHash,
+          byteSize: body.byteLength,
+          contentType: 'audio/wav',
+        },
+      ],
+      hasRuntimeAssetsFile: true,
+    })
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const fetchMock = vi.fn()
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      headers: new Map([
+        ['content-length', String(body.byteLength)],
+        ['content-type', 'audio/wav'],
+      ]),
+    })
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      arrayBuffer: () => Promise.resolve(body.buffer),
+    })
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      headers: new Map([
+        ['access-control-allow-origin', 'https://other.example'],
+      ]),
+    })
+    fetchMock.mockResolvedValueOnce({
+      status: 206,
+      headers: new Map([['access-control-allow-origin', '*']]),
+    })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const result = await runVerification({
+      cwd: tempDir,
+      checkRemote: true,
+    })
+    const corsErrors = result.errors.filter(
+      (e) => e.check === 'remote-asset-cors',
+    )
+    expect(corsErrors).toHaveLength(1)
+    expect(corsErrors[0].message).toContain('https://other.example')
+
+    vi.unstubAllGlobals()
+  })
+
   it('detects non-206 Range request response for remote assets', async () => {
     const tempDir = await makeTempDir()
     const slugs = ['yt-remote-range']
@@ -976,6 +1048,76 @@ export const ${pascalName} = () => {
     expect(rangeErrors).toHaveLength(1)
     expect(rangeErrors[0].message).toContain('200')
     expect(rangeErrors[0].message).toContain('206')
+
+    vi.unstubAllGlobals()
+  })
+
+  it('detects missing CORS headers on Range responses', async () => {
+    const tempDir = await makeTempDir()
+    const slugs = ['yt-remote-range-cors']
+    const body = Buffer.from('test content')
+    const realHash = createHash('sha256').update(body).digest('hex')
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug: 'yt-remote-range-cors',
+      durationFrames: 120,
+      rootDuration: 120,
+      runtimeAssets: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/audio.wav',
+          sha256: realHash,
+          byteSize: body.byteLength,
+          contentType: 'audio/wav',
+        },
+      ],
+      hasRuntimeAssetsFile: true,
+    })
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const fetchMock = vi.fn()
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      headers: new Map([
+        ['content-length', String(body.byteLength)],
+        ['content-type', 'audio/wav'],
+      ]),
+    })
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      arrayBuffer: () => Promise.resolve(body.buffer),
+    })
+    fetchMock.mockResolvedValueOnce({
+      ok: true,
+      headers: new Map([['access-control-allow-origin', '*']]),
+    })
+    fetchMock.mockResolvedValueOnce({
+      status: 206,
+      headers: new Map(),
+    })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const result = await runVerification({
+      cwd: tempDir,
+      checkRemote: true,
+    })
+    const corsErrors = result.errors.filter(
+      (e) => e.check === 'remote-asset-cors',
+    )
+    expect(corsErrors).toHaveLength(1)
+    expect(corsErrors[0].message).toContain('Range')
 
     vi.unstubAllGlobals()
   })

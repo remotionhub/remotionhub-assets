@@ -24,11 +24,57 @@ type VerificationError = {
   message: string
 }
 
+const REMOTIONHUB_ORIGIN = 'https://remotionhub.ai'
+
 function toPascalCase(slug: string) {
   return slug
     .split('-')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join('')
+}
+
+function validateCorsResponse(args: {
+  slug: string
+  sourcePath: string
+  response: Response
+  label: string
+}): VerificationError[] {
+  const { slug, sourcePath, response, label } = args
+  const errors: VerificationError[] = []
+  const allowOrigin = response.headers.get('access-control-allow-origin')
+  const responseOk =
+    response.ok !== false &&
+    (response.ok ||
+      response.status === undefined ||
+      (response.status >= 200 && response.status < 300))
+
+  if (!responseOk) {
+    errors.push({
+      slug,
+      check: 'remote-asset-cors',
+      message: `Runtime asset "${sourcePath}" ${label} CORS request failed with status ${response.status}`,
+    })
+    return errors
+  }
+
+  if (!allowOrigin) {
+    errors.push({
+      slug,
+      check: 'remote-asset-cors',
+      message: `Runtime asset "${sourcePath}" ${label} response missing Access-Control-Allow-Origin header`,
+    })
+    return errors
+  }
+
+  if (allowOrigin !== '*' && allowOrigin !== REMOTIONHUB_ORIGIN) {
+    errors.push({
+      slug,
+      check: 'remote-asset-cors',
+      message: `Runtime asset "${sourcePath}" ${label} response has unsupported Access-Control-Allow-Origin: ${allowOrigin}`,
+    })
+  }
+
+  return errors
 }
 
 async function readManifest(filePath: string): Promise<AssetManifest> {
@@ -432,21 +478,22 @@ async function verifyRemoteAssets(
       }
 
       const corsResponse = await fetch(entry.url, {
-        headers: { Origin: 'https://remotionhub.ai' },
+        headers: { Origin: REMOTIONHUB_ORIGIN },
       })
-      const allowOrigin = corsResponse.headers.get(
-        'access-control-allow-origin',
-      )
-      if (!allowOrigin) {
-        errors.push({
+      errors.push(
+        ...validateCorsResponse({
           slug,
-          check: 'remote-asset-cors',
-          message: `Runtime asset "${entry.sourcePath}" missing Access-Control-Allow-Origin header`,
-        })
-      }
+          sourcePath: entry.sourcePath,
+          response: corsResponse,
+          label: 'GET',
+        }),
+      )
 
       const rangeResponse = await fetch(entry.url, {
-        headers: { Range: 'bytes=0-1023' },
+        headers: {
+          Origin: REMOTIONHUB_ORIGIN,
+          Range: 'bytes=0-1023',
+        },
       })
       if (rangeResponse.status !== 206) {
         errors.push({
@@ -455,6 +502,14 @@ async function verifyRemoteAssets(
           message: `Runtime asset "${entry.sourcePath}" Range request returned ${rangeResponse.status} instead of 206`,
         })
       }
+      errors.push(
+        ...validateCorsResponse({
+          slug,
+          sourcePath: entry.sourcePath,
+          response: rangeResponse,
+          label: 'Range',
+        }),
+      )
     } catch (error) {
       errors.push({
         slug,
