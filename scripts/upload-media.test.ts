@@ -399,4 +399,31 @@ describe('runMediaMirror', () => {
     )
     expect(manifest.migration.status).toBe('media-mirrored')
   })
+
+  it('fails when runtime media uses dynamic staticFile paths', async () => {
+    const tempDir = await makeTempDir()
+    await writeWorkspace(tempDir)
+    await fs.mkdir(path.join(tempDir, 'remotion', 'card-avatar', 'src'), {
+      recursive: true,
+    })
+    await fs.writeFile(
+      path.join(tempDir, 'remotion', 'card-avatar', 'src', 'CardAvatar.tsx'),
+      `import { staticFile } from 'remotion'
+
+const filename = 'audio/test.wav'
+const audio = staticFile(filename)
+`,
+      'utf8',
+    )
+
+    const { runMediaMirror } = await import('./upload-media')
+
+    await expect(
+      runMediaMirror({
+        cwd: tempDir,
+        slug: 'card-avatar',
+        dryRun: true,
+      }),
+    ).rejects.toThrow(/dynamic argument/i)
+  })
 })

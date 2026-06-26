@@ -18,7 +18,8 @@
     "validate": "tsx scripts/validate-case.ts",
     "manifest:validate": "tsx scripts/validate-case.ts --manifest-only",
     "readme:generate": "tsx scripts/generate-readme.ts",
-    "verify:yt-assets": "tsx scripts/verify-yt-assets.ts",
+    "verify:yt-assets": "tsx scripts/verify-yt-assets.ts --check-remote",
+    "verify:yt-assets:local": "tsx scripts/verify-yt-assets.ts",
     "oss:cors": "tsx scripts/configure-oss-cors.ts"
   },
   "dependencies": {

@@ -149,6 +149,17 @@ describe('media helpers', () => {
     )
   })
 
+  it('throws when OSS head returns an auth error', async () => {
+    const head = vi.fn(async () => {
+      throw Object.assign(new Error('Forbidden'), { status: 403 })
+    })
+    const target = { provider: 'oss' as const, client: { head, put: vi.fn() } }
+
+    await expect(objectExists(target, 'runtime/sha256/abc')).rejects.toThrow(
+      /Forbidden/,
+    )
+  })
+
   it('returns true when R2 HeadObject succeeds', async () => {
     const send = vi.fn(async () => ({ ContentLength: 1024 }))
     const target = {
@@ -172,6 +183,23 @@ describe('media helpers', () => {
 
     await expect(objectExists(target, 'runtime/sha256/abc')).resolves.toBe(
       false,
+    )
+  })
+
+  it('throws when R2 HeadObject returns a server error', async () => {
+    const send = vi.fn(async () => {
+      throw Object.assign(new Error('Internal Error'), {
+        $metadata: { httpStatusCode: 500 },
+      })
+    })
+    const target = {
+      provider: 'r2' as const,
+      client: { send } as unknown as R2MediaClient,
+      bucket: 'assets',
+    }
+
+    await expect(objectExists(target, 'runtime/sha256/abc')).rejects.toThrow(
+      /Internal Error/,
     )
   })
 })

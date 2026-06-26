@@ -34,6 +34,7 @@ async function createWorkspace(
       sourcePath: string
       url: string
     }>
+    runtimeAssetsFileContent?: string
     hasRuntimeAssetsFile?: boolean
     skipManifest?: boolean
     skipRoot?: boolean
@@ -144,7 +145,9 @@ export const ${pascalName}: React.FC = () => {
   if (options.hasRuntimeAssetsFile) {
     const assetsForFile =
       options.runtimeAssetsInFile ?? options.runtimeAssets ?? []
-    const runtimeAssetsContent = `export const runtimeAssets = {
+    const runtimeAssetsContent =
+      options.runtimeAssetsFileContent ??
+      `export const runtimeAssets = {
 ${assetsForFile.map((a) => `  '${a.sourcePath}': '${a.url}',`).join('\n')}
 } as const
 `
@@ -421,6 +424,51 @@ describe('runVerification', () => {
     })
   })
 
+  it('detects malformed component source even when duration is recoverable', async () => {
+    const tempDir = await makeTempDir()
+    const slug = 'yt-malformed-source'
+    const slugs = [slug]
+    const pascalName = toPascalCase(slug)
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug,
+      durationFrames: 120,
+      rootDuration: 120,
+      componentDuration: 120,
+    })
+    await fs.writeFile(
+      path.join(tempDir, 'remotion', slug, 'src', `${pascalName}.tsx`),
+      `export const ${pascalName.toUpperCase()}_DURATION_FRAMES = 120
+export const ${pascalName} = () => {
+  return <div>broken</span>
+}
+`,
+      'utf8',
+    )
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const result = await runVerification({ cwd: tempDir })
+    expect(
+      result.errors.some(
+        (e) =>
+          e.check === 'duration-parse-error' ||
+          e.check === 'staticfile-parse-error',
+      ),
+    ).toBe(true)
+  })
+
   it('detects missing runtime asset entry in runtime-assets.ts', async () => {
     const tempDir = await makeTempDir()
     const slugs = ['yt-runtime-entry']
@@ -478,6 +526,107 @@ describe('runVerification', () => {
       message:
         'Runtime asset entry "audio/missing.wav" not found in src/runtime-assets.ts',
     })
+  })
+
+  it('detects runtime asset URL mismatches in runtime-assets.ts', async () => {
+    const tempDir = await makeTempDir()
+    const slugs = ['yt-runtime-url-mismatch']
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug: 'yt-runtime-url-mismatch',
+      durationFrames: 120,
+      rootDuration: 120,
+      runtimeAssets: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/audio.wav',
+          sha256: 'a'.repeat(64),
+          byteSize: 1024,
+          contentType: 'audio/wav',
+        },
+      ],
+      runtimeAssetsInFile: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/wrong.wav',
+        },
+      ],
+      hasRuntimeAssetsFile: true,
+    })
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const result = await runVerification({ cwd: tempDir })
+    const entryErrors = result.errors.filter(
+      (e) => e.check === 'runtime-assets-entry',
+    )
+    expect(entryErrors).toHaveLength(1)
+    expect(entryErrors[0].message).toContain('URL mismatch')
+  })
+
+  it('detects runtimeAsset() calls that are not declared in the manifest', async () => {
+    const tempDir = await makeTempDir()
+    const slug = 'yt-runtime-call-missing'
+    const slugs = [slug]
+    const pascalName = toPascalCase(slug)
+
+    await fs.mkdir(path.join(tempDir, 'manifest'), { recursive: true })
+    await fs.writeFile(
+      path.join(tempDir, 'manifest', 'yt-animation-slugs.json'),
+      JSON.stringify(slugs, null, 2),
+      'utf8',
+    )
+
+    await createWorkspace(tempDir, {
+      slug,
+      durationFrames: 120,
+      rootDuration: 120,
+      runtimeAssets: [
+        {
+          sourcePath: 'audio/test.wav',
+          url: 'https://assets.remotionhub.ai/test/audio.wav',
+          sha256: 'a'.repeat(64),
+          byteSize: 1024,
+          contentType: 'audio/wav',
+        },
+      ],
+      hasRuntimeAssetsFile: true,
+    })
+    await fs.writeFile(
+      path.join(tempDir, 'remotion', slug, 'src', `${pascalName}.tsx`),
+      `import { runtimeAsset } from './runtime-assets'
+
+export const ${pascalName.toUpperCase()}_DURATION_FRAMES = 120
+export const ${pascalName} = () => {
+  return <audio src={runtimeAsset('audio/missing.wav')} />
+}
+`,
+      'utf8',
+    )
+
+    await fs.writeFile(
+      path.join(tempDir, 'package-lock.json'),
+      JSON.stringify({ name: 'test', lockfileVersion: 3, packages: {} }),
+      'utf8',
+    )
+
+    const result = await runVerification({ cwd: tempDir })
+    const callErrors = result.errors.filter(
+      (e) => e.check === 'runtime-asset-call',
+    )
+    expect(callErrors).toHaveLength(1)
+    expect(callErrors[0].message).toContain('audio/missing.wav')
   })
 
   it('detects missing lockfile entry for workspace', async () => {
