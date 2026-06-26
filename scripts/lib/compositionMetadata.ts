@@ -110,19 +110,16 @@ function resolveIdentifierImport(
 }
 
 export function parseRootDuration(rootFilePath: string): number {
-  const sourceText = ts.sys.readFile(rootFilePath)
-  if (!sourceText) {
-    throw new Error(`Cannot read file: ${rootFilePath}`)
-  }
-
   const sourceFile = parseSourceFileOrThrow(rootFilePath)
 
   let result: number | undefined
+  let foundComposition = false
 
   function visit(node: ts.Node) {
     if (ts.isJsxSelfClosingElement(node) || ts.isJsxOpeningElement(node)) {
       const tagName = node.tagName.getText(sourceFile)
       if (tagName === 'Composition') {
+        foundComposition = true
         for (const attr of node.attributes.properties) {
           if (!ts.isJsxAttribute(attr)) continue
           if (!ts.isIdentifier(attr.name)) continue
@@ -171,12 +168,11 @@ export function parseRootDuration(rootFilePath: string): number {
 
   visit(sourceFile)
 
+  if (!foundComposition) {
+    throw new Error(`No <Composition> element found in ${rootFilePath}`)
+  }
   if (result === undefined) {
-    const hasComposition = sourceText.includes('<Composition')
-    if (!hasComposition) {
-      throw new Error(`No Composition element found in ${rootFilePath}`)
-    }
-    throw new Error(`durationInFrames not found in ${rootFilePath}`)
+    throw new Error(`durationInFrames not found in <Composition> in ${rootFilePath}`)
   }
 
   return result

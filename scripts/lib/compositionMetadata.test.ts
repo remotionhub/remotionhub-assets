@@ -137,7 +137,7 @@ registerRoot(RemotionRoot)
 `,
     )
     expect(() => parseRootDuration(filePath)).toThrow(
-      /no Composition element found/i,
+      /no <Composition> element found/i,
     )
   })
 
