@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import { execSync } from 'node:child_process'
+import { execFileSync } from 'node:child_process'
 
 const slugs = [
   'audio-bar-spectrum',
@@ -508,7 +508,7 @@ async function scaffold(slug: string) {
 
   // 1. Run extraction script first to get source.raw.tsx
   console.log(`Extracting raw markdown for ${slug}...`)
-  execSync(`npx tsx scripts/extract-case.ts --slug=${slug}`, {
+  execFileSync('npx', ['tsx', 'scripts/extract-case.ts', `--slug=${slug}`], {
     stdio: 'inherit',
   })
 

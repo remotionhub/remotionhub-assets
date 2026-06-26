@@ -1,4 +1,4 @@
-import { execSync } from 'node:child_process'
+import { execFileSync } from 'node:child_process'
 
 const slugs = [
   'yt-acq-ret-ref',
@@ -124,29 +124,35 @@ async function runPipeline(slug: string) {
   try {
     // 1. Scaffold
     console.log(`Running scaffold-batch.ts...`)
-    execSync(`npx tsx scripts/scaffold-batch.ts ${slug}`, { stdio: 'inherit' })
+    execFileSync('npx', ['tsx', 'scripts/scaffold-batch.ts', slug], {
+      stdio: 'inherit',
+    })
 
     // 2. Upload/Mirror Media
     console.log(`Running upload-media.ts...`)
-    execSync(`npx tsx scripts/upload-media.ts --slug=${slug}`, {
+    execFileSync('npx', ['tsx', 'scripts/upload-media.ts', `--slug=${slug}`], {
       stdio: 'inherit',
     })
 
     // 3. Generate README
     console.log(`Running generate-readme.ts...`)
-    execSync(`npx tsx scripts/generate-readme.ts --slug=${slug}`, {
-      stdio: 'inherit',
-    })
+    execFileSync(
+      'npx',
+      ['tsx', 'scripts/generate-readme.ts', `--slug=${slug}`],
+      {
+        stdio: 'inherit',
+      },
+    )
 
     // 4. Sanitize
     console.log(`Running sanitize-case.ts...`)
-    execSync(`npx tsx scripts/sanitize-case.ts --slug=${slug}`, {
+    execFileSync('npx', ['tsx', 'scripts/sanitize-case.ts', `--slug=${slug}`], {
       stdio: 'inherit',
     })
 
     // 5. Validate
     console.log(`Running validate-case.ts...`)
-    execSync(`npx tsx scripts/validate-case.ts --slug=${slug}`, {
+    execFileSync('npx', ['tsx', 'scripts/validate-case.ts', `--slug=${slug}`], {
       stdio: 'inherit',
     })
 
