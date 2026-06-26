@@ -1,5 +1,6 @@
 import path from 'node:path'
 import ts from 'typescript'
+import { parseSourceFileOrThrow } from './runtimeAssets'
 
 export type DurationInfo = {
   name: string
@@ -24,17 +25,7 @@ function extractNumericValue(expr: ts.Expression): number | undefined {
 }
 
 export function parseDurationFrames(sourceFilePath: string): DurationInfo {
-  const sourceText = ts.sys.readFile(sourceFilePath)
-  if (!sourceText) {
-    throw new Error(`Cannot read file: ${sourceFilePath}`)
-  }
-
-  const sourceFile = ts.createSourceFile(
-    sourceFilePath,
-    sourceText,
-    ts.ScriptTarget.Latest,
-    true,
-  )
+  const sourceFile = parseSourceFileOrThrow(sourceFilePath)
 
   const candidates: DurationInfo[] = []
 
@@ -124,13 +115,7 @@ export function parseRootDuration(rootFilePath: string): number {
     throw new Error(`Cannot read file: ${rootFilePath}`)
   }
 
-  const sourceFile = ts.createSourceFile(
-    rootFilePath,
-    sourceText,
-    ts.ScriptTarget.Latest,
-    true,
-    ts.ScriptKind.TSX,
-  )
+  const sourceFile = parseSourceFileOrThrow(rootFilePath)
 
   let result: number | undefined
 

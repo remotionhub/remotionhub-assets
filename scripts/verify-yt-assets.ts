@@ -7,7 +7,11 @@ import {
   parseDurationFrames,
   parseRootDuration,
 } from './lib/compositionMetadata'
-import { parseStaticFileCalls } from './lib/runtimeAssets'
+import {
+  parseRuntimeAssetCalls,
+  parseRuntimeAssetsModule,
+  parseStaticFileCalls,
+} from './lib/runtimeAssets'
 
 type VerificationOptions = {
   cwd?: string
@@ -181,23 +185,27 @@ async function verifyComponentDuration(
   return errors
 }
 
+async function listSourceFiles(cwd: string, slug: string) {
+  const srcDir = path.join(cwd, 'remotion', slug, 'src')
+
+  if (!(await fileExists(srcDir))) {
+    return []
+  }
+
+  const entries = await fs.readdir(srcDir, { withFileTypes: true })
+  return entries
+    .filter((e) => e.isFile() && /\.[tj]sx?$/.test(e.name))
+    .map((e) => path.join(srcDir, e.name))
+}
+
 async function verifyNoStaticFileCalls(
   cwd: string,
   slug: string,
 ): Promise<VerificationError[]> {
   const errors: VerificationError[] = []
-  const srcDir = path.join(cwd, 'remotion', slug, 'src')
+  const sourceFiles = await listSourceFiles(cwd, slug)
 
-  if (!(await fileExists(srcDir))) {
-    return errors
-  }
-
-  const entries = await fs.readdir(srcDir, { withFileTypes: true })
-  const tsxFiles = entries
-    .filter((e) => e.isFile() && e.name.endsWith('.tsx'))
-    .map((e) => path.join(srcDir, e.name))
-
-  for (const filePath of tsxFiles) {
+  for (const filePath of sourceFiles) {
     try {
       const calls = parseStaticFileCalls(filePath)
       for (const call of calls) {
@@ -212,6 +220,43 @@ async function verifyNoStaticFileCalls(
         errors.push({
           slug,
           check: 'staticfile-parse-error',
+          message: error.message,
+        })
+      }
+    }
+  }
+
+  return errors
+}
+
+async function verifyRuntimeAssetCalls(
+  cwd: string,
+  slug: string,
+  manifest: AssetManifest,
+): Promise<VerificationError[]> {
+  const errors: VerificationError[] = []
+  const manifestSourcePaths = new Set(
+    (manifest.runtimeAssets ?? []).map((entry) => entry.sourcePath),
+  )
+  const sourceFiles = await listSourceFiles(cwd, slug)
+
+  for (const filePath of sourceFiles) {
+    try {
+      const calls = parseRuntimeAssetCalls(filePath)
+      for (const call of calls) {
+        if (!manifestSourcePaths.has(call.sourcePath)) {
+          errors.push({
+            slug,
+            check: 'runtime-asset-call',
+            message: `runtimeAsset("${call.sourcePath}") at ${filePath}:${call.line} is not declared in remotionhub.asset.json`,
+          })
+        }
+      }
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        errors.push({
+          slug,
+          check: 'runtime-asset-parse-error',
           message: error.message,
         })
       }
@@ -249,14 +294,34 @@ async function verifyRuntimeAssets(
     return errors
   }
 
-  const content = await fs.readFile(runtimeAssetsPath, 'utf8')
+  let moduleEntries: Map<string, string>
+  try {
+    moduleEntries = parseRuntimeAssetsModule(runtimeAssetsPath)
+  } catch (error: unknown) {
+    errors.push({
+      slug,
+      check: 'runtime-assets-entry',
+      message: `Failed to parse src/runtime-assets.ts: ${error instanceof Error ? error.message : String(error)}`,
+    })
+    return errors
+  }
 
   for (const entry of manifest.runtimeAssets) {
-    if (!content.includes(entry.sourcePath)) {
+    const moduleUrl = moduleEntries.get(entry.sourcePath)
+    if (!moduleUrl) {
       errors.push({
         slug,
         check: 'runtime-assets-entry',
         message: `Runtime asset entry "${entry.sourcePath}" not found in src/runtime-assets.ts`,
+      })
+      continue
+    }
+
+    if (moduleUrl !== entry.url) {
+      errors.push({
+        slug,
+        check: 'runtime-assets-entry',
+        message: `Runtime asset entry "${entry.sourcePath}" URL mismatch: manifest=${entry.url}, runtime-assets.ts=${moduleUrl}`,
       })
     }
   }
@@ -452,6 +517,7 @@ export async function runVerification(options: VerificationOptions = {}) {
     errors.push(...(await verifyComponentDuration(cwd, slug, manifest)))
     errors.push(...(await verifyNoStaticFileCalls(cwd, slug)))
     errors.push(...(await verifyRuntimeAssets(cwd, slug, manifest)))
+    errors.push(...(await verifyRuntimeAssetCalls(cwd, slug, manifest)))
 
     if (checkRemote) {
       errors.push(...(await verifyRemoteAssets(slug, manifest)))

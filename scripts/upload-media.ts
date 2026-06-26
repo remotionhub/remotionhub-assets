@@ -201,19 +201,7 @@ async function mirrorRuntimeMedia(args: {
   const results: RuntimeAssetEntry[] = []
 
   for (const sourceFile of sourceFiles) {
-    let calls: ReturnType<typeof parseStaticFileCalls>
-    try {
-      calls = parseStaticFileCalls(sourceFile)
-    } catch (error: unknown) {
-      if (
-        error instanceof Error &&
-        (error.message.includes('staticFile()') ||
-          error.message.includes('Cannot read file'))
-      ) {
-        continue
-      }
-      throw error
-    }
+    const calls = parseStaticFileCalls(sourceFile)
 
     for (const call of calls) {
       if (seen.has(call.arg)) {
