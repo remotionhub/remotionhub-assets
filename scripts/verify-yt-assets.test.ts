@@ -759,7 +759,10 @@ export const ${pascalName} = () => {
     })
     fetchMock.mockResolvedValueOnce({
       ok: true,
-      arrayBuffer: () => Promise.resolve(body.buffer),
+      arrayBuffer: () =>
+        Promise.resolve(
+          body.buffer.slice(body.byteOffset, body.byteOffset + body.byteLength),
+        ),
     })
     fetchMock.mockResolvedValueOnce({
       headers: new Map([['access-control-allow-origin', '*']]),
@@ -825,7 +828,10 @@ export const ${pascalName} = () => {
     })
     fetchMock.mockResolvedValueOnce({
       ok: true,
-      arrayBuffer: () => Promise.resolve(body.buffer),
+      arrayBuffer: () =>
+        Promise.resolve(
+          body.buffer.slice(body.byteOffset, body.byteOffset + body.byteLength),
+        ),
     })
     fetchMock.mockResolvedValueOnce({
       headers: new Map([['access-control-allow-origin', '*']]),
@@ -892,7 +898,10 @@ export const ${pascalName} = () => {
     })
     fetchMock.mockResolvedValueOnce({
       ok: true,
-      arrayBuffer: () => Promise.resolve(body.buffer),
+      arrayBuffer: () =>
+        Promise.resolve(
+          body.buffer.slice(body.byteOffset, body.byteOffset + body.byteLength),
+        ),
     })
     fetchMock.mockResolvedValueOnce({
       headers: new Map(),
@@ -958,7 +967,10 @@ export const ${pascalName} = () => {
     })
     fetchMock.mockResolvedValueOnce({
       ok: true,
-      arrayBuffer: () => Promise.resolve(body.buffer),
+      arrayBuffer: () =>
+        Promise.resolve(
+          body.buffer.slice(body.byteOffset, body.byteOffset + body.byteLength),
+        ),
     })
     fetchMock.mockResolvedValueOnce({
       ok: true,
@@ -1030,7 +1042,10 @@ export const ${pascalName} = () => {
     })
     fetchMock.mockResolvedValueOnce({
       ok: true,
-      arrayBuffer: () => Promise.resolve(body.buffer),
+      arrayBuffer: () =>
+        Promise.resolve(
+          body.buffer.slice(body.byteOffset, body.byteOffset + body.byteLength),
+        ),
     })
     fetchMock.mockResolvedValueOnce({
       headers: new Map([['access-control-allow-origin', '*']]),
@@ -1097,7 +1112,10 @@ export const ${pascalName} = () => {
     })
     fetchMock.mockResolvedValueOnce({
       ok: true,
-      arrayBuffer: () => Promise.resolve(body.buffer),
+      arrayBuffer: () =>
+        Promise.resolve(
+          body.buffer.slice(body.byteOffset, body.byteOffset + body.byteLength),
+        ),
     })
     fetchMock.mockResolvedValueOnce({
       ok: true,

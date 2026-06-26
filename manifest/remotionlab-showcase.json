@@ -1059,10 +1059,10 @@
     },
     {
       "slug": "yt-ai-not-understand",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-ai-not-understand.md",
       "assetPath": "remotion/yt-ai-not-understand",
-      "updatedAt": "2026-06-25T06:53:20.916Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-ai-reads-only",
@@ -1080,10 +1080,10 @@
     },
     {
       "slug": "yt-ai-skill-network",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-ai-skill-network.md",
       "assetPath": "remotion/yt-ai-skill-network",
-      "updatedAt": "2026-06-25T06:53:32.383Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-ai-use-cases",
@@ -1136,10 +1136,10 @@
     },
     {
       "slug": "yt-audio-control",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-audio-control.md",
       "assetPath": "remotion/yt-audio-control",
-      "updatedAt": "2026-06-25T06:53:34.231Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-audio-fast-results",
@@ -1150,17 +1150,17 @@
     },
     {
       "slug": "yt-audio-lets-start",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-audio-lets-start.md",
       "assetPath": "remotion/yt-audio-lets-start",
-      "updatedAt": "2026-06-25T06:53:36.433Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-audio-prompt-skill",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-audio-prompt-skill.md",
       "assetPath": "remotion/yt-audio-prompt-skill",
-      "updatedAt": "2026-06-25T06:53:38.246Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-audio-rock-remix",
@@ -1171,10 +1171,10 @@
     },
     {
       "slug": "yt-audio-software-criteria",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-audio-software-criteria.md",
       "assetPath": "remotion/yt-audio-software-criteria",
-      "updatedAt": "2026-06-25T06:53:50.737Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-brand-value-stripped",
@@ -1416,10 +1416,10 @@
     },
     {
       "slug": "yt-from-scratch",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-from-scratch.md",
       "assetPath": "remotion/yt-from-scratch",
-      "updatedAt": "2026-06-25T06:53:52.423Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-game-mashup",
@@ -1486,17 +1486,17 @@
     },
     {
       "slug": "yt-like-subscribe-bell",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-like-subscribe-bell.md",
       "assetPath": "remotion/yt-like-subscribe-bell",
-      "updatedAt": "2026-06-25T06:53:54.486Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-line-phase-intro",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-line-phase-intro.md",
       "assetPath": "remotion/yt-line-phase-intro",
-      "updatedAt": "2026-06-25T06:53:56.217Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-magazine-layout",
@@ -1514,17 +1514,17 @@
     },
     {
       "slug": "yt-mcp-chapter-card",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-mcp-chapter-card.md",
       "assetPath": "remotion/yt-mcp-chapter-card",
-      "updatedAt": "2026-06-25T06:54:05.583Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-mcp-pipeline",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-mcp-pipeline.md",
       "assetPath": "remotion/yt-mcp-pipeline",
-      "updatedAt": "2026-06-25T06:54:07.488Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-mid-ask-experts",
@@ -1591,10 +1591,10 @@
     },
     {
       "slug": "yt-pencil-intro",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-pencil-intro.md",
       "assetPath": "remotion/yt-pencil-intro",
-      "updatedAt": "2026-06-25T06:54:09.474Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-product-overflow",
@@ -1717,10 +1717,10 @@
     },
     {
       "slug": "yt-svg-cards",
-      "status": "media-mirrored",
+      "status": "validated",
       "sourceFile": "/tmp/remotionlab/案例/yt-svg-cards.md",
       "assetPath": "remotion/yt-svg-cards",
-      "updatedAt": "2026-06-25T06:54:11.166Z"
+      "updatedAt": "2026-06-26T14:18:35.952Z"
     },
     {
       "slug": "yt-tailor-for-audience",

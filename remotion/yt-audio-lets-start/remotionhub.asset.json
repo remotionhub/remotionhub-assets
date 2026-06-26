@@ -66,8 +66,8 @@
     }
   ],
   "migration": {
-    "status": "media-mirrored",
+    "status": "validated",
     "sourceFile": "/tmp/remotionlab/案例/yt-audio-lets-start.md",
-    "updatedAt": "2026-06-25T06:53:36.433Z"
+    "updatedAt": "2026-06-26T14:18:35.952Z"
   }
 }
